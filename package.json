@@ -27,5 +27,8 @@
   },
   "devDependencies": {
     "jsdom": "^31.0.1"
+  },
+  "engines": {
+    "node": ">=22.22"
   }
 }
