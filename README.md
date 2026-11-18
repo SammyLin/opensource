@@ -57,17 +57,17 @@
 <!-- programs:zh-Hant:start -->
 |  | 方案 | CNCF 分類 | 門檻 | 對你的專案有什麼幫助 |
 | --- | --- | --- | --- | --- |
-| <img src="public/logos/docker.svg" alt="" width="20" height="20"> | [Docker-Sponsored Open Source Program](https://www.docker.com/community/open-source/application/) | 容器映像倉庫<br><sub>Provisioning › Container Registry</sub> | 要申請 | 使用者從 Docker Hub 拉你的映像不會撞到次數限制，加上認證徽章讓大家知道這是官方可信的映像，採用門檻更低。 |
-| <img src="public/logos/sonarqubecloud.svg" alt="" width="20" height="20"> | [SonarQube Cloud for Open Source](https://www.sonarsource.com/plans-and-pricing/) | 安全與合規<br><sub>Provisioning › Security & Compliance</sub> | 直接開通 | 每個 PR 自動檢查 bug、程式碼異味與安全熱點，讓貢獻者送進來的程式碼品質一致，減輕維護者 review 負擔。 |
-| <img src="public/logos/socket.svg" alt="" width="20" height="20"> | [Socket for Open Source](https://www.socket.dev/blog/free-business-plan-upgrades-for-open-source) | 安全與合規<br><sub>Provisioning › Security & Compliance</sub> | 要申請 | 在 PR 階段就攔下惡意或可疑的相依套件（例如被植入後門的套件），避免供應鏈攻擊經由你的專案傳給下游使用者。 |
-| <img src="public/logos/snyk.svg" alt="" width="20" height="20"> | [Snyk for Open Source](https://snyk.io/open-source/) | 安全與合規<br><sub>Provisioning › Security & Compliance</sub> | 要申請 | 持續掃描相依套件與程式碼的已知漏洞，並自動開 PR 升級修補，讓專案的安全狀態一直保持在最新。 |
-| <img src="public/logos/1password.svg" alt="" width="20" height="20"> | [1Password for Open Source](https://github.com/1Password/for-open-source) | 金鑰與機密管理<br><sub>Provisioning › Key Management</sub> | 要申請 | 維護團隊安全共用發佈 token、雲端金鑰等機密，不必再用聊天訊息傳密碼，有人加入或離開時交接也簡單。 |
-| <img src="public/logos/jetbrains.svg" alt="" width="20" height="20"> | [JetBrains Open Source License](https://www.jetbrains.com/shop/eform/opensource?product=ALL) | 應用定義與開發環境<br><sub>App Definition and Development › Application Definition & Image Build</sub> | 要申請 | IntelliJ IDEA、PyCharm、WebStorm、GoLand 等專業 IDE 全部可用，重構、除錯、程式碼分析更順手，寫碼和 review 都更有效率。 |
-| <img src="public/logos/codecov.svg" alt="" width="20" height="20"> | [Codecov for Open Source](https://about.codecov.io/for/open-source/) | 持續整合與交付<br><sub>App Definition and Development › Continuous Integration & Delivery</sub> | 直接開通 | 在 PR 上直接看到新程式碼有沒有被測試覆蓋，README 也能放覆蓋率徽章，讓使用者對專案品質更有信心。 |
-| <img src="public/logos/sentry.svg" alt="" width="20" height="20"> | [Sentry for Open Source](https://sentry.io/for/open-source/) | 可觀測性<br><sub>Observability and Analysis › Observability</sub> | 要申請 | 使用者遇到的錯誤和當機會自動回報並附上 stack trace，不必等人開 issue 才知道哪裡壞了，修 bug 更快。 |
-| <img src="public/logos/githubcopilot.svg" alt="" width="20" height="20"> | [GitHub Copilot Pro for Open Source](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-teachers-and-os-maintainers) | AI Agent<br><sub>AI Agent</sub> | 門檻高 | 編輯器裡的 AI 程式碼補全與對話，加快寫功能、補測試，也更快看懂貢獻者送來的陌生程式碼。 |
-| <img src="public/logos/claude.svg" alt="" width="20" height="20"> | [Claude for Open Source](https://claude.com/contact-sales/claude-for-oss) | AI Agent<br><sub>AI Agent</sub> | 門檻高 | 用 AI 協助 review PR、整理 issue、撰寫文件與測試、規劃重構，把維護者有限的時間留給真正需要判斷的地方。 |
-|  | [OpenAI Codex for Open Source](https://developers.openai.com/community/codex-for-oss) | AI Agent<br><sub>AI Agent</sub> | 門檻高 | 用 AI 程式代理直接接手修 bug、寫測試、review PR 等任務；有條件提供的 Codex Security 還能協助找出安全漏洞。 |
+| <img src="public/logos/docker.svg" alt="" width="20" height="20"> | [Docker-Sponsored Open Source Program](https://opensource.3mi.ai/p/docker/) | 容器映像倉庫<br><sub>Provisioning › Container Registry</sub> | 要申請 | 使用者從 Docker Hub 拉你的映像不會撞到次數限制，加上認證徽章讓大家知道這是官方可信的映像，採用門檻更低。 |
+| <img src="public/logos/sonarqubecloud.svg" alt="" width="20" height="20"> | [SonarQube Cloud for Open Source](https://opensource.3mi.ai/p/sonarqube-cloud/) | 安全與合規<br><sub>Provisioning › Security & Compliance</sub> | 直接開通 | 每個 PR 自動檢查 bug、程式碼異味與安全熱點，讓貢獻者送進來的程式碼品質一致，減輕維護者 review 負擔。 |
+| <img src="public/logos/socket.svg" alt="" width="20" height="20"> | [Socket for Open Source](https://opensource.3mi.ai/p/socket/) | 安全與合規<br><sub>Provisioning › Security & Compliance</sub> | 要申請 | 在 PR 階段就攔下惡意或可疑的相依套件（例如被植入後門的套件），避免供應鏈攻擊經由你的專案傳給下游使用者。 |
+| <img src="public/logos/snyk.svg" alt="" width="20" height="20"> | [Snyk for Open Source](https://opensource.3mi.ai/p/snyk/) | 安全與合規<br><sub>Provisioning › Security & Compliance</sub> | 要申請 | 持續掃描相依套件與程式碼的已知漏洞，並自動開 PR 升級修補，讓專案的安全狀態一直保持在最新。 |
+| <img src="public/logos/1password.svg" alt="" width="20" height="20"> | [1Password for Open Source](https://opensource.3mi.ai/p/1password/) | 金鑰與機密管理<br><sub>Provisioning › Key Management</sub> | 要申請 | 維護團隊安全共用發佈 token、雲端金鑰等機密，不必再用聊天訊息傳密碼，有人加入或離開時交接也簡單。 |
+| <img src="public/logos/jetbrains.svg" alt="" width="20" height="20"> | [JetBrains Open Source License](https://opensource.3mi.ai/p/jetbrains/) | 應用定義與開發環境<br><sub>App Definition and Development › Application Definition & Image Build</sub> | 要申請 | IntelliJ IDEA、PyCharm、WebStorm、GoLand 等專業 IDE 全部可用，重構、除錯、程式碼分析更順手，寫碼和 review 都更有效率。 |
+| <img src="public/logos/codecov.svg" alt="" width="20" height="20"> | [Codecov for Open Source](https://opensource.3mi.ai/p/codecov/) | 持續整合與交付<br><sub>App Definition and Development › Continuous Integration & Delivery</sub> | 直接開通 | 在 PR 上直接看到新程式碼有沒有被測試覆蓋，README 也能放覆蓋率徽章，讓使用者對專案品質更有信心。 |
+| <img src="public/logos/sentry.svg" alt="" width="20" height="20"> | [Sentry for Open Source](https://opensource.3mi.ai/p/sentry/) | 可觀測性<br><sub>Observability and Analysis › Observability</sub> | 要申請 | 使用者遇到的錯誤和當機會自動回報並附上 stack trace，不必等人開 issue 才知道哪裡壞了，修 bug 更快。 |
+| <img src="public/logos/githubcopilot.svg" alt="" width="20" height="20"> | [GitHub Copilot Pro for Open Source](https://opensource.3mi.ai/p/github-copilot/) | AI Agent<br><sub>AI Agent</sub> | 門檻高 | 編輯器裡的 AI 程式碼補全與對話，加快寫功能、補測試，也更快看懂貢獻者送來的陌生程式碼。 |
+| <img src="public/logos/claude.svg" alt="" width="20" height="20"> | [Claude for Open Source](https://opensource.3mi.ai/p/claude/) | AI Agent<br><sub>AI Agent</sub> | 門檻高 | 用 AI 協助 review PR、整理 issue、撰寫文件與測試、規劃重構，把維護者有限的時間留給真正需要判斷的地方。 |
+|  | [OpenAI Codex for Open Source](https://opensource.3mi.ai/p/openai-codex/) | AI Agent<br><sub>AI Agent</sub> | 門檻高 | 用 AI 程式代理直接接手修 bug、寫測試、review PR 等任務；有條件提供的 Codex Security 還能協助找出安全漏洞。 |
 <!-- programs:zh-Hant:end -->
 
 ### 如何編輯資料
@@ -76,6 +76,7 @@
 
 ```json
 {
+  "id": "方案代號（網址 /p/<id>/ 用，小寫英數與 -）",
   "name": "方案名稱",
   "logo": "/logos/方案代號.svg（選填）",
   "whatYouGet": {
@@ -105,9 +106,12 @@
 本專案是純靜態網站。頁面模板在 `src/index.html`，`public/` 底下的三個語言頁面（`index.html`、`zh-hans/`、`en/`）、`sitemap.xml`、`robots.txt` 都由 `build.js` 預先渲染產生，讓搜尋引擎和社群預覽不用執行 JavaScript 也看得到完整內容。修改模板或資料後執行：
 
 ```bash
-npm install      # 首次需要（安裝 jsdom）
+npm install      # 首次需要（安裝 jsdom、Playwright）
+npm run og       # 畫每個方案的分享圖（public/og/，只重畫有變動的）
 npm run build    # 重新產生 public/ 底下的頁面
 ```
+
+每個方案都有自己的頁面（`/p/<id>/`、`/zh-hans/p/<id>/`、`/en/p/<id>/`），可以直接分享；分享到 LINE、Facebook、X 等平台時會顯示該方案專屬的預覽圖。
 
 > 不用擔心忘記：合併到 `main` 後，GitHub Action「Build static pages」會自動重新產生並 commit。
 
@@ -199,17 +203,17 @@ npm run screenshots -- after pr-media/pr2
 <!-- programs:zh-Hans:start -->
 |  | 方案 | CNCF 分类 | 门槛 | 对你的项目有什么帮助 |
 | --- | --- | --- | --- | --- |
-| <img src="public/logos/docker.svg" alt="" width="20" height="20"> | [Docker-Sponsored Open Source Program](https://www.docker.com/community/open-source/application/) | 容器镜像仓库<br><sub>Provisioning › Container Registry</sub> | 要申请 | 用户从 Docker Hub 拉取你的镜像不会触发次数限制，加上认证徽章让大家知道这是官方可信的镜像，采用门槛更低。 |
-| <img src="public/logos/sonarqubecloud.svg" alt="" width="20" height="20"> | [SonarQube Cloud for Open Source](https://www.sonarsource.com/plans-and-pricing/) | 安全与合规<br><sub>Provisioning › Security & Compliance</sub> | 直接开通 | 每个 PR 自动检查 bug、代码异味与安全热点，让贡献者提交的代码质量一致，减轻维护者 review 负担。 |
-| <img src="public/logos/socket.svg" alt="" width="20" height="20"> | [Socket for Open Source](https://www.socket.dev/blog/free-business-plan-upgrades-for-open-source) | 安全与合规<br><sub>Provisioning › Security & Compliance</sub> | 要申请 | 在 PR 阶段就拦下恶意或可疑的依赖包（例如被植入后门的包），避免供应链攻击经由你的项目传给下游用户。 |
-| <img src="public/logos/snyk.svg" alt="" width="20" height="20"> | [Snyk for Open Source](https://snyk.io/open-source/) | 安全与合规<br><sub>Provisioning › Security & Compliance</sub> | 要申请 | 持续扫描依赖与代码中的已知漏洞，并自动提 PR 升级修复，让项目的安全状态始终保持最新。 |
-| <img src="public/logos/1password.svg" alt="" width="20" height="20"> | [1Password for Open Source](https://github.com/1Password/for-open-source) | 密钥与机密管理<br><sub>Provisioning › Key Management</sub> | 要申请 | 维护团队安全共享发布 token、云密钥等机密，不必再用聊天消息传密码，有人加入或离开时交接也简单。 |
-| <img src="public/logos/jetbrains.svg" alt="" width="20" height="20"> | [JetBrains Open Source License](https://www.jetbrains.com/shop/eform/opensource?product=ALL) | 应用定义与开发环境<br><sub>App Definition and Development › Application Definition & Image Build</sub> | 要申请 | IntelliJ IDEA、PyCharm、WebStorm、GoLand 等专业 IDE 全部可用，重构、调试、代码分析更顺手，写代码和 review 都更高效。 |
-| <img src="public/logos/codecov.svg" alt="" width="20" height="20"> | [Codecov for Open Source](https://about.codecov.io/for/open-source/) | 持续集成与交付<br><sub>App Definition and Development › Continuous Integration & Delivery</sub> | 直接开通 | 在 PR 上直接看到新代码有没有被测试覆盖，README 也能放覆盖率徽章，让用户对项目质量更有信心。 |
-| <img src="public/logos/sentry.svg" alt="" width="20" height="20"> | [Sentry for Open Source](https://sentry.io/for/open-source/) | 可观测性<br><sub>Observability and Analysis › Observability</sub> | 要申请 | 用户遇到的错误和崩溃会自动上报并附带 stack trace，不必等人提 issue 才知道哪里坏了，修 bug 更快。 |
-| <img src="public/logos/githubcopilot.svg" alt="" width="20" height="20"> | [GitHub Copilot Pro for Open Source](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-teachers-and-os-maintainers) | AI Agent<br><sub>AI Agent</sub> | 门槛高 | 编辑器里的 AI 代码补全与对话，加快写功能、补测试，也更快看懂贡献者提交的陌生代码。 |
-| <img src="public/logos/claude.svg" alt="" width="20" height="20"> | [Claude for Open Source](https://claude.com/contact-sales/claude-for-oss) | AI Agent<br><sub>AI Agent</sub> | 门槛高 | 用 AI 协助 review PR、整理 issue、撰写文档与测试、规划重构，把维护者有限的时间留给真正需要判断的地方。 |
-|  | [OpenAI Codex for Open Source](https://developers.openai.com/community/codex-for-oss) | AI Agent<br><sub>AI Agent</sub> | 门槛高 | 用 AI 编程代理直接接手修 bug、写测试、review PR 等任务；有条件提供的 Codex Security 还能协助找出安全漏洞。 |
+| <img src="public/logos/docker.svg" alt="" width="20" height="20"> | [Docker-Sponsored Open Source Program](https://opensource.3mi.ai/zh-hans/p/docker/) | 容器镜像仓库<br><sub>Provisioning › Container Registry</sub> | 要申请 | 用户从 Docker Hub 拉取你的镜像不会触发次数限制，加上认证徽章让大家知道这是官方可信的镜像，采用门槛更低。 |
+| <img src="public/logos/sonarqubecloud.svg" alt="" width="20" height="20"> | [SonarQube Cloud for Open Source](https://opensource.3mi.ai/zh-hans/p/sonarqube-cloud/) | 安全与合规<br><sub>Provisioning › Security & Compliance</sub> | 直接开通 | 每个 PR 自动检查 bug、代码异味与安全热点，让贡献者提交的代码质量一致，减轻维护者 review 负担。 |
+| <img src="public/logos/socket.svg" alt="" width="20" height="20"> | [Socket for Open Source](https://opensource.3mi.ai/zh-hans/p/socket/) | 安全与合规<br><sub>Provisioning › Security & Compliance</sub> | 要申请 | 在 PR 阶段就拦下恶意或可疑的依赖包（例如被植入后门的包），避免供应链攻击经由你的项目传给下游用户。 |
+| <img src="public/logos/snyk.svg" alt="" width="20" height="20"> | [Snyk for Open Source](https://opensource.3mi.ai/zh-hans/p/snyk/) | 安全与合规<br><sub>Provisioning › Security & Compliance</sub> | 要申请 | 持续扫描依赖与代码中的已知漏洞，并自动提 PR 升级修复，让项目的安全状态始终保持最新。 |
+| <img src="public/logos/1password.svg" alt="" width="20" height="20"> | [1Password for Open Source](https://opensource.3mi.ai/zh-hans/p/1password/) | 密钥与机密管理<br><sub>Provisioning › Key Management</sub> | 要申请 | 维护团队安全共享发布 token、云密钥等机密，不必再用聊天消息传密码，有人加入或离开时交接也简单。 |
+| <img src="public/logos/jetbrains.svg" alt="" width="20" height="20"> | [JetBrains Open Source License](https://opensource.3mi.ai/zh-hans/p/jetbrains/) | 应用定义与开发环境<br><sub>App Definition and Development › Application Definition & Image Build</sub> | 要申请 | IntelliJ IDEA、PyCharm、WebStorm、GoLand 等专业 IDE 全部可用，重构、调试、代码分析更顺手，写代码和 review 都更高效。 |
+| <img src="public/logos/codecov.svg" alt="" width="20" height="20"> | [Codecov for Open Source](https://opensource.3mi.ai/zh-hans/p/codecov/) | 持续集成与交付<br><sub>App Definition and Development › Continuous Integration & Delivery</sub> | 直接开通 | 在 PR 上直接看到新代码有没有被测试覆盖，README 也能放覆盖率徽章，让用户对项目质量更有信心。 |
+| <img src="public/logos/sentry.svg" alt="" width="20" height="20"> | [Sentry for Open Source](https://opensource.3mi.ai/zh-hans/p/sentry/) | 可观测性<br><sub>Observability and Analysis › Observability</sub> | 要申请 | 用户遇到的错误和崩溃会自动上报并附带 stack trace，不必等人提 issue 才知道哪里坏了，修 bug 更快。 |
+| <img src="public/logos/githubcopilot.svg" alt="" width="20" height="20"> | [GitHub Copilot Pro for Open Source](https://opensource.3mi.ai/zh-hans/p/github-copilot/) | AI Agent<br><sub>AI Agent</sub> | 门槛高 | 编辑器里的 AI 代码补全与对话，加快写功能、补测试，也更快看懂贡献者提交的陌生代码。 |
+| <img src="public/logos/claude.svg" alt="" width="20" height="20"> | [Claude for Open Source](https://opensource.3mi.ai/zh-hans/p/claude/) | AI Agent<br><sub>AI Agent</sub> | 门槛高 | 用 AI 协助 review PR、整理 issue、撰写文档与测试、规划重构，把维护者有限的时间留给真正需要判断的地方。 |
+|  | [OpenAI Codex for Open Source](https://opensource.3mi.ai/zh-hans/p/openai-codex/) | AI Agent<br><sub>AI Agent</sub> | 门槛高 | 用 AI 编程代理直接接手修 bug、写测试、review PR 等任务；有条件提供的 Codex Security 还能协助找出安全漏洞。 |
 <!-- programs:zh-Hans:end -->
 
 ### 如何编辑数据
@@ -218,6 +222,7 @@ npm run screenshots -- after pr-media/pr2
 
 ```json
 {
+  "id": "方案代号（网址 /p/<id>/ 用，小写英数与 -）",
   "name": "方案名称",
   "logo": "/logos/方案代号.svg（选填）",
   "whatYouGet": {
@@ -247,9 +252,12 @@ npm run screenshots -- after pr-media/pr2
 本项目是纯静态网站。页面模板在 `src/index.html`，`public/` 下的三个语言页面（`index.html`、`zh-hans/`、`en/`）、`sitemap.xml`、`robots.txt` 都由 `build.js` 预先渲染生成，让搜索引擎和社交预览无需执行 JavaScript 也能看到完整内容。修改模板或数据后运行：
 
 ```bash
-npm install      # 首次需要（安装 jsdom）
+npm install      # 首次需要（安装 jsdom、Playwright）
+npm run og       # 绘制每个方案的分享图（public/og/，只重绘有变动的）
 npm run build    # 重新生成 public/ 下的页面
 ```
+
+每个方案都有自己的页面（`/p/<id>/`、`/zh-hans/p/<id>/`、`/en/p/<id>/`），可以直接分享；分享到 LINE、Facebook、X 等平台时会显示该方案专属的预览图。
 
 > 不用担心忘记：合并到 `main` 后，GitHub Action「Build static pages」会自动重新生成并提交。
 
@@ -341,17 +349,17 @@ Categories follow the [CNCF Cloud Native Landscape](https://landscape.cncf.io). 
 <!-- programs:en:start -->
 |  | Program | CNCF category | Bar | How it helps your project |
 | --- | --- | --- | --- | --- |
-| <img src="public/logos/docker.svg" alt="" width="20" height="20"> | [Docker-Sponsored Open Source Program](https://www.docker.com/community/open-source/application/) | Provisioning › Container Registry | Application required | Users can pull your images from Docker Hub without hitting rate limits, and the verified badge tells them it's the trusted official image. |
-| <img src="public/logos/sonarqubecloud.svg" alt="" width="20" height="20"> | [SonarQube Cloud for Open Source](https://www.sonarsource.com/plans-and-pricing/) | Provisioning › Security & Compliance | Direct activation | Every PR is checked for bugs, code smells and security hotspots, keeping contributions consistent and lightening the review load. |
-| <img src="public/logos/socket.svg" alt="" width="20" height="20"> | [Socket for Open Source](https://www.socket.dev/blog/free-business-plan-upgrades-for-open-source) | Provisioning › Security & Compliance | Application required | Catches malicious or suspicious dependencies (e.g. backdoored packages) at PR time, so supply-chain attacks don't reach your downstream users. |
-| <img src="public/logos/snyk.svg" alt="" width="20" height="20"> | [Snyk for Open Source](https://snyk.io/open-source/) | Provisioning › Security & Compliance | Application required | Continuously scans your dependencies and code for known vulnerabilities and opens fix PRs automatically. |
-| <img src="public/logos/1password.svg" alt="" width="20" height="20"> | [1Password for Open Source](https://github.com/1Password/for-open-source) | Provisioning › Key Management | Application required | Share release tokens, cloud keys and other secrets safely across maintainers — no more passing passwords in chat, and easy hand-offs. |
-| <img src="public/logos/jetbrains.svg" alt="" width="20" height="20"> | [JetBrains Open Source License](https://www.jetbrains.com/shop/eform/opensource?product=ALL) | App Definition and Development › Application Definition & Image Build | Application required | Use every JetBrains IDE (IntelliJ IDEA, PyCharm, WebStorm, GoLand…) for smoother refactoring, debugging and code analysis when writing and reviewing code. |
-| <img src="public/logos/codecov.svg" alt="" width="20" height="20"> | [Codecov for Open Source](https://about.codecov.io/for/open-source/) | App Definition and Development › Continuous Integration & Delivery | Direct activation | See right on the PR whether new code is covered by tests, and show a coverage badge in your README to build user confidence. |
-| <img src="public/logos/sentry.svg" alt="" width="20" height="20"> | [Sentry for Open Source](https://sentry.io/for/open-source/) | Observability and Analysis › Observability | Application required | Errors and crashes your users hit are reported automatically with stack traces, so you can fix bugs before anyone files an issue. |
-| <img src="public/logos/githubcopilot.svg" alt="" width="20" height="20"> | [GitHub Copilot Pro for Open Source](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-teachers-and-os-maintainers) | AI Agent | High bar | AI code completion and chat in your editor to write features and tests faster and understand unfamiliar contributed code. |
-| <img src="public/logos/claude.svg" alt="" width="20" height="20"> | [Claude for Open Source](https://claude.com/contact-sales/claude-for-oss) | AI Agent | High bar | Use AI to help review PRs, triage issues, write docs and tests, and plan refactors, saving maintainer time for the calls that need you. |
-|  | [OpenAI Codex for Open Source](https://developers.openai.com/community/codex-for-oss) | AI Agent | High bar | Hand tasks like bug fixes, tests and PR reviews to an AI coding agent; Codex Security (where offered) helps find vulnerabilities. |
+| <img src="public/logos/docker.svg" alt="" width="20" height="20"> | [Docker-Sponsored Open Source Program](https://opensource.3mi.ai/en/p/docker/) | Provisioning › Container Registry | Application required | Users can pull your images from Docker Hub without hitting rate limits, and the verified badge tells them it's the trusted official image. |
+| <img src="public/logos/sonarqubecloud.svg" alt="" width="20" height="20"> | [SonarQube Cloud for Open Source](https://opensource.3mi.ai/en/p/sonarqube-cloud/) | Provisioning › Security & Compliance | Direct activation | Every PR is checked for bugs, code smells and security hotspots, keeping contributions consistent and lightening the review load. |
+| <img src="public/logos/socket.svg" alt="" width="20" height="20"> | [Socket for Open Source](https://opensource.3mi.ai/en/p/socket/) | Provisioning › Security & Compliance | Application required | Catches malicious or suspicious dependencies (e.g. backdoored packages) at PR time, so supply-chain attacks don't reach your downstream users. |
+| <img src="public/logos/snyk.svg" alt="" width="20" height="20"> | [Snyk for Open Source](https://opensource.3mi.ai/en/p/snyk/) | Provisioning › Security & Compliance | Application required | Continuously scans your dependencies and code for known vulnerabilities and opens fix PRs automatically. |
+| <img src="public/logos/1password.svg" alt="" width="20" height="20"> | [1Password for Open Source](https://opensource.3mi.ai/en/p/1password/) | Provisioning › Key Management | Application required | Share release tokens, cloud keys and other secrets safely across maintainers — no more passing passwords in chat, and easy hand-offs. |
+| <img src="public/logos/jetbrains.svg" alt="" width="20" height="20"> | [JetBrains Open Source License](https://opensource.3mi.ai/en/p/jetbrains/) | App Definition and Development › Application Definition & Image Build | Application required | Use every JetBrains IDE (IntelliJ IDEA, PyCharm, WebStorm, GoLand…) for smoother refactoring, debugging and code analysis when writing and reviewing code. |
+| <img src="public/logos/codecov.svg" alt="" width="20" height="20"> | [Codecov for Open Source](https://opensource.3mi.ai/en/p/codecov/) | App Definition and Development › Continuous Integration & Delivery | Direct activation | See right on the PR whether new code is covered by tests, and show a coverage badge in your README to build user confidence. |
+| <img src="public/logos/sentry.svg" alt="" width="20" height="20"> | [Sentry for Open Source](https://opensource.3mi.ai/en/p/sentry/) | Observability and Analysis › Observability | Application required | Errors and crashes your users hit are reported automatically with stack traces, so you can fix bugs before anyone files an issue. |
+| <img src="public/logos/githubcopilot.svg" alt="" width="20" height="20"> | [GitHub Copilot Pro for Open Source](https://opensource.3mi.ai/en/p/github-copilot/) | AI Agent | High bar | AI code completion and chat in your editor to write features and tests faster and understand unfamiliar contributed code. |
+| <img src="public/logos/claude.svg" alt="" width="20" height="20"> | [Claude for Open Source](https://opensource.3mi.ai/en/p/claude/) | AI Agent | High bar | Use AI to help review PRs, triage issues, write docs and tests, and plan refactors, saving maintainer time for the calls that need you. |
+|  | [OpenAI Codex for Open Source](https://opensource.3mi.ai/en/p/openai-codex/) | AI Agent | High bar | Hand tasks like bug fixes, tests and PR reviews to an AI coding agent; Codex Security (where offered) helps find vulnerabilities. |
 <!-- programs:en:end -->
 
 ### How to Edit Data
@@ -360,6 +368,7 @@ All program data is stored in `public/data/programs.json` (`categories` for cate
 
 ```json
 {
+  "id": "program-slug (used in the page URL /p/<id>/)",
   "name": "Program Name",
   "logo": "/logos/program-slug.svg (optional)",
   "whatYouGet": {
@@ -389,9 +398,12 @@ All program data is stored in `public/data/programs.json` (`categories` for cate
 This is a plain static website. The page template lives in `src/index.html`; the three language pages in `public/` (`index.html`, `zh-hans/`, `en/`), `sitemap.xml` and `robots.txt` are prerendered by `build.js`, so search engines and link previews see the full content without running JavaScript. After changing the template or the data, run:
 
 ```bash
-npm install      # first time only (installs jsdom)
+npm install      # first time only (installs jsdom and Playwright)
+npm run og       # draw each program's share image (public/og/, only the ones that changed)
 npm run build    # regenerate the pages in public/
 ```
+
+Every program has its own shareable page (`/p/<id>/`, `/zh-hans/p/<id>/`, `/en/p/<id>/`) with a program-specific preview image for LINE, Facebook, X and other platforms.
 
 > If you forget, the "Build static pages" GitHub Action regenerates and commits them after the change lands on `main`.
 

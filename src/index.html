@@ -6,14 +6,15 @@
     <title>OSS Perks｜開源福利社 — 開源維護者的免費工具</title>
     <meta name="description" content="開源維護者可以免費拿到的工具與服務，一頁看完內容、條件、怎麼申請。" id="meta-description">
     <link rel="canonical" href="https://opensource.3mi.ai/" id="canonical">
-    <link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/">
-    <link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/">
-    <link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/">
-    <link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/" data-alt="zh-Hant">
+    <link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/" data-alt="zh-Hans">
+    <link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/" data-alt="en">
+    <link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/" data-alt="zh-Hant">
+    <meta name="robots" content="index, follow" id="meta-robots">
     <meta property="og:title" content="OSS Perks｜開源福利社 — 開源維護者的免費工具" id="meta-og-title">
     <meta property="og:description" content="開源維護者可以免費拿到的工具與服務，一頁看完內容、條件、怎麼申請。" id="meta-og-description">
     <meta property="og:site_name" content="OSS Perks">
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="website" id="meta-og-type">
     <meta property="og:url" content="https://opensource.3mi.ai/" id="meta-og-url">
     <meta property="og:locale" content="zh_TW" id="meta-og-locale">
     <meta property="og:image" content="https://opensource.3mi.ai/brand/og-zh-hant.png" id="meta-og-image">
@@ -120,7 +121,51 @@
         .apply { display: inline-flex; gap: 6px; align-items: center; padding: 8px 14px; border-radius: var(--radius-md); background: var(--color-text); color: var(--color-surface); font-weight: 500; text-decoration: none; }
         .apply:hover { background: var(--color-accent-dark); }
         .card-foot span { color: var(--color-text-muted); }
+        /* whole card links to the program page; buttons and inline links stay clickable on top */
+        .card { position: relative; }
+        .card h2 a::after { content: ''; position: absolute; inset: 0; border-radius: var(--radius-lg); }
+        .card .apply, .card dd a { position: relative; z-index: 1; }
+        .card:hover h2 a { color: var(--color-accent-dark); }
         .empty { grid-column: 1 / -1; text-align: center; padding: 48px 0; color: var(--color-text-muted); }
+
+        /* program page */
+        .detail { max-width: 860px; padding: 24px 0 48px; }
+        .back { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; color: var(--color-text-subtle); text-decoration: none; margin-bottom: 16px; }
+        .back:hover { color: var(--color-accent-dark); }
+        .detail-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 32px; display: grid; gap: 24px; }
+        .detail-head { display: flex; gap: 20px; align-items: center; }
+        .detail-head .brand { width: 72px; height: 72px; border-radius: var(--radius-lg); }
+        .detail-head .brand img { width: 40px; height: 40px; }
+        .detail-head .brand.mono { font-size: 28px; }
+        .detail-head h1 { font-size: 32px; line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 8px; text-wrap: balance; }
+        .detail-lead { font-size: 18px; color: var(--color-text); }
+        .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .detail-grid section { background: var(--color-bg); border-radius: var(--radius-md); padding: 16px 20px; }
+        .detail-grid h2 { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+        .detail-grid p { font-size: 15px; color: var(--color-text-subtle); }
+        .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px 24px; font-size: 14px; }
+        .facts dt { font-size: 12px; color: var(--color-text-muted); }
+        .facts dd { color: var(--color-text); overflow-wrap: anywhere; }
+        .facts dd a, .detail-grid a { color: #047857; }
+        .detail-cta { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; padding-top: 20px; border-top: 1px solid var(--color-border); }
+        .detail-cta .apply { padding: 12px 22px; font-size: 16px; }
+        .detail-cta .edit { font-size: 14px; color: var(--color-text-subtle); }
+        .share { margin-top: 24px; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 24px 32px; }
+        .share h2 { font-size: 16px; margin-bottom: 12px; }
+        .share-btns { display: flex; flex-wrap: wrap; gap: 8px; }
+        .share-btn { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 8px 14px; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); color: var(--color-text); font: inherit; font-size: 14px; text-decoration: none; cursor: pointer; }
+        .share-btn:hover { border-color: var(--color-text); }
+        .share-btn.primary { background: var(--color-text); border-color: var(--color-text); color: var(--color-surface); }
+        .bi { width: 16px; height: 16px; flex: none; fill: currentColor; }
+        .related { margin-top: 32px; }
+        .related h2 { font-size: 18px; margin-bottom: 12px; }
+        .related-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+        .mini { display: flex; gap: 12px; align-items: center; padding: 14px 16px; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); color: var(--color-text); text-decoration: none; }
+        .mini:hover { border-color: var(--color-border-hover); box-shadow: var(--shadow-md); }
+        .mini .brand { width: 40px; height: 40px; }
+        .mini .brand img { width: 22px; height: 22px; }
+        .mini strong { display: block; font-size: 14px; font-weight: 600; line-height: 1.35; }
+        .mini .badge { margin-top: 4px; }
 
         .contribute { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 32px; margin-bottom: 48px; display: flex; gap: 24px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
         .contribute h2 { font-size: 22px; margin-bottom: 4px; }
@@ -138,6 +183,14 @@
             .logo { font-size: 16px; gap: 8px; }
             .logo img { width: 26px; height: 26px; }
             .hero { padding: 32px 0 24px; }
+            .detail-card { padding: 20px; gap: 20px; }
+            .detail-head { gap: 14px; align-items: flex-start; }
+            .detail-head .brand { width: 56px; height: 56px; }
+            .detail-head .brand img { width: 32px; height: 32px; }
+            .detail-head h1 { font-size: 24px; }
+            .detail-lead { font-size: 16px; }
+            .detail-grid { grid-template-columns: 1fr; }
+            .share { padding: 20px; }
             .hero h1 { font-size: 30px; }
             .hero .lead { font-size: 16px; }
             .legend { grid-template-columns: 1fr; }
@@ -153,7 +206,15 @@
 </head>
 <body>
     <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-        <!-- lucide: search, external-link, x, github -->
+        <!-- lucide: search, external-link, x, github, arrow-left, link, share-2 -->
+        <symbol id="i-back" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></symbol>
+        <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol>
+        <symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.59 13.51 6.83 3.98"/><path d="m15.41 6.51-6.82 3.98"/></symbol>
+        <!-- simple-icons (CC0): x, facebook, line, threads -->
+        <symbol id="b-x" viewBox="0 0 24 24"><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></symbol>
+        <symbol id="b-facebook" viewBox="0 0 24 24"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></symbol>
+        <symbol id="b-line" viewBox="0 0 24 24"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></symbol>
+        <symbol id="b-threads" viewBox="0 0 24 24"><path d="M18.263 11.097c-.03-3.486-1.92-5.586-5.111-5.586-2.13 0-3.922.963-4.863 2.499l2.062 1.438c.535-.843 1.272-1.543 2.628-1.543 1.528 0 2.318.85 2.544 2.431a15 15 0 0 0-2.236-.173c-4.125 0-6.068 1.867-6.068 4.336s1.943 3.99 4.804 3.99c3.139 0 5.013-2.115 5.781-4.735.798.361 1.348 1.204 1.348 2.47 0 3.387-3.907 5.232-7.22 5.232-4.885 0-8.077-3.207-8.077-8.424 0-6.392 4.223-10.487 9.9-10.487 3.808 0 5.69 1.671 6.97 3.914l2.108-1.475C21.44 2.078 18.331 0 13.663 0 6.227 0 1.168 5.277 1.168 12.934c0 7 4.953 11.066 10.856 11.066 4.878 0 9.809-2.846 9.809-7.716 0-2.545-1.46-4.231-3.569-5.187m-6.33 4.855c-1.077 0-2.026-.512-2.026-1.453 0-1.483 1.822-1.934 3.606-1.934.678 0 1.34.045 1.927.173-.422 1.927-1.671 3.215-3.508 3.214Z"/></symbol>
         <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
         <symbol id="i-ext" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
         <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
@@ -172,6 +233,7 @@
     </nav>
 
     <main class="wrap">
+        <div id="list-view">
         <section class="hero">
             <h1 data-t="h1"></h1>
             <p class="lead" data-t="lead"></p>
@@ -211,6 +273,9 @@
                 <a class="btn secondary" href="https://github.com/SammyLin/opensource/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener" data-t="guide-btn"></a>
             </div>
         </section>
+        </div>
+
+        <div id="detail" class="detail" hidden></div>
     </main>
 
     <footer><p data-t="footer"></p><p data-t-html="license"></p></footer>
@@ -243,7 +308,12 @@
                 'edit-btn': '在 GitHub 編輯資料', 'guide-btn': '貢獻指南',
                 'footer': '資料以各方案官網為準，申請前請再確認條件。',
                 'load-fail': '資料載入失敗',
-                'license': '程式碼 <a href="https://github.com/SammyLin/opensource/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a> · 資料 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>', 'updated': '資料更新於', 'pending': '待確認', 'pending-src': '確認來源'
+                'license': '程式碼 <a href="https://github.com/SammyLin/opensource/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a> · 資料 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>', 'updated': '資料更新於', 'pending': '待確認', 'pending-src': '確認來源',
+                'back': '所有方案', 'share-title': '分享這個方案', 'share-text': n => `${n}：開源專案可以免費申請`,
+                'copy-link': '複製連結', 'copied': '已複製！', 'share-native': '分享…', 'related': '同類別的其他方案',
+                'official-page': '官方頁面', 'label-verified': '最後驗證', 'edit-entry': '資料有誤？在 GitHub 上修改',
+                'not-found': '找不到這個方案', 'not-found-desc': '連結可能打錯了，或這個方案已經下架。',
+                'page-title': n => `${n}｜開源專案免費方案 — 開源福利社`
             },
             'zh-Hans': {
                 'logo': 'OSS Perks｜开源福利社',
@@ -265,7 +335,12 @@
                 'edit-btn': '在 GitHub 编辑数据', 'guide-btn': '贡献指南',
                 'footer': '数据以各方案官网为准，申请前请再确认条件。',
                 'load-fail': '数据加载失败',
-                'license': '代码 <a href="https://github.com/SammyLin/opensource/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a> · 数据 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>', 'updated': '数据更新于', 'pending': '待确认', 'pending-src': '确认来源'
+                'license': '代码 <a href="https://github.com/SammyLin/opensource/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a> · 数据 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>', 'updated': '数据更新于', 'pending': '待确认', 'pending-src': '确认来源',
+                'back': '所有方案', 'share-title': '分享这个方案', 'share-text': n => `${n}：开源项目可以免费申请`,
+                'copy-link': '复制链接', 'copied': '已复制！', 'share-native': '分享…', 'related': '同类别的其他方案',
+                'official-page': '官方页面', 'label-verified': '最后验证', 'edit-entry': '数据有误？在 GitHub 上修改',
+                'not-found': '找不到这个方案', 'not-found-desc': '链接可能打错了，或这个方案已经下架。',
+                'page-title': n => `${n}｜开源项目免费方案 — 开源福利社`
             },
             'en': {
                 'logo': 'OSS Perks',
@@ -287,12 +362,22 @@
                 'edit-btn': 'Edit data on GitHub', 'guide-btn': 'Contributing guide',
                 'footer': 'Vendor sites are the source of truth. Double-check terms before applying.',
                 'load-fail': 'Failed to load data',
-                'license': 'Code <a href="https://github.com/SammyLin/opensource/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a> · Data <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>', 'updated': 'Data updated', 'pending': 'To be confirmed', 'pending-src': 'Source'
+                'license': 'Code <a href="https://github.com/SammyLin/opensource/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a> · Data <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>', 'updated': 'Data updated', 'pending': 'To be confirmed', 'pending-src': 'Source',
+                'back': 'All programs', 'share-title': 'Share this program', 'share-text': n => `${n}: free for open source projects`,
+                'copy-link': 'Copy link', 'copied': 'Copied!', 'share-native': 'Share…', 'related': 'More in this category',
+                'official-page': 'Official page', 'label-verified': 'Last verified', 'edit-entry': 'Something wrong? Edit on GitHub',
+                'not-found': 'Program not found', 'not-found-desc': 'The link may be mistyped, or the program was removed.',
+                'page-title': n => `${n} — free for open source | OSS Perks`
             }
         };
 
         const lang = Object.keys(LANG_PATHS).find(l => l !== 'zh-Hant' && location.pathname.startsWith(LANG_PATHS[l])) || 'zh-Hant';
         const t = T[lang];
+        const SITE = 'https://opensource.3mi.ai';
+        // Program pages live at /p/<id>/, /zh-hans/p/<id>/ and /en/p/<id>/ (prerendered by build.js).
+        const PID = (location.pathname.match(/\/p\/([a-z0-9-]+)\/?$/) || [])[1] || '';
+        const pageUrl = (l, id) => SITE + LANG_PATHS[l] + (id ? `p/${id}/` : '');
+        const programPath = id => `${LANG_PATHS[lang]}p/${id}/`;
         const state = { q: '', type: '', cat: '' };
         let data = { categories: {}, programs: [] };
 
@@ -301,22 +386,25 @@
         const safeUrl = u => /^https?:\/\//.test(u) ? u : '#';
         const $ = s => document.querySelector(s);
 
-        function applyStaticText() {
-            document.documentElement.lang = lang;
-            document.title = t.title;
-            $('#meta-description').content = t.desc;
-            $('#meta-og-title').content = t.title;
-            $('#meta-og-description').content = t.desc;
-            const url = 'https://opensource.3mi.ai' + LANG_PATHS[lang];
-            const og = 'https://opensource.3mi.ai/brand/og-' + lang.toLowerCase() + '.png';
+        function setMeta({ title, desc, url, image, type = 'website' }) {
+            document.title = title;
+            $('#meta-description').content = desc;
+            $('#meta-og-title').content = title;
+            $('#meta-og-description').content = desc;
+            $('#meta-tw-title').content = title;
+            $('#meta-tw-description').content = desc;
             $('#canonical').href = url;
             $('#meta-og-url').content = url;
+            $('#meta-og-type').content = type;
+            $('#meta-og-image').content = image;
+            $('#meta-tw-image').content = image;
+            $('#meta-og-image-alt').content = title;
+        }
+
+        function applyStaticText() {
+            document.documentElement.lang = lang;
             $('#meta-og-locale').content = OG_LOCALE[lang];
-            $('#meta-og-image').content = og;
-            $('#meta-tw-image').content = og;
-            $('#meta-og-image-alt').content = t.title;
-            $('#meta-tw-title').content = t.title;
-            $('#meta-tw-description').content = t.desc;
+            setMeta({ title: t.title, desc: t.desc, url: pageUrl(lang), image: `${SITE}/brand/og-${lang.toLowerCase()}.png` });
             document.querySelectorAll('[data-t]').forEach(el => el.textContent = t[el.dataset.t]);
             document.querySelectorAll('[data-t-html]').forEach(el => el.innerHTML = t[el.dataset.tHtml]);
             document.querySelectorAll('[data-t-placeholder]').forEach(el => el.placeholder = t[el.dataset.tPlaceholder]);
@@ -387,7 +475,7 @@
                 <article class="card">
                     <div class="card-head">
                         ${p.logo ? `<span class="brand"><img src="${esc(p.logo)}" alt="" width="24" height="24" loading="lazy"></span>` : `<span class="brand mono" aria-hidden="true">${esc(p.name.charAt(0))}</span>`}
-                        <h2><a href="${esc(safeUrl(p.link))}" target="_blank" rel="noopener">${esc(p.name)}</a></h2>
+                        <h2><a href="${esc(programPath(p.id))}">${esc(p.name)}</a></h2>
                     </div>
                     <div class="meta">
                         <span class="badge type-${esc(p.type)}">${esc(t['type-' + p.type])}</span>
@@ -408,7 +496,120 @@
 
         function render() { renderChips(); renderCards(); writeState(); }
 
+        const brand = (p, size) => p.logo
+            ? `<span class="brand"><img src="${esc(p.logo)}" alt="" width="${size}" height="${size}"></span>`
+            : `<span class="brand mono" aria-hidden="true">${esc(p.name.charAt(0))}</span>`;
+        const hostOf = u => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return ''; } };
+
+        function renderDetail() {
+            const back = `<a class="back" href="${LANG_PATHS[lang]}"><svg class="icon"><use href="#i-back"/></svg>${esc(t.back)}</a>`;
+            // Language switch and hreflang point at this program in the other languages.
+            document.querySelectorAll('.lang-switch a').forEach(a => a.href = `${LANG_PATHS[a.dataset.lang]}p/${PID}/`);
+            document.querySelectorAll('link[data-alt]').forEach(l => l.href = pageUrl(l.dataset.alt, PID));
+
+            const p = data.programs.find(x => x.id === PID);
+            if (!p) {
+                $('#meta-robots').content = 'noindex';
+                document.title = `${t['not-found']} — OSS Perks`;
+                $('#detail').innerHTML = `${back}<div class="detail-card"><h1>${esc(t['not-found'])}</h1><p>${esc(t['not-found-desc'])}</p></div>`;
+                return;
+            }
+
+            const url = pageUrl(lang, p.id);
+            const sep = lang === 'en' ? ': ' : '：';
+            const desc = `${p.whyItHelps[lang]} ${t['what-you-get']}${sep}${p.whatYouGet[lang]}`;
+            setMeta({
+                title: t['page-title'](p.name),
+                desc: desc.length > 200 ? desc.slice(0, 199) + '…' : desc,
+                url,
+                image: `${SITE}/og/${p.id}-${lang.toLowerCase()}.png`,
+                type: 'article',
+            });
+
+            const enc = encodeURIComponent;
+            const text = t['share-text'](p.name);
+            const nets = {
+                line: ['LINE', `https://social-plugins.line.me/lineit/share?url=${enc(url)}`],
+                facebook: ['Facebook', `https://www.facebook.com/sharer/sharer.php?u=${enc(url)}`],
+                threads: ['Threads', `https://www.threads.net/intent/post?text=${enc(text + ' ' + url)}`],
+                x: ['X', `https://x.com/intent/post?text=${enc(text)}&url=${enc(url)}`],
+                linkedin: ['LinkedIn', `https://www.linkedin.com/sharing/share-offsite/?url=${enc(url)}`],
+            };
+            const order = lang === 'en' ? ['x', 'linkedin', 'facebook', 'threads', 'line'] : ['line', 'facebook', 'threads', 'x', 'linkedin'];
+            const shareLinks = order.map(k => {
+                const [label, href] = nets[k];
+                const icon = k === 'linkedin' ? '' : `<svg class="bi" aria-hidden="true"><use href="#b-${k}"/></svg>`;
+                return `<a class="share-btn" href="${esc(href)}" target="_blank" rel="noopener">${icon}${label}</a>`;
+            }).join('');
+
+            const related = data.programs.filter(x => x.id !== p.id && x.category.some(c => p.category.includes(c)));
+            const cat = p.category.map(c => `${esc(data.categories[c]?.[lang] || c)}<br><small>${esc(cncfPath(c))}</small>`).join('<br>');
+            const cta = p.type === 'direct_activation' ? t['cta-direct'] : t['cta-apply'];
+
+            $('#detail').innerHTML = `${back}
+                <article class="detail-card">
+                    <header class="detail-head">
+                        ${brand(p, 40)}
+                        <div>
+                            <h1>${esc(p.name)}</h1>
+                            <div class="meta">
+                                <span class="badge type-${esc(p.type)}">${esc(t['type-' + p.type])}</span>
+                                ${p.pending ? `<span class="badge pending">${esc(p.pending[lang] || t.pending)}</span>` : ''}
+                                ${p.category.map(c => `<span class="tag" title="${esc(cncfPath(c))}">${esc(data.categories[c]?.[lang] || c)}</span>`).join('')}
+                            </div>
+                        </div>
+                    </header>
+                    <p class="detail-lead">${esc(p.whyItHelps[lang])}</p>
+                    <div class="detail-grid">
+                        <section><h2>${esc(t['what-you-get'])}</h2><p>${esc(p.whatYouGet[lang])}</p></section>
+                        <section><h2>${esc(t.requirements)}</h2><p>${esc(p.requirements[lang])}${p.pending?.link ? ` <a href="${esc(safeUrl(p.pending.link))}" target="_blank" rel="noopener">${esc(t['pending-src'])}</a>` : ''}</p></section>
+                    </div>
+                    <dl class="facts">
+                        <div><dt>${esc(t['label-type'])}</dt><dd>${esc(t['type-' + p.type])} — ${esc(t['legend-' + p.type])}</dd></div>
+                        <div><dt>${esc(t['label-cat'])}</dt><dd>${cat}</dd></div>
+                        <div><dt>${esc(t['label-verified'])}</dt><dd><time datetime="${esc(p.lastVerified)}">${esc(p.lastVerified)}</time></dd></div>
+                        <div><dt>${esc(t['official-page'])}</dt><dd><a href="${esc(safeUrl(p.link))}" target="_blank" rel="noopener">${esc(hostOf(p.link))}</a></dd></div>
+                    </dl>
+                    <div class="detail-cta">
+                        <a class="apply" href="${esc(safeUrl(p.link))}" target="_blank" rel="noopener">${esc(cta)}<svg class="icon"><use href="#i-ext"/></svg></a>
+                        <a class="edit" href="https://github.com/SammyLin/opensource/edit/main/public/data/programs.json" target="_blank" rel="noopener">${esc(t['edit-entry'])}</a>
+                    </div>
+                </article>
+                <section class="share" aria-labelledby="share-title">
+                    <h2 id="share-title">${esc(t['share-title'])}</h2>
+                    <div class="share-btns">
+                        <button type="button" class="share-btn primary" data-copy="${esc(url)}"><svg class="icon"><use href="#i-link"/></svg><span>${esc(t['copy-link'])}</span></button>
+                        <button type="button" class="share-btn" data-native-share hidden><svg class="icon"><use href="#i-share"/></svg>${esc(t['share-native'])}</button>
+                        ${shareLinks}
+                    </div>
+                </section>
+                ${related.length ? `<section class="related"><h2>${esc(t.related)}</h2><div class="related-list">${related.map(x => `
+                    <a class="mini" href="${esc(programPath(x.id))}">${brand(x, 22)}<span><strong>${esc(x.name)}</strong><span class="badge type-${esc(x.type)}">${esc(t['type-' + x.type])}</span></span></a>`).join('')}</div></section>` : ''}`;
+
+            const native = $('[data-native-share]');
+            if (navigator.share) {
+                native.hidden = false;
+                native.addEventListener('click', () => navigator.share({ title: p.name, text, url }).catch(() => {}));
+            }
+        }
+
+        async function copyText(s) {
+            if (navigator.clipboard?.writeText) return navigator.clipboard.writeText(s);
+            const ta = Object.assign(document.createElement('textarea'), { value: s });
+            ta.style.cssText = 'position:fixed;opacity:0';
+            document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove();
+        }
+
         document.addEventListener('click', e => {
+            const copy = e.target.closest('[data-copy]');
+            if (copy) {
+                const label = copy.querySelector('span');
+                copyText(copy.dataset.copy).then(() => {
+                    label.textContent = t.copied;
+                    setTimeout(() => { label.textContent = t['copy-link']; }, 2000);
+                }).catch(() => {});
+                return;
+            }
             const c = e.target.closest('.chip');
             if (c) { state[c.dataset.group] = state[c.dataset.group] === c.dataset.value ? '' : c.dataset.value; render(); }
         });
@@ -416,17 +617,18 @@
         $('#clear').addEventListener('click', () => { state.q = state.type = state.cat = ''; $('#q').value = ''; render(); });
 
         applyStaticText();
+        if (PID) { $('#list-view').hidden = true; $('#detail').hidden = false; }
         fetch('/data/programs.json')
             .then(r => r.json())
             .then(d => {
                 data = d;
                 const latest = data.programs.map(p => p.lastVerified).sort().at(-1);
                 if (latest) $('#updated').textContent = `${t.updated} ${latest}`;
-                readState(); render();
+                if (PID) renderDetail(); else { readState(); render(); }
             })
             .catch(err => {
                 console.error(err);
-                $('#programs').innerHTML = `<p class="empty">${esc(t['load-fail'])}</p>`;
+                $(PID ? '#detail' : '#programs').innerHTML = `<p class="empty">${esc(t['load-fail'])}</p>`;
             });
     </script>
 </body>

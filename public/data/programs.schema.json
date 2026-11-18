@@ -46,9 +46,10 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["name", "whatYouGet", "whyItHelps", "requirements", "type", "category", "link", "lastVerified"],
+        "required": ["id", "name", "whatYouGet", "whyItHelps", "requirements", "type", "category", "link", "lastVerified"],
         "additionalProperties": false,
         "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "description": "網址代號，例如 sentry → /p/sentry/；建立後不要改，否則分享出去的連結會失效" },
           "name": { "type": "string", "minLength": 1, "description": "方案正式英文名稱" },
           "logo": { "type": "string", "pattern": "^/logos/[a-z0-9-]+\\.svg$", "description": "選填：public/logos/ 底下的 SVG，例如 /logos/sentry.svg；沒有就顯示名稱縮寫" },
           "whatYouGet": { "$ref": "#/$defs/i18n", "description": "提供什麼" },

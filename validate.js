@@ -32,8 +32,12 @@ Object.entries(categories).forEach(([id, label]) => {
 });
 
 const seen = new Set();
+const seenIds = new Set();
 programs.forEach((p, i) => {
     const id = `programs[${i}]${p.name ? ` (${p.name})` : ''}`;
+    if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(p.id || '')) errors.push(`${id}: 'id' must be lowercase letters, digits and dashes (used in the page URL /p/<id>/)`);
+    else if (seenIds.has(p.id)) errors.push(`${id}: duplicate id '${p.id}'`);
+    else seenIds.add(p.id);
     if (!isText(p.name)) errors.push(`${id}: missing 'name'`);
     else if (seen.has(p.name)) errors.push(`${id}: duplicate name`);
     else seen.add(p.name);

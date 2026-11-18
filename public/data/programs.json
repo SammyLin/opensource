@@ -66,6 +66,7 @@
   },
   "programs": [
     {
+      "id": "jetbrains",
       "name": "JetBrains Open Source License",
       "logo": "/logos/jetbrains.svg",
       "whatYouGet": {
@@ -91,6 +92,7 @@
       "lastVerified": "2026-11-18"
     },
     {
+      "id": "docker",
       "name": "Docker-Sponsored Open Source Program",
       "logo": "/logos/docker.svg",
       "whatYouGet": {
@@ -116,6 +118,7 @@
       "lastVerified": "2026-11-18"
     },
     {
+      "id": "sentry",
       "name": "Sentry for Open Source",
       "logo": "/logos/sentry.svg",
       "whatYouGet": {
@@ -141,6 +144,7 @@
       "lastVerified": "2026-11-18"
     },
     {
+      "id": "socket",
       "name": "Socket for Open Source",
       "logo": "/logos/socket.svg",
       "whatYouGet": {
@@ -166,6 +170,7 @@
       "lastVerified": "2026-11-18"
     },
     {
+      "id": "snyk",
       "name": "Snyk for Open Source",
       "logo": "/logos/snyk.svg",
       "whatYouGet": {
@@ -191,6 +196,7 @@
       "lastVerified": "2026-11-18"
     },
     {
+      "id": "sonarqube-cloud",
       "name": "SonarQube Cloud for Open Source",
       "logo": "/logos/sonarqubecloud.svg",
       "whatYouGet": {
@@ -216,6 +222,7 @@
       "lastVerified": "2026-11-18"
     },
     {
+      "id": "codecov",
       "name": "Codecov for Open Source",
       "logo": "/logos/codecov.svg",
       "whatYouGet": {
@@ -241,6 +248,7 @@
       "lastVerified": "2026-11-18"
     },
     {
+      "id": "1password",
       "name": "1Password for Open Source",
       "logo": "/logos/1password.svg",
       "whatYouGet": {
@@ -266,6 +274,7 @@
       "lastVerified": "2026-11-18"
     },
     {
+      "id": "github-copilot",
       "name": "GitHub Copilot Pro for Open Source",
       "logo": "/logos/githubcopilot.svg",
       "whatYouGet": {
@@ -291,6 +300,7 @@
       "lastVerified": "2026-11-18"
     },
     {
+      "id": "claude",
       "name": "Claude for Open Source",
       "logo": "/logos/claude.svg",
       "whatYouGet": {
@@ -316,6 +326,7 @@
       "lastVerified": "2026-11-18"
     },
     {
+      "id": "openai-codex",
       "name": "OpenAI Codex for Open Source",
       "whatYouGet": {
         "zh-Hant": "6 個月 ChatGPT Pro with Codex、API 額度、Codex Security（有條件提供）",

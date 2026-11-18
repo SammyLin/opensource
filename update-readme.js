@@ -13,6 +13,8 @@ const L = {
     'en': { head: ['', 'Program', 'CNCF category', 'Bar', 'How it helps your project'], type: { direct_activation: 'Direct activation', application_required: 'Application required', high_bar: 'High bar' } },
 };
 
+const SITE = 'https://opensource.3mi.ai';
+const LANG_PATH = { 'zh-Hant': '/', 'zh-Hans': '/zh-hans/', 'en': '/en/' };
 const cell = s => String(s).replace(/\|/g, '\\|').replace(/\n/g, ' ');
 // Group by CNCF category (in the order of data.categories), then by how hard it is to get.
 const CATS = Object.keys(data.categories);
@@ -27,7 +29,7 @@ let readme = fs.readFileSync(README, 'utf-8');
 for (const [lang, l] of Object.entries(L)) {
     const rows = programs.map(p => [
         p.logo ? `<img src="public${p.logo}" alt="" width="20" height="20">` : '',
-        `[${cell(p.name)}](${p.link})`,
+        `[${cell(p.name)}](${SITE}${LANG_PATH[lang]}p/${p.id}/)`,
         p.category.map(c => lang === 'en'
             ? cell(cncf(c))
             : `${cell(data.categories[c] ? data.categories[c][lang] : c)}<br><sub>${cell(cncf(c))}</sub>`).join('<br>'),
