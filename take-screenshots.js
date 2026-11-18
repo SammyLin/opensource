@@ -47,7 +47,7 @@ async function takeScreenshots() {
         ['screenshot-zh-hant-desktop', '/', 1440, 900],
         ['screenshot-zh-hans-desktop', '/zh-hans/', 1440, 900],
         ['screenshot-en-desktop', '/en/', 1440, 900],
-        ['screenshot-zh-hant-mobile-filtered', '/?cat=ai_tools', 390, 844],
+        ['screenshot-zh-hant-mobile-filtered', '/?cat=ai_agent', 390, 844],
     ];
     for (const [name, urlPath, width, height] of shots) {
         await capture(name, async (page) => {

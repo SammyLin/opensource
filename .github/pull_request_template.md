@@ -9,10 +9,12 @@ Please ensure all items are checked before submitting:
 
 - [ ] I have verified the information on the **official source page**
 - [ ] The `name` field contains the official program name
-- [ ] All three language fields (`zh-Hant`, `zh-Hans`, `en`) are filled in for `whatYouGet` and `requirements`
+- [ ] All three language fields (`zh-Hant`, `zh-Hans`, `en`) are filled in for `whatYouGet`, `whyItHelps` and `requirements`
+- [ ] (Optional) Logo added to `public/logos/` and referenced in `logo`
+- [ ] I have run `npm run readme` to update the README tables
 - [ ] Simplified Chinese (`zh-Hans`) uses mainland China terminology (代码, 仓库, 服务器, 用户, etc.)
 - [ ] The `type` field is one of: `direct_activation`, `application_required`, or `high_bar`
-- [ ] The `category` array contains at least one valid category: `ide`, `containers`, `monitoring`, `security_scanning`, `code_quality`, `password_management`, or `ai_tools`
+- [ ] The `category` follows the [CNCF Landscape](https://landscape.cncf.io) and uses an id from `categories` (e.g. `security_compliance`, `observability`, `ai_agent`)
 - [ ] The `link` field contains a valid official URL
 - [ ] The `lastVerified` field is in `YYYY-MM-DD` format with today's date
 - [ ] I have run `node validate.js` and it passes
@@ -24,10 +26,12 @@ Please ensure all items are checked before submitting:
 
 - [ ] 我已在**官方來源頁面**驗證了資訊
 - [ ] `name` 欄位包含官方方案名稱
-- [ ] `whatYouGet` 和 `requirements` 的三種語言欄位（`zh-Hant`、`zh-Hans`、`en`）都已填寫
+- [ ] `whatYouGet`、`whyItHelps` 和 `requirements` 的三種語言欄位（`zh-Hant`、`zh-Hans`、`en`）都已填寫
+- [ ] （選填）Logo 已放進 `public/logos/` 並填入 `logo` 欄位
+- [ ] 我已執行 `npm run readme` 更新 README 方案列表
 - [ ] 簡體中文（`zh-Hans`）使用大陸用詞（代码、仓库、服务器、用户 等）
 - [ ] `type` 欄位是以下之一：`direct_activation`、`application_required` 或 `high_bar`
-- [ ] `category` 陣列包含至少一個有效類別：`ide`、`containers`、`monitoring`、`security_scanning`、`code_quality`、`password_management` 或 `ai_tools`
+- [ ] `category` 依照 [CNCF Landscape](https://landscape.cncf.io) 分類，並使用 `categories` 裡的 id（例如 `security_compliance`、`observability`、`ai_agent`）
 - [ ] `link` 欄位包含有效的官方 URL
 - [ ] `lastVerified` 欄位為 `YYYY-MM-DD` 格式，日期為今天
 - [ ] 我已執行 `node validate.js` 且通過驗證

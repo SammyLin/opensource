@@ -26,7 +26,10 @@ if (!Array.isArray(data.programs)) errors.push("root: 'programs' must be an arra
 const categories = data.categories || {};
 const programs = Array.isArray(data.programs) ? data.programs : [];
 
-Object.entries(categories).forEach(([id, label]) => checkI18n(label, `categories.${id}`));
+Object.entries(categories).forEach(([id, label]) => {
+    checkI18n(label, `categories.${id}`);
+    if (!label || !label.cncf || !isText(label.cncf.category)) errors.push(`categories.${id}.cncf.category: missing (see https://landscape.cncf.io)`);
+});
 
 const seen = new Set();
 programs.forEach((p, i) => {
@@ -35,6 +38,11 @@ programs.forEach((p, i) => {
     else if (seen.has(p.name)) errors.push(`${id}: duplicate name`);
     else seen.add(p.name);
     checkI18n(p.whatYouGet, `${id}.whatYouGet`);
+    checkI18n(p.whyItHelps, `${id}.whyItHelps`);
+    if (p.logo !== undefined) {
+        if (!/^\/logos\/[a-z0-9-]+\.svg$/.test(p.logo)) errors.push(`${id}: 'logo' must look like /logos/name.svg`);
+        else if (!fs.existsSync(path.join(__dirname, 'public', p.logo))) errors.push(`${id}: logo file public${p.logo} not found`);
+    }
     checkI18n(p.requirements, `${id}.requirements`);
     if (!TYPES.includes(p.type)) errors.push(`${id}: 'type' must be one of ${TYPES.join(', ')}`);
     if (!Array.isArray(p.category) || p.category.length === 0) {
