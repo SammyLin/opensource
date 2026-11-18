@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://opensource.3mi.ai/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/zh-hans/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/en/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/"/>
+  </url>
+</urlset>

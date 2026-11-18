@@ -2,8 +2,8 @@
  * Capture full-page screenshots of the local site for PR media.
  *
  * Prerequisites:
- *   1. Serve the site locally with `npx wrangler pages dev public --port 8788`
- *      (needed for the /zh-hans/ and /en/ rewrites in public/_redirects)
+ *   1. Build (`npm run build`), then serve the site locally, e.g.
+ *      `npx wrangler pages dev public --port 8788` or `cd public && python3 -m http.server 8788`
  *   2. Install Playwright browsers once: `npx playwright install chromium`
  *
  * Usage:

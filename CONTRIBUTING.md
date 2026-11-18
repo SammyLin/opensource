@@ -87,6 +87,7 @@ cd opensource
 ```bash
 node validate.js
 npm run readme   # 更新 README 裡的方案列表
+npm run build    # （選填）重新產生網站靜態頁；沒跑的話合併後 GitHub Action 會自動處理
 ```
 
 確保所有欄位都正確，且通過驗證。
@@ -202,6 +203,7 @@ cd opensource
 ```bash
 node validate.js
 npm run readme   # 更新 README 里的方案列表
+npm run build    # （可选）重新生成网站静态页；没运行的话合并后 GitHub Action 会自动处理
 ```
 
 确保所有字段都正确，且通过验证。
@@ -317,6 +319,7 @@ Add a new entry to the `programs` array. The `$schema` at the top of the file gi
 ```bash
 node validate.js
 npm run readme   # refresh the program tables in README
+npm run build    # (optional) regenerate the static pages; the GitHub Action does it after merge if you skip it
 ```
 
 Ensure all fields are correct and pass validation.
