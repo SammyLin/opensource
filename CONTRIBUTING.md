@@ -1,0 +1,267 @@
+# Contributing Guide | 貢獻指南 | 贡献指南
+
+[繁體中文](#繁體中文) | [简体中文](#简体中文) | [English](#english)
+
+---
+
+## 繁體中文
+
+### 如何新增一個方案
+
+感謝您願意為開源福利社貢獻！以下是新增方案的步驟：
+
+#### 1. Fork 並 Clone 專案
+
+```bash
+git clone https://github.com/YOUR_USERNAME/opensource.git
+cd opensource
+```
+
+#### 2. 編輯 `public/data/programs.json`
+
+在陣列中新增一個條目，包含所有必要欄位：
+
+```json
+{
+  "name": "方案的正式名稱",
+  "whatYouGet": {
+    "zh-Hant": "繁體中文：說明這個方案提供什麼內容",
+    "zh-Hans": "简体中文：说明这个方案提供什么内容",
+    "en": "English: What this program offers"
+  },
+  "requirements": {
+    "zh-Hant": "繁體中文：申請條件與門檻",
+    "zh-Hans": "简体中文：申请条件与门槛",
+    "en": "English: Requirements and eligibility criteria"
+  },
+  "type": "選擇其中之一",
+  "category": ["至少選擇一個類別"],
+  "link": "https://官方來源連結",
+  "lastVerified": "YYYY-MM-DD"
+}
+```
+
+#### 欄位說明
+
+- **name**: 方案的正式英文名稱
+- **whatYouGet**: 三種語言的內容說明
+  - **zh-Hant**: 繁體中文，使用台灣用詞（程式碼、軟體、儲存庫等）
+  - **zh-Hans**: 简体中文，使用大陆用词（代码、软件、仓库等）
+  - **en**: 英文說明
+- **requirements**: 三種語言的申請條件說明
+- **type**: 必須是以下其中之一
+  - `direct_activation` - 直接開通（無需申請）
+  - `application_required` - 要申請
+  - `high_bar` - 門檻高
+- **category**: 陣列，可包含一個或多個類別
+  - `ide` - IDE
+  - `containers` - 容器
+  - `monitoring` - 監控
+  - `security_scanning` - 安全掃描
+  - `code_quality` - 程式碼品質
+  - `password_management` - 密碼管理
+  - `ai_tools` - AI 工具
+- **link**: 官方來源連結（必填）
+- **lastVerified**: 最後驗證日期，格式 YYYY-MM-DD（如 2026-11-18）
+
+#### 3. 執行驗證
+
+```bash
+node validate.js
+```
+
+確保所有欄位都正確，且通過驗證。
+
+#### 4. 提交 Pull Request
+
+```bash
+git add public/data/programs.json
+git commit -m "Add [方案名稱]"
+git push origin main
+```
+
+然後在 GitHub 上開啟 Pull Request。
+
+### 重要原則
+
+- ✅ 每個條目必須包含**官方來源連結**
+- ✅ 說明文字應**客觀描述**方案本身的條款，不添加個人意見或推薦
+- ✅ 簡體中文必須使用**大陸用詞**，而非僅做繁簡轉換
+- ✅ 在提交前請訪問官方頁面**驗證資訊正確性**
+- ✅ 將 `lastVerified` 設為您驗證的日期
+
+---
+
+## 简体中文
+
+### 如何新增一个方案
+
+感谢您愿意为开源福利社贡献！以下是新增方案的步骤：
+
+#### 1. Fork 并 Clone 项目
+
+```bash
+git clone https://github.com/YOUR_USERNAME/opensource.git
+cd opensource
+```
+
+#### 2. 编辑 `public/data/programs.json`
+
+在数组中新增一个条目，包含所有必要字段：
+
+```json
+{
+  "name": "方案的正式名称",
+  "whatYouGet": {
+    "zh-Hant": "繁體中文：說明這個方案提供什麼內容",
+    "zh-Hans": "简体中文：说明这个方案提供什么内容",
+    "en": "English: What this program offers"
+  },
+  "requirements": {
+    "zh-Hant": "繁體中文：申請條件與門檻",
+    "zh-Hans": "简体中文：申请条件与门槛",
+    "en": "English: Requirements and eligibility criteria"
+  },
+  "type": "选择其中之一",
+  "category": ["至少选择一个类别"],
+  "link": "https://官方来源链接",
+  "lastVerified": "YYYY-MM-DD"
+}
+```
+
+#### 字段说明
+
+- **name**: 方案的正式英文名称
+- **whatYouGet**: 三种语言的内容说明
+  - **zh-Hant**: 繁體中文，使用台灣用詞（程式碼、軟體、儲存庫等）
+  - **zh-Hans**: 简体中文，使用大陆用词（代码、软件、仓库等）
+  - **en**: 英文说明
+- **requirements**: 三种语言的申请条件说明
+- **type**: 必须是以下其中之一
+  - `direct_activation` - 直接开通（无需申请）
+  - `application_required` - 要申请
+  - `high_bar` - 门槛高
+- **category**: 数组，可包含一个或多个类别
+  - `ide` - IDE
+  - `containers` - 容器
+  - `monitoring` - 监控
+  - `security_scanning` - 安全扫描
+  - `code_quality` - 代码质量
+  - `password_management` - 密码管理
+  - `ai_tools` - AI 工具
+- **link**: 官方来源链接（必填）
+- **lastVerified**: 最后验证日期，格式 YYYY-MM-DD（如 2026-11-18）
+
+#### 3. 运行验证
+
+```bash
+node validate.js
+```
+
+确保所有字段都正确，且通过验证。
+
+#### 4. 提交 Pull Request
+
+```bash
+git add public/data/programs.json
+git commit -m "Add [方案名称]"
+git push origin main
+```
+
+然后在 GitHub 上开启 Pull Request。
+
+### 重要原则
+
+- ✅ 每个条目必须包含**官方来源链接**
+- ✅ 说明文字应**客观描述**方案本身的条款，不添加个人意见或推荐
+- ✅ 简体中文必须使用**大陆用词**，而非仅做繁简转换
+- ✅ 在提交前请访问官方页面**验证信息正确性**
+- ✅ 将 `lastVerified` 设为您验证的日期
+
+---
+
+## English
+
+### How to Add a Program
+
+Thank you for contributing to OSS Perks! Here's how to add a new program:
+
+#### 1. Fork and Clone the Project
+
+```bash
+git clone https://github.com/YOUR_USERNAME/opensource.git
+cd opensource
+```
+
+#### 2. Edit `public/data/programs.json`
+
+Add a new entry to the array with all required fields:
+
+```json
+{
+  "name": "Official Program Name",
+  "whatYouGet": {
+    "zh-Hant": "繁體中文：說明這個方案提供什麼內容",
+    "zh-Hans": "简体中文：说明这个方案提供什么内容",
+    "en": "English: What this program offers"
+  },
+  "requirements": {
+    "zh-Hant": "繁體中文：申請條件與門檻",
+    "zh-Hans": "简体中文：申请条件与门槛",
+    "en": "English: Requirements and eligibility criteria"
+  },
+  "type": "one of the allowed values",
+  "category": ["at least one category"],
+  "link": "https://official-source-link",
+  "lastVerified": "YYYY-MM-DD"
+}
+```
+
+#### Field Descriptions
+
+- **name**: Official name of the program (in English)
+- **whatYouGet**: Description in three languages
+  - **zh-Hant**: Traditional Chinese, using Taiwan terminology (程式碼, 軟體, 儲存庫, etc.)
+  - **zh-Hans**: Simplified Chinese, using mainland China terminology (代码, 软件, 仓库, etc.)
+  - **en**: English description
+- **requirements**: Requirements in three languages
+- **type**: Must be one of the following
+  - `direct_activation` - Direct Activation (no application needed)
+  - `application_required` - Application Required
+  - `high_bar` - High Bar
+- **category**: Array, must include one or more categories
+  - `ide` - IDE
+  - `containers` - Containers
+  - `monitoring` - Monitoring
+  - `security_scanning` - Security Scanning
+  - `code_quality` - Code Quality
+  - `password_management` - Password Management
+  - `ai_tools` - AI Tools
+- **link**: Official source link (required)
+- **lastVerified**: Last verified date in YYYY-MM-DD format (e.g., 2026-11-18)
+
+#### 3. Run Validation
+
+```bash
+node validate.js
+```
+
+Ensure all fields are correct and pass validation.
+
+#### 4. Submit a Pull Request
+
+```bash
+git add public/data/programs.json
+git commit -m "Add [Program Name]"
+git push origin main
+```
+
+Then open a Pull Request on GitHub.
+
+### Important Guidelines
+
+- ✅ Every entry must include an **official source link**
+- ✅ Descriptions should **objectively state** what the program offers, without personal opinions or recommendations
+- ✅ Simplified Chinese must use **mainland China terminology**, not just character conversion
+- ✅ Visit the official page to **verify accuracy** before submitting
+- ✅ Set `lastVerified` to the date you verified the information

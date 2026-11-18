@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSS Perks｜開源福利社</title>
+    <meta name="description" content="為開源專案維護者提供的免費工具與服務" id="meta-description">
+    <meta property="og:title" content="OSS Perks｜開源福利社" id="meta-og-title">
+    <meta property="og:description" content="為開源專案維護者提供的免費工具與服務" id="meta-og-description">
+    <meta property="og:site_name" content="OSS Perks｜開源福利社" id="meta-og-site-name">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OSS Perks｜開源福利社" id="meta-twitter-title">
+    <meta name="twitter:description" content="為開源專案維護者提供的免費工具與服務" id="meta-twitter-description">
+    <style>
+        /* Hallmark · OSS Perks · trending-custom · F0 R0 */
+        
+        :root {
+            --color-bg: #f8f9fa;
+            --color-surface: #fdfefe;
+            --color-text: #1a1a1a;
+            --color-text-subtle: #555555;
+            --color-text-muted: #757575;
+            --color-border: #e5e7eb;
+            --color-border-hover: #d1d5db;
+            --color-accent: #10b981;
+            --color-accent-dark: #059669;
+            --color-focus: #0d9668;
+            --color-badge-green-bg: #d1fae5;
+            --color-badge-green-text: #065f46;
+            --color-badge-yellow-bg: #fef3c7;
+            --color-badge-yellow-text: #92400e;
+            --color-badge-red-bg: #fee2e2;
+            --color-badge-red-text: #991b1b;
+            
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "Noto Sans TC", Roboto, "Helvetica Neue", Arial, sans-serif;
+            
+            --radius-sm: 6px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            --radius-full: 20px;
+            
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            overflow-x: clip;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            color: var(--color-text);
+            background: var(--color-bg);
+            scrollbar-color: var(--color-border-hover) var(--color-bg);
+        }
+
+        ::selection {
+            background: var(--color-accent);
+            color: var(--color-surface);
+        }
+
+        nav {
+            background: var(--color-surface);
+            border-bottom: 1px solid var(--color-border);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--color-text);
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .logo:focus-visible {
+            outline: 2px solid var(--color-focus);
+            outline-offset: 4px;
+            border-radius: var(--radius-sm);
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 4px;
+            background: var(--color-bg);
+            padding: 4px;
+            border-radius: var(--radius-full);
+        }
+
+        .lang-switch button {
+            padding: 8px 16px;
+            border: none;
+            background: transparent;
+            color: var(--color-text-subtle);
+            cursor: pointer;
+            border-radius: var(--radius-xl);
+            font-size: 14px;
+            min-height: 44px;
+            transition: background 0.2s, color 0.2s;
+            font-weight: 500;
+        }
+
+        .lang-switch button.active {
+            background: var(--color-text);
+            color: var(--color-surface);
+        }
+
+        .lang-switch button:hover:not(.active) {
+            color: var(--color-text);
+            background: var(--color-bg);
+        }
+
+        .lang-switch button:active {
+            transform: translateY(1px);
+        }
+
+        .lang-switch button:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        .lang-switch button:focus-visible {
+            outline: 2px solid var(--color-focus);
+            outline-offset: 2px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        header {
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--color-text);
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+            text-wrap: balance;
+        }
+
+        header p {
+            font-size: 16px;
+            color: var(--color-text-subtle);
+            margin-bottom: 4px;
+        }
+
+        .date-line {
+            font-size: 14px;
+            color: var(--color-text-muted);
+        }
+
+        .contribute-section {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-xl);
+            padding: 48px;
+            margin-bottom: 32px;
+        }
+
+        .contribute-section h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--color-text);
+            margin-bottom: 32px;
+            text-wrap: balance;
+        }
+
+        .steps {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin: 32px 0;
+            flex-wrap: wrap;
+        }
+
+        .step {
+            background: var(--color-bg);
+            border: 1px solid var(--color-border);
+            padding: 24px;
+            border-radius: var(--radius-lg);
+            flex: 1;
+            min-width: 200px;
+            max-width: 280px;
+        }
+
+        .step-number {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--color-accent);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .step h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--color-text);
+        }
+
+        .step p {
+            font-size: 14px;
+            color: var(--color-text-subtle);
+        }
+
+        .contribute-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .contribute-buttons a {
+            display: inline-block;
+            padding: 12px 24px;
+            background: var(--color-text);
+            color: var(--color-surface);
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            font-weight: 500;
+            font-size: 14px;
+            min-height: 44px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .contribute-buttons a:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .contribute-buttons a:active {
+            transform: translateY(0);
+        }
+
+        .contribute-buttons a:focus-visible {
+            outline: 2px solid var(--color-focus);
+            outline-offset: 2px;
+        }
+
+        .filters {
+            margin-bottom: 32px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .filter-btn {
+            padding: 12px 24px;
+            border: 1px solid var(--color-border);
+            background: var(--color-surface);
+            color: var(--color-text-subtle);
+            cursor: pointer;
+            border-radius: var(--radius-full);
+            transition: border-color 0.2s, color 0.2s, background 0.2s;
+            font-size: 14px;
+            font-weight: 500;
+            min-height: 44px;
+        }
+
+        .filter-btn:hover:not(.active) {
+            border-color: var(--color-border-hover);
+            color: var(--color-text);
+            background: var(--color-bg);
+        }
+
+        .filter-btn.active {
+            background: var(--color-text);
+            color: var(--color-surface);
+            border-color: var(--color-text);
+        }
+
+        .filter-btn:active {
+            transform: translateY(1px);
+        }
+
+        .filter-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        .filter-btn:focus-visible {
+            outline: 2px solid var(--color-focus);
+            outline-offset: 2px;
+        }
+
+        .programs {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .program-card {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            transition: box-shadow 0.2s, border-color 0.2s;
+        }
+
+        .program-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--color-border-hover);
+        }
+
+        .program-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--color-text);
+        }
+
+        .type-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .type-direct_activation {
+            background: var(--color-badge-green-bg);
+            color: var(--color-badge-green-text);
+        }
+
+        .type-application_required {
+            background: var(--color-badge-yellow-bg);
+            color: var(--color-badge-yellow-text);
+        }
+
+        .type-high_bar {
+            background: var(--color-badge-red-bg);
+            color: var(--color-badge-red-text);
+        }
+
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .category-tag {
+            padding: 4px 8px;
+            background: var(--color-bg);
+            border-radius: var(--radius-sm);
+            font-size: 11px;
+            color: var(--color-text-subtle);
+            font-weight: 500;
+        }
+
+        .program-card p {
+            margin-bottom: 12px;
+            font-size: 14px;
+            color: var(--color-text-subtle);
+            line-height: 1.5;
+        }
+
+        .program-card a {
+            color: var(--color-accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .program-card a:hover {
+            color: var(--color-accent-dark);
+        }
+
+        .program-card a:focus-visible {
+            outline: 2px solid var(--color-focus);
+            outline-offset: 2px;
+            border-radius: var(--radius-sm);
+        }
+
+        .last-verified {
+            font-size: 12px;
+            color: var(--color-text-muted);
+            margin-top: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 32px 0;
+            margin-top: 48px;
+            border-top: 1px solid var(--color-border);
+        }
+
+        footer a {
+            color: var(--color-accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        footer a:hover {
+            color: var(--color-accent-dark);
+        }
+
+        footer a:focus-visible {
+            outline: 2px solid var(--color-focus);
+            outline-offset: 2px;
+            border-radius: var(--radius-sm);
+        }
+
+        footer p {
+            color: var(--color-text-subtle);
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 16px;
+            }
+
+            .logo {
+                font-size: 16px;
+            }
+
+            .container {
+                padding: 24px 16px;
+            }
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            header p {
+                font-size: 14px;
+            }
+
+            .contribute-section {
+                padding: 32px 24px;
+            }
+
+            .contribute-section h2 {
+                font-size: 24px;
+            }
+
+            .steps {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .step {
+                max-width: 100%;
+            }
+
+            .programs {
+                grid-template-columns: 1fr;
+            }
+
+            .filters {
+                gap: 6px;
+            }
+
+            .filter-btn {
+                font-size: 13px;
+                padding: 6px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo" id="nav-logo">OSS Perks｜開源福利社</a>
+            <div class="lang-switch">
+                <button onclick="switchLang('zh-Hant')" class="active" id="btn-zh-Hant">繁</button>
+                <button onclick="switchLang('zh-Hans')" id="btn-zh-Hans">简</button>
+                <button onclick="switchLang('en')" id="btn-en">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="contribute-section">
+            <h2 id="contribute-title">參與貢獻</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3 id="step1-title">Fork 專案</h3>
+                    <p id="step1-desc">複製這個儲存庫到你的帳號</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3 id="step2-title">新增條目</h3>
+                    <p id="step2-desc">在 JSON 檔案中加入一個方案</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3 id="step3-title">提交 PR</h3>
+                    <p id="step3-desc">開啟 Pull Request 送出你的貢獻</p>
+                </div>
+            </div>
+            <div class="contribute-buttons">
+                <a href="https://github.com/SammyLin/opensource" target="_blank" id="repo-btn">前往 GitHub 儲存庫</a>
+                <a href="https://github.com/SammyLin/opensource/blob/main/CONTRIBUTING.md" target="_blank" id="guide-btn">查看貢獻指南</a>
+            </div>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" data-category="all" id="filter-all">全部</button>
+            <button class="filter-btn" data-category="ide" id="filter-ide">IDE</button>
+            <button class="filter-btn" data-category="containers" id="filter-containers">容器</button>
+            <button class="filter-btn" data-category="monitoring" id="filter-monitoring">監控</button>
+            <button class="filter-btn" data-category="security_scanning" id="filter-security">安全掃描</button>
+            <button class="filter-btn" data-category="code_quality" id="filter-quality">程式碼品質</button>
+            <button class="filter-btn" data-category="password_management" id="filter-password">密碼管理</button>
+            <button class="filter-btn" data-category="ai_tools" id="filter-ai">AI 工具</button>
+        </div>
+
+        <div class="programs" id="programs-container"></div>
+
+        <footer>
+            <p id="footer-contribute">
+                <a href="https://github.com/SammyLin/opensource" target="_blank" id="footer-link">發 PR 新增方案</a>
+            </p>
+            <p style="margin-top: 20px; font-size: 14px; color: var(--color-text-subtle);">
+                <span id="footer-note">最後驗證日期顯示於各方案卡片中</span>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        const translations = {
+            'zh-Hant': {
+                'site-title': '開源福利社',
+                'site-desc': '為開源專案維護者提供的免費工具與服務',
+                'page-title': 'OSS Perks｜開源福利社',
+                'meta-description': '為開源專案維護者提供的免費工具與服務',
+                'contribute-title': '參與貢獻',
+                'contribute-desc': '發現新的免費方案？或是發現過期的資訊？歡迎提交 PR 幫助我們改進！',
+                'step1-title': 'Fork 專案',
+                'step1-desc': '複製這個儲存庫到你的帳號',
+                'step2-title': '新增條目',
+                'step2-desc': '在 JSON 檔案中加入一個方案',
+                'step3-title': '提交 PR',
+                'step3-desc': '開啟 Pull Request 送出你的貢獻',
+                'repo-btn': '前往 GitHub 儲存庫',
+                'guide-btn': '查看貢獻指南',
+                'filter-all': '全部',
+                'filter-ide': 'IDE',
+                'filter-containers': '容器',
+                'filter-monitoring': '監控',
+                'filter-security': '安全掃描',
+                'filter-quality': '程式碼品質',
+                'filter-password': '密碼管理',
+                'filter-ai': 'AI 工具',
+                'footer-link': '發 PR 新增方案',
+                'footer-note': '最後驗證日期顯示於各方案卡片中',
+                'what-you-get': '提供內容',
+                'requirements': '申請條件',
+                'official-link': '官方連結',
+                'last-verified': '最後驗證',
+                'type-direct_activation': '直接開通',
+                'type-application_required': '要申請',
+                'type-high_bar': '門檻高',
+                'cat-ide': 'IDE',
+                'cat-containers': '容器',
+                'cat-monitoring': '監控',
+                'cat-security_scanning': '安全掃描',
+                'cat-code_quality': '程式碼品質',
+                'cat-password_management': '密碼管理',
+                'cat-ai_tools': 'AI 工具'
+            },
+            'zh-Hans': {
+                'site-title': '开源福利社',
+                'site-desc': '为开源项目维护者提供的免费工具与服务',
+                'page-title': 'OSS Perks｜开源福利社',
+                'meta-description': '为开源项目维护者提供的免费工具与服务',
+                'contribute-title': '参与贡献',
+                'contribute-desc': '发现新的免费方案？或是发现过期的信息？欢迎提交 PR 帮助我们改进！',
+                'step1-title': 'Fork 项目',
+                'step1-desc': '复制这个仓库到你的账号',
+                'step2-title': '新增条目',
+                'step2-desc': '在 JSON 文件中添加一个方案',
+                'step3-title': '提交 PR',
+                'step3-desc': '开启 Pull Request 提交你的贡献',
+                'repo-btn': '前往 GitHub 仓库',
+                'guide-btn': '查看贡献指南',
+                'filter-all': '全部',
+                'filter-ide': 'IDE',
+                'filter-containers': '容器',
+                'filter-monitoring': '监控',
+                'filter-security': '安全扫描',
+                'filter-quality': '代码质量',
+                'filter-password': '密码管理',
+                'filter-ai': 'AI 工具',
+                'footer-link': '发 PR 添加方案',
+                'footer-note': '最后验证日期显示在各方案卡片中',
+                'what-you-get': '提供内容',
+                'requirements': '申请条件',
+                'official-link': '官方链接',
+                'last-verified': '最后验证',
+                'type-direct_activation': '直接开通',
+                'type-application_required': '要申请',
+                'type-high_bar': '门槛高',
+                'cat-ide': 'IDE',
+                'cat-containers': '容器',
+                'cat-monitoring': '监控',
+                'cat-security_scanning': '安全扫描',
+                'cat-code_quality': '代码质量',
+                'cat-password_management': '密码管理',
+                'cat-ai_tools': 'AI 工具'
+            },
+            'en': {
+                'site-title': 'OSS Perks',
+                'site-desc': 'Free tools and services for open source project maintainers',
+                'page-title': 'OSS Perks',
+                'meta-description': 'Free tools and services for open source project maintainers',
+                'contribute-title': 'Get Involved',
+                'contribute-desc': 'Found a new offer or outdated info? Submit a PR to help us improve!',
+                'step1-title': 'Fork the Repo',
+                'step1-desc': 'Copy this repository to your account',
+                'step2-title': 'Add an Entry',
+                'step2-desc': 'Add one program to the JSON file',
+                'step3-title': 'Open a PR',
+                'step3-desc': 'Submit a Pull Request with your contribution',
+                'repo-btn': 'Go to GitHub Repository',
+                'guide-btn': 'View Contributing Guide',
+                'filter-all': 'All',
+                'filter-ide': 'IDE',
+                'filter-containers': 'Containers',
+                'filter-monitoring': 'Monitoring',
+                'filter-security': 'Security Scanning',
+                'filter-quality': 'Code Quality',
+                'filter-password': 'Password Management',
+                'filter-ai': 'AI Tools',
+                'footer-link': 'Submit a PR to add a program',
+                'footer-note': 'Last verified dates shown on each program card',
+                'what-you-get': 'What You Get',
+                'requirements': 'Requirements',
+                'official-link': 'Official Link',
+                'last-verified': 'Last Verified',
+                'type-direct_activation': 'Direct Activation',
+                'type-application_required': 'Application Required',
+                'type-high_bar': 'High Bar',
+                'cat-ide': 'IDE',
+                'cat-containers': 'Containers',
+                'cat-monitoring': 'Monitoring',
+                'cat-security_scanning': 'Security Scanning',
+                'cat-code_quality': 'Code Quality',
+                'cat-password_management': 'Password Management',
+                'cat-ai_tools': 'AI Tools'
+            }
+        };
+
+        let currentLang = 'zh-Hant';
+        let programsData = [];
+        let currentFilter = 'all';
+
+        function switchLang(lang) {
+            currentLang = lang;
+            document.querySelectorAll('.lang-switch button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById(`btn-${lang}`).classList.add('active');
+            document.documentElement.lang = lang;
+            
+            const texts = translations[lang];
+            document.title = texts['page-title'];
+            document.getElementById('meta-description').content = texts['meta-description'];
+            document.getElementById('meta-og-title').content = texts['page-title'];
+            document.getElementById('meta-og-description').content = texts['meta-description'];
+            document.getElementById('meta-og-site-name').content = texts['page-title'];
+            document.getElementById('meta-twitter-title').content = texts['page-title'];
+            document.getElementById('meta-twitter-description').content = texts['meta-description'];
+            
+            updateUIText();
+            renderPrograms();
+        }
+
+        function updateUIText() {
+            const texts = translations[currentLang];
+            Object.keys(texts).forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    if (el.tagName === 'BUTTON') {
+                        el.textContent = texts[id];
+                    } else {
+                        el.textContent = texts[id];
+                    }
+                }
+            });
+        }
+
+        function filterPrograms(category) {
+            currentFilter = category;
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            renderPrograms();
+        }
+
+        function renderPrograms() {
+            const container = document.getElementById('programs-container');
+            const texts = translations[currentLang];
+            
+            let filtered = programsData;
+            if (currentFilter !== 'all') {
+                filtered = programsData.filter(p => p.category.includes(currentFilter));
+            }
+
+            container.innerHTML = filtered.map(program => `
+                <div class="program-card">
+                    <h3>${program.name}</h3>
+                    <span class="type-badge type-${program.type}">${texts['type-' + program.type]}</span>
+                    <div class="categories">
+                        ${program.category.map(cat => `<span class="category-tag">${texts['cat-' + cat]}</span>`).join('')}
+                    </div>
+                    <p><strong>${texts['what-you-get']}:</strong> ${program.whatYouGet[currentLang]}</p>
+                    <p><strong>${texts['requirements']}:</strong> ${program.requirements[currentLang]}</p>
+                    <p><a href="${program.link}" target="_blank">${texts['official-link']}</a></p>
+                    <p class="last-verified">${texts['last-verified']}: ${program.lastVerified}</p>
+                </div>
+            `).join('');
+        }
+
+        fetch('data/programs.json')
+            .then(response => response.json())
+            .then(data => {
+                programsData = data;
+                renderPrograms();
+            })
+            .catch(error => {
+                console.error('Error loading programs:', error);
+                document.getElementById('programs-container').innerHTML = '<p style="text-align:center;color:var(--color-text-muted);">Failed to load programs data</p>';
+            });
+
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                currentFilter = e.target.dataset.category;
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
+                renderPrograms();
+            });
+        });
+    </script>
+</body>
+</html>
