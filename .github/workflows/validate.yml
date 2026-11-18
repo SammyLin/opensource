@@ -3,17 +3,19 @@ name: Validate Programs Data
 on:
   pull_request:
     paths:
-      - 'data/programs.json'
+      - 'public/data/programs.json'
       - 'validate.js'
   push:
     branches:
       - main
     paths:
-      - 'data/programs.json'
+      - 'public/data/programs.json'
       - 'validate.js'
 
 jobs:
   validate:
+    # IMPORTANT: Must run on GitHub-hosted runner (NOT self-hosted)
+    # for security on public repo accepting PRs from forks
     runs-on: ubuntu-latest
     
     steps:

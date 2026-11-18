@@ -17,7 +17,7 @@ git clone https://github.com/YOUR_USERNAME/opensource.git
 cd opensource
 ```
 
-#### 2. 編輯 `data/programs.json`
+#### 2. 編輯 `public/data/programs.json`
 
 在陣列中新增一個條目，包含所有必要欄位：
 
@@ -75,7 +75,7 @@ node validate.js
 #### 4. 提交 Pull Request
 
 ```bash
-git add data/programs.json
+git add public/data/programs.json
 git commit -m "Add [方案名稱]"
 git push origin main
 ```
@@ -105,7 +105,7 @@ git clone https://github.com/YOUR_USERNAME/opensource.git
 cd opensource
 ```
 
-#### 2. 编辑 `data/programs.json`
+#### 2. 编辑 `public/data/programs.json`
 
 在数组中新增一个条目，包含所有必要字段：
 
@@ -163,7 +163,7 @@ node validate.js
 #### 4. 提交 Pull Request
 
 ```bash
-git add data/programs.json
+git add public/data/programs.json
 git commit -m "Add [方案名称]"
 git push origin main
 ```
@@ -193,7 +193,7 @@ git clone https://github.com/YOUR_USERNAME/opensource.git
 cd opensource
 ```
 
-#### 2. Edit `data/programs.json`
+#### 2. Edit `public/data/programs.json`
 
 Add a new entry to the array with all required fields:
 
@@ -251,7 +251,7 @@ Ensure all fields are correct and pass validation.
 #### 4. Submit a Pull Request
 
 ```bash
-git add data/programs.json
+git add public/data/programs.json
 git commit -m "Add [Program Name]"
 git push origin main
 ```

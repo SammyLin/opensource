@@ -99,9 +99,9 @@ function validateProgram(program, index) {
 }
 
 function main() {
-    console.log('🔍 Validating data/programs.json...\n');
+    console.log('🔍 Validating public/data/programs.json...\n');
     
-    const filePath = path.join(__dirname, 'data', 'programs.json');
+    const filePath = path.join(__dirname, 'public', 'data', 'programs.json');
     
     if (!fs.existsSync(filePath)) {
         error('data/programs.json file not found');

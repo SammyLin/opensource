@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/SammyLin/opensource#readme",
   "dependencies": {
-    "playwright": "^1.65.1"
+    "playwright": "^1.65.1",
+    "puppeteer-core": "^25.18.1"
   }
 }

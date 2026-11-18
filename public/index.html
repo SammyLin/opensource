@@ -22,215 +22,253 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "Noto Sans TC", Roboto, "Helvetica Neue", Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: #f5f5f5;
+            color: #1a1a1a;
+            background: #f8f9fa;
+        }
+
+        nav {
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a1a;
+            text-decoration: none;
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 4px;
+            background: #f3f4f6;
+            padding: 4px;
+            border-radius: 20px;
+        }
+
+        .lang-switch button {
+            padding: 6px 16px;
+            border: none;
+            background: transparent;
+            color: #6b7280;
+            cursor: pointer;
+            border-radius: 16px;
+            font-size: 14px;
+            transition: all 0.2s;
+            font-weight: 500;
+        }
+
+        .lang-switch button.active {
+            background: #1a1a1a;
+            color: white;
+        }
+
+        .lang-switch button:hover:not(.active) {
+            color: #1a1a1a;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 40px 24px;
         }
 
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
 
         header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            font-size: 48px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
         }
 
         header p {
-            font-size: 1.2em;
-            opacity: 0.95;
+            font-size: 16px;
+            color: #6b7280;
+            margin-bottom: 4px;
         }
 
-        .lang-switch {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-            background: white;
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        .lang-switch button {
-            padding: 8px 16px;
-            margin: 0 5px;
-            border: 2px solid #667eea;
-            background: white;
-            color: #667eea;
-            cursor: pointer;
-            border-radius: 4px;
+        .date-line {
             font-size: 14px;
-            transition: all 0.3s;
-        }
-
-        .lang-switch button.active {
-            background: #667eea;
-            color: white;
-        }
-
-        .lang-switch button:hover {
-            background: #667eea;
-            color: white;
+            color: #9ca3af;
         }
 
         .contribute-section {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-            padding: 60px 40px;
-            border-radius: 12px;
-            margin-bottom: 40px;
-            text-align: center;
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 48px;
+            margin-bottom: 32px;
         }
 
         .contribute-section h2 {
-            font-size: 2.2em;
-            margin-bottom: 20px;
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 16px;
         }
 
-        .contribute-section p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-            opacity: 0.95;
+        .contribute-section > p {
+            font-size: 16px;
+            color: #6b7280;
+            margin-bottom: 32px;
         }
 
         .steps {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            margin: 40px 0;
+            gap: 24px;
+            margin: 32px 0;
             flex-wrap: wrap;
         }
 
         .step {
-            background: rgba(255,255,255,0.15);
-            backdrop-filter: blur(10px);
-            padding: 30px;
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            padding: 24px;
             border-radius: 12px;
             flex: 1;
             min-width: 200px;
-            max-width: 300px;
+            max-width: 280px;
         }
 
         .step-number {
-            font-size: 3em;
-            font-weight: bold;
-            margin-bottom: 10px;
-            opacity: 0.9;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #10b981;
         }
 
         .step h3 {
-            font-size: 1.4em;
-            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1a1a1a;
+        }
+
+        .step p {
+            font-size: 14px;
+            color: #6b7280;
         }
 
         .contribute-buttons {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 12px;
             flex-wrap: wrap;
         }
 
         .contribute-buttons a {
             display: inline-block;
-            padding: 15px 30px;
-            background: white;
-            color: #f5576c;
+            padding: 10px 20px;
+            background: #1a1a1a;
+            color: white;
             text-decoration: none;
             border-radius: 8px;
-            font-weight: 600;
-            font-size: 1.1em;
-            transition: all 0.3s;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.2s;
         }
 
         .contribute-buttons a:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+            background: #374151;
         }
 
         .filters {
-            margin-bottom: 30px;
+            margin-bottom: 32px;
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
+            gap: 8px;
         }
 
         .filter-btn {
-            padding: 10px 20px;
-            border: 2px solid #667eea;
+            padding: 8px 20px;
+            border: 1px solid #e5e7eb;
             background: white;
-            color: #667eea;
+            color: #6b7280;
             cursor: pointer;
             border-radius: 20px;
-            transition: all 0.3s;
+            transition: all 0.2s;
             font-size: 14px;
+            font-weight: 500;
         }
 
-        .filter-btn:hover,
+        .filter-btn:hover {
+            border-color: #d1d5db;
+            color: #1a1a1a;
+        }
+
         .filter-btn.active {
-            background: #667eea;
+            background: #1a1a1a;
             color: white;
+            border-color: #1a1a1a;
         }
 
         .programs {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 16px;
             margin-bottom: 40px;
         }
 
         .program-card {
             background: white;
+            border: 1px solid #e5e7eb;
             border-radius: 12px;
             padding: 24px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            transition: all 0.3s;
+            transition: all 0.2s;
         }
 
         .program-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-color: #d1d5db;
         }
 
         .program-card h3 {
-            font-size: 1.3em;
+            font-size: 18px;
+            font-weight: 600;
             margin-bottom: 12px;
-            color: #667eea;
+            color: #1a1a1a;
         }
 
         .type-badge {
             display: inline-block;
-            padding: 4px 12px;
-            border-radius: 12px;
+            padding: 4px 10px;
+            border-radius: 6px;
             font-size: 12px;
-            font-weight: 600;
+            font-weight: 500;
             margin-bottom: 12px;
         }
 
         .type-direct_activation {
-            background: #d4edda;
-            color: #155724;
+            background: #d1fae5;
+            color: #065f46;
         }
 
         .type-application_required {
-            background: #fff3cd;
-            color: #856404;
+            background: #fef3c7;
+            color: #92400e;
         }
 
         .type-high_bar {
-            background: #f8d7da;
-            color: #721c24;
+            background: #fee2e2;
+            color: #991b1b;
         }
 
         .categories {
@@ -241,22 +279,25 @@
         }
 
         .category-tag {
-            padding: 3px 10px;
-            background: #e9ecef;
-            border-radius: 8px;
+            padding: 3px 8px;
+            background: #f3f4f6;
+            border-radius: 6px;
             font-size: 11px;
-            color: #495057;
+            color: #6b7280;
+            font-weight: 500;
         }
 
         .program-card p {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             font-size: 14px;
+            color: #4b5563;
+            line-height: 1.5;
         }
 
         .program-card a {
-            color: #667eea;
+            color: #10b981;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 500;
         }
 
         .program-card a:hover {
@@ -265,48 +306,64 @@
 
         .last-verified {
             font-size: 12px;
-            color: #6c757d;
-            margin-top: 10px;
+            color: #9ca3af;
+            margin-top: 8px;
         }
 
         footer {
             text-align: center;
-            padding: 40px 20px;
-            background: white;
-            margin-top: 40px;
-            border-radius: 12px;
+            padding: 32px 0;
+            margin-top: 48px;
+            border-top: 1px solid #e5e7eb;
         }
 
         footer a {
-            color: #667eea;
+            color: #10b981;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 500;
         }
 
         footer a:hover {
             text-decoration: underline;
         }
 
+        footer p {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
         @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 16px;
+            }
+
+            .logo {
+                font-size: 16px;
+            }
+
+            .container {
+                padding: 24px 16px;
+            }
+
             header h1 {
-                font-size: 1.8em;
+                font-size: 32px;
             }
 
             header p {
-                font-size: 1em;
+                font-size: 14px;
             }
 
             .contribute-section {
-                padding: 40px 20px;
+                padding: 32px 24px;
             }
 
             .contribute-section h2 {
-                font-size: 1.6em;
+                font-size: 24px;
             }
 
             .steps {
                 flex-direction: column;
-                gap: 20px;
+                gap: 16px;
             }
 
             .step {
@@ -317,26 +374,28 @@
                 grid-template-columns: 1fr;
             }
 
-            .lang-switch {
-                position: relative;
-                top: 0;
-                right: 0;
-                margin-bottom: 20px;
+            .filters {
+                gap: 6px;
+            }
+
+            .filter-btn {
+                font-size: 13px;
+                padding: 6px 16px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="lang-switch">
-        <button onclick="switchLang('zh-Hant')" class="active" id="btn-zh-Hant">繁體中文</button>
-        <button onclick="switchLang('zh-Hans')" id="btn-zh-Hans">简体中文</button>
-        <button onclick="switchLang('en')" id="btn-en">English</button>
-    </div>
-
-    <header>
-        <h1 id="site-title">開源福利社</h1>
-        <p id="site-desc">為開源專案維護者提供的免費工具與服務</p>
-    </header>
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo" id="nav-logo">OSS Perks｜開源福利社</a>
+            <div class="lang-switch">
+                <button onclick="switchLang('zh-Hant')" class="active" id="btn-zh-Hant">繁</button>
+                <button onclick="switchLang('zh-Hans')" id="btn-zh-Hans">简</button>
+                <button onclick="switchLang('en')" id="btn-en">EN</button>
+            </div>
+        </div>
+    </nav>
 
     <div class="container">
         <div class="contribute-section">
@@ -589,6 +648,10 @@
             .then(data => {
                 programsData = data;
                 renderPrograms();
+            })
+            .catch(error => {
+                console.error('Error loading programs:', error);
+                document.getElementById('programs-container').innerHTML = '<p style="text-align:center;color:#999;">Failed to load programs data</p>';
             });
 
         document.querySelectorAll('.filter-btn').forEach(btn => {

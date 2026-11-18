@@ -41,16 +41,33 @@
 本專案是純靜態網站，無需建置步驟：
 
 ```bash
-# 方法 1: 使用 Python 的內建伺服器
-python3 -m http.server 8000
+# 方法 1: 使用 Wrangler Pages 本地開發伺服器（推薦）
+npx wrangler pages dev public
 
-# 方法 2: 使用 Node.js 的 http-server
-npx http-server
+# 方法 2: 使用 Python 的內建伺服器
+cd public && python3 -m http.server 8000
 
-# 方法 3: 直接用瀏覽器開啟 index.html
+# 方法 3: 使用 Node.js 的 http-server
+npx http-server public
+
+# 方法 4: 直接用瀏覽器開啟 public/index.html
 ```
 
-然後在瀏覽器中開啟 `http://localhost:8000`
+然後在瀏覽器中開啟顯示的 URL（通常是 `http://localhost:8787` 或 `http://localhost:8000`）
+
+### 部署
+
+網站部署在 Cloudflare Pages：
+
+```bash
+# 手動部署（需要 CLOUDFLARE_API_TOKEN 環境變數）
+./scripts/deploy.sh
+
+# 或直接使用 wrangler
+npx wrangler pages deploy public --project-name opensource-3mi --branch main
+```
+
+自動部署：推送到 `main` 分支會自動觸發 GitHub Actions 部署。
 
 ### 資料驗證
 
@@ -103,16 +120,33 @@ node validate.js
 本项目是纯静态网站，无需构建步骤：
 
 ```bash
-# 方法 1: 使用 Python 的内置服务器
-python3 -m http.server 8000
+# 方法 1: 使用 Wrangler Pages 本地开发服务器（推荐）
+npx wrangler pages dev public
 
-# 方法 2: 使用 Node.js 的 http-server
-npx http-server
+# 方法 2: 使用 Python 的内置服务器
+cd public && python3 -m http.server 8000
 
-# 方法 3: 直接用浏览器打开 index.html
+# 方法 3: 使用 Node.js 的 http-server
+npx http-server public
+
+# 方法 4: 直接用浏览器打开 public/index.html
 ```
 
-然后在浏览器中打开 `http://localhost:8000`
+然后在浏览器中打开显示的 URL（通常是 `http://localhost:8787` 或 `http://localhost:8000`）
+
+### 部署
+
+网站部署在 Cloudflare Pages：
+
+```bash
+# 手动部署（需要 CLOUDFLARE_API_TOKEN 环境变量）
+./scripts/deploy.sh
+
+# 或直接使用 wrangler
+npx wrangler pages deploy public --project-name opensource-3mi --branch main
+```
+
+自动部署：推送到 `main` 分支会自动触发 GitHub Actions 部署。
 
 ### 数据验证
 
@@ -165,16 +199,33 @@ All program data is stored in the `data/programs.json` file. Each entry contains
 This is a plain static website with no build step required:
 
 ```bash
-# Method 1: Using Python's built-in server
-python3 -m http.server 8000
+# Method 1: Using Wrangler Pages local dev server (recommended)
+npx wrangler pages dev public
 
-# Method 2: Using Node.js http-server
-npx http-server
+# Method 2: Using Python's built-in server
+cd public && python3 -m http.server 8000
 
-# Method 3: Open index.html directly in browser
+# Method 3: Using Node.js http-server
+npx http-server public
+
+# Method 4: Open public/index.html directly in browser
 ```
 
-Then open `http://localhost:8000` in your browser
+Then open the displayed URL in your browser (usually `http://localhost:8787` or `http://localhost:8000`)
+
+### Deployment
+
+The site is deployed on Cloudflare Pages:
+
+```bash
+# Manual deployment (requires CLOUDFLARE_API_TOKEN environment variable)
+./scripts/deploy.sh
+
+# Or use wrangler directly
+npx wrangler pages deploy public --project-name opensource-3mi --branch main
+```
+
+Automatic deployment: Pushing to the `main` branch automatically triggers GitHub Actions deployment.
 
 ### Data Validation
 

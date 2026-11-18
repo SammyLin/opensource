@@ -14,7 +14,7 @@ async function takeScreenshots() {
     console.log('Taking zh-Hant desktop screenshot...');
     const pageZhHant = await context.newPage();
     await pageZhHant.setViewportSize({ width: 1920, height: 1080 });
-    await pageZhHant.goto('http://localhost:8000');
+    await pageZhHant.goto('http://localhost:8000/public/');
     await pageZhHant.waitForTimeout(1000);
     await pageZhHant.screenshot({ 
         path: 'pr-media/screenshot-zh-hant-desktop.png',
@@ -26,7 +26,7 @@ async function takeScreenshots() {
     console.log('Taking zh-Hans desktop screenshot...');
     const pageZhHans = await context.newPage();
     await pageZhHans.setViewportSize({ width: 1920, height: 1080 });
-    await pageZhHans.goto('http://localhost:8000');
+    await pageZhHans.goto('http://localhost:8000/public/');
     await pageZhHans.waitForTimeout(500);
     await pageZhHans.click('#btn-zh-Hans');
     await pageZhHans.waitForTimeout(1000);
@@ -40,7 +40,7 @@ async function takeScreenshots() {
     console.log('Taking English desktop screenshot...');
     const pageEn = await context.newPage();
     await pageEn.setViewportSize({ width: 1920, height: 1080 });
-    await pageEn.goto('http://localhost:8000');
+    await pageEn.goto('http://localhost:8000/public/');
     await pageEn.waitForTimeout(500);
     await pageEn.click('#btn-en');
     await pageEn.waitForTimeout(1000);
@@ -54,7 +54,7 @@ async function takeScreenshots() {
     console.log('Taking zh-Hant mobile screenshot with filter...');
     const pageMobile = await context.newPage();
     await pageMobile.setViewportSize({ width: 390, height: 844 });
-    await pageMobile.goto('http://localhost:8000');
+    await pageMobile.goto('http://localhost:8000/public/');
     await pageMobile.waitForTimeout(1000);
     
     // Apply a filter (e.g., AI Tools)
