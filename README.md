@@ -67,7 +67,26 @@ npx http-server public
 
 ```bash
 node validate.js
+# 或
+npm run validate
 ```
+
+### 截圖（PR 用）
+
+先在本機啟動靜態站（例如 `cd public && python3 -m http.server 8000`），再執行：
+
+```bash
+npx playwright install chromium   # 首次需要
+npm run screenshots -- before pr-media/pr2
+npm run screenshots -- after pr-media/pr2
+```
+
+腳本見根目錄 `take-screenshots.js`。
+
+### 授權
+
+- **程式碼**（網站、腳本、文件等）：[MIT](./LICENSE)（Copyright © 2026 Sammy Lin）
+- **方案資料**（`public/data/programs.json`）：[CC BY 4.0](./public/data/LICENSE) — https://creativecommons.org/licenses/by/4.0/
 
 ### 貢獻方式
 
@@ -138,7 +157,26 @@ npx http-server public
 
 ```bash
 node validate.js
+# 或
+npm run validate
 ```
+
+### 截图（PR 用）
+
+先在本地启动静态站（例如 `cd public && python3 -m http.server 8000`），再执行：
+
+```bash
+npx playwright install chromium   # 首次需要
+npm run screenshots -- before pr-media/pr2
+npm run screenshots -- after pr-media/pr2
+```
+
+脚本见根目录 `take-screenshots.js`。
+
+### 许可
+
+- **代码**（网站、脚本、文档等）：[MIT](./LICENSE)（Copyright © 2026 Sammy Lin）
+- **方案数据**（`public/data/programs.json`）：[CC BY 4.0](./public/data/LICENSE) — https://creativecommons.org/licenses/by/4.0/
 
 ### 贡献方式
 
@@ -209,7 +247,26 @@ Run the validation script to ensure JSON is properly formatted:
 
 ```bash
 node validate.js
+# or
+npm run validate
 ```
+
+### Screenshots (for PRs)
+
+Serve the site locally first (e.g. `cd public && python3 -m http.server 8000`), then:
+
+```bash
+npx playwright install chromium   # first time only
+npm run screenshots -- before pr-media/pr2
+npm run screenshots -- after pr-media/pr2
+```
+
+See `take-screenshots.js` in the repo root.
+
+### License
+
+- **Code** (site, scripts, docs, etc.): [MIT](./LICENSE) (Copyright © 2026 Sammy Lin)
+- **Program data** (`public/data/programs.json`): [CC BY 4.0](./public/data/LICENSE) — https://creativecommons.org/licenses/by/4.0/
 
 ### Contributing
 

@@ -4,7 +4,9 @@
   "description": "[繁體中文](#繁體中文) | [简体中文](#简体中文) | [English](#english)",
   "main": "validate.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "validate": "node validate.js",
+    "screenshots": "node take-screenshots.js",
+    "test": "node validate.js"
   },
   "repository": {
     "type": "git",

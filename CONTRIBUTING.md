@@ -37,9 +37,17 @@ cd opensource
   "type": "選擇其中之一",
   "category": ["至少選擇一個類別"],
   "link": "https://官方來源連結",
-  "lastVerified": "YYYY-MM-DD"
+  "lastVerified": "YYYY-MM-DD",
+  "pending": {
+    "zh-Hant": "待確認",
+    "zh-Hans": "待确认",
+    "en": "To be confirmed",
+    "link": "https://官方來源連結"
+  }
 }
 ```
+
+`pending` 為**選填**：僅在某項申請條件暫時無法從官方來源確認時使用；網站會顯示「待確認」徽章。
 
 #### 欄位說明
 
@@ -63,6 +71,7 @@ cd opensource
   - `ai_tools` - AI 工具
 - **link**: 官方來源連結（必填）
 - **lastVerified**: 最後驗證日期，格式 YYYY-MM-DD（如 2026-11-18）
+- **pending**（選填）：尚未確認的說明，需含 `zh-Hant` / `zh-Hans` / `en`；可選 `link` 指向官方來源
 
 #### 3. 執行驗證
 
@@ -82,6 +91,13 @@ git push origin main
 
 然後在 GitHub 上開啟 Pull Request。
 
+### 授權條款
+
+提交貢獻即表示您同意：
+
+- **程式碼／網站／文件**貢獻以 [MIT](./LICENSE) 授權
+- **`public/data/programs.json` 資料**貢獻以 [CC BY 4.0](./public/data/LICENSE) 授權
+
 ### 重要原則
 
 - ✅ 每個條目必須包含**官方來源連結**
@@ -89,6 +105,7 @@ git push origin main
 - ✅ 簡體中文必須使用**大陸用詞**，而非僅做繁簡轉換
 - ✅ 在提交前請訪問官方頁面**驗證資訊正確性**
 - ✅ 將 `lastVerified` 設為您驗證的日期
+- ✅ 無法確認的條件請用選填 `pending` 標明，勿臆造
 
 ---
 
@@ -125,9 +142,17 @@ cd opensource
   "type": "选择其中之一",
   "category": ["至少选择一个类别"],
   "link": "https://官方来源链接",
-  "lastVerified": "YYYY-MM-DD"
+  "lastVerified": "YYYY-MM-DD",
+  "pending": {
+    "zh-Hant": "待確認",
+    "zh-Hans": "待确认",
+    "en": "To be confirmed",
+    "link": "https://官方来源链接"
+  }
 }
 ```
+
+`pending` 为**选填**：仅在某项申请条件暂时无法从官方来源确认时使用；网站会显示「待确认」徽章。
 
 #### 字段说明
 
@@ -151,6 +176,7 @@ cd opensource
   - `ai_tools` - AI 工具
 - **link**: 官方来源链接（必填）
 - **lastVerified**: 最后验证日期，格式 YYYY-MM-DD（如 2026-11-18）
+- **pending**（选填）：尚未确认的说明，需含 `zh-Hant` / `zh-Hans` / `en`；可选 `link` 指向官方来源
 
 #### 3. 运行验证
 
@@ -170,6 +196,13 @@ git push origin main
 
 然后在 GitHub 上开启 Pull Request。
 
+### 许可条款
+
+提交贡献即表示您同意：
+
+- **代码／网站／文档**贡献以 [MIT](./LICENSE) 授权
+- **`public/data/programs.json` 数据**贡献以 [CC BY 4.0](./public/data/LICENSE) 授权
+
 ### 重要原则
 
 - ✅ 每个条目必须包含**官方来源链接**
@@ -177,6 +210,7 @@ git push origin main
 - ✅ 简体中文必须使用**大陆用词**，而非仅做繁简转换
 - ✅ 在提交前请访问官方页面**验证信息正确性**
 - ✅ 将 `lastVerified` 设为您验证的日期
+- ✅ 无法确认的条件请用选填 `pending` 标明，勿臆造
 
 ---
 
@@ -213,9 +247,17 @@ Add a new entry to the array with all required fields:
   "type": "one of the allowed values",
   "category": ["at least one category"],
   "link": "https://official-source-link",
-  "lastVerified": "YYYY-MM-DD"
+  "lastVerified": "YYYY-MM-DD",
+  "pending": {
+    "zh-Hant": "待確認",
+    "zh-Hans": "待确认",
+    "en": "To be confirmed",
+    "link": "https://official-source-link"
+  }
 }
 ```
+
+`pending` is **optional**: use it only when a requirement cannot yet be confirmed from an official source. The site shows a “To be confirmed” badge.
 
 #### Field Descriptions
 
@@ -239,6 +281,7 @@ Add a new entry to the array with all required fields:
   - `ai_tools` - AI Tools
 - **link**: Official source link (required)
 - **lastVerified**: Last verified date in YYYY-MM-DD format (e.g., 2026-11-18)
+- **pending** (optional): Unconfirmed note with `zh-Hant` / `zh-Hans` / `en`; optional `link` to the official source
 
 #### 3. Run Validation
 
@@ -258,6 +301,13 @@ git push origin main
 
 Then open a Pull Request on GitHub.
 
+### Licensing
+
+By contributing, you agree that:
+
+- **Code / site / documentation** contributions are licensed under [MIT](./LICENSE)
+- **`public/data/programs.json` data** contributions are licensed under [CC BY 4.0](./public/data/LICENSE)
+
 ### Important Guidelines
 
 - ✅ Every entry must include an **official source link**
@@ -265,3 +315,4 @@ Then open a Pull Request on GitHub.
 - ✅ Simplified Chinese must use **mainland China terminology**, not just character conversion
 - ✅ Visit the official page to **verify accuracy** before submitting
 - ✅ Set `lastVerified` to the date you verified the information
+- ✅ Mark unconfirmed requirements with optional `pending`; do not invent details
