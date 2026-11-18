@@ -1,0 +1,13 @@
+render tier: 5 screenshots in /workspace/public/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+public/index.html
+  FAIL 40 :1 [1280px] contrast 4.37:1 against the pixels behind < 4.5:1 on p "Failed to load programs " | fix: Raise the contrast to threshold
+  FAIL 40 :1 [1280px] contrast 2.41:1 against the pixels behind < 4.5:1 on a "發 PR 新增方案"
+  FAIL 48 :142 colour literal rgba(0,0,0,0.04) outside tokens (background on .lang-switch button:hover:not…) | fix: Lift the value into the token block
+  FAIL 54 :524 eyebrow "發現新的免費方案？或是發現過期的資訊？歡迎提交 PR 幫助我們…" before <div> | fix: Cut it; the heading already says this (craft.md § 7 has twelve other openings)
+  REFLEX 24b :499 gap: 6px (off the 4px scale) on .filters | fix: Use the 4px spacing scale
+  REFLEX 24b :504 padding: 6px 16px (off the 4px scale) on .filter-btn
+  WARN 23 :1 [1280px] accent paints ~6.0% of the 1280x800 viewport | fix: Confirm this is a declared posture surface, else retreat to <= 5%
+  WARN 41 :1 accent fills a surface but --color-accent-ink is undefined | fix: Define and apply --color-accent-ink
+  WARN 77 :1 [1440px] 1 sections, hero and footer included | fix: A landing strip, not a page: six to nine sections, five on a thin prompt (layout.md § 3)
+  WARN F4 :294 3 filled primary-button recipes: .lang-switch button.active + .filter-btn + .filter-… | fix: One filled primary per page; demote the rest to outline/quiet variants
+sloplint: 4 FAIL, 2 REFLEX, 4 WARN across 1 file(s).
