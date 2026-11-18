@@ -19,7 +19,7 @@ cd opensource
 
 #### 2. 編輯 `public/data/programs.json`
 
-在陣列中新增一個條目，包含所有必要欄位：
+在 `programs` 陣列中新增一個條目。檔案開頭的 `$schema` 會讓 VS Code 等編輯器自動補完欄位、即時標出錯誤。必要欄位：
 
 ```json
 {
@@ -61,7 +61,7 @@ cd opensource
   - `direct_activation` - 直接開通（無需申請）
   - `application_required` - 要申請
   - `high_bar` - 門檻高
-- **category**: 陣列，可包含一個或多個類別
+- **category**: 陣列，填檔案上方 `categories` 裡的 id（一個或多個）。需要新類別時，先在 `categories` 加一筆三語名稱，網站篩選會自動出現
   - `ide` - IDE
   - `containers` - 容器
   - `monitoring` - 監控
@@ -69,7 +69,7 @@ cd opensource
   - `code_quality` - 程式碼品質
   - `password_management` - 密碼管理
   - `ai_tools` - AI 工具
-- **link**: 官方來源連結（必填）
+- **link**: 申請／開通頁面（必填），網站的「前往申請」按鈕會連到這裡
 - **lastVerified**: 最後驗證日期，格式 YYYY-MM-DD（如 2026-11-18）
 - **pending**（選填）：尚未確認的說明，需含 `zh-Hant` / `zh-Hans` / `en`；可選 `link` 指向官方來源
 
@@ -124,7 +124,7 @@ cd opensource
 
 #### 2. 编辑 `public/data/programs.json`
 
-在数组中新增一个条目，包含所有必要字段：
+在 `programs` 数组中新增一个条目。文件开头的 `$schema` 会让 VS Code 等编辑器自动补全字段、实时标出错误。必要字段：
 
 ```json
 {
@@ -166,7 +166,7 @@ cd opensource
   - `direct_activation` - 直接开通（无需申请）
   - `application_required` - 要申请
   - `high_bar` - 门槛高
-- **category**: 数组，可包含一个或多个类别
+- **category**: 数组，填文件上方 `categories` 里的 id（一个或多个）。需要新类别时，先在 `categories` 加一条三语名称，网站筛选会自动出现
   - `ide` - IDE
   - `containers` - 容器
   - `monitoring` - 监控
@@ -174,7 +174,7 @@ cd opensource
   - `code_quality` - 代码质量
   - `password_management` - 密码管理
   - `ai_tools` - AI 工具
-- **link**: 官方来源链接（必填）
+- **link**: 申请／开通页面（必填），网站的「前往申请」按钮会链接到这里
 - **lastVerified**: 最后验证日期，格式 YYYY-MM-DD（如 2026-11-18）
 - **pending**（选填）：尚未确认的说明，需含 `zh-Hant` / `zh-Hans` / `en`；可选 `link` 指向官方来源
 
@@ -229,7 +229,7 @@ cd opensource
 
 #### 2. Edit `public/data/programs.json`
 
-Add a new entry to the array with all required fields:
+Add a new entry to the `programs` array. The `$schema` at the top of the file gives VS Code and other editors autocomplete and inline errors. Required fields:
 
 ```json
 {
@@ -271,7 +271,7 @@ Add a new entry to the array with all required fields:
   - `direct_activation` - Direct Activation (no application needed)
   - `application_required` - Application Required
   - `high_bar` - High Bar
-- **category**: Array, must include one or more categories
+- **category**: Array of ids from the `categories` map at the top of the file (one or more). For a new category, add it to `categories` with three-language labels first; the site filter picks it up automatically
   - `ide` - IDE
   - `containers` - Containers
   - `monitoring` - Monitoring

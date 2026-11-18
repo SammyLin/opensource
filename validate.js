@@ -1,163 +1,63 @@
+// Validates public/data/programs.json. Run: node validate.js
 const fs = require('fs');
 const path = require('path');
 
-const VALID_TYPES = ['direct_activation', 'application_required', 'high_bar'];
-const VALID_CATEGORIES = ['ide', 'containers', 'monitoring', 'security_scanning', 'code_quality', 'password_management', 'ai_tools'];
-const REQUIRED_LANGS = ['zh-Hant', 'zh-Hans', 'en'];
-const DATE_REGEX = /^\d{4}-\d{2}-\d{2}$/;
-const URL_REGEX = /^https?:\/\/.+/;
+const FILE = path.join(__dirname, 'public', 'data', 'programs.json');
+const TYPES = ['direct_activation', 'application_required', 'high_bar'];
+const LANGS = ['zh-Hant', 'zh-Hans', 'en'];
+const errors = [];
 
-let hasErrors = false;
+const isText = v => typeof v === 'string' && v.trim() !== '';
+const checkI18n = (obj, where) => {
+    if (!obj || typeof obj !== 'object') return errors.push(`${where}: missing`);
+    LANGS.forEach(l => isText(obj[l]) || errors.push(`${where}.${l}: missing or empty`));
+};
 
-function error(message) {
-    console.error(`❌ ERROR: ${message}`);
-    hasErrors = true;
+let data;
+try {
+    data = JSON.parse(fs.readFileSync(FILE, 'utf-8'));
+} catch (err) {
+    console.error(`ERROR: cannot read/parse ${FILE}: ${err.message}`);
+    process.exit(1);
 }
 
-function success(message) {
-    console.log(`✅ ${message}`);
+if (!data.categories || typeof data.categories !== 'object') errors.push("root: missing 'categories' object");
+if (!Array.isArray(data.programs)) errors.push("root: 'programs' must be an array");
+const categories = data.categories || {};
+const programs = Array.isArray(data.programs) ? data.programs : [];
+
+Object.entries(categories).forEach(([id, label]) => checkI18n(label, `categories.${id}`));
+
+const seen = new Set();
+programs.forEach((p, i) => {
+    const id = `programs[${i}]${p.name ? ` (${p.name})` : ''}`;
+    if (!isText(p.name)) errors.push(`${id}: missing 'name'`);
+    else if (seen.has(p.name)) errors.push(`${id}: duplicate name`);
+    else seen.add(p.name);
+    checkI18n(p.whatYouGet, `${id}.whatYouGet`);
+    checkI18n(p.requirements, `${id}.requirements`);
+    if (!TYPES.includes(p.type)) errors.push(`${id}: 'type' must be one of ${TYPES.join(', ')}`);
+    if (!Array.isArray(p.category) || p.category.length === 0) {
+        errors.push(`${id}: 'category' must be a non-empty array`);
+    } else {
+        p.category.filter(c => !(c in categories)).forEach(c =>
+            errors.push(`${id}: unknown category '${c}' (add it to 'categories' first; known: ${Object.keys(categories).join(', ')})`));
+    }
+    if (!/^https?:\/\/.+/.test(p.link || '')) errors.push(`${id}: invalid 'link'`);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(p.lastVerified || '') || isNaN(Date.parse(p.lastVerified))) {
+        errors.push(`${id}: 'lastVerified' must be a valid YYYY-MM-DD date`);
+    }
+    if (p.pending !== undefined) {
+        checkI18n(p.pending, `${id}.pending`);
+        if (p.pending && p.pending.link !== undefined && !/^https?:\/\/.+/.test(p.pending.link)) {
+            errors.push(`${id}: invalid 'pending.link'`);
+        }
+    }
+});
+
+if (errors.length) {
+    errors.forEach(e => console.error(`ERROR: ${e}`));
+    console.error(`\nValidation FAILED (${errors.length} error${errors.length > 1 ? 's' : ''}).`);
+    process.exit(1);
 }
-
-function validateProgram(program, index) {
-    const programId = `Program #${index + 1}${program.name ? ` (${program.name})` : ''}`;
-    
-    // Check required fields exist
-    if (!program.name) {
-        error(`${programId}: Missing 'name' field`);
-    } else {
-        success(`${programId}: Has name`);
-    }
-    
-    // Validate whatYouGet
-    if (!program.whatYouGet || typeof program.whatYouGet !== 'object') {
-        error(`${programId}: Missing or invalid 'whatYouGet' field`);
-    } else {
-        REQUIRED_LANGS.forEach(lang => {
-            if (!program.whatYouGet[lang] || typeof program.whatYouGet[lang] !== 'string' || program.whatYouGet[lang].trim() === '') {
-                error(`${programId}: Missing or empty 'whatYouGet.${lang}'`);
-            }
-        });
-        if (program.whatYouGet['zh-Hant'] && program.whatYouGet['zh-Hans'] && program.whatYouGet['en']) {
-            success(`${programId}: All three languages present in whatYouGet`);
-        }
-    }
-    
-    // Validate requirements
-    if (!program.requirements || typeof program.requirements !== 'object') {
-        error(`${programId}: Missing or invalid 'requirements' field`);
-    } else {
-        REQUIRED_LANGS.forEach(lang => {
-            if (!program.requirements[lang] || typeof program.requirements[lang] !== 'string' || program.requirements[lang].trim() === '') {
-                error(`${programId}: Missing or empty 'requirements.${lang}'`);
-            }
-        });
-        if (program.requirements['zh-Hant'] && program.requirements['zh-Hans'] && program.requirements['en']) {
-            success(`${programId}: All three languages present in requirements`);
-        }
-    }
-    
-    // Validate type
-    if (!program.type) {
-        error(`${programId}: Missing 'type' field`);
-    } else if (!VALID_TYPES.includes(program.type)) {
-        error(`${programId}: Invalid 'type' value '${program.type}'. Must be one of: ${VALID_TYPES.join(', ')}`);
-    } else {
-        success(`${programId}: Valid type '${program.type}'`);
-    }
-    
-    // Validate category
-    if (!program.category || !Array.isArray(program.category)) {
-        error(`${programId}: Missing or invalid 'category' field (must be an array)`);
-    } else if (program.category.length === 0) {
-        error(`${programId}: 'category' array is empty (must have at least one category)`);
-    } else {
-        const invalidCategories = program.category.filter(cat => !VALID_CATEGORIES.includes(cat));
-        if (invalidCategories.length > 0) {
-            error(`${programId}: Invalid categories: ${invalidCategories.join(', ')}. Valid categories are: ${VALID_CATEGORIES.join(', ')}`);
-        } else {
-            success(`${programId}: Valid categories: ${program.category.join(', ')}`);
-        }
-    }
-    
-    // Validate link
-    if (!program.link) {
-        error(`${programId}: Missing 'link' field`);
-    } else if (!URL_REGEX.test(program.link)) {
-        error(`${programId}: Invalid 'link' URL: ${program.link}`);
-    } else {
-        success(`${programId}: Valid link`);
-    }
-    
-    // Validate lastVerified
-    if (!program.lastVerified) {
-        error(`${programId}: Missing 'lastVerified' field`);
-    } else if (!DATE_REGEX.test(program.lastVerified)) {
-        error(`${programId}: Invalid 'lastVerified' date format '${program.lastVerified}'. Must be YYYY-MM-DD`);
-    } else {
-        success(`${programId}: Valid lastVerified date: ${program.lastVerified}`);
-    }
-
-    // Optional pending / unconfirmed note
-    if (program.pending !== undefined) {
-        if (!program.pending || typeof program.pending !== 'object' || Array.isArray(program.pending)) {
-            error(`${programId}: Optional 'pending' must be an object with zh-Hant/zh-Hans/en text`);
-        } else {
-            REQUIRED_LANGS.forEach(lang => {
-                if (!program.pending[lang] || typeof program.pending[lang] !== 'string' || program.pending[lang].trim() === '') {
-                    error(`${programId}: Missing or empty 'pending.${lang}'`);
-                }
-            });
-            if (program.pending.link !== undefined) {
-                if (typeof program.pending.link !== 'string' || !URL_REGEX.test(program.pending.link)) {
-                    error(`${programId}: Invalid optional 'pending.link' URL: ${program.pending.link}`);
-                }
-            }
-            if (program.pending['zh-Hant'] && program.pending['zh-Hans'] && program.pending['en']) {
-                success(`${programId}: Optional pending note present in all three languages`);
-            }
-        }
-    }
-}
-
-function main() {
-    console.log('🔍 Validating public/data/programs.json...\n');
-    
-    const filePath = path.join(__dirname, 'public', 'data', 'programs.json');
-    
-    if (!fs.existsSync(filePath)) {
-        error('data/programs.json file not found');
-        process.exit(1);
-    }
-    
-    let data;
-    try {
-        const content = fs.readFileSync(filePath, 'utf-8');
-        data = JSON.parse(content);
-    } catch (err) {
-        error(`Failed to parse JSON: ${err.message}`);
-        process.exit(1);
-    }
-    
-    if (!Array.isArray(data)) {
-        error('JSON root must be an array');
-        process.exit(1);
-    }
-    
-    success(`Found ${data.length} programs\n`);
-    
-    data.forEach((program, index) => {
-        console.log(`\n--- Validating ${program.name || `Program #${index + 1}`} ---`);
-        validateProgram(program, index);
-    });
-    
-    console.log('\n' + '='.repeat(60));
-    if (hasErrors) {
-        console.error('\n❌ Validation FAILED. Please fix the errors above.\n');
-        process.exit(1);
-    } else {
-        console.log('\n✅ All validations PASSED!\n');
-        process.exit(0);
-    }
-}
-
-main();
+console.log(`OK: ${programs.length} programs, ${Object.keys(categories).length} categories.`);
