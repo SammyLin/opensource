@@ -1,76 +1,82 @@
+/**
+ * Capture full-page screenshots of the local site for PR media.
+ *
+ * Prerequisites:
+ *   1. Serve the site locally, e.g. `cd public && python3 -m http.server 8000`
+ *   2. Install Playwright browsers once: `npx playwright install chromium`
+ *
+ * Usage:
+ *   node take-screenshots.js [prefix] [outdir]
+ *
+ * Examples:
+ *   npm run screenshots -- before pr-media/pr2
+ *   npm run screenshots -- after pr-media/pr2
+ *   node take-screenshots.js after- pr-media
+ */
 const { chromium } = require('playwright');
 const fs = require('fs');
+const path = require('path');
+
+const BASE_URL = process.env.SCREENSHOT_BASE_URL || 'http://localhost:8000/';
+const rawPrefix = process.argv[2] || '';
+const outDir = process.argv[3] || 'pr-media';
+const prefix = rawPrefix && !rawPrefix.endsWith('-') && !rawPrefix.endsWith('_')
+    ? `${rawPrefix}-`
+    : rawPrefix;
 
 async function takeScreenshots() {
+    if (!fs.existsSync(outDir)) {
+        fs.mkdirSync(outDir, { recursive: true });
+    }
+
+    console.log(`Writing screenshots to ${outDir} (prefix: "${prefix}")...`);
     const browser = await chromium.launch();
     const context = await browser.newContext();
-    
-    const prefix = process.argv[2] || '';
-    
-    console.log(`Creating pr-media directory (prefix: ${prefix})...`);
-    if (!fs.existsSync('pr-media')) {
-        fs.mkdirSync('pr-media');
+
+    async function capture(name, setup) {
+        const page = await context.newPage();
+        await setup(page);
+        const filePath = path.join(outDir, `${prefix}${name}.png`);
+        await page.screenshot({ path: filePath, fullPage: true });
+        await page.close();
+        console.log(`Saved ${filePath}`);
     }
-    
-    // Desktop screenshots - Traditional Chinese
-    console.log('Taking zh-Hant desktop screenshot...');
-    const pageZhHant = await context.newPage();
-    await pageZhHant.setViewportSize({ width: 1920, height: 1080 });
-    await pageZhHant.goto('http://localhost:8000/');
-    await pageZhHant.waitForTimeout(1500);
-    await pageZhHant.screenshot({ 
-        path: `pr-media/${prefix}screenshot-zh-hant-desktop.png`,
-        fullPage: true 
+
+    await capture('screenshot-zh-hant-desktop', async (page) => {
+        await page.setViewportSize({ width: 1440, height: 900 });
+        await page.goto(BASE_URL, { waitUntil: 'networkidle' });
+        await page.waitForSelector('.program-card');
     });
-    await pageZhHant.close();
-    
-    // Desktop screenshots - Simplified Chinese
-    console.log('Taking zh-Hans desktop screenshot...');
-    const pageZhHans = await context.newPage();
-    await pageZhHans.setViewportSize({ width: 1920, height: 1080 });
-    await pageZhHans.goto('http://localhost:8000/');
-    await pageZhHans.waitForTimeout(500);
-    await pageZhHans.click('#btn-zh-Hans');
-    await pageZhHans.waitForTimeout(1000);
-    await pageZhHans.screenshot({ 
-        path: `pr-media/${prefix}screenshot-zh-hans-desktop.png`,
-        fullPage: true 
+
+    await capture('screenshot-zh-hans-desktop', async (page) => {
+        await page.setViewportSize({ width: 1440, height: 900 });
+        await page.goto(BASE_URL, { waitUntil: 'networkidle' });
+        await page.waitForSelector('.program-card');
+        await page.click('#btn-zh-Hans');
+        await page.waitForTimeout(400);
     });
-    await pageZhHans.close();
-    
-    // Desktop screenshots - English
-    console.log('Taking English desktop screenshot...');
-    const pageEn = await context.newPage();
-    await pageEn.setViewportSize({ width: 1920, height: 1080 });
-    await pageEn.goto('http://localhost:8000/');
-    await pageEn.waitForTimeout(500);
-    await pageEn.click('#btn-en');
-    await pageEn.waitForTimeout(1000);
-    await pageEn.screenshot({ 
-        path: `pr-media/${prefix}screenshot-en-desktop.png`,
-        fullPage: true 
+
+    await capture('screenshot-en-desktop', async (page) => {
+        await page.setViewportSize({ width: 1440, height: 900 });
+        await page.goto(BASE_URL, { waitUntil: 'networkidle' });
+        await page.waitForSelector('.program-card');
+        await page.click('#btn-en');
+        await page.waitForTimeout(400);
     });
-    await pageEn.close();
-    
-    // Mobile screenshot - Traditional Chinese with filter
-    console.log('Taking zh-Hant mobile screenshot with filter...');
-    const pageMobile = await context.newPage();
-    await pageMobile.setViewportSize({ width: 390, height: 844 });
-    await pageMobile.goto('http://localhost:8000/');
-    await pageMobile.waitForTimeout(1000);
-    
-    // Apply a filter (e.g., AI Tools)
-    await pageMobile.click('#filter-ai');
-    await pageMobile.waitForTimeout(500);
-    
-    await pageMobile.screenshot({ 
-        path: `pr-media/${prefix}screenshot-zh-hant-mobile-filtered.png`,
-        fullPage: true 
+
+    await capture('screenshot-zh-hant-mobile-filtered', async (page) => {
+        await page.setViewportSize({ width: 390, height: 844 });
+        await page.goto(BASE_URL, { waitUntil: 'networkidle' });
+        await page.waitForSelector('.program-card');
+        await page.click('#filter-ai');
+        await page.waitForTimeout(400);
     });
-    await pageMobile.close();
-    
+
     await browser.close();
     console.log('All screenshots taken successfully!');
 }
 
-takeScreenshots().catch(console.error);
+takeScreenshots().catch((err) => {
+    console.error(err);
+    process.exit(1);
+});

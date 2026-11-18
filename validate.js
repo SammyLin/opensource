@@ -96,6 +96,27 @@ function validateProgram(program, index) {
     } else {
         success(`${programId}: Valid lastVerified date: ${program.lastVerified}`);
     }
+
+    // Optional pending / unconfirmed note
+    if (program.pending !== undefined) {
+        if (!program.pending || typeof program.pending !== 'object' || Array.isArray(program.pending)) {
+            error(`${programId}: Optional 'pending' must be an object with zh-Hant/zh-Hans/en text`);
+        } else {
+            REQUIRED_LANGS.forEach(lang => {
+                if (!program.pending[lang] || typeof program.pending[lang] !== 'string' || program.pending[lang].trim() === '') {
+                    error(`${programId}: Missing or empty 'pending.${lang}'`);
+                }
+            });
+            if (program.pending.link !== undefined) {
+                if (typeof program.pending.link !== 'string' || !URL_REGEX.test(program.pending.link)) {
+                    error(`${programId}: Invalid optional 'pending.link' URL: ${program.pending.link}`);
+                }
+            }
+            if (program.pending['zh-Hant'] && program.pending['zh-Hans'] && program.pending['en']) {
+                success(`${programId}: Optional pending note present in all three languages`);
+            }
+        }
+    }
 }
 
 function main() {

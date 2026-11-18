@@ -75,9 +75,9 @@
       "en": "Full enterprise entitlements (vulnerability scanning with no usage limits), Discord community support"
     },
     "requirements": {
-      "zh-Hant": "社群專案（非企業支持）、需在 README 及網站提供 Snyk 連結、允許使用專案 logo",
-      "zh-Hans": "社区项目（非企业支持）、需在 README 及网站提供 Snyk 链接、允许使用项目 logo",
-      "en": "Community project (not corporate-backed), include link to Snyk in README and website, permit use of project logo"
+      "zh-Hant": "社群專案（非企業支持）。接受免費 Secure Developer Program 的條件：在該開源專案的 README 與專案網站放上回連 Snyk 的連結，並授權 Snyk 使用專案 logo（此為申請專案本身的義務，非列表網站要求）",
+      "zh-Hans": "社区项目（非企业支持）。接受免费 Secure Developer Program 的条件：在该开源项目的 README 与项目网站放上回链 Snyk 的链接，并授权 Snyk 使用项目 logo（此为申请项目本身的义务，非列表网站要求）",
+      "en": "Community project (not corporate-backed). Accepting the free Secure Developer Program requires linking back to Snyk in that project's README and website, and granting Snyk license to use the project logo (obligations of the applying project, not of listing sites)"
     },
     "type": "application_required",
     "category": ["security_scanning"],
@@ -121,14 +121,14 @@
   {
     "name": "1Password for Open Source",
     "whatYouGet": {
-      "zh-Hant": "免費 Teams 方案",
-      "zh-Hans": "免费 Teams 方案",
-      "en": "Free Teams plan"
+      "zh-Hant": "免費 Teams 方案（只要專案持續符合資格就不限期）",
+      "zh-Hans": "免费 Teams 方案（只要项目持续符合资格就不限期）",
+      "en": "Free Teams account (does not expire while the project remains eligible)"
     },
     "requirements": {
-      "zh-Hant": "開源專案（需查看 GitHub 儲存庫了解具體要求）",
-      "zh-Hans": "开源项目（需查看 GitHub 仓库了解具体要求）",
-      "en": "Open source project (see GitHub repository for specific requirements)"
+      "zh-Hant": "僅限 Teams 帳號（個人／家庭／商業帳號不符）；帳號不得與商業活動相關（GitHub Sponsors、Open Collective 等開源資助除外）；單一專案申請須為核心貢獻者，專案至少 30 天、活躍且採寬鬆開源授權；團隊申請則團隊專案須以開源為主且非商業支持；開源相關社群活動主辦方亦可申請。是否核准由 1Password 裁量。",
+      "zh-Hans": "仅限 Teams 账号（个人／家庭／商业账号不符）；账号不得与商业活动相关（GitHub Sponsors、Open Collective 等开源资助除外）；单一项目申请须为核心贡献者，项目至少 30 天、活跃且采用宽松开源许可；团队申请则团队项目须以开源为主且非商业支持；开源相关社区活动主办方亦可申请。是否核准由 1Password 裁量。",
+      "en": "Teams accounts only (personal, family, and business accounts are ineligible); account must not be tied to commercial activity (except OSS funding such as GitHub Sponsors or Open Collective); for a single project you must be a core contributor and the project must be ≥30 days old, active, and under a permissive open source license; for a team, projects must be primarily open source and not commercially backed; organizers of OSS-related community events may also apply. Acceptance is at 1Password's discretion."
     },
     "type": "application_required",
     "category": ["password_management"],

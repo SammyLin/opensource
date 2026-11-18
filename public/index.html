@@ -371,6 +371,29 @@
             color: var(--color-badge-red-text);
         }
 
+        .pending-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            font-weight: 500;
+            margin-left: 8px;
+            margin-bottom: 12px;
+            background: #eef2ff;
+            color: #3730a3;
+            border: 1px solid #c7d2fe;
+        }
+
+        .pending-note {
+            font-size: 13px;
+            color: var(--color-text-muted);
+            margin-bottom: 12px;
+        }
+
+        .pending-note a {
+            color: var(--color-accent);
+        }
+
         .categories {
             display: flex;
             flex-wrap: wrap;
@@ -446,6 +469,23 @@
             font-size: 14px;
         }
 
+        .footer-license {
+            margin-top: 12px;
+            font-size: 13px;
+            color: var(--color-text-muted);
+        }
+
+        .footer-license a {
+            color: var(--color-text-subtle);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            font-weight: 500;
+        }
+
+        .footer-license a:hover {
+            color: var(--color-accent);
+        }
+
         @media (max-width: 768px) {
             .nav-container {
                 padding: 0 16px;
@@ -512,6 +552,25 @@
     </nav>
 
     <div class="container">
+        <header>
+            <h1 id="site-title">開源福利社</h1>
+            <p id="site-desc">為開源專案維護者提供的免費工具與服務</p>
+            <p class="date-line" id="date-line"></p>
+        </header>
+
+        <div class="filters">
+            <button class="filter-btn active" data-category="all" id="filter-all">全部</button>
+            <button class="filter-btn" data-category="ide" id="filter-ide">IDE</button>
+            <button class="filter-btn" data-category="containers" id="filter-containers">容器</button>
+            <button class="filter-btn" data-category="monitoring" id="filter-monitoring">監控</button>
+            <button class="filter-btn" data-category="security_scanning" id="filter-security">安全掃描</button>
+            <button class="filter-btn" data-category="code_quality" id="filter-quality">程式碼品質</button>
+            <button class="filter-btn" data-category="password_management" id="filter-password">密碼管理</button>
+            <button class="filter-btn" data-category="ai_tools" id="filter-ai">AI 工具</button>
+        </div>
+
+        <div class="programs" id="programs-container"></div>
+
         <div class="contribute-section">
             <h2 id="contribute-title">參與貢獻</h2>
             <div class="steps">
@@ -537,23 +596,11 @@
             </div>
         </div>
 
-        <div class="filters">
-            <button class="filter-btn active" data-category="all" id="filter-all">全部</button>
-            <button class="filter-btn" data-category="ide" id="filter-ide">IDE</button>
-            <button class="filter-btn" data-category="containers" id="filter-containers">容器</button>
-            <button class="filter-btn" data-category="monitoring" id="filter-monitoring">監控</button>
-            <button class="filter-btn" data-category="security_scanning" id="filter-security">安全掃描</button>
-            <button class="filter-btn" data-category="code_quality" id="filter-quality">程式碼品質</button>
-            <button class="filter-btn" data-category="password_management" id="filter-password">密碼管理</button>
-            <button class="filter-btn" data-category="ai_tools" id="filter-ai">AI 工具</button>
-        </div>
-
-        <div class="programs" id="programs-container"></div>
-
         <footer>
             <p id="footer-contribute">
                 <a href="https://github.com/SammyLin/opensource" target="_blank" id="footer-link">發 PR 新增方案</a>
             </p>
+            <p class="footer-license" id="footer-license"></p>
             <p style="margin-top: 20px; font-size: 14px; color: var(--color-text-subtle);">
                 <span id="footer-note">最後驗證日期顯示於各方案卡片中</span>
             </p>
@@ -587,10 +634,12 @@
                 'filter-ai': 'AI 工具',
                 'footer-link': '發 PR 新增方案',
                 'footer-note': '最後驗證日期顯示於各方案卡片中',
+                'footer-license-html': '程式碼 <a href="https://github.com/SammyLin/opensource/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a>・資料 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>',
                 'what-you-get': '提供內容',
                 'requirements': '申請條件',
                 'official-link': '官方連結',
                 'last-verified': '最後驗證',
+                'pending-label': '待確認',
                 'type-direct_activation': '直接開通',
                 'type-application_required': '要申請',
                 'type-high_bar': '門檻高',
@@ -627,10 +676,12 @@
                 'filter-ai': 'AI 工具',
                 'footer-link': '发 PR 添加方案',
                 'footer-note': '最后验证日期显示在各方案卡片中',
+                'footer-license-html': '代码 <a href="https://github.com/SammyLin/opensource/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a>·数据 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>',
                 'what-you-get': '提供内容',
                 'requirements': '申请条件',
                 'official-link': '官方链接',
                 'last-verified': '最后验证',
+                'pending-label': '待确认',
                 'type-direct_activation': '直接开通',
                 'type-application_required': '要申请',
                 'type-high_bar': '门槛高',
@@ -667,10 +718,12 @@
                 'filter-ai': 'AI Tools',
                 'footer-link': 'Submit a PR to add a program',
                 'footer-note': 'Last verified dates shown on each program card',
+                'footer-license-html': 'Code <a href="https://github.com/SammyLin/opensource/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a> · Data <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>',
                 'what-you-get': 'What You Get',
                 'requirements': 'Requirements',
                 'official-link': 'Official Link',
                 'last-verified': 'Last Verified',
+                'pending-label': 'To be confirmed',
                 'type-direct_activation': 'Direct Activation',
                 'type-application_required': 'Application Required',
                 'type-high_bar': 'High Bar',
@@ -687,6 +740,24 @@
         let currentLang = 'zh-Hant';
         let programsData = [];
         let currentFilter = 'all';
+        let latestVerified = '';
+
+        function escapeHtml(value) {
+            return String(value)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        }
+
+        function getLatestVerified(programs) {
+            return programs
+                .map(p => p.lastVerified)
+                .filter(Boolean)
+                .sort()
+                .at(-1) || '';
+        }
 
         function switchLang(lang) {
             currentLang = lang;
@@ -711,25 +782,21 @@
 
         function updateUIText() {
             const texts = translations[currentLang];
+            const skipIds = new Set(['footer-license-html', 'pending-label', 'page-title', 'meta-description', 'contribute-desc']);
             Object.keys(texts).forEach(id => {
+                if (skipIds.has(id)) return;
                 const el = document.getElementById(id);
                 if (el) {
-                    if (el.tagName === 'BUTTON') {
-                        el.textContent = texts[id];
-                    } else {
-                        el.textContent = texts[id];
-                    }
+                    el.textContent = texts[id];
                 }
             });
-        }
 
-        function filterPrograms(category) {
-            currentFilter = category;
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            event.target.classList.add('active');
-            renderPrograms();
+            document.getElementById('nav-logo').textContent = texts['page-title'];
+            document.getElementById('footer-license').innerHTML = texts['footer-license-html'];
+            const dateLine = document.getElementById('date-line');
+            dateLine.textContent = latestVerified
+                ? `${texts['last-verified']}: ${latestVerified}`
+                : '';
         }
 
         function renderPrograms() {
@@ -741,25 +808,39 @@
                 filtered = programsData.filter(p => p.category.includes(currentFilter));
             }
 
-            container.innerHTML = filtered.map(program => `
+            container.innerHTML = filtered.map(program => {
+                const pending = program.pending;
+                const pendingBadge = pending
+                    ? `<span class="pending-badge">${escapeHtml(pending[currentLang] || texts['pending-label'])}</span>`
+                    : '';
+                const pendingNote = pending && pending.link
+                    ? `<p class="pending-note"><a href="${escapeHtml(pending.link)}" target="_blank" rel="noopener">${escapeHtml(texts['official-link'])}</a></p>`
+                    : '';
+
+                return `
                 <div class="program-card">
-                    <h3>${program.name}</h3>
-                    <span class="type-badge type-${program.type}">${texts['type-' + program.type]}</span>
+                    <h3>${escapeHtml(program.name)}</h3>
+                    <span class="type-badge type-${escapeHtml(program.type)}">${texts['type-' + program.type]}</span>
+                    ${pendingBadge}
                     <div class="categories">
                         ${program.category.map(cat => `<span class="category-tag">${texts['cat-' + cat]}</span>`).join('')}
                     </div>
-                    <p><strong>${texts['what-you-get']}:</strong> ${program.whatYouGet[currentLang]}</p>
-                    <p><strong>${texts['requirements']}:</strong> ${program.requirements[currentLang]}</p>
-                    <p><a href="${program.link}" target="_blank">${texts['official-link']}</a></p>
-                    <p class="last-verified">${texts['last-verified']}: ${program.lastVerified}</p>
+                    <p><strong>${texts['what-you-get']}:</strong> ${escapeHtml(program.whatYouGet[currentLang])}</p>
+                    <p><strong>${texts['requirements']}:</strong> ${escapeHtml(program.requirements[currentLang])}</p>
+                    ${pendingNote}
+                    <p><a href="${escapeHtml(program.link)}" target="_blank" rel="noopener">${texts['official-link']}</a></p>
+                    <p class="last-verified">${texts['last-verified']}: ${escapeHtml(program.lastVerified)}</p>
                 </div>
-            `).join('');
+            `;
+            }).join('');
         }
 
         fetch('data/programs.json')
             .then(response => response.json())
             .then(data => {
                 programsData = data;
+                latestVerified = getLatestVerified(programsData);
+                updateUIText();
                 renderPrograms();
             })
             .catch(error => {
@@ -775,6 +856,8 @@
                 renderPrograms();
             });
         });
+
+        updateUIText();
     </script>
 </body>
 </html>
