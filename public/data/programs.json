@@ -1,49 +1,82 @@
 {
   "$schema": "./programs.schema.json",
   "categories": {
-    "ide": {
-      "zh-Hant": "IDE",
-      "zh-Hans": "IDE",
-      "en": "IDE"
+    "container_registry": {
+      "zh-Hant": "容器映像倉庫",
+      "zh-Hans": "容器镜像仓库",
+      "en": "Container Registry",
+      "cncf": {
+        "category": "Provisioning",
+        "subcategory": "Container Registry"
+      }
     },
-    "containers": {
-      "zh-Hant": "容器",
-      "zh-Hans": "容器",
-      "en": "Containers"
+    "security_compliance": {
+      "zh-Hant": "安全與合規",
+      "zh-Hans": "安全与合规",
+      "en": "Security & Compliance",
+      "cncf": {
+        "category": "Provisioning",
+        "subcategory": "Security & Compliance"
+      }
     },
-    "monitoring": {
-      "zh-Hant": "監控",
-      "zh-Hans": "监控",
-      "en": "Monitoring"
+    "key_management": {
+      "zh-Hant": "金鑰與機密管理",
+      "zh-Hans": "密钥与机密管理",
+      "en": "Key Management",
+      "cncf": {
+        "category": "Provisioning",
+        "subcategory": "Key Management"
+      }
     },
-    "security_scanning": {
-      "zh-Hant": "安全掃描",
-      "zh-Hans": "安全扫描",
-      "en": "Security Scanning"
+    "app_definition_image_build": {
+      "zh-Hant": "應用定義與開發環境",
+      "zh-Hans": "应用定义与开发环境",
+      "en": "Application Definition & Image Build",
+      "cncf": {
+        "category": "App Definition and Development",
+        "subcategory": "Application Definition & Image Build"
+      }
     },
-    "code_quality": {
-      "zh-Hant": "程式碼品質",
-      "zh-Hans": "代码质量",
-      "en": "Code Quality"
+    "ci_cd": {
+      "zh-Hant": "持續整合與交付",
+      "zh-Hans": "持续集成与交付",
+      "en": "Continuous Integration & Delivery",
+      "cncf": {
+        "category": "App Definition and Development",
+        "subcategory": "Continuous Integration & Delivery"
+      }
     },
-    "password_management": {
-      "zh-Hant": "密碼管理",
-      "zh-Hans": "密码管理",
-      "en": "Password Management"
+    "observability": {
+      "zh-Hant": "可觀測性",
+      "zh-Hans": "可观测性",
+      "en": "Observability",
+      "cncf": {
+        "category": "Observability and Analysis",
+        "subcategory": "Observability"
+      }
     },
-    "ai_tools": {
-      "zh-Hant": "AI 工具",
-      "zh-Hans": "AI 工具",
-      "en": "AI Tools"
+    "ai_agent": {
+      "zh-Hant": "AI Agent",
+      "zh-Hans": "AI Agent",
+      "en": "AI Agent",
+      "cncf": {
+        "category": "AI Agent"
+      }
     }
   },
   "programs": [
     {
       "name": "JetBrains Open Source License",
+      "logo": "/logos/jetbrains.svg",
       "whatYouGet": {
         "zh-Hant": "免費 All Products Pack（所有產品套裝）",
         "zh-Hans": "免费 All Products Pack（所有产品套装）",
         "en": "Free All Products Pack"
+      },
+      "whyItHelps": {
+        "zh-Hant": "IntelliJ IDEA、PyCharm、WebStorm、GoLand 等專業 IDE 全部可用，重構、除錯、程式碼分析更順手，寫碼和 review 都更有效率。",
+        "zh-Hans": "IntelliJ IDEA、PyCharm、WebStorm、GoLand 等专业 IDE 全部可用，重构、调试、代码分析更顺手，写代码和 review 都更高效。",
+        "en": "Use every JetBrains IDE (IntelliJ IDEA, PyCharm, WebStorm, GoLand…) for smoother refactoring, debugging and code analysis when writing and reviewing code."
       },
       "requirements": {
         "zh-Hant": "一年期授權，專案必須持續開發中，提供開源授權證明，專案領導者或核心貢獻者可申請",
@@ -52,17 +85,23 @@
       },
       "type": "application_required",
       "category": [
-        "ide"
+        "app_definition_image_build"
       ],
       "link": "https://www.jetbrains.com/shop/eform/opensource?product=ALL",
       "lastVerified": "2026-11-18"
     },
     {
       "name": "Docker-Sponsored Open Source Program",
+      "logo": "/logos/docker.svg",
       "whatYouGet": {
         "zh-Hant": "Docker Hub 無限制映像拉取、驗證徽章、核心貢獻者獲得一年免費 Docker Team 訂閱",
         "zh-Hans": "Docker Hub 无限制镜像拉取、验证徽章、核心贡献者获得一年免费 Docker Team 订阅",
         "en": "Unlimited Docker Hub image pulls, verified badge, core contributors get one year free Docker Team subscription"
+      },
+      "whyItHelps": {
+        "zh-Hant": "使用者從 Docker Hub 拉你的映像不會撞到次數限制，加上認證徽章讓大家知道這是官方可信的映像，採用門檻更低。",
+        "zh-Hans": "用户从 Docker Hub 拉取你的镜像不会触发次数限制，加上认证徽章让大家知道这是官方可信的镜像，采用门槛更低。",
+        "en": "Users can pull your images from Docker Hub without hitting rate limits, and the verified badge tells them it's the trusted official image."
       },
       "requirements": {
         "zh-Hant": "公開儲存庫、符合 OSI 定義、過去 6 個月內有更新、非營利性質",
@@ -71,17 +110,23 @@
       },
       "type": "application_required",
       "category": [
-        "containers"
+        "container_registry"
       ],
       "link": "https://www.docker.com/community/open-source/application/",
       "lastVerified": "2026-11-18"
     },
     {
       "name": "Sentry for Open Source",
+      "logo": "/logos/sentry.svg",
       "whatYouGet": {
         "zh-Hant": "Business 層級配額（5M 錯誤、5,000GB 日誌、1B spans、100K replays 等）、無期限、包含 Business 功能",
         "zh-Hans": "Business 级别配额（5M 错误、5,000GB 日志、1B spans、100K replays 等）、无期限、包含 Business 功能",
         "en": "Business-tier quota (5M errors, 5,000GB logs, 1B spans, 100K replays, etc.), no term limit, includes Business features"
+      },
+      "whyItHelps": {
+        "zh-Hant": "使用者遇到的錯誤和當機會自動回報並附上 stack trace，不必等人開 issue 才知道哪裡壞了，修 bug 更快。",
+        "zh-Hans": "用户遇到的错误和崩溃会自动上报并附带 stack trace，不必等人提 issue 才知道哪里坏了，修 bug 更快。",
+        "en": "Errors and crashes your users hit are reported automatically with stack traces, so you can fix bugs before anyone files an issue."
       },
       "requirements": {
         "zh-Hant": "需要 OSI 認可的授權（如 Apache 或 MIT）",
@@ -90,17 +135,23 @@
       },
       "type": "application_required",
       "category": [
-        "monitoring"
+        "observability"
       ],
       "link": "https://sentry.io/for/open-source/",
       "lastVerified": "2026-11-18"
     },
     {
       "name": "Socket for Open Source",
+      "logo": "/logos/socket.svg",
       "whatYouGet": {
         "zh-Hant": "免費 Business 方案（自動封鎖惡意依賴、可達性分析、GitHub Actions 掃描、SBOM 匯出等）",
         "zh-Hans": "免费 Business 方案（自动阻止恶意依赖、可达性分析、GitHub Actions 扫描、SBOM 导出等）",
         "en": "Free Business plan (automatic blocking of malicious dependencies, reachability analysis, GitHub Actions scanning, SBOM export, etc.)"
+      },
+      "whyItHelps": {
+        "zh-Hant": "在 PR 階段就攔下惡意或可疑的相依套件（例如被植入後門的套件），避免供應鏈攻擊經由你的專案傳給下游使用者。",
+        "zh-Hans": "在 PR 阶段就拦下恶意或可疑的依赖包（例如被植入后门的包），避免供应链攻击经由你的项目传给下游用户。",
+        "en": "Catches malicious or suspicious dependencies (e.g. backdoored packages) at PR time, so supply-chain attacks don't reach your downstream users."
       },
       "requirements": {
         "zh-Hant": "公開的開源專案，擁有有效的 OSI 授權",
@@ -109,17 +160,23 @@
       },
       "type": "application_required",
       "category": [
-        "security_scanning"
+        "security_compliance"
       ],
       "link": "https://www.socket.dev/blog/free-business-plan-upgrades-for-open-source",
       "lastVerified": "2026-11-18"
     },
     {
       "name": "Snyk for Open Source",
+      "logo": "/logos/snyk.svg",
       "whatYouGet": {
         "zh-Hant": "完整企業級授權（無使用限制的漏洞掃描）、Discord 社群支援",
         "zh-Hans": "完整企业级授权（无使用限制的漏洞扫描）、Discord 社区支持",
         "en": "Full enterprise entitlements (vulnerability scanning with no usage limits), Discord community support"
+      },
+      "whyItHelps": {
+        "zh-Hant": "持續掃描相依套件與程式碼的已知漏洞，並自動開 PR 升級修補，讓專案的安全狀態一直保持在最新。",
+        "zh-Hans": "持续扫描依赖与代码中的已知漏洞，并自动提 PR 升级修复，让项目的安全状态始终保持最新。",
+        "en": "Continuously scans your dependencies and code for known vulnerabilities and opens fix PRs automatically."
       },
       "requirements": {
         "zh-Hant": "社群專案（非企業支持）。接受免費 Secure Developer Program 的條件：在該開源專案的 README 與專案網站放上回連 Snyk 的連結，並授權 Snyk 使用專案 logo（此為申請專案本身的義務，非列表網站要求）",
@@ -128,17 +185,23 @@
       },
       "type": "application_required",
       "category": [
-        "security_scanning"
+        "security_compliance"
       ],
       "link": "https://snyk.io/open-source/",
       "lastVerified": "2026-11-18"
     },
     {
       "name": "SonarQube Cloud for Open Source",
+      "logo": "/logos/sonarqubecloud.svg",
       "whatYouGet": {
         "zh-Hant": "Pro 方案功能（程式碼品質與安全掃描，支援 35+ 語言）、永久免費",
         "zh-Hans": "Pro 方案功能（代码质量与安全扫描，支持 35+ 语言）、永久免费",
         "en": "Pro plan features (code quality and security scanning, 35+ languages supported), free forever"
+      },
+      "whyItHelps": {
+        "zh-Hant": "每個 PR 自動檢查 bug、程式碼異味與安全熱點，讓貢獻者送進來的程式碼品質一致，減輕維護者 review 負擔。",
+        "zh-Hans": "每个 PR 自动检查 bug、代码异味与安全热点，让贡献者提交的代码质量一致，减轻维护者 review 负担。",
+        "en": "Every PR is checked for bugs, code smells and security hotspots, keeping contributions consistent and lightening the review load."
       },
       "requirements": {
         "zh-Hant": "公開且擁有 OSI 授權的儲存庫",
@@ -147,18 +210,23 @@
       },
       "type": "direct_activation",
       "category": [
-        "code_quality",
-        "security_scanning"
+        "security_compliance"
       ],
       "link": "https://www.sonarsource.com/plans-and-pricing/",
       "lastVerified": "2026-11-18"
     },
     {
       "name": "Codecov for Open Source",
+      "logo": "/logos/codecov.svg",
       "whatYouGet": {
         "zh-Hant": "免費程式碼覆蓋率分析、PR 評論、狀態檢查",
         "zh-Hans": "免费代码覆盖率分析、PR 评论、状态检查",
         "en": "Free code coverage analysis, PR comments, status checks"
+      },
+      "whyItHelps": {
+        "zh-Hant": "在 PR 上直接看到新程式碼有沒有被測試覆蓋，README 也能放覆蓋率徽章，讓使用者對專案品質更有信心。",
+        "zh-Hans": "在 PR 上直接看到新代码有没有被测试覆盖，README 也能放覆盖率徽章，让用户对项目质量更有信心。",
+        "en": "See right on the PR whether new code is covered by tests, and show a coverage badge in your README to build user confidence."
       },
       "requirements": {
         "zh-Hant": "公開的開源專案",
@@ -167,17 +235,23 @@
       },
       "type": "direct_activation",
       "category": [
-        "code_quality"
+        "ci_cd"
       ],
       "link": "https://about.codecov.io/for/open-source/",
       "lastVerified": "2026-11-18"
     },
     {
       "name": "1Password for Open Source",
+      "logo": "/logos/1password.svg",
       "whatYouGet": {
         "zh-Hant": "免費 Teams 方案（只要專案持續符合資格就不限期）",
         "zh-Hans": "免费 Teams 方案（只要项目持续符合资格就不限期）",
         "en": "Free Teams account (does not expire while the project remains eligible)"
+      },
+      "whyItHelps": {
+        "zh-Hant": "維護團隊安全共用發佈 token、雲端金鑰等機密，不必再用聊天訊息傳密碼，有人加入或離開時交接也簡單。",
+        "zh-Hans": "维护团队安全共享发布 token、云密钥等机密，不必再用聊天消息传密码，有人加入或离开时交接也简单。",
+        "en": "Share release tokens, cloud keys and other secrets safely across maintainers — no more passing passwords in chat, and easy hand-offs."
       },
       "requirements": {
         "zh-Hant": "僅限 Teams 帳號（個人／家庭／商業帳號不符）；帳號不得與商業活動相關（GitHub Sponsors、Open Collective 等開源資助除外）；單一專案申請須為核心貢獻者，專案至少 30 天、活躍且採寬鬆開源授權；團隊申請則團隊專案須以開源為主且非商業支持；開源相關社群活動主辦方亦可申請。是否核准由 1Password 裁量。",
@@ -186,17 +260,23 @@
       },
       "type": "application_required",
       "category": [
-        "password_management"
+        "key_management"
       ],
       "link": "https://github.com/1Password/for-open-source",
       "lastVerified": "2026-11-18"
     },
     {
       "name": "GitHub Copilot Pro for Open Source",
+      "logo": "/logos/githubcopilot.svg",
       "whatYouGet": {
         "zh-Hant": "免費 Copilot Pro 訂閱",
         "zh-Hans": "免费 Copilot Pro 订阅",
         "en": "Free Copilot Pro subscription"
+      },
+      "whyItHelps": {
+        "zh-Hant": "編輯器裡的 AI 程式碼補全與對話，加快寫功能、補測試，也更快看懂貢獻者送來的陌生程式碼。",
+        "zh-Hans": "编辑器里的 AI 代码补全与对话，加快写功能、补测试，也更快看懂贡献者提交的陌生代码。",
+        "en": "AI code completion and chat in your editor to write features and tests faster and understand unfamiliar contributed code."
       },
       "requirements": {
         "zh-Hant": "熱門開源儲存庫的維護者（每月自動重新評估資格）",
@@ -205,18 +285,23 @@
       },
       "type": "high_bar",
       "category": [
-        "ai_tools",
-        "ide"
+        "ai_agent"
       ],
       "link": "https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-teachers-and-os-maintainers",
       "lastVerified": "2026-11-18"
     },
     {
       "name": "Claude for Open Source",
+      "logo": "/logos/claude.svg",
       "whatYouGet": {
         "zh-Hant": "6 個月免費 Claude Ultra",
         "zh-Hans": "6 个月免费 Claude Ultra",
         "en": "6 months of free Claude Ultra"
+      },
+      "whyItHelps": {
+        "zh-Hant": "用 AI 協助 review PR、整理 issue、撰寫文件與測試、規劃重構，把維護者有限的時間留給真正需要判斷的地方。",
+        "zh-Hans": "用 AI 协助 review PR、整理 issue、撰写文档与测试、规划重构，把维护者有限的时间留给真正需要判断的地方。",
+        "en": "Use AI to help review PRs, triage issues, write docs and tests, and plan refactors, saving maintainer time for the calls that need you."
       },
       "requirements": {
         "zh-Hant": "維護者與函式庫作者：500+ 依賴儲存庫、100+ 依賴套件或 200,000+ 每月下載；核心貢獻者：知名基金會或語言專案成員；活躍貢獻者：過去 12 個月有 100+ PR 合併；社群建設者：你的儲存庫在過去 12 個月有 20+ 外部貢獻者；關鍵基礎設施：OpenSSF 關鍵性評分 0.4 以上",
@@ -225,7 +310,7 @@
       },
       "type": "high_bar",
       "category": [
-        "ai_tools"
+        "ai_agent"
       ],
       "link": "https://claude.com/contact-sales/claude-for-oss",
       "lastVerified": "2026-11-18"
@@ -237,6 +322,11 @@
         "zh-Hans": "6 个月 ChatGPT Pro with Codex、API 额度、Codex Security（有条件提供）",
         "en": "6 months of ChatGPT Pro with Codex, API credits, conditional access to Codex Security"
       },
+      "whyItHelps": {
+        "zh-Hant": "用 AI 程式代理直接接手修 bug、寫測試、review PR 等任務；有條件提供的 Codex Security 還能協助找出安全漏洞。",
+        "zh-Hans": "用 AI 编程代理直接接手修 bug、写测试、review PR 等任务；有条件提供的 Codex Security 还能协助找出安全漏洞。",
+        "en": "Hand tasks like bug fixes, tests and PR reviews to an AI coding agent; Codex Security (where offered) helps find vulnerabilities."
+      },
       "requirements": {
         "zh-Hant": "核心維護者或廣泛使用的公開專案（相較 Claude 門檻較寬鬆）",
         "zh-Hans": "核心维护者或广泛使用的公开项目（相较 Claude 门槛较宽松）",
@@ -244,7 +334,7 @@
       },
       "type": "high_bar",
       "category": [
-        "ai_tools"
+        "ai_agent"
       ],
       "link": "https://developers.openai.com/community/codex-for-oss",
       "lastVerified": "2026-11-18"

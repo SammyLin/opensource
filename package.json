@@ -6,6 +6,7 @@
   "scripts": {
     "validate": "node validate.js",
     "screenshots": "node take-screenshots.js",
+    "readme": "node update-readme.js",
     "test": "node validate.js"
   },
   "repository": {

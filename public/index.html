@@ -15,6 +15,9 @@
     <meta property="og:site_name" content="OSS Perks">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta property="og:image" content="https://opensource.3mi.ai/brand/logo-wordmark.png">
     <style>
         :root {
             --color-bg: #f8f9fa;
@@ -54,7 +57,8 @@
         nav { background: var(--color-surface); border-bottom: 1px solid var(--color-border); position: sticky; top: 0; z-index: 10; }
         .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
         .nav-inner { display: flex; justify-content: space-between; align-items: center; height: 64px; gap: 12px; }
-        .logo { font-size: 18px; font-weight: 600; color: var(--color-text); text-decoration: none; white-space: nowrap; }
+        .logo { display: inline-flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 600; color: var(--color-text); text-decoration: none; white-space: nowrap; }
+        .logo img { width: 32px; height: 32px; flex: none; }
         .lang-switch { display: flex; gap: 4px; background: var(--color-bg); padding: 4px; border-radius: var(--radius-full); }
         .lang-switch a { padding: 6px 14px; color: var(--color-text-subtle); text-decoration: none; border-radius: var(--radius-full); font-size: 14px; font-weight: 500; }
         .lang-switch a[aria-current="page"] { background: var(--color-text); color: var(--color-surface); }
@@ -86,6 +90,11 @@
         .card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 24px; display: flex; flex-direction: column; gap: 12px; }
         .card:hover { box-shadow: var(--shadow-md); border-color: var(--color-border-hover); }
         .card h3 { font-size: 18px; font-weight: 600; line-height: 1.35; }
+        .card-head { display: flex; align-items: center; gap: 12px; }
+        .brand { width: 44px; height: 44px; flex: none; display: grid; place-items: center; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: #fff; }
+        .brand img { width: 24px; height: 24px; }
+        .brand.mono { background: var(--color-bg); font-weight: 700; font-size: 16px; color: var(--color-text-subtle); }
+        .why-it-helps dd { color: var(--color-text); }
         .meta { display: flex; flex-wrap: wrap; gap: 6px; }
         .badge { display: inline-block; padding: 2px 10px; border-radius: var(--radius-sm); font-size: 12px; font-weight: 600; }
         .type-direct_activation { background: var(--color-badge-green-bg); color: var(--color-badge-green-text); }
@@ -116,7 +125,8 @@
 
         @media (max-width: 768px) {
             .wrap { padding: 0 16px; }
-            .logo { font-size: 16px; }
+            .logo { font-size: 16px; gap: 8px; }
+            .logo img { width: 26px; height: 26px; }
             .hero { padding: 32px 0 24px; }
             .hero h1 { font-size: 30px; }
             .hero .lead { font-size: 16px; }
@@ -124,6 +134,10 @@
             .programs { grid-template-columns: 1fr; }
             .row-label { width: 100%; }
             .contribute { padding: 24px; }
+        }
+        @media (max-width: 420px) {
+            .logo { font-size: 15px; gap: 6px; }
+            .lang-switch a { padding: 6px 10px; }
         }
     </style>
 </head>
@@ -138,7 +152,7 @@
 
     <nav>
         <div class="wrap nav-inner">
-            <a href="/" class="logo" data-t="logo">OSS Perks｜開源福利社</a>
+            <a href="/" class="logo"><img src="/brand/logo-mark.png" alt="" width="32" height="32"><span data-t="logo">OSS Perks｜開源福利社</span></a>
             <div class="lang-switch">
                 <a href="/" hreflang="zh-Hant" data-lang="zh-Hant">繁</a>
                 <a href="/zh-hans/" hreflang="zh-Hans" data-lang="zh-Hans">简</a>
@@ -194,6 +208,8 @@
     <script>
         const LANG_PATHS = { 'zh-Hant': '/', 'zh-Hans': '/zh-hans/', 'en': '/en/' };
         const TYPES = ['direct_activation', 'application_required', 'high_bar'];
+        // Old category ids (before the switch to CNCF Landscape categories) so shared links keep working.
+        const LEGACY_CATS = { ide: 'app_definition_image_build', containers: 'container_registry', monitoring: 'observability', security_scanning: 'security_compliance', password_management: 'key_management', ai_tools: 'ai_agent' };
 
         const T = {
             'zh-Hant': {
@@ -207,10 +223,10 @@
                 'type-application_required': '要申請', 'legend-application_required': '填申請表，通常要等幾天到幾週審核。',
                 'type-high_bar': '門檻高', 'legend-high_bar': '要求星數、下載量或知名度，適合較大的專案。',
                 'search': '搜尋方案名稱、內容或條件…',
-                'label-type': '申請難度', 'label-cat': '類別', 'all': '全部',
+                'label-type': '申請難度', 'label-cat': 'CNCF 分類', 'all': '全部',
                 'count': n => `共 ${n} 個方案`, 'clear': '清除篩選',
                 'empty': '沒有符合條件的方案，試試清除篩選。',
-                'what-you-get': '拿到什麼', 'requirements': '申請條件', 'cta-apply': '前往申請', 'cta-direct': '前往開通', 'last-verified': '驗證於',
+                'why-it-helps': '對你的專案有什麼幫助', 'what-you-get': '拿到什麼', 'requirements': '申請條件', 'cta-apply': '前往申請', 'cta-direct': '前往開通', 'last-verified': '驗證於',
                 'contribute-title': '知道其他免費方案？',
                 'contribute-desc': '所有資料都在 <code>public/data/programs.json</code>。在 GitHub 上直接編輯、照著現有格式加一筆，送出 PR 就好；CI 會自動檢查格式。',
                 'edit-btn': '在 GitHub 編輯資料', 'guide-btn': '貢獻指南',
@@ -229,10 +245,10 @@
                 'type-application_required': '要申请', 'legend-application_required': '填申请表，通常要等几天到几周审核。',
                 'type-high_bar': '门槛高', 'legend-high_bar': '要求星数、下载量或知名度，适合较大的项目。',
                 'search': '搜索方案名称、内容或条件…',
-                'label-type': '申请难度', 'label-cat': '类别', 'all': '全部',
+                'label-type': '申请难度', 'label-cat': 'CNCF 分类', 'all': '全部',
                 'count': n => `共 ${n} 个方案`, 'clear': '清除筛选',
                 'empty': '没有符合条件的方案，试试清除筛选。',
-                'what-you-get': '拿到什么', 'requirements': '申请条件', 'cta-apply': '前往申请', 'cta-direct': '前往开通', 'last-verified': '验证于',
+                'why-it-helps': '对你的项目有什么帮助', 'what-you-get': '拿到什么', 'requirements': '申请条件', 'cta-apply': '前往申请', 'cta-direct': '前往开通', 'last-verified': '验证于',
                 'contribute-title': '知道其他免费方案？',
                 'contribute-desc': '所有数据都在 <code>public/data/programs.json</code>。在 GitHub 上直接编辑、照着现有格式加一条，提交 PR 就好；CI 会自动检查格式。',
                 'edit-btn': '在 GitHub 编辑数据', 'guide-btn': '贡献指南',
@@ -251,10 +267,10 @@
                 'type-application_required': 'Application required', 'legend-application_required': 'Fill out a form; review usually takes days to weeks.',
                 'type-high_bar': 'High bar', 'legend-high_bar': 'Needs stars, downloads or recognition. Aimed at larger projects.',
                 'search': 'Search names, benefits or requirements…',
-                'label-type': 'Difficulty', 'label-cat': 'Category', 'all': 'All',
+                'label-type': 'Difficulty', 'label-cat': 'CNCF category', 'all': 'All',
                 'count': n => `${n} program${n === 1 ? '' : 's'}`, 'clear': 'Clear filters',
                 'empty': 'No programs match. Try clearing the filters.',
-                'what-you-get': 'What you get', 'requirements': 'Requirements', 'cta-apply': 'Apply', 'cta-direct': 'Activate', 'last-verified': 'Verified',
+                'why-it-helps': 'How it helps your project', 'what-you-get': 'What you get', 'requirements': 'Requirements', 'cta-apply': 'Apply', 'cta-direct': 'Activate', 'last-verified': 'Verified',
                 'contribute-title': 'Know another free program?',
                 'contribute-desc': 'All data lives in <code>public/data/programs.json</code>. Edit it on GitHub, add one entry following the existing format, and open a PR. CI checks the format for you.',
                 'edit-btn': 'Edit data on GitHub', 'guide-btn': 'Contributing guide',
@@ -294,7 +310,8 @@
             const p = new URLSearchParams(location.search);
             state.q = p.get('q') || '';
             state.type = TYPES.includes(p.get('type')) ? p.get('type') : '';
-            state.cat = p.get('cat') in data.categories ? p.get('cat') : '';
+            const cat = LEGACY_CATS[p.get('cat')] || p.get('cat');
+            state.cat = cat in data.categories ? cat : '';
             $('#q').value = state.q;
         }
 
@@ -311,8 +328,8 @@
             if (skip !== 'type' && state.type && p.type !== state.type) return false;
             if (skip !== 'cat' && state.cat && !p.category.includes(state.cat)) return false;
             if (state.q) {
-                const hay = [p.name, p.whatYouGet[lang], p.requirements[lang],
-                    ...p.category.map(c => data.categories[c]?.[lang] || c)].join(' ').toLowerCase();
+                const hay = [p.name, p.whatYouGet[lang], p.whyItHelps?.[lang] || '', p.requirements[lang],
+                    ...p.category.map(c => (data.categories[c]?.[lang] || c) + ' ' + cncfPath(c))].join(' ').toLowerCase();
                 return state.q.toLowerCase().split(/\s+/).filter(Boolean).every(w => hay.includes(w));
             }
             return true;
@@ -335,6 +352,12 @@
                 Object.keys(data.categories).map(c => chip('cat', c, data.categories[c][lang], catPool.filter(p => p.category.includes(c)).length)).join('');
         }
 
+        // CNCF Landscape path, e.g. "Provisioning › Key Management"
+        function cncfPath(c) {
+            const x = data.categories[c]?.cncf;
+            return x ? ['CNCF', x.category, x.subcategory].filter(Boolean).join(' › ') : '';
+        }
+
         function renderCards() {
             const list = data.programs.filter(p => matches(p))
                 .sort((a, b) => TYPES.indexOf(a.type) - TYPES.indexOf(b.type));
@@ -342,13 +365,17 @@
             $('#clear').hidden = !(state.q || state.type || state.cat);
             $('#programs').innerHTML = list.length ? list.map(p => `
                 <article class="card">
-                    <h3><a href="${esc(safeUrl(p.link))}" target="_blank" rel="noopener">${esc(p.name)}</a></h3>
+                    <div class="card-head">
+                        ${p.logo ? `<span class="brand"><img src="${esc(p.logo)}" alt="" width="24" height="24" loading="lazy"></span>` : `<span class="brand mono" aria-hidden="true">${esc(p.name.charAt(0))}</span>`}
+                        <h3><a href="${esc(safeUrl(p.link))}" target="_blank" rel="noopener">${esc(p.name)}</a></h3>
+                    </div>
                     <div class="meta">
                         <span class="badge type-${esc(p.type)}">${esc(t['type-' + p.type])}</span>
                         ${p.pending ? `<span class="badge pending">${esc(p.pending[lang] || t.pending)}</span>` : ''}
-                        ${p.category.map(c => `<span class="tag">${esc(data.categories[c]?.[lang] || c)}</span>`).join('')}
+                        ${p.category.map(c => `<span class="tag" title="${esc(cncfPath(c))}">${esc(data.categories[c]?.[lang] || c)}</span>`).join('')}
                     </div>
                     <dl>
+                        ${p.whyItHelps ? `<div class="why-it-helps"><dt>${esc(t['why-it-helps'])}</dt><dd>${esc(p.whyItHelps[lang])}</dd></div>` : ''}
                         <div><dt>${esc(t['what-you-get'])}</dt><dd>${esc(p.whatYouGet[lang])}</dd></div>
                         <div><dt>${esc(t.requirements)}</dt><dd>${esc(p.requirements[lang])}${p.pending?.link ? ` <a href="${esc(safeUrl(p.pending.link))}" target="_blank" rel="noopener">${esc(t['pending-src'])}</a>` : ''}</dd></div>
                     </dl>
