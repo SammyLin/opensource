@@ -4,6 +4,9 @@ on:
   pull_request:
     paths:
       - 'public/data/programs.json'
+      - 'public/logos/**'
+      - 'src/**'
+      - 'build.js'
       - 'validate.js'
   push:
     branches:
@@ -29,6 +32,13 @@ jobs:
       
       - name: Run validation script
         run: node validate.js
+
+      # Make sure the template still prerenders (every card renders in every language).
+      # Generated files are committed by the "Build static pages" workflow after merge.
+      - name: Check the pages build
+        run: |
+          npm install --no-save --no-package-lock jsdom@31
+          node build.js
       
       - name: Validation passed
         if: success()

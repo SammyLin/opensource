@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSS Perks｜開源福利社 — 開源維護者的免費工具</title>
+    <meta name="description" content="開源維護者可以免費拿到的工具與服務，一頁看完內容、條件、怎麼申請。" id="meta-description">
+    <link rel="canonical" href="https://opensource.3mi.ai/" id="canonical">
+    <link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/">
+    <link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/">
+    <link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/">
+    <meta property="og:title" content="OSS Perks｜開源福利社 — 開源維護者的免費工具" id="meta-og-title">
+    <meta property="og:description" content="開源維護者可以免費拿到的工具與服務，一頁看完內容、條件、怎麼申請。" id="meta-og-description">
+    <meta property="og:site_name" content="OSS Perks">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://opensource.3mi.ai/" id="meta-og-url">
+    <meta property="og:locale" content="zh_TW" id="meta-og-locale">
+    <meta property="og:image" content="https://opensource.3mi.ai/brand/og-zh-hant.png" id="meta-og-image">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="OSS Perks｜開源福利社" id="meta-og-image-alt">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OSS Perks｜開源福利社 — 開源維護者的免費工具" id="meta-tw-title">
+    <meta name="twitter:description" content="開源維護者可以免費拿到的工具與服務，一頁看完內容、條件、怎麼申請。" id="meta-tw-description">
+    <meta name="twitter:image" content="https://opensource.3mi.ai/brand/og-zh-hant.png" id="meta-tw-image">
+    <meta name="theme-color" content="#10b981">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <style>
+        :root {
+            --color-bg: #f8f9fa;
+            --color-surface: #fdfefe;
+            --color-text: #1a1a1a;
+            --color-text-subtle: #555555;
+            --color-text-muted: #6b6b6b;
+            --color-border: #e5e7eb;
+            --color-border-hover: #d1d5db;
+            --color-accent: #10b981;
+            --color-accent-dark: #059669;
+            --color-focus: #0d9668;
+            --color-badge-green-bg: #d1fae5;
+            --color-badge-green-text: #065f46;
+            --color-badge-yellow-bg: #fef3c7;
+            --color-badge-yellow-text: #92400e;
+            --color-badge-red-bg: #fee2e2;
+            --color-badge-red-text: #991b1b;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "Noto Sans SC", Roboto, "Helvetica Neue", Arial, sans-serif;
+            --radius-sm: 6px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-full: 999px;
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        [hidden] { display: none !important; }
+        html, body { overflow-x: clip; }
+        body { font-family: var(--font-sans); line-height: 1.6; color: var(--color-text); background: var(--color-bg); }
+        a { color: var(--color-accent-dark); }
+        :focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; border-radius: var(--radius-sm); }
+        .icon { width: 16px; height: 16px; flex: none; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+        nav { background: var(--color-surface); border-bottom: 1px solid var(--color-border); position: sticky; top: 0; z-index: 10; }
+        .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .nav-inner { display: flex; justify-content: space-between; align-items: center; height: 64px; gap: 12px; }
+        .logo { display: inline-flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 600; color: var(--color-text); text-decoration: none; white-space: nowrap; }
+        .logo img { width: 32px; height: 32px; flex: none; }
+        .lang-switch { display: flex; gap: 4px; background: var(--color-bg); padding: 4px; border-radius: var(--radius-full); }
+        .lang-switch a { padding: 6px 14px; color: var(--color-text-subtle); text-decoration: none; border-radius: var(--radius-full); font-size: 14px; font-weight: 500; }
+        .lang-switch a[aria-current="page"] { background: var(--color-text); color: var(--color-surface); }
+
+        .hero { padding: 56px 0 32px; max-width: 760px; }
+        .hero h1 { font-size: 44px; line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 16px; text-wrap: balance; }
+        .hero .lead { font-size: 18px; color: var(--color-text-subtle); margin-bottom: 12px; }
+        .hero .why { font-size: 15px; color: var(--color-text-muted); }
+
+        .legend { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 32px; }
+        .legend div { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 16px; font-size: 14px; color: var(--color-text-subtle); }
+        .legend .badge { margin-bottom: 6px; }
+
+        .toolbar { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 16px; margin-bottom: 16px; display: grid; gap: 12px; }
+        .search { display: flex; align-items: center; gap: 8px; border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 0 12px; color: var(--color-text-muted); background: var(--color-bg); }
+        .search:focus-within { border-color: var(--color-focus); }
+        .search input { flex: 1; border: 0; background: transparent; font: inherit; font-size: 16px; padding: 10px 0; color: var(--color-text); outline: none; min-width: 0; }
+        .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+        .row-label { font-size: 13px; color: var(--color-text-muted); min-width: 4.5em; }
+        .chip { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; min-height: 36px; border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text-subtle); border-radius: var(--radius-full); font: inherit; font-size: 14px; cursor: pointer; }
+        .chip:hover { border-color: var(--color-border-hover); color: var(--color-text); }
+        .chip[aria-pressed="true"] { background: var(--color-text); border-color: var(--color-text); color: var(--color-surface); }
+        .chip .n { font-size: 12px; opacity: 0.7; font-variant-numeric: tabular-nums; }
+        .chip:disabled { opacity: 0.4; cursor: default; }
+        .status { display: flex; justify-content: space-between; align-items: center; font-size: 14px; color: var(--color-text-muted); margin-bottom: 16px; min-height: 32px; }
+        .link-btn { background: none; border: 0; font: inherit; font-size: 14px; color: var(--color-accent-dark); cursor: pointer; display: inline-flex; gap: 4px; align-items: center; }
+
+        .programs { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; margin-bottom: 48px; }
+        .card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 24px; display: flex; flex-direction: column; gap: 12px; }
+        .card:hover { box-shadow: var(--shadow-md); border-color: var(--color-border-hover); }
+        .card h2 { font-size: 18px; font-weight: 600; line-height: 1.35; }
+        .card-head { display: flex; align-items: center; gap: 12px; }
+        .brand { width: 44px; height: 44px; flex: none; display: grid; place-items: center; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: #fff; }
+        .brand img { width: 24px; height: 24px; }
+        .brand.mono { background: var(--color-bg); font-weight: 700; font-size: 16px; color: var(--color-text-subtle); }
+        .why-it-helps dd { color: var(--color-text); }
+        .meta { display: flex; flex-wrap: wrap; gap: 6px; }
+        .badge { display: inline-block; padding: 2px 10px; border-radius: var(--radius-sm); font-size: 12px; font-weight: 600; }
+        .type-direct_activation { background: var(--color-badge-green-bg); color: var(--color-badge-green-text); }
+        .type-application_required { background: var(--color-badge-yellow-bg); color: var(--color-badge-yellow-text); }
+        .type-high_bar { background: var(--color-badge-red-bg); color: var(--color-badge-red-text); }
+        .pending { background: #eef2ff; color: #3730a3; border: 1px solid #c7d2fe; }
+        .tag { padding: 2px 8px; background: var(--color-bg); border-radius: var(--radius-sm); font-size: 12px; color: var(--color-text-subtle); }
+        .card dl { font-size: 14px; color: var(--color-text-subtle); display: grid; gap: 8px; }
+        .card dt { font-size: 12px; font-weight: 600; color: var(--color-text); }
+        .card-foot { margin-top: auto; display: flex; justify-content: space-between; align-items: center; padding-top: 8px; border-top: 1px solid var(--color-border); font-size: 13px; }
+        .card h2 a { color: inherit; text-decoration: none; }
+        .card h2 a:hover { color: var(--color-accent-dark); text-decoration: underline; }
+        .apply { display: inline-flex; gap: 6px; align-items: center; padding: 8px 14px; border-radius: var(--radius-md); background: var(--color-text); color: var(--color-surface); font-weight: 500; text-decoration: none; }
+        .apply:hover { background: var(--color-accent-dark); }
+        .card-foot span { color: var(--color-text-muted); }
+        .empty { grid-column: 1 / -1; text-align: center; padding: 48px 0; color: var(--color-text-muted); }
+
+        .contribute { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 32px; margin-bottom: 48px; display: flex; gap: 24px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+        .contribute h2 { font-size: 22px; margin-bottom: 4px; }
+        .contribute p { color: var(--color-text-subtle); font-size: 14px; max-width: 600px; }
+        .contribute code { background: var(--color-bg); padding: 1px 6px; border-radius: 4px; font-size: 13px; }
+        .btns { display: flex; gap: 8px; flex-wrap: wrap; }
+        .btn { display: inline-flex; gap: 6px; align-items: center; padding: 10px 18px; border-radius: var(--radius-md); font-size: 14px; font-weight: 500; text-decoration: none; border: 1px solid var(--color-text); }
+        .btn.primary { background: var(--color-text); color: var(--color-surface); }
+        .btn.secondary { color: var(--color-text); }
+        footer { text-align: center; padding: 24px 0 40px; color: var(--color-text-muted); font-size: 13px; display: grid; gap: 6px; }
+        footer a { color: var(--color-text-subtle); }
+
+        @media (max-width: 768px) {
+            .wrap { padding: 0 16px; }
+            .logo { font-size: 16px; gap: 8px; }
+            .logo img { width: 26px; height: 26px; }
+            .hero { padding: 32px 0 24px; }
+            .hero h1 { font-size: 30px; }
+            .hero .lead { font-size: 16px; }
+            .legend { grid-template-columns: 1fr; }
+            .programs { grid-template-columns: 1fr; }
+            .row-label { width: 100%; }
+            .contribute { padding: 24px; }
+        }
+        @media (max-width: 420px) {
+            .logo { font-size: 15px; gap: 6px; }
+            .lang-switch a { padding: 6px 10px; }
+        }
+    </style>
+</head>
+<body>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <!-- lucide: search, external-link, x, github -->
+        <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+        <symbol id="i-ext" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+        <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+        <symbol id="i-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></symbol>
+    </svg>
+
+    <nav>
+        <div class="wrap nav-inner">
+            <a href="/" class="logo"><img src="/brand/logo-mark.png" alt="" width="32" height="32"><span data-t="logo">OSS Perks｜開源福利社</span></a>
+            <div class="lang-switch">
+                <a href="/" hreflang="zh-Hant" data-lang="zh-Hant">繁</a>
+                <a href="/zh-hans/" hreflang="zh-Hans" data-lang="zh-Hans">简</a>
+                <a href="/en/" hreflang="en" data-lang="en">EN</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="wrap">
+        <section class="hero">
+            <h1 data-t="h1"></h1>
+            <p class="lead" data-t="lead"></p>
+            <p class="why" data-t="why"></p>
+            <p class="why" id="updated"></p>
+        </section>
+
+        <section class="legend" aria-label="type legend">
+            <div><span class="badge type-direct_activation" data-t="type-direct_activation"></span><p data-t="legend-direct_activation"></p></div>
+            <div><span class="badge type-application_required" data-t="type-application_required"></span><p data-t="legend-application_required"></p></div>
+            <div><span class="badge type-high_bar" data-t="type-high_bar"></span><p data-t="legend-high_bar"></p></div>
+        </section>
+
+        <section class="toolbar">
+            <label class="search">
+                <svg class="icon"><use href="#i-search"/></svg>
+                <input type="search" id="q" autocomplete="off" data-t-placeholder="search">
+            </label>
+            <div class="row" id="type-row"><span class="row-label" data-t="label-type"></span></div>
+            <div class="row" id="cat-row"><span class="row-label" data-t="label-cat"></span></div>
+        </section>
+
+        <div class="status">
+            <span id="count" aria-live="polite"></span>
+            <button class="link-btn" id="clear" hidden><svg class="icon"><use href="#i-x"/></svg><span data-t="clear"></span></button>
+        </div>
+
+        <section class="programs" id="programs"></section>
+
+        <section class="contribute">
+            <div>
+                <h2 data-t="contribute-title"></h2>
+                <p data-t-html="contribute-desc"></p>
+            </div>
+            <div class="btns">
+                <a class="btn primary" href="https://github.com/SammyLin/opensource/edit/main/public/data/programs.json" target="_blank" rel="noopener"><svg class="icon"><use href="#i-github"/></svg><span data-t="edit-btn"></span></a>
+                <a class="btn secondary" href="https://github.com/SammyLin/opensource/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener" data-t="guide-btn"></a>
+            </div>
+        </section>
+    </main>
+
+    <footer><p data-t="footer"></p><p data-t-html="license"></p></footer>
+
+    <script>
+        const LANG_PATHS = { 'zh-Hant': '/', 'zh-Hans': '/zh-hans/', 'en': '/en/' };
+        const OG_LOCALE = { 'zh-Hant': 'zh_TW', 'zh-Hans': 'zh_CN', 'en': 'en_US' };
+        const TYPES = ['direct_activation', 'application_required', 'high_bar'];
+        // Old category ids (before the switch to CNCF Landscape categories) so shared links keep working.
+        const LEGACY_CATS = { ide: 'app_definition_image_build', containers: 'container_registry', monitoring: 'observability', security_scanning: 'security_compliance', password_management: 'key_management', ai_tools: 'ai_agent' };
+
+        const T = {
+            'zh-Hant': {
+                'logo': 'OSS Perks｜開源福利社',
+                'title': 'OSS Perks｜開源福利社 — 開源維護者的免費工具',
+                'desc': '開源維護者可以免費拿到的工具與服務，一頁看完內容、條件、怎麼申請。',
+                'h1': '做開源，這些工具可以免費用',
+                'lead': '很多公司提供免費方案給開源專案維護者：IDE、CI、監控、安全掃描、AI 工具。這裡把它們整理成一頁，每個方案都寫清楚拿到什麼、要什麼條件、去哪申請。',
+                'why': '資訊散落在各家官網、條件又常改，所以每筆都附官方連結與最後驗證日期。看到過期資訊，歡迎直接發 PR 修正。',
+                'type-direct_activation': '直接開通', 'legend-direct_activation': '公開儲存庫就能用，不用填表等審核。',
+                'type-application_required': '要申請', 'legend-application_required': '填申請表，通常要等幾天到幾週審核。',
+                'type-high_bar': '門檻高', 'legend-high_bar': '要求星數、下載量或知名度，適合較大的專案。',
+                'search': '搜尋方案名稱、內容或條件…',
+                'label-type': '申請難度', 'label-cat': 'CNCF 分類', 'all': '全部',
+                'count': n => `共 ${n} 個方案`, 'clear': '清除篩選',
+                'empty': '沒有符合條件的方案，試試清除篩選。',
+                'why-it-helps': '對你的專案有什麼幫助', 'what-you-get': '拿到什麼', 'requirements': '申請條件', 'cta-apply': '前往申請', 'cta-direct': '前往開通', 'last-verified': '驗證於',
+                'contribute-title': '知道其他免費方案？',
+                'contribute-desc': '所有資料都在 <code>public/data/programs.json</code>。在 GitHub 上直接編輯、照著現有格式加一筆，送出 PR 就好；CI 會自動檢查格式。',
+                'edit-btn': '在 GitHub 編輯資料', 'guide-btn': '貢獻指南',
+                'footer': '資料以各方案官網為準，申請前請再確認條件。',
+                'load-fail': '資料載入失敗',
+                'license': '程式碼 <a href="https://github.com/SammyLin/opensource/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a> · 資料 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>', 'updated': '資料更新於', 'pending': '待確認', 'pending-src': '確認來源'
+            },
+            'zh-Hans': {
+                'logo': 'OSS Perks｜开源福利社',
+                'title': 'OSS Perks｜开源福利社 — 开源维护者的免费工具',
+                'desc': '开源维护者可以免费拿到的工具与服务，一页看完内容、条件、怎么申请。',
+                'h1': '做开源，这些工具可以免费用',
+                'lead': '很多公司提供免费方案给开源项目维护者：IDE、CI、监控、安全扫描、AI 工具。这里把它们整理成一页，每个方案都写清楚拿到什么、要什么条件、去哪申请。',
+                'why': '信息散落在各家官网、条件又常改，所以每条都附官方链接与最后验证日期。看到过期信息，欢迎直接提 PR 修正。',
+                'type-direct_activation': '直接开通', 'legend-direct_activation': '公开仓库就能用，不用填表等审核。',
+                'type-application_required': '要申请', 'legend-application_required': '填申请表，通常要等几天到几周审核。',
+                'type-high_bar': '门槛高', 'legend-high_bar': '要求星数、下载量或知名度，适合较大的项目。',
+                'search': '搜索方案名称、内容或条件…',
+                'label-type': '申请难度', 'label-cat': 'CNCF 分类', 'all': '全部',
+                'count': n => `共 ${n} 个方案`, 'clear': '清除筛选',
+                'empty': '没有符合条件的方案，试试清除筛选。',
+                'why-it-helps': '对你的项目有什么帮助', 'what-you-get': '拿到什么', 'requirements': '申请条件', 'cta-apply': '前往申请', 'cta-direct': '前往开通', 'last-verified': '验证于',
+                'contribute-title': '知道其他免费方案？',
+                'contribute-desc': '所有数据都在 <code>public/data/programs.json</code>。在 GitHub 上直接编辑、照着现有格式加一条，提交 PR 就好；CI 会自动检查格式。',
+                'edit-btn': '在 GitHub 编辑数据', 'guide-btn': '贡献指南',
+                'footer': '数据以各方案官网为准，申请前请再确认条件。',
+                'load-fail': '数据加载失败',
+                'license': '代码 <a href="https://github.com/SammyLin/opensource/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a> · 数据 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>', 'updated': '数据更新于', 'pending': '待确认', 'pending-src': '确认来源'
+            },
+            'en': {
+                'logo': 'OSS Perks',
+                'title': 'OSS Perks — Free tools for open source maintainers',
+                'desc': 'Free tools and services for open source maintainers: what you get, who qualifies, and where to apply, on one page.',
+                'h1': 'Free tools for open source maintainers',
+                'lead': 'Many companies give open source maintainers free plans: IDEs, CI, monitoring, security scanning, AI tools. This page collects them in one place, each with what you get, who qualifies, and where to apply.',
+                'why': 'These offers are scattered across vendor sites and change often, so every entry links to the official source and shows when it was last verified. Spot something outdated? Send a PR.',
+                'type-direct_activation': 'Direct activation', 'legend-direct_activation': 'Works for any public repo. No form, no review.',
+                'type-application_required': 'Application required', 'legend-application_required': 'Fill out a form; review usually takes days to weeks.',
+                'type-high_bar': 'High bar', 'legend-high_bar': 'Needs stars, downloads or recognition. Aimed at larger projects.',
+                'search': 'Search names, benefits or requirements…',
+                'label-type': 'Difficulty', 'label-cat': 'CNCF category', 'all': 'All',
+                'count': n => `${n} program${n === 1 ? '' : 's'}`, 'clear': 'Clear filters',
+                'empty': 'No programs match. Try clearing the filters.',
+                'why-it-helps': 'How it helps your project', 'what-you-get': 'What you get', 'requirements': 'Requirements', 'cta-apply': 'Apply', 'cta-direct': 'Activate', 'last-verified': 'Verified',
+                'contribute-title': 'Know another free program?',
+                'contribute-desc': 'All data lives in <code>public/data/programs.json</code>. Edit it on GitHub, add one entry following the existing format, and open a PR. CI checks the format for you.',
+                'edit-btn': 'Edit data on GitHub', 'guide-btn': 'Contributing guide',
+                'footer': 'Vendor sites are the source of truth. Double-check terms before applying.',
+                'load-fail': 'Failed to load data',
+                'license': 'Code <a href="https://github.com/SammyLin/opensource/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a> · Data <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>', 'updated': 'Data updated', 'pending': 'To be confirmed', 'pending-src': 'Source'
+            }
+        };
+
+        const lang = Object.keys(LANG_PATHS).find(l => l !== 'zh-Hant' && location.pathname.startsWith(LANG_PATHS[l])) || 'zh-Hant';
+        const t = T[lang];
+        const state = { q: '', type: '', cat: '' };
+        let data = { categories: {}, programs: [] };
+
+        // Data comes from public PRs: escape before inserting into HTML.
+        const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+        const safeUrl = u => /^https?:\/\//.test(u) ? u : '#';
+        const $ = s => document.querySelector(s);
+
+        function applyStaticText() {
+            document.documentElement.lang = lang;
+            document.title = t.title;
+            $('#meta-description').content = t.desc;
+            $('#meta-og-title').content = t.title;
+            $('#meta-og-description').content = t.desc;
+            const url = 'https://opensource.3mi.ai' + LANG_PATHS[lang];
+            const og = 'https://opensource.3mi.ai/brand/og-' + lang.toLowerCase() + '.png';
+            $('#canonical').href = url;
+            $('#meta-og-url').content = url;
+            $('#meta-og-locale').content = OG_LOCALE[lang];
+            $('#meta-og-image').content = og;
+            $('#meta-tw-image').content = og;
+            $('#meta-og-image-alt').content = t.title;
+            $('#meta-tw-title').content = t.title;
+            $('#meta-tw-description').content = t.desc;
+            document.querySelectorAll('[data-t]').forEach(el => el.textContent = t[el.dataset.t]);
+            document.querySelectorAll('[data-t-html]').forEach(el => el.innerHTML = t[el.dataset.tHtml]);
+            document.querySelectorAll('[data-t-placeholder]').forEach(el => el.placeholder = t[el.dataset.tPlaceholder]);
+            document.querySelectorAll('.lang-switch a').forEach(a => {
+                if (a.dataset.lang === lang) a.setAttribute('aria-current', 'page');
+            });
+            $('.logo').href = LANG_PATHS[lang];
+        }
+
+        function readState() {
+            const p = new URLSearchParams(location.search);
+            state.q = p.get('q') || '';
+            state.type = TYPES.includes(p.get('type')) ? p.get('type') : '';
+            const cat = LEGACY_CATS[p.get('cat')] || p.get('cat');
+            state.cat = cat in data.categories ? cat : '';
+            $('#q').value = state.q;
+        }
+
+        function writeState() {
+            const p = new URLSearchParams();
+            Object.entries(state).forEach(([k, v]) => v && p.set(k, v));
+            const qs = p.toString() ? '?' + p : '';
+            history.replaceState(null, '', location.pathname + qs);
+            // keep filters when switching language
+            document.querySelectorAll('.lang-switch a').forEach(a => a.href = LANG_PATHS[a.dataset.lang] + qs);
+        }
+
+        function matches(p, skip) {
+            if (skip !== 'type' && state.type && p.type !== state.type) return false;
+            if (skip !== 'cat' && state.cat && !p.category.includes(state.cat)) return false;
+            if (state.q) {
+                const hay = [p.name, p.whatYouGet[lang], p.whyItHelps?.[lang] || '', p.requirements[lang],
+                    ...p.category.map(c => (data.categories[c]?.[lang] || c) + ' ' + cncfPath(c))].join(' ').toLowerCase();
+                return state.q.toLowerCase().split(/\s+/).filter(Boolean).every(w => hay.includes(w));
+            }
+            return true;
+        }
+
+        // Counts on each chip reflect the other active filters, so users never click into an empty result.
+        function chip(group, value, label, count) {
+            const on = state[group] === value;
+            return `<button class="chip" data-group="${group}" data-value="${esc(value)}" aria-pressed="${on}" ${count === 0 && !on ? 'disabled' : ''}>${esc(label)} <span class="n">${count}</span></button>`;
+        }
+
+        function renderChips() {
+            const typePool = data.programs.filter(p => matches(p, 'type'));
+            const catPool = data.programs.filter(p => matches(p, 'cat'));
+            $('#type-row').innerHTML = `<span class="row-label">${esc(t['label-type'])}</span>` +
+                chip('type', '', t.all, typePool.length) +
+                TYPES.map(ty => chip('type', ty, t['type-' + ty], typePool.filter(p => p.type === ty).length)).join('');
+            $('#cat-row').innerHTML = `<span class="row-label">${esc(t['label-cat'])}</span>` +
+                chip('cat', '', t.all, catPool.length) +
+                Object.keys(data.categories).map(c => chip('cat', c, data.categories[c][lang], catPool.filter(p => p.category.includes(c)).length)).join('');
+        }
+
+        // CNCF Landscape path, e.g. "Provisioning › Key Management"
+        function cncfPath(c) {
+            const x = data.categories[c]?.cncf;
+            return x ? ['CNCF', x.category, x.subcategory].filter(Boolean).join(' › ') : '';
+        }
+
+        function renderCards() {
+            const list = data.programs.filter(p => matches(p))
+                .sort((a, b) => TYPES.indexOf(a.type) - TYPES.indexOf(b.type));
+            $('#count').textContent = t.count(list.length);
+            $('#clear').hidden = !(state.q || state.type || state.cat);
+            $('#programs').innerHTML = list.length ? list.map(p => `
+                <article class="card">
+                    <div class="card-head">
+                        ${p.logo ? `<span class="brand"><img src="${esc(p.logo)}" alt="" width="24" height="24" loading="lazy"></span>` : `<span class="brand mono" aria-hidden="true">${esc(p.name.charAt(0))}</span>`}
+                        <h2><a href="${esc(safeUrl(p.link))}" target="_blank" rel="noopener">${esc(p.name)}</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-${esc(p.type)}">${esc(t['type-' + p.type])}</span>
+                        ${p.pending ? `<span class="badge pending">${esc(p.pending[lang] || t.pending)}</span>` : ''}
+                        ${p.category.map(c => `<span class="tag" title="${esc(cncfPath(c))}">${esc(data.categories[c]?.[lang] || c)}</span>`).join('')}
+                    </div>
+                    <dl>
+                        ${p.whyItHelps ? `<div class="why-it-helps"><dt>${esc(t['why-it-helps'])}</dt><dd>${esc(p.whyItHelps[lang])}</dd></div>` : ''}
+                        <div><dt>${esc(t['what-you-get'])}</dt><dd>${esc(p.whatYouGet[lang])}</dd></div>
+                        <div><dt>${esc(t.requirements)}</dt><dd>${esc(p.requirements[lang])}${p.pending?.link ? ` <a href="${esc(safeUrl(p.pending.link))}" target="_blank" rel="noopener">${esc(t['pending-src'])}</a>` : ''}</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="${esc(safeUrl(p.link))}" target="_blank" rel="noopener">${esc(p.type === 'direct_activation' ? t['cta-direct'] : t['cta-apply'])}<svg class="icon"><use href="#i-ext"/></svg></a>
+                        <span>${esc(t['last-verified'])} ${esc(p.lastVerified)}</span>
+                    </div>
+                </article>`).join('') : `<p class="empty">${esc(t.empty)}</p>`;
+        }
+
+        function render() { renderChips(); renderCards(); writeState(); }
+
+        document.addEventListener('click', e => {
+            const c = e.target.closest('.chip');
+            if (c) { state[c.dataset.group] = state[c.dataset.group] === c.dataset.value ? '' : c.dataset.value; render(); }
+        });
+        $('#q').addEventListener('input', e => { state.q = e.target.value.trim(); render(); });
+        $('#clear').addEventListener('click', () => { state.q = state.type = state.cat = ''; $('#q').value = ''; render(); });
+
+        applyStaticText();
+        fetch('/data/programs.json')
+            .then(r => r.json())
+            .then(d => {
+                data = d;
+                const latest = data.programs.map(p => p.lastVerified).sort().at(-1);
+                if (latest) $('#updated').textContent = `${t.updated} ${latest}`;
+                readState(); render();
+            })
+            .catch(err => {
+                console.error(err);
+                $('#programs').innerHTML = `<p class="empty">${esc(t['load-fail'])}</p>`;
+            });
+    </script>
+</body>
+</html>

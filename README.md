@@ -102,10 +102,19 @@
 
 ### 本地執行
 
-本專案是純靜態網站，無需建置步驟：
+本專案是純靜態網站。頁面模板在 `src/index.html`，`public/` 底下的三個語言頁面（`index.html`、`zh-hans/`、`en/`）、`sitemap.xml`、`robots.txt` 都由 `build.js` 預先渲染產生，讓搜尋引擎和社群預覽不用執行 JavaScript 也看得到完整內容。修改模板或資料後執行：
 
 ```bash
-# 方法 1: 使用 Wrangler Pages 本地開發伺服器（推薦，唯一支援 /zh-hans/、/en/ 語言路徑）
+npm install      # 首次需要（安裝 jsdom）
+npm run build    # 重新產生 public/ 底下的頁面
+```
+
+> 不用擔心忘記：合併到 `main` 後，GitHub Action「Build static pages」會自動重新產生並 commit。
+
+啟動本機伺服器：
+
+```bash
+# 方法 1: 使用 Wrangler Pages 本地開發伺服器（推薦）
 npx wrangler pages dev public
 
 # 方法 2: 使用 Python 的內建伺服器
@@ -123,7 +132,7 @@ npx http-server public
 
 網站部署在 Cloudflare Pages，使用 Cloudflare 的 GitHub 集成（自動部署）。
 
-推送到 `main` 分支會自動觸發 Cloudflare Pages 重新建置和部署。
+推送到 `main` 分支會自動觸發 Cloudflare Pages 部署（直接發佈 `public/`，Cloudflare 端不需要建置指令）。
 
 ### 資料驗證
 
@@ -139,7 +148,7 @@ npm run validate
 
 ### 截圖（PR 用）
 
-先用 `npx wrangler pages dev public --port 8788` 啟動本機站（一般靜態伺服器不支援語言路徑），再執行：
+先執行 `npm run build`，再用 `npx wrangler pages dev public --port 8788` 啟動本機站，然後執行：
 
 ```bash
 npx playwright install chromium   # 首次需要
@@ -235,10 +244,19 @@ npm run screenshots -- after pr-media/pr2
 
 ### 本地运行
 
-本项目是纯静态网站，无需构建步骤：
+本项目是纯静态网站。页面模板在 `src/index.html`，`public/` 下的三个语言页面（`index.html`、`zh-hans/`、`en/`）、`sitemap.xml`、`robots.txt` 都由 `build.js` 预先渲染生成，让搜索引擎和社交预览无需执行 JavaScript 也能看到完整内容。修改模板或数据后运行：
 
 ```bash
-# 方法 1: 使用 Wrangler Pages 本地开发服务器（推荐，唯一支持 /zh-hans/、/en/ 语言路径）
+npm install      # 首次需要（安装 jsdom）
+npm run build    # 重新生成 public/ 下的页面
+```
+
+> 不用担心忘记：合并到 `main` 后，GitHub Action「Build static pages」会自动重新生成并提交。
+
+启动本地服务器：
+
+```bash
+# 方法 1: 使用 Wrangler Pages 本地开发服务器（推荐）
 npx wrangler pages dev public
 
 # 方法 2: 使用 Python 的内置服务器
@@ -256,7 +274,7 @@ npx http-server public
 
 网站部署在 Cloudflare Pages，使用 Cloudflare 的 GitHub 集成（自动部署）。
 
-推送到 `main` 分支会自动触发 Cloudflare Pages 重新构建和部署。
+推送到 `main` 分支会自动触发 Cloudflare Pages 部署（直接发布 `public/`，Cloudflare 端无需构建命令）。
 
 ### 数据验证
 
@@ -272,7 +290,7 @@ npm run validate
 
 ### 截图（PR 用）
 
-先用 `npx wrangler pages dev public --port 8788` 启动本地站（一般静态服务器不支持语言路径），再执行：
+先运行 `npm run build`，再用 `npx wrangler pages dev public --port 8788` 启动本地站，然后执行：
 
 ```bash
 npx playwright install chromium   # 首次需要
@@ -368,10 +386,19 @@ All program data is stored in `public/data/programs.json` (`categories` for cate
 
 ### Running Locally
 
-This is a plain static website with no build step required:
+This is a plain static website. The page template lives in `src/index.html`; the three language pages in `public/` (`index.html`, `zh-hans/`, `en/`), `sitemap.xml` and `robots.txt` are prerendered by `build.js`, so search engines and link previews see the full content without running JavaScript. After changing the template or the data, run:
 
 ```bash
-# Method 1: Wrangler Pages local dev server (recommended; the only option that serves /zh-hans/ and /en/)
+npm install      # first time only (installs jsdom)
+npm run build    # regenerate the pages in public/
+```
+
+> If you forget, the "Build static pages" GitHub Action regenerates and commits them after the change lands on `main`.
+
+Serve it locally:
+
+```bash
+# Method 1: Wrangler Pages local dev server (recommended)
 npx wrangler pages dev public
 
 # Method 2: Using Python's built-in server
@@ -389,7 +416,7 @@ Then open the displayed URL in your browser (usually `http://localhost:8787` or 
 
 The site is deployed on Cloudflare Pages using Cloudflare's GitHub integration (automatic deployment).
 
-Pushing to the `main` branch automatically triggers Cloudflare Pages to rebuild and deploy.
+Pushing to the `main` branch automatically triggers a Cloudflare Pages deployment (it publishes `public/` as is; no build command is needed on the Cloudflare side).
 
 ### Data Validation
 
@@ -405,7 +432,7 @@ After editing `programs.json`, run `npm run readme` to refresh the program table
 
 ### Screenshots (for PRs)
 
-Serve the site locally first (use `npx wrangler pages dev public --port 8788`; plain static servers do not handle the language paths), then:
+Run `npm run build`, serve the site with `npx wrangler pages dev public --port 8788`, then:
 
 ```bash
 npx playwright install chromium   # first time only

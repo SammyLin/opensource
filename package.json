@@ -4,9 +4,10 @@
   "description": "[繁體中文](#繁體中文) | [简体中文](#简体中文) | [English](#english)",
   "main": "validate.js",
   "scripts": {
+    "build": "node build.js",
     "validate": "node validate.js",
-    "screenshots": "node take-screenshots.js",
     "readme": "node update-readme.js",
+    "screenshots": "node take-screenshots.js",
     "test": "node validate.js"
   },
   "repository": {
@@ -23,5 +24,8 @@
   "dependencies": {
     "playwright": "^1.65.1",
     "puppeteer-core": "^25.18.1"
+  },
+  "devDependencies": {
+    "jsdom": "^31.0.1"
   }
 }
