@@ -14,7 +14,7 @@
 
 ### 如何編輯資料
 
-所有方案資料存放在 `data/programs.json` 檔案中。每個條目包含以下欄位：
+所有方案資料存放在 `public/data/programs.json`（`categories` 類別名稱 + `programs` 方案陣列）。每個條目包含以下欄位：
 
 ```json
 {
@@ -41,7 +41,7 @@
 本專案是純靜態網站，無需建置步驟：
 
 ```bash
-# 方法 1: 使用 Wrangler Pages 本地開發伺服器（推薦）
+# 方法 1: 使用 Wrangler Pages 本地開發伺服器（推薦，唯一支援 /zh-hans/、/en/ 語言路徑）
 npx wrangler pages dev public
 
 # 方法 2: 使用 Python 的內建伺服器
@@ -73,7 +73,7 @@ npm run validate
 
 ### 截圖（PR 用）
 
-先在本機啟動靜態站（例如 `cd public && python3 -m http.server 8000`），再執行：
+先用 `npx wrangler pages dev public --port 8788` 啟動本機站（一般靜態伺服器不支援語言路徑），再執行：
 
 ```bash
 npx playwright install chromium   # 首次需要
@@ -104,7 +104,7 @@ npm run screenshots -- after pr-media/pr2
 
 ### 如何编辑数据
 
-所有方案数据存放在 `data/programs.json` 文件中。每个条目包含以下字段：
+所有方案数据存放在 `public/data/programs.json`（`categories` 类别名称 + `programs` 方案数组）。每个条目包含以下字段：
 
 ```json
 {
@@ -131,7 +131,7 @@ npm run screenshots -- after pr-media/pr2
 本项目是纯静态网站，无需构建步骤：
 
 ```bash
-# 方法 1: 使用 Wrangler Pages 本地开发服务器（推荐）
+# 方法 1: 使用 Wrangler Pages 本地开发服务器（推荐，唯一支持 /zh-hans/、/en/ 语言路径）
 npx wrangler pages dev public
 
 # 方法 2: 使用 Python 的内置服务器
@@ -163,7 +163,7 @@ npm run validate
 
 ### 截图（PR 用）
 
-先在本地启动静态站（例如 `cd public && python3 -m http.server 8000`），再执行：
+先用 `npx wrangler pages dev public --port 8788` 启动本地站（一般静态服务器不支持语言路径），再执行：
 
 ```bash
 npx playwright install chromium   # 首次需要
@@ -221,7 +221,7 @@ All program data is stored in the `data/programs.json` file. Each entry contains
 This is a plain static website with no build step required:
 
 ```bash
-# Method 1: Using Wrangler Pages local dev server (recommended)
+# Method 1: Wrangler Pages local dev server (recommended; the only option that serves /zh-hans/ and /en/)
 npx wrangler pages dev public
 
 # Method 2: Using Python's built-in server
@@ -253,7 +253,7 @@ npm run validate
 
 ### Screenshots (for PRs)
 
-Serve the site locally first (e.g. `cd public && python3 -m http.server 8000`), then:
+Serve the site locally first (use `npx wrangler pages dev public --port 8788`; plain static servers do not handle the language paths), then:
 
 ```bash
 npx playwright install chromium   # first time only

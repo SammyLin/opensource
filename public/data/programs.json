@@ -1,189 +1,253 @@
-[
-  {
-    "name": "JetBrains Open Source License",
-    "whatYouGet": {
-      "zh-Hant": "免費 All Products Pack（所有產品套裝）",
-      "zh-Hans": "免费 All Products Pack（所有产品套装）",
-      "en": "Free All Products Pack"
+{
+  "$schema": "./programs.schema.json",
+  "categories": {
+    "ide": {
+      "zh-Hant": "IDE",
+      "zh-Hans": "IDE",
+      "en": "IDE"
     },
-    "requirements": {
-      "zh-Hant": "一年期授權，專案必須持續開發中，提供開源授權證明，專案領導者或核心貢獻者可申請",
-      "zh-Hans": "一年期授权，项目必须持续开发中，提供开源许可证明，项目负责人或核心贡献者可申请",
-      "en": "One-year term, project must be actively developed, provide open source license proof, project lead or core contributor may apply"
+    "containers": {
+      "zh-Hant": "容器",
+      "zh-Hans": "容器",
+      "en": "Containers"
     },
-    "type": "application_required",
-    "category": ["ide"],
-    "link": "https://www.jetbrains.com/shop/eform/opensource?product=ALL",
-    "lastVerified": "2026-11-18"
+    "monitoring": {
+      "zh-Hant": "監控",
+      "zh-Hans": "监控",
+      "en": "Monitoring"
+    },
+    "security_scanning": {
+      "zh-Hant": "安全掃描",
+      "zh-Hans": "安全扫描",
+      "en": "Security Scanning"
+    },
+    "code_quality": {
+      "zh-Hant": "程式碼品質",
+      "zh-Hans": "代码质量",
+      "en": "Code Quality"
+    },
+    "password_management": {
+      "zh-Hant": "密碼管理",
+      "zh-Hans": "密码管理",
+      "en": "Password Management"
+    },
+    "ai_tools": {
+      "zh-Hant": "AI 工具",
+      "zh-Hans": "AI 工具",
+      "en": "AI Tools"
+    }
   },
-  {
-    "name": "Docker-Sponsored Open Source Program",
-    "whatYouGet": {
-      "zh-Hant": "Docker Hub 無限制映像拉取、驗證徽章、核心貢獻者獲得一年免費 Docker Team 訂閱",
-      "zh-Hans": "Docker Hub 无限制镜像拉取、验证徽章、核心贡献者获得一年免费 Docker Team 订阅",
-      "en": "Unlimited Docker Hub image pulls, verified badge, core contributors get one year free Docker Team subscription"
+  "programs": [
+    {
+      "name": "JetBrains Open Source License",
+      "whatYouGet": {
+        "zh-Hant": "免費 All Products Pack（所有產品套裝）",
+        "zh-Hans": "免费 All Products Pack（所有产品套装）",
+        "en": "Free All Products Pack"
+      },
+      "requirements": {
+        "zh-Hant": "一年期授權，專案必須持續開發中，提供開源授權證明，專案領導者或核心貢獻者可申請",
+        "zh-Hans": "一年期授权，项目必须持续开发中，提供开源许可证明，项目负责人或核心贡献者可申请",
+        "en": "One-year term, project must be actively developed, provide open source license proof, project lead or core contributor may apply"
+      },
+      "type": "application_required",
+      "category": [
+        "ide"
+      ],
+      "link": "https://www.jetbrains.com/shop/eform/opensource?product=ALL",
+      "lastVerified": "2026-11-18"
     },
-    "requirements": {
-      "zh-Hant": "公開儲存庫、符合 OSI 定義、過去 6 個月內有更新、非營利性質",
-      "zh-Hans": "公开仓库、符合 OSI 定义、过去 6 个月内有更新、非营利性质",
-      "en": "Public repository, meets OSI definition, updated within past 6 months, non-commercial"
+    {
+      "name": "Docker-Sponsored Open Source Program",
+      "whatYouGet": {
+        "zh-Hant": "Docker Hub 無限制映像拉取、驗證徽章、核心貢獻者獲得一年免費 Docker Team 訂閱",
+        "zh-Hans": "Docker Hub 无限制镜像拉取、验证徽章、核心贡献者获得一年免费 Docker Team 订阅",
+        "en": "Unlimited Docker Hub image pulls, verified badge, core contributors get one year free Docker Team subscription"
+      },
+      "requirements": {
+        "zh-Hant": "公開儲存庫、符合 OSI 定義、過去 6 個月內有更新、非營利性質",
+        "zh-Hans": "公开仓库、符合 OSI 定义、过去 6 个月内有更新、非营利性质",
+        "en": "Public repository, meets OSI definition, updated within past 6 months, non-commercial"
+      },
+      "type": "application_required",
+      "category": [
+        "containers"
+      ],
+      "link": "https://www.docker.com/community/open-source/application/",
+      "lastVerified": "2026-11-18"
     },
-    "type": "application_required",
-    "category": ["containers"],
-    "link": "https://www.docker.com/community/open-source/application/",
-    "lastVerified": "2026-11-18"
-  },
-  {
-    "name": "Sentry for Open Source",
-    "whatYouGet": {
-      "zh-Hant": "Business 層級配額（5M 錯誤、5,000GB 日誌、1B spans、100K replays 等）、無期限、包含 Business 功能",
-      "zh-Hans": "Business 级别配额（5M 错误、5,000GB 日志、1B spans、100K replays 等）、无期限、包含 Business 功能",
-      "en": "Business-tier quota (5M errors, 5,000GB logs, 1B spans, 100K replays, etc.), no term limit, includes Business features"
+    {
+      "name": "Sentry for Open Source",
+      "whatYouGet": {
+        "zh-Hant": "Business 層級配額（5M 錯誤、5,000GB 日誌、1B spans、100K replays 等）、無期限、包含 Business 功能",
+        "zh-Hans": "Business 级别配额（5M 错误、5,000GB 日志、1B spans、100K replays 等）、无期限、包含 Business 功能",
+        "en": "Business-tier quota (5M errors, 5,000GB logs, 1B spans, 100K replays, etc.), no term limit, includes Business features"
+      },
+      "requirements": {
+        "zh-Hant": "需要 OSI 認可的授權（如 Apache 或 MIT）",
+        "zh-Hans": "需要 OSI 认可的许可证（如 Apache 或 MIT）",
+        "en": "Requires OSI-approved license (e.g. Apache or MIT)"
+      },
+      "type": "application_required",
+      "category": [
+        "monitoring"
+      ],
+      "link": "https://sentry.io/for/open-source/",
+      "lastVerified": "2026-11-18"
     },
-    "requirements": {
-      "zh-Hant": "需要 OSI 認可的授權（如 Apache 或 MIT）",
-      "zh-Hans": "需要 OSI 认可的许可证（如 Apache 或 MIT）",
-      "en": "Requires OSI-approved license (e.g. Apache or MIT)"
+    {
+      "name": "Socket for Open Source",
+      "whatYouGet": {
+        "zh-Hant": "免費 Business 方案（自動封鎖惡意依賴、可達性分析、GitHub Actions 掃描、SBOM 匯出等）",
+        "zh-Hans": "免费 Business 方案（自动阻止恶意依赖、可达性分析、GitHub Actions 扫描、SBOM 导出等）",
+        "en": "Free Business plan (automatic blocking of malicious dependencies, reachability analysis, GitHub Actions scanning, SBOM export, etc.)"
+      },
+      "requirements": {
+        "zh-Hant": "公開的開源專案，擁有有效的 OSI 授權",
+        "zh-Hans": "公开的开源项目，拥有有效的 OSI 许可证",
+        "en": "Public open source project with valid OSI license"
+      },
+      "type": "application_required",
+      "category": [
+        "security_scanning"
+      ],
+      "link": "https://www.socket.dev/blog/free-business-plan-upgrades-for-open-source",
+      "lastVerified": "2026-11-18"
     },
-    "type": "application_required",
-    "category": ["monitoring"],
-    "link": "https://sentry.io/for/open-source/",
-    "lastVerified": "2026-11-18"
-  },
-  {
-    "name": "Socket for Open Source",
-    "whatYouGet": {
-      "zh-Hant": "免費 Business 方案（自動封鎖惡意依賴、可達性分析、GitHub Actions 掃描、SBOM 匯出等）",
-      "zh-Hans": "免费 Business 方案（自动阻止恶意依赖、可达性分析、GitHub Actions 扫描、SBOM 导出等）",
-      "en": "Free Business plan (automatic blocking of malicious dependencies, reachability analysis, GitHub Actions scanning, SBOM export, etc.)"
+    {
+      "name": "Snyk for Open Source",
+      "whatYouGet": {
+        "zh-Hant": "完整企業級授權（無使用限制的漏洞掃描）、Discord 社群支援",
+        "zh-Hans": "完整企业级授权（无使用限制的漏洞扫描）、Discord 社区支持",
+        "en": "Full enterprise entitlements (vulnerability scanning with no usage limits), Discord community support"
+      },
+      "requirements": {
+        "zh-Hant": "社群專案（非企業支持）。接受免費 Secure Developer Program 的條件：在該開源專案的 README 與專案網站放上回連 Snyk 的連結，並授權 Snyk 使用專案 logo（此為申請專案本身的義務，非列表網站要求）",
+        "zh-Hans": "社区项目（非企业支持）。接受免费 Secure Developer Program 的条件：在该开源项目的 README 与项目网站放上回链 Snyk 的链接，并授权 Snyk 使用项目 logo（此为申请项目本身的义务，非列表网站要求）",
+        "en": "Community project (not corporate-backed). Accepting the free Secure Developer Program requires linking back to Snyk in that project's README and website, and granting Snyk license to use the project logo (obligations of the applying project, not of listing sites)"
+      },
+      "type": "application_required",
+      "category": [
+        "security_scanning"
+      ],
+      "link": "https://snyk.io/open-source/",
+      "lastVerified": "2026-11-18"
     },
-    "requirements": {
-      "zh-Hant": "公開的開源專案，擁有有效的 OSI 授權",
-      "zh-Hans": "公开的开源项目，拥有有效的 OSI 许可证",
-      "en": "Public open source project with valid OSI license"
+    {
+      "name": "SonarQube Cloud for Open Source",
+      "whatYouGet": {
+        "zh-Hant": "Pro 方案功能（程式碼品質與安全掃描，支援 35+ 語言）、永久免費",
+        "zh-Hans": "Pro 方案功能（代码质量与安全扫描，支持 35+ 语言）、永久免费",
+        "en": "Pro plan features (code quality and security scanning, 35+ languages supported), free forever"
+      },
+      "requirements": {
+        "zh-Hant": "公開且擁有 OSI 授權的儲存庫",
+        "zh-Hans": "公开且拥有 OSI 许可证的仓库",
+        "en": "Public repositories with OSI license"
+      },
+      "type": "direct_activation",
+      "category": [
+        "code_quality",
+        "security_scanning"
+      ],
+      "link": "https://www.sonarsource.com/plans-and-pricing/",
+      "lastVerified": "2026-11-18"
     },
-    "type": "application_required",
-    "category": ["security_scanning"],
-    "link": "https://www.socket.dev/blog/free-business-plan-upgrades-for-open-source",
-    "lastVerified": "2026-11-18"
-  },
-  {
-    "name": "Snyk for Open Source",
-    "whatYouGet": {
-      "zh-Hant": "完整企業級授權（無使用限制的漏洞掃描）、Discord 社群支援",
-      "zh-Hans": "完整企业级授权（无使用限制的漏洞扫描）、Discord 社区支持",
-      "en": "Full enterprise entitlements (vulnerability scanning with no usage limits), Discord community support"
+    {
+      "name": "Codecov for Open Source",
+      "whatYouGet": {
+        "zh-Hant": "免費程式碼覆蓋率分析、PR 評論、狀態檢查",
+        "zh-Hans": "免费代码覆盖率分析、PR 评论、状态检查",
+        "en": "Free code coverage analysis, PR comments, status checks"
+      },
+      "requirements": {
+        "zh-Hant": "公開的開源專案",
+        "zh-Hans": "公开的开源项目",
+        "en": "Public open source projects"
+      },
+      "type": "direct_activation",
+      "category": [
+        "code_quality"
+      ],
+      "link": "https://about.codecov.io/for/open-source/",
+      "lastVerified": "2026-11-18"
     },
-    "requirements": {
-      "zh-Hant": "社群專案（非企業支持）。接受免費 Secure Developer Program 的條件：在該開源專案的 README 與專案網站放上回連 Snyk 的連結，並授權 Snyk 使用專案 logo（此為申請專案本身的義務，非列表網站要求）",
-      "zh-Hans": "社区项目（非企业支持）。接受免费 Secure Developer Program 的条件：在该开源项目的 README 与项目网站放上回链 Snyk 的链接，并授权 Snyk 使用项目 logo（此为申请项目本身的义务，非列表网站要求）",
-      "en": "Community project (not corporate-backed). Accepting the free Secure Developer Program requires linking back to Snyk in that project's README and website, and granting Snyk license to use the project logo (obligations of the applying project, not of listing sites)"
+    {
+      "name": "1Password for Open Source",
+      "whatYouGet": {
+        "zh-Hant": "免費 Teams 方案（只要專案持續符合資格就不限期）",
+        "zh-Hans": "免费 Teams 方案（只要项目持续符合资格就不限期）",
+        "en": "Free Teams account (does not expire while the project remains eligible)"
+      },
+      "requirements": {
+        "zh-Hant": "僅限 Teams 帳號（個人／家庭／商業帳號不符）；帳號不得與商業活動相關（GitHub Sponsors、Open Collective 等開源資助除外）；單一專案申請須為核心貢獻者，專案至少 30 天、活躍且採寬鬆開源授權；團隊申請則團隊專案須以開源為主且非商業支持；開源相關社群活動主辦方亦可申請。是否核准由 1Password 裁量。",
+        "zh-Hans": "仅限 Teams 账号（个人／家庭／商业账号不符）；账号不得与商业活动相关（GitHub Sponsors、Open Collective 等开源资助除外）；单一项目申请须为核心贡献者，项目至少 30 天、活跃且采用宽松开源许可；团队申请则团队项目须以开源为主且非商业支持；开源相关社区活动主办方亦可申请。是否核准由 1Password 裁量。",
+        "en": "Teams accounts only (personal, family, and business accounts are ineligible); account must not be tied to commercial activity (except OSS funding such as GitHub Sponsors or Open Collective); for a single project you must be a core contributor and the project must be ≥30 days old, active, and under a permissive open source license; for a team, projects must be primarily open source and not commercially backed; organizers of OSS-related community events may also apply. Acceptance is at 1Password's discretion."
+      },
+      "type": "application_required",
+      "category": [
+        "password_management"
+      ],
+      "link": "https://github.com/1Password/for-open-source",
+      "lastVerified": "2026-11-18"
     },
-    "type": "application_required",
-    "category": ["security_scanning"],
-    "link": "https://snyk.io/open-source/",
-    "lastVerified": "2026-11-18"
-  },
-  {
-    "name": "SonarQube Cloud for Open Source",
-    "whatYouGet": {
-      "zh-Hant": "Pro 方案功能（程式碼品質與安全掃描，支援 35+ 語言）、永久免費",
-      "zh-Hans": "Pro 方案功能（代码质量与安全扫描，支持 35+ 语言）、永久免费",
-      "en": "Pro plan features (code quality and security scanning, 35+ languages supported), free forever"
+    {
+      "name": "GitHub Copilot Pro for Open Source",
+      "whatYouGet": {
+        "zh-Hant": "免費 Copilot Pro 訂閱",
+        "zh-Hans": "免费 Copilot Pro 订阅",
+        "en": "Free Copilot Pro subscription"
+      },
+      "requirements": {
+        "zh-Hant": "熱門開源儲存庫的維護者（每月自動重新評估資格）",
+        "zh-Hans": "热门开源仓库的维护者（每月自动重新评估资格）",
+        "en": "Maintainer of a popular open source repository (eligibility reevaluated monthly)"
+      },
+      "type": "high_bar",
+      "category": [
+        "ai_tools",
+        "ide"
+      ],
+      "link": "https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-teachers-and-os-maintainers",
+      "lastVerified": "2026-11-18"
     },
-    "requirements": {
-      "zh-Hant": "公開且擁有 OSI 授權的儲存庫",
-      "zh-Hans": "公开且拥有 OSI 许可证的仓库",
-      "en": "Public repositories with OSI license"
+    {
+      "name": "Claude for Open Source",
+      "whatYouGet": {
+        "zh-Hant": "6 個月免費 Claude Ultra",
+        "zh-Hans": "6 个月免费 Claude Ultra",
+        "en": "6 months of free Claude Ultra"
+      },
+      "requirements": {
+        "zh-Hant": "維護者與函式庫作者：500+ 依賴儲存庫、100+ 依賴套件或 200,000+ 每月下載；核心貢獻者：知名基金會或語言專案成員；活躍貢獻者：過去 12 個月有 100+ PR 合併；社群建設者：你的儲存庫在過去 12 個月有 20+ 外部貢獻者；關鍵基礎設施：OpenSSF 關鍵性評分 0.4 以上",
+        "zh-Hans": "维护者与库作者：500+ 依赖仓库、100+ 依赖包或 200,000+ 每月下载量；核心贡献者：知名基金会或语言项目成员；活跃贡献者：过去 12 个月有 100+ PR 合并；社区建设者：你的仓库在过去 12 个月有 20+ 外部贡献者；关键基础设施：OpenSSF 关键性评分 0.4 以上",
+        "en": "Maintainers & library authors: 500+ dependent repos, 100+ dependent packages, or 200,000+ monthly downloads; Core contributors: listed on recognized foundation or language project; Active contributors: 100+ PRs merged in last 12 months; Community builders: 20+ unique external contributors in last 12 months; Critical infrastructure: OpenSSF criticality score 0.4+"
+      },
+      "type": "high_bar",
+      "category": [
+        "ai_tools"
+      ],
+      "link": "https://claude.com/contact-sales/claude-for-oss",
+      "lastVerified": "2026-11-18"
     },
-    "type": "direct_activation",
-    "category": ["code_quality", "security_scanning"],
-    "link": "https://www.sonarsource.com/plans-and-pricing/",
-    "lastVerified": "2026-11-18"
-  },
-  {
-    "name": "Codecov for Open Source",
-    "whatYouGet": {
-      "zh-Hant": "免費程式碼覆蓋率分析、PR 評論、狀態檢查",
-      "zh-Hans": "免费代码覆盖率分析、PR 评论、状态检查",
-      "en": "Free code coverage analysis, PR comments, status checks"
-    },
-    "requirements": {
-      "zh-Hant": "公開的開源專案",
-      "zh-Hans": "公开的开源项目",
-      "en": "Public open source projects"
-    },
-    "type": "direct_activation",
-    "category": ["code_quality"],
-    "link": "https://about.codecov.io/for/open-source/",
-    "lastVerified": "2026-11-18"
-  },
-  {
-    "name": "1Password for Open Source",
-    "whatYouGet": {
-      "zh-Hant": "免費 Teams 方案（只要專案持續符合資格就不限期）",
-      "zh-Hans": "免费 Teams 方案（只要项目持续符合资格就不限期）",
-      "en": "Free Teams account (does not expire while the project remains eligible)"
-    },
-    "requirements": {
-      "zh-Hant": "僅限 Teams 帳號（個人／家庭／商業帳號不符）；帳號不得與商業活動相關（GitHub Sponsors、Open Collective 等開源資助除外）；單一專案申請須為核心貢獻者，專案至少 30 天、活躍且採寬鬆開源授權；團隊申請則團隊專案須以開源為主且非商業支持；開源相關社群活動主辦方亦可申請。是否核准由 1Password 裁量。",
-      "zh-Hans": "仅限 Teams 账号（个人／家庭／商业账号不符）；账号不得与商业活动相关（GitHub Sponsors、Open Collective 等开源资助除外）；单一项目申请须为核心贡献者，项目至少 30 天、活跃且采用宽松开源许可；团队申请则团队项目须以开源为主且非商业支持；开源相关社区活动主办方亦可申请。是否核准由 1Password 裁量。",
-      "en": "Teams accounts only (personal, family, and business accounts are ineligible); account must not be tied to commercial activity (except OSS funding such as GitHub Sponsors or Open Collective); for a single project you must be a core contributor and the project must be ≥30 days old, active, and under a permissive open source license; for a team, projects must be primarily open source and not commercially backed; organizers of OSS-related community events may also apply. Acceptance is at 1Password's discretion."
-    },
-    "type": "application_required",
-    "category": ["password_management"],
-    "link": "https://github.com/1Password/for-open-source",
-    "lastVerified": "2026-11-18"
-  },
-  {
-    "name": "GitHub Copilot Pro for Open Source",
-    "whatYouGet": {
-      "zh-Hant": "免費 Copilot Pro 訂閱",
-      "zh-Hans": "免费 Copilot Pro 订阅",
-      "en": "Free Copilot Pro subscription"
-    },
-    "requirements": {
-      "zh-Hant": "熱門開源儲存庫的維護者（每月自動重新評估資格）",
-      "zh-Hans": "热门开源仓库的维护者（每月自动重新评估资格）",
-      "en": "Maintainer of a popular open source repository (eligibility reevaluated monthly)"
-    },
-    "type": "high_bar",
-    "category": ["ai_tools", "ide"],
-    "link": "https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-teachers-and-os-maintainers",
-    "lastVerified": "2026-11-18"
-  },
-  {
-    "name": "Claude for Open Source",
-    "whatYouGet": {
-      "zh-Hant": "6 個月免費 Claude Ultra",
-      "zh-Hans": "6 个月免费 Claude Ultra",
-      "en": "6 months of free Claude Ultra"
-    },
-    "requirements": {
-      "zh-Hant": "維護者與函式庫作者：500+ 依賴儲存庫、100+ 依賴套件或 200,000+ 每月下載；核心貢獻者：知名基金會或語言專案成員；活躍貢獻者：過去 12 個月有 100+ PR 合併；社群建設者：你的儲存庫在過去 12 個月有 20+ 外部貢獻者；關鍵基礎設施：OpenSSF 關鍵性評分 0.4 以上",
-      "zh-Hans": "维护者与库作者：500+ 依赖仓库、100+ 依赖包或 200,000+ 每月下载量；核心贡献者：知名基金会或语言项目成员；活跃贡献者：过去 12 个月有 100+ PR 合并；社区建设者：你的仓库在过去 12 个月有 20+ 外部贡献者；关键基础设施：OpenSSF 关键性评分 0.4 以上",
-      "en": "Maintainers & library authors: 500+ dependent repos, 100+ dependent packages, or 200,000+ monthly downloads; Core contributors: listed on recognized foundation or language project; Active contributors: 100+ PRs merged in last 12 months; Community builders: 20+ unique external contributors in last 12 months; Critical infrastructure: OpenSSF criticality score 0.4+"
-    },
-    "type": "high_bar",
-    "category": ["ai_tools"],
-    "link": "https://claude.com/contact-sales/claude-for-oss",
-    "lastVerified": "2026-11-18"
-  },
-  {
-    "name": "OpenAI Codex for Open Source",
-    "whatYouGet": {
-      "zh-Hant": "6 個月 ChatGPT Pro with Codex、API 額度、Codex Security（有條件提供）",
-      "zh-Hans": "6 个月 ChatGPT Pro with Codex、API 额度、Codex Security（有条件提供）",
-      "en": "6 months of ChatGPT Pro with Codex, API credits, conditional access to Codex Security"
-    },
-    "requirements": {
-      "zh-Hant": "核心維護者或廣泛使用的公開專案（相較 Claude 門檻較寬鬆）",
-      "zh-Hans": "核心维护者或广泛使用的公开项目（相较 Claude 门槛较宽松）",
-      "en": "Core maintainer or widely used public project (looser requirements compared to Claude)"
-    },
-    "type": "high_bar",
-    "category": ["ai_tools"],
-    "link": "https://developers.openai.com/community/codex-for-oss",
-    "lastVerified": "2026-11-18"
-  }
-]
+    {
+      "name": "OpenAI Codex for Open Source",
+      "whatYouGet": {
+        "zh-Hant": "6 個月 ChatGPT Pro with Codex、API 額度、Codex Security（有條件提供）",
+        "zh-Hans": "6 个月 ChatGPT Pro with Codex、API 额度、Codex Security（有条件提供）",
+        "en": "6 months of ChatGPT Pro with Codex, API credits, conditional access to Codex Security"
+      },
+      "requirements": {
+        "zh-Hant": "核心維護者或廣泛使用的公開專案（相較 Claude 門檻較寬鬆）",
+        "zh-Hans": "核心维护者或广泛使用的公开项目（相较 Claude 门槛较宽松）",
+        "en": "Core maintainer or widely used public project (looser requirements compared to Claude)"
+      },
+      "type": "high_bar",
+      "category": [
+        "ai_tools"
+      ],
+      "link": "https://developers.openai.com/community/codex-for-oss",
+      "lastVerified": "2026-11-18"
+    }
+  ]
+}

@@ -2,7 +2,8 @@
  * Capture full-page screenshots of the local site for PR media.
  *
  * Prerequisites:
- *   1. Serve the site locally, e.g. `cd public && python3 -m http.server 8000`
+ *   1. Serve the site locally with `npx wrangler pages dev public --port 8788`
+ *      (needed for the /zh-hans/ and /en/ rewrites in public/_redirects)
  *   2. Install Playwright browsers once: `npx playwright install chromium`
  *
  * Usage:
@@ -17,7 +18,7 @@ const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');
 
-const BASE_URL = process.env.SCREENSHOT_BASE_URL || 'http://localhost:8000/';
+const BASE_URL = (process.env.SCREENSHOT_BASE_URL || 'http://localhost:8788').replace(/\/$/, '');
 const rawPrefix = process.argv[2] || '';
 const outDir = process.argv[3] || 'pr-media';
 const prefix = rawPrefix && !rawPrefix.endsWith('-') && !rawPrefix.endsWith('_')
@@ -42,35 +43,19 @@ async function takeScreenshots() {
         console.log(`Saved ${filePath}`);
     }
 
-    await capture('screenshot-zh-hant-desktop', async (page) => {
-        await page.setViewportSize({ width: 1440, height: 900 });
-        await page.goto(BASE_URL, { waitUntil: 'networkidle' });
-        await page.waitForSelector('.program-card');
-    });
-
-    await capture('screenshot-zh-hans-desktop', async (page) => {
-        await page.setViewportSize({ width: 1440, height: 900 });
-        await page.goto(BASE_URL, { waitUntil: 'networkidle' });
-        await page.waitForSelector('.program-card');
-        await page.click('#btn-zh-Hans');
-        await page.waitForTimeout(400);
-    });
-
-    await capture('screenshot-en-desktop', async (page) => {
-        await page.setViewportSize({ width: 1440, height: 900 });
-        await page.goto(BASE_URL, { waitUntil: 'networkidle' });
-        await page.waitForSelector('.program-card');
-        await page.click('#btn-en');
-        await page.waitForTimeout(400);
-    });
-
-    await capture('screenshot-zh-hant-mobile-filtered', async (page) => {
-        await page.setViewportSize({ width: 390, height: 844 });
-        await page.goto(BASE_URL, { waitUntil: 'networkidle' });
-        await page.waitForSelector('.program-card');
-        await page.click('#filter-ai');
-        await page.waitForTimeout(400);
-    });
+    const shots = [
+        ['screenshot-zh-hant-desktop', '/', 1440, 900],
+        ['screenshot-zh-hans-desktop', '/zh-hans/', 1440, 900],
+        ['screenshot-en-desktop', '/en/', 1440, 900],
+        ['screenshot-zh-hant-mobile-filtered', '/?cat=ai_tools', 390, 844],
+    ];
+    for (const [name, urlPath, width, height] of shots) {
+        await capture(name, async (page) => {
+            await page.setViewportSize({ width, height });
+            await page.goto(BASE_URL + urlPath, { waitUntil: 'networkidle' });
+            await page.waitForSelector('.card');
+        });
+    }
 
     await browser.close();
     console.log('All screenshots taken successfully!');
