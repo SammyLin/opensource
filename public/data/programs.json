@@ -28,6 +28,15 @@
         "subcategory": "Key Management"
       }
     },
+    "cloud_native_network": {
+      "zh-Hant": "雲原生網路",
+      "zh-Hans": "云原生网络",
+      "en": "Cloud Native Network",
+      "cncf": {
+        "category": "Runtime",
+        "subcategory": "Cloud Native Network"
+      }
+    },
     "app_definition_image_build": {
       "zh-Hant": "應用定義與開發環境",
       "zh-Hans": "应用定义与开发环境",
@@ -46,6 +55,15 @@
         "subcategory": "Continuous Integration & Delivery"
       }
     },
+    "serverless_hosted": {
+      "zh-Hant": "託管平台",
+      "zh-Hans": "托管平台",
+      "en": "Hosted Platform",
+      "cncf": {
+        "category": "Serverless",
+        "subcategory": "Hosted Platform"
+      }
+    },
     "observability": {
       "zh-Hant": "可觀測性",
       "zh-Hans": "可观测性",
@@ -62,6 +80,16 @@
       "cncf": {
         "category": "AI Agent"
       }
+    },
+    "collaboration": {
+      "zh-Hant": "協作與溝通",
+      "zh-Hans": "协作与沟通",
+      "en": "Collaboration"
+    },
+    "docs_localization": {
+      "zh-Hant": "文件與在地化",
+      "zh-Hans": "文档与本地化",
+      "en": "Docs & Localization"
     }
   },
   "programs": [
@@ -348,6 +376,604 @@
         "ai_agent"
       ],
       "link": "https://developers.openai.com/community/codex-for-oss",
+      "lastVerified": "2026-11-18"
+    },
+    {
+      "id": "coderabbit",
+      "name": "CodeRabbit for Open Source",
+      "logo": "/logos/coderabbit.svg",
+      "whatYouGet": {
+        "zh-Hant": "公開 repo 免費使用 Pro 等級的 AI code review（有速率限制；Dashboard、Reports 等其他付費功能不含）",
+        "zh-Hans": "公开仓库免费使用 Pro 级别的 AI 代码审查（有速率限制；Dashboard、Reports 等其他付费功能不含）",
+        "en": "Pro-level AI code reviews free on public repositories (rate-limited; other paid features such as Dashboard and Reports are not included)"
+      },
+      "whyItHelps": {
+        "zh-Hant": "每個 PR 先由 AI 逐行 review 並整理摘要，維護者能更快消化外部貢獻者送來的 PR。",
+        "zh-Hans": "每个 PR 先由 AI 逐行审查并整理摘要，维护者能更快消化外部贡献者提交的 PR。",
+        "en": "Every PR gets a line-by-line AI review and summary first, so maintainers can work through outside contributions faster."
+      },
+      "requirements": {
+        "zh-Hant": "GitHub 或 GitLab 上的公開 repo，安裝 CodeRabbit 後自動啟用，不需另外申請",
+        "zh-Hans": "GitHub 或 GitLab 上的公开仓库，安装 CodeRabbit 后自动启用，无需另外申请",
+        "en": "Public repository on GitHub or GitLab; Pro features turn on automatically once CodeRabbit is installed, no application needed"
+      },
+      "type": "direct_activation",
+      "category": [
+        "ai_agent"
+      ],
+      "link": "https://kb.coderabbit.ai/articles/8856795235-how-do-i-activate-coderabbit-pro-for-my-open-source-project",
+      "lastVerified": "2026-11-18"
+    },
+    {
+      "id": "gitguardian",
+      "name": "GitGuardian for Open Source",
+      "whatYouGet": {
+        "zh-Hant": "免費使用 GitGuardian 平台，監控 repo 中外洩的 API 金鑰、token、密碼等機密",
+        "zh-Hans": "免费使用 GitGuardian 平台，监控仓库中泄露的 API 密钥、token、密码等机密",
+        "en": "Free use of the GitGuardian platform to monitor repositories for leaked API keys, tokens, passwords and other secrets"
+      },
+      "whyItHelps": {
+        "zh-Hant": "有人不小心把金鑰或密碼 commit 進 repo 時立即警示，降低憑證外洩被濫用的風險。",
+        "zh-Hans": "有人不小心把密钥或密码提交进仓库时立即告警，降低凭证泄露被滥用的风险。",
+        "en": "Alerts you the moment someone commits a key or password, before a leaked credential can be abused."
+      },
+      "requirements": {
+        "zh-Hant": "repo 放在你的 GitHub Organization 底下，從 GitHub Marketplace 安裝 GitGuardian App",
+        "zh-Hans": "仓库位于你的 GitHub Organization 下，从 GitHub Marketplace 安装 GitGuardian App",
+        "en": "Repositories hosted under your GitHub Organization; install the GitGuardian app from GitHub Marketplace"
+      },
+      "type": "direct_activation",
+      "category": [
+        "security_compliance"
+      ],
+      "link": "https://www.gitguardian.com/pricing",
+      "lastVerified": "2026-11-18"
+    },
+    {
+      "id": "codacy",
+      "name": "Codacy Open Source",
+      "logo": "/logos/codacy.svg",
+      "whatYouGet": {
+        "zh-Hant": "免費 Open Source 方案：可基本使用所有功能（程式碼品質、安全、覆蓋率），分析時間為盡力而為",
+        "zh-Hans": "免费 Open Source 方案：可基本使用所有功能（代码质量、安全、覆盖率），分析时间为尽力而为",
+        "en": "Free Open Source plan: basic access to all solutions (quality, security, coverage) with best-effort analysis time"
+      },
+      "whyItHelps": {
+        "zh-Hant": "自動在 PR 上標出程式碼品質與安全問題，讓不同貢獻者寫的程式碼維持一致標準。",
+        "zh-Hans": "自动在 PR 上标出代码质量与安全问题，让不同贡献者写的代码保持一致标准。",
+        "en": "Flags quality and security issues right on the PR, keeping code from many contributors to one standard."
+      },
+      "requirements": {
+        "zh-Hant": "只限公開 repo，適合專門開發公開專案的個人或團隊",
+        "zh-Hans": "仅限公开仓库，适合专门开发公开项目的个人或团队",
+        "en": "Public repositories only; meant for individuals and teams working exclusively on public projects"
+      },
+      "type": "direct_activation",
+      "category": [
+        "security_compliance"
+      ],
+      "link": "https://codacy.com/pricing",
+      "lastVerified": "2026-11-18"
+    },
+    {
+      "id": "deepsource",
+      "name": "DeepSource Open Source Plan",
+      "whatYouGet": {
+        "zh-Hant": "免費 Open Source 方案：公開 repo 與團隊成員數量不限，每月 1,000 次 PR review；AI Review 與 Autofix 按用量計費；不含相依套件漏洞掃描（SCA）",
+        "zh-Hans": "免费 Open Source 方案：公开仓库与团队成员数量不限，每月 1,000 次 PR 审查；AI Review 与 Autofix 按用量计费；不含依赖漏洞扫描（SCA）",
+        "en": "Free Open Source plan: unlimited public repositories and team members, 1,000 PR reviews per month; AI Review and Autofix are pay-as-you-go; SCA (dependency scanning) is not included"
+      },
+      "whyItHelps": {
+        "zh-Hant": "每次 commit 和 PR 自動做靜態分析，及早抓出 bug、反模式與安全問題。",
+        "zh-Hans": "每次提交和 PR 自动做静态分析，及早发现 bug、反模式与安全问题。",
+        "en": "Runs static analysis on every commit and PR to catch bugs, anti-patterns and security issues early."
+      },
+      "requirements": {
+        "zh-Hant": "僅限公開 repo；私有 repo 需付費方案",
+        "zh-Hans": "仅限公开仓库；私有仓库需付费方案",
+        "en": "Public repositories only; private repositories need a paid plan"
+      },
+      "type": "direct_activation",
+      "category": [
+        "security_compliance"
+      ],
+      "link": "https://deepsource.com/docs/platform/reference/billing",
+      "lastVerified": "2026-11-18"
+    },
+    {
+      "id": "mergify",
+      "name": "Mergify Open Source",
+      "whatYouGet": {
+        "zh-Hant": "免費方案，含 Merge Queue、Merge Protections、CI Insights、Test Insights",
+        "zh-Hans": "免费方案，含 Merge Queue、Merge Protections、CI Insights、Test Insights",
+        "en": "Free plan including Merge Queue, Merge Protections, CI Insights and Test Insights"
+      },
+      "whyItHelps": {
+        "zh-Hant": "合併前用最新的 main 重新驗證，避免多個各自通過 CI 的 PR 合在一起後把 main 弄壞。",
+        "zh-Hans": "合并前用最新的 main 重新验证，避免多个各自通过 CI 的 PR 合在一起后把 main 弄坏。",
+        "en": "Re-validates PRs against the latest main before merging, so individually green PRs don't break main together."
+      },
+      "requirements": {
+        "zh-Hant": "開源專案（公開 repo）免費；私有 repo 則限 5 人以內",
+        "zh-Hans": "开源项目（公开仓库）免费；私有仓库则限 5 人以内",
+        "en": "Free for open source projects (public repositories); private repositories are limited to teams of up to 5"
+      },
+      "type": "direct_activation",
+      "category": [
+        "ci_cd"
+      ],
+      "link": "https://mergify.com/pricing",
+      "lastVerified": "2026-11-18"
+    },
+    {
+      "id": "tailscale",
+      "name": "Tailscale Community on GitHub",
+      "logo": "/logos/tailscale.svg",
+      "whatYouGet": {
+        "zh-Hant": "免費的 Community on GitHub 方案，讓 GitHub 組織成員共用同一個 Tailscale 私有網路（tailnet）",
+        "zh-Hans": "免费的 Community on GitHub 方案，让 GitHub 组织成员共用同一个 Tailscale 私有网络（tailnet）",
+        "en": "Free Community on GitHub plan so members of a GitHub organization share one Tailscale private network (tailnet)"
+      },
+      "whyItHelps": {
+        "zh-Hant": "不用架 VPN 或開放公網連接埠，維護者就能安全連到專案的測試機、建置機與內部服務。",
+        "zh-Hans": "不用搭 VPN 或开放公网端口，维护者就能安全连接项目的测试机、构建机与内部服务。",
+        "en": "Maintainers reach the project's test, build and internal machines securely without running a VPN or opening ports."
+      },
+      "requirements": {
+        "zh-Hant": "用於採 OSI 授權開源專案的 GitHub 組織；在管理後台的 Billing 設定選擇此方案",
+        "zh-Hans": "用于采用 OSI 许可证开源项目的 GitHub 组织；在管理后台的 Billing 设置中选择此方案",
+        "en": "A GitHub organization used for an open source project with an OSI license; select the plan in the admin console's Billing settings"
+      },
+      "type": "direct_activation",
+      "category": [
+        "cloud_native_network"
+      ],
+      "link": "https://tailscale.com/kb/1154/free-plans-discounts",
+      "lastVerified": "2026-11-18"
+    },
+    {
+      "id": "gitlab",
+      "name": "GitLab for Open Source",
+      "logo": "/logos/gitlab.svg",
+      "whatYouGet": {
+        "zh-Hant": "GitLab Ultimate 功能（SaaS 或自架）與 50,000 分鐘運算時間；不含官方技術支援",
+        "zh-Hans": "GitLab Ultimate 功能（SaaS 或自建）与 50,000 分钟计算时间；不含官方技术支持",
+        "en": "GitLab Ultimate features (SaaS or self-managed) plus 50,000 compute minutes; no vendor support included"
+      },
+      "whyItHelps": {
+        "zh-Hant": "用頂級方案的安全掃描、合規與規劃功能管理專案，CI 額度也更充裕。",
+        "zh-Hans": "用顶级方案的安全扫描、合规与规划功能管理项目，CI 额度也更充裕。",
+        "en": "Run the project with Ultimate's security scanning, compliance and planning tools, with far more CI minutes."
+      },
+      "requirements": {
+        "zh-Hant": "namespace 內每個專案都要採 OSI 認可授權；GitLab.com 群組或自架實例與原始碼都必須公開；每年需續約",
+        "zh-Hans": "namespace 内每个项目都要采用 OSI 认可的许可证；GitLab.com 群组或自建实例与源代码都必须公开；每年需续约",
+        "en": "Every project in the namespace must use an OSI-approved license; the GitLab.com group or self-managed instance and the source code must be public; renew annually"
+      },
+      "type": "application_required",
+      "category": [
+        "ci_cd"
+      ],
+      "link": "https://about.gitlab.com/solutions/open-source/join/",
+      "lastVerified": "2026-11-18"
+    },
+    {
+      "id": "netlify",
+      "name": "Netlify Open Source Plan",
+      "logo": "/logos/netlify.svg",
+      "whatYouGet": {
+        "zh-Hant": "每月 10,000 點數、免費正式環境部署、團隊成員不限；點數用完網站也不會停",
+        "zh-Hans": "每月 10,000 点数、免费生产环境部署、团队成员不限；点数用完网站也不会停",
+        "en": "10,000 credits per month, free production deploys and unlimited team members; sites stay up even if credits run out"
+      },
+      "whyItHelps": {
+        "zh-Hant": "文件站與專案官網免費託管，所有維護者都能加入同一個團隊管理部署。",
+        "zh-Hans": "文档站与项目官网免费托管，所有维护者都能加入同一个团队管理部署。",
+        "en": "Free hosting for docs and project sites, with every maintainer on the same team managing deploys."
+      },
+      "requirements": {
+        "zh-Hant": "網站內容須與開源軟體及其社群直接相關（文件、變更紀錄、開發團隊部落格等）；專案採開源授權；填表申請審核",
+        "zh-Hans": "网站内容须与开源软件及其社区直接相关（文档、变更记录、开发团队博客等）；项目采用开源许可证；填表申请审核",
+        "en": "The site must relate directly to the open source software and its community (docs, changelogs, team blog, etc.); open source license; apply via form for review"
+      },
+      "type": "application_required",
+      "category": [
+        "serverless_hosted"
+      ],
+      "link": "https://www.netlify.com/legal/open-source-policy/",
+      "lastVerified": "2026-11-18"
+    },
+    {
+      "id": "vercel",
+      "name": "Vercel Open Source Program",
+      "logo": "/logos/vercel.svg",
+      "whatYouGet": {
+        "zh-Hant": "12 個月共 US$3,600 Vercel 平台點數，加上含第三方服務點數的 OSS Starter Pack 與社群支援",
+        "zh-Hans": "12 个月共 US$3,600 Vercel 平台点数，加上含第三方服务点数的 OSS Starter Pack 与社区支持",
+        "en": "US$3,600 in Vercel platform credits over 12 months, plus an OSS Starter Pack of third-party credits and community support"
+      },
+      "whyItHelps": {
+        "zh-Hant": "一整年的託管額度讓文件站、Demo 與範例專案可以放心上線。",
+        "zh-Hans": "一整年的托管额度让文档站、Demo 与示例项目可以放心上线。",
+        "en": "A year of hosting credits lets docs, demos and example apps go live without worrying about the bill."
+      },
+      "requirements": {
+        "zh-Hant": "持續開發維護中；託管或打算託管在 Vercel；有可衡量的影響力或成長潛力；有行為準則；點數只用於該開源專案。一年四梯次收件，目前暫停申請，1 月重新開放",
+        "zh-Hans": "持续开发维护中；托管或打算托管在 Vercel；有可衡量的影响力或成长潜力；有行为准则；点数只用于该开源项目。一年四期收件，目前暂停申请，1 月重新开放",
+        "en": "Actively developed and maintained; hosted or intended to be hosted on Vercel; measurable impact or growth potential; a Code of Conduct; credits used only for the project. Four cohorts a year; applications are closed and reopen in January"
+      },
+      "type": "application_required",
+      "category": [
+        "serverless_hosted"
+      ],
+      "link": "https://vercel.com/open-source-program",
+      "lastVerified": "2026-11-18"
+    },
+    {
+      "id": "cloudflare",
+      "name": "Cloudflare Project Alexandria",
+      "logo": "/logos/cloudflare.svg",
+      "whatYouGet": {
+        "zh-Hant": "每年可續的點數：升級 Pro／Business／Enterprise 方案、更多 Workers 與 Pages 請求、更多 R2 儲存空間、加強版 Zero Trust",
+        "zh-Hans": "每年可续的点数：升级 Pro／Business／Enterprise 方案、更多 Workers 与 Pages 请求、更多 R2 存储空间、增强版 Zero Trust",
+        "en": "Recurring annual credits: upgrades to Pro, Business or Enterprise, more Workers and Pages requests, more R2 storage and enhanced Zero Trust"
+      },
+      "whyItHelps": {
+        "zh-Hant": "用 Cloudflare 的 CDN 與防護加速全球下載、擋下攻擊，R2 也適合存放建置產物與套件。",
+        "zh-Hans": "用 Cloudflare 的 CDN 与防护加速全球下载、抵挡攻击，R2 也适合存放构建产物与软件包。",
+        "en": "Cloudflare's CDN and protection speed up downloads worldwide and absorb attacks; R2 suits build artifacts and packages."
+      },
+      "requirements": {
+        "zh-Hant": "採公認開源授權的專案，以非營利方式運作並符合計畫宗旨；提交贊助申請",
+        "zh-Hans": "采用公认开源许可证的项目，以非营利方式运作并符合计划宗旨；提交赞助申请",
+        "en": "Open source project with a recognized OSS license, operating solely on a non-profit basis and aligned with the program's mission; submit a sponsorship request"
+      },
+      "type": "application_required",
+      "category": [
+        "serverless_hosted"
+      ],
+      "link": "https://www.cloudflare.com/lp/project-alexandria/",
+      "lastVerified": "2026-11-18"
+    },
+    {
+      "id": "aws",
+      "name": "AWS Cloud Credits for Open Source",
+      "whatYouGet": {
+        "zh-Hant": "AWS 促銷點數，常用於上游與效能測試、CI/CD、存放建置產物",
+        "zh-Hans": "AWS 促销点数，常用于上游与性能测试、CI/CD、存放构建产物",
+        "en": "AWS promotional credits, typically used for upstream and performance testing, CI/CD and artifact storage"
+      },
+      "whyItHelps": {
+        "zh-Hant": "用雲端點數支付 CI 跑者、效能測試環境與檔案儲存，把經費留給專案本身。",
+        "zh-Hans": "用云点数支付 CI 运行器、性能测试环境与文件存储，把经费留给项目本身。",
+        "en": "Cover CI runners, performance test environments and storage with credits, keeping funds for the project itself."
+      },
+      "requirements": {
+        "zh-Hant": "一般需採 OSI 認可授權（領域內常用的非 OSI 授權也可申請）；填寫申請表寄到 awsopensourcecredits@amazon.com，每月審核發放",
+        "zh-Hans": "一般需采用 OSI 认可的许可证（领域内常用的非 OSI 许可证也可申请）；填写申请表发送到 awsopensourcecredits@amazon.com，每月审核发放",
+        "en": "Generally an OSI-approved license (projects using common non-OSI licenses in their space may still apply); email the application form to awsopensourcecredits@amazon.com; reviewed and issued monthly"
+      },
+      "type": "application_required",
+      "category": [
+        "serverless_hosted"
+      ],
+      "link": "https://aws.amazon.com/blogs/opensource/aws-cloud-credits-for-open-source-projects-affirming-our-commitment/",
+      "lastVerified": "2026-11-18"
+    },
+    {
+      "id": "fastly",
+      "name": "Fastly Fast Forward",
+      "logo": "/logos/fastly.svg",
+      "whatYouGet": {
+        "zh-Hant": "免費提供 Fastly 服務給符合資格的開源專案，以及支持它們的非營利組織",
+        "zh-Hans": "免费向符合资格的开源项目及支持它们的非营利组织提供 Fastly 服务",
+        "en": "Free Fastly services for eligible open source projects and the nonprofits that support them"
+      },
+      "whyItHelps": {
+        "zh-Hant": "套件下載、文件站等高流量內容透過 Fastly 的邊緣網路傳送，更快也更省頻寬費用。",
+        "zh-Hans": "软件包下载、文档站等高流量内容通过 Fastly 的边缘网络分发，更快也更省带宽费用。",
+        "en": "Serve high-traffic content like package downloads and docs from Fastly's edge network, faster and without the bandwidth bill."
+      },
+      "requirements": {
+        "zh-Hant": "符合資格的開源專案或支持開源的非營利組織；需申請審核",
+        "zh-Hans": "符合资格的开源项目或支持开源的非营利组织；需申请审核",
+        "en": "Eligible open source projects or nonprofits that support them; application and review required"
+      },
+      "type": "application_required",
+      "category": [
+        "serverless_hosted"
+      ],
+      "link": "https://www.fastly.com/forward",
+      "lastVerified": "2026-11-18"
+    },
+    {
+      "id": "datadog",
+      "name": "Datadog for Open Source Projects",
+      "logo": "/logos/datadog.svg",
+      "whatYouGet": {
+        "zh-Hant": "免費使用 Datadog 雲端可觀測性與安全平台",
+        "zh-Hans": "免费使用 Datadog 云端可观测性与安全平台",
+        "en": "Free access to Datadog's cloud observability and security platform"
+      },
+      "whyItHelps": {
+        "zh-Hant": "在同一處看到專案基礎設施（CI、套件伺服器、網站）的指標、日誌與追蹤，出問題能更快定位。",
+        "zh-Hans": "在同一处看到项目基础设施（CI、软件包服务器、网站）的指标、日志与追踪，出问题能更快定位。",
+        "en": "See metrics, logs and traces for the project's own infrastructure (CI, package servers, website) in one place."
+      },
+      "requirements": {
+        "zh-Hant": "非商業專案、採認可的開源授權；監控的基礎設施與應用必須直接用於支援專案本身（某個開源軟體的部署實例不算）；個案審核",
+        "zh-Hans": "非商业项目、采用认可的开源许可证；监控的基础设施与应用必须直接用于支持项目本身（某个开源软件的部署实例不算）；逐案审核",
+        "en": "Non-commercial project under an approved open source license; monitored infrastructure must directly support the project (instances of an open source project are out of scope); reviewed case by case"
+      },
+      "type": "application_required",
+      "category": [
+        "observability"
+      ],
+      "link": "https://www.datadoghq.com/partner/open-source/",
+      "lastVerified": "2026-11-18"
+    },
+    {
+      "id": "browserstack",
+      "name": "BrowserStack Open Source Program",
+      "whatYouGet": {
+        "zh-Hant": "免費無限測試 Live、Automate、Percy（5 位使用者、5 個平行測試），涵蓋 3,000+ 瀏覽器與實機，專案存續期間有效",
+        "zh-Hans": "免费无限测试 Live、Automate、Percy（5 位用户、5 个并行测试），覆盖 3,000+ 浏览器与真机，项目存续期间有效",
+        "en": "Free unlimited testing with Live, Automate and Percy (5 users, 5 parallel tests) across 3,000+ browsers and real devices, for the life of the project"
+      },
+      "whyItHelps": {
+        "zh-Hant": "不用自己準備一堆裝置，就能在各種瀏覽器和真實手機上測試，確保使用者那邊都能正常運作。",
+        "zh-Hans": "不用自己准备一堆设备，就能在各种浏览器和真实手机上测试，确保用户那边都能正常运行。",
+        "en": "Test on every browser and real phones without owning the devices, so it works for all your users."
+      },
+      "requirements": {
+        "zh-Hant": "公開的開源專案，透過官方開源頁面申請",
+        "zh-Hans": "公开的开源项目，通过官方开源页面申请",
+        "en": "Public open source project; apply through the official open source page"
+      },
+      "type": "application_required",
+      "category": [
+        "ci_cd"
+      ],
+      "link": "https://www.browserstack.com/open-source",
+      "lastVerified": "2026-11-18",
+      "pending": {
+        "zh-Hant": "開源方案已從價格頁移除，請以官方開源頁面為準",
+        "zh-Hans": "开源方案已从价格页移除，请以官方开源页面为准",
+        "en": "No longer shown on the pricing page; check the official open source page",
+        "link": "https://www.browserstack.com/open-source"
+      }
+    },
+    {
+      "id": "saucelabs",
+      "name": "Sauce Labs Open Sauce",
+      "logo": "/logos/saucelabs.svg",
+      "whatYouGet": {
+        "zh-Hant": "開源專案免費無限測試分鐘數，可在多種瀏覽器、作業系統與模擬器上平行測試",
+        "zh-Hans": "开源项目免费无限测试分钟数，可在多种浏览器、操作系统与模拟器上并行测试",
+        "en": "Unlimited free testing minutes for open source, in parallel across many browser, OS and emulator combinations"
+      },
+      "whyItHelps": {
+        "zh-Hant": "在雲端自動跑跨瀏覽器測試，改前端時能及早發現只在特定瀏覽器出現的 bug。",
+        "zh-Hans": "在云端自动跑跨浏览器测试，改前端时能及早发现只在特定浏览器出现的 bug。",
+        "en": "Run cross-browser tests in the cloud and catch browser-specific bugs early when the front end changes."
+      },
+      "requirements": {
+        "zh-Hant": "帳號只能用於開源專案；所有測試結果（影片、截圖、日誌）必須公開",
+        "zh-Hans": "账号只能用于开源项目；所有测试结果（视频、截图、日志）必须公开",
+        "en": "The account may be used only for open source projects; all test results (videos, screenshots, logs) are public"
+      },
+      "type": "application_required",
+      "category": [
+        "ci_cd"
+      ],
+      "link": "https://opensource.saucelabs.com/",
+      "lastVerified": "2026-11-18"
+    },
+    {
+      "id": "testingbot",
+      "name": "TestingBot for Open Source",
+      "whatYouGet": {
+        "zh-Hant": "免費無限跨瀏覽器與行動裝置測試：2 個同時測試、6,100+ 真實瀏覽器與 iOS／Android 實機，支援 Selenium、Cypress 等",
+        "zh-Hans": "免费无限跨浏览器与移动设备测试：2 个并发测试、6,100+ 真实浏览器与 iOS／Android 真机，支持 Selenium、Cypress 等",
+        "en": "Free unlimited cross-browser and mobile testing: 2 concurrent tests on 6,100+ real browsers and iOS/Android devices, with Selenium, Cypress and more"
+      },
+      "whyItHelps": {
+        "zh-Hant": "在真實瀏覽器和 iOS／Android 實機上跑自動化測試，及早抓到相容性問題。",
+        "zh-Hans": "在真实浏览器和 iOS／Android 真机上跑自动化测试，及早发现兼容性问题。",
+        "en": "Run automated tests on real browsers and iOS/Android devices to catch compatibility issues early."
+      },
+      "requirements": {
+        "zh-Hant": "符合資格的開源專案；先註冊免費帳號再提交專案，通常幾個工作天內完成審核升級",
+        "zh-Hans": "符合资格的开源项目；先注册免费账号再提交项目，通常几个工作日内完成审核升级",
+        "en": "Qualifying open source project; create a free account, then submit the project; usually upgraded within a couple of business days"
+      },
+      "type": "application_required",
+      "category": [
+        "ci_cd"
+      ],
+      "link": "https://testingbot.com/open-source",
+      "lastVerified": "2026-11-18"
+    },
+    {
+      "id": "termius",
+      "name": "Termius for Open Source",
+      "logo": "/logos/termius.svg",
+      "whatYouGet": {
+        "zh-Hant": "免費 Termius Business 帳號，方便團隊協作管理 SSH 連線",
+        "zh-Hans": "免费 Termius Business 账号，方便团队协作管理 SSH 连接",
+        "en": "Free Termius Business account for team collaboration on SSH connections"
+      },
+      "whyItHelps": {
+        "zh-Hant": "維護團隊共用主機清單與連線設定，部署和維運專案伺服器更方便。",
+        "zh-Hans": "维护团队共用主机列表与连接配置，部署和运维项目服务器更方便。",
+        "en": "Maintainers share hosts and connection settings, making it easier to deploy and run project servers."
+      },
+      "requirements": {
+        "zh-Hant": "在專案的贊助者區塊放上 Termius Logo 與介紹連結；不得商業使用（GitHub Sponsors、Open Collective 等開源募資平台除外）；單一專案申請者須為核心貢獻者，專案至少 30 天、持續維護並採寬鬆型開源授權",
+        "zh-Hans": "在项目的赞助者区块放上 Termius Logo 与介绍链接；不得商业使用（GitHub Sponsors、Open Collective 等开源筹资平台除外）；单一项目申请者须为核心贡献者，项目至少 30 天、持续维护并采用宽松型开源许可证",
+        "en": "Add the Termius logo and link to your sponsors section; no commercial use (except open source funding platforms such as GitHub Sponsors or Open Collective); single-project applicants must be core contributors, and the project must be 30+ days old, actively maintained and under a permissive license"
+      },
+      "type": "application_required",
+      "category": [
+        "app_definition_image_build"
+      ],
+      "link": "https://www.termius.com/opensource",
+      "lastVerified": "2026-11-18"
+    },
+    {
+      "id": "atlassian",
+      "name": "Atlassian Open Source License",
+      "logo": "/logos/atlassian.svg",
+      "whatYouGet": {
+        "zh-Hant": "免費使用 Atlassian 雲端產品（Jira、Confluence 等），雲端版限 Standard 方案",
+        "zh-Hans": "免费使用 Atlassian 云端产品（Jira、Confluence 等），云端版限 Standard 方案",
+        "en": "Free Atlassian cloud products (Jira, Confluence and more); open source cloud is limited to the Standard plan"
+      },
+      "whyItHelps": {
+        "zh-Hant": "用 Jira 追蹤 issue 與路線圖、用 Confluence 寫設計文件，適合需要較正式專案管理的大型專案。",
+        "zh-Hans": "用 Jira 跟踪 issue 与路线图、用 Confluence 写设计文档，适合需要较正式项目管理的大型项目。",
+        "en": "Track issues and roadmaps in Jira and write design docs in Confluence, useful for larger projects with formal planning."
+      },
+      "requirements": {
+        "zh-Hant": "開源專案提出授權申請，通常 1 個工作天內回覆",
+        "zh-Hans": "开源项目提出许可申请，通常 1 个工作日内回复",
+        "en": "Open source projects apply for a license; responses usually arrive within 1 business day"
+      },
+      "type": "application_required",
+      "category": [
+        "collaboration"
+      ],
+      "link": "https://www.atlassian.com/software/views/open-source-license-request",
+      "lastVerified": "2026-11-18"
+    },
+    {
+      "id": "zulip",
+      "name": "Zulip Cloud Standard Sponsorship",
+      "logo": "/logos/zulip.svg",
+      "whatYouGet": {
+        "zh-Hant": "免費 Zulip Cloud Standard 方案（無限搜尋歷史、每人最多 10 GB 檔案空間等）",
+        "zh-Hans": "免费 Zulip Cloud Standard 方案（无限搜索历史、每人最多 10 GB 文件空间等）",
+        "en": "Free Zulip Cloud Standard (unlimited search history, up to 10 GB file storage per user and more)"
+      },
+      "whyItHelps": {
+        "zh-Hant": "以話題（topic）分串的聊天室，社群討論不會被洗掉，非同步協作的開源社群特別好用。",
+        "zh-Hans": "以话题（topic）分串的聊天室，社区讨论不会被刷屏，非同步协作的开源社区特别好用。",
+        "en": "Topic-threaded chat keeps community discussions from getting buried, ideal for asynchronous open source teams."
+      },
+      "requirements": {
+        "zh-Hant": "開源專案提出贊助申請（Zulip 也贊助非營利、教育與學術研究組織）",
+        "zh-Hans": "开源项目提出赞助申请（Zulip 也赞助非营利、教育与学术研究组织）",
+        "en": "Open source projects request sponsorship (Zulip also sponsors nonprofits, education and academic research)"
+      },
+      "type": "application_required",
+      "category": [
+        "collaboration"
+      ],
+      "link": "https://zulip.com/plans/",
+      "lastVerified": "2026-11-18"
+    },
+    {
+      "id": "algolia-docsearch",
+      "name": "Algolia DocSearch",
+      "logo": "/logos/algolia.svg",
+      "whatYouGet": {
+        "zh-Hant": "免費的文件搜尋：Algolia 代管爬蟲每週自動爬取文件，提供專屬 Algolia 應用與後台分析",
+        "zh-Hans": "免费的文档搜索：Algolia 托管爬虫每周自动抓取文档，提供专属 Algolia 应用与后台分析",
+        "en": "Free docs search: Algolia hosts the crawler and re-crawls your docs weekly, with a dedicated Algolia app and analytics"
+      },
+      "whyItHelps": {
+        "zh-Hant": "使用者在文件站裡即打即搜，更快找到 API 與教學，減少重複的提問 issue。",
+        "zh-Hans": "用户在文档站里即打即搜，更快找到 API 与教程，减少重复的提问 issue。",
+        "en": "Instant search in your docs helps users find APIs and guides faster, cutting repeat questions in issues."
+      },
+      "requirements": {
+        "zh-Hant": "開源專案文件或技術部落格，須公開且為正式上線網站；搜尋結果旁要保留「Search by Algolia」Logo；在 Algolia 後台的 DocSearch 流程提交網域，會自動檢查資格",
+        "zh-Hans": "开源项目文档或技术博客，须公开且为正式上线网站；搜索结果旁要保留“Search by Algolia”Logo；在 Algolia 后台的 DocSearch 流程提交域名，会自动检查资格",
+        "en": "Open source docs or technical blogs that are public and in production; keep the \"Search by Algolia\" logo next to results; submit your domain in the DocSearch onboarding in the Algolia dashboard for an automated check"
+      },
+      "type": "application_required",
+      "category": [
+        "docs_localization"
+      ],
+      "link": "https://docsearch.algolia.com/docs/who-can-apply/",
+      "lastVerified": "2026-11-18"
+    },
+    {
+      "id": "crowdin",
+      "name": "Crowdin for Open Source",
+      "logo": "/logos/crowdin.svg",
+      "whatYouGet": {
+        "zh-Hant": "免費使用 Crowdin 翻譯管理平台",
+        "zh-Hans": "免费使用 Crowdin 翻译管理平台",
+        "en": "Free use of the Crowdin localization platform"
+      },
+      "whyItHelps": {
+        "zh-Hant": "社群志工直接在網頁上翻譯介面字串，譯文同步回 repo，輕鬆做出多語系版本。",
+        "zh-Hans": "社区志愿者直接在网页上翻译界面字符串，译文同步回仓库，轻松做出多语言版本。",
+        "en": "Volunteers translate strings in the browser and translations sync back to the repo, making multilingual releases easy."
+      },
+      "requirements": {
+        "zh-Hant": "已在 Crowdin 建立翻譯專案；採 OSI 認可授權且原始碼公開；沒有相關商業產品；申請者是專案負責人；已開發至少 3 個月、有活躍社群、網站消息持續更新並定期發布版本；同意將譯文貢獻到 Crowdin Global TM",
+        "zh-Hans": "已在 Crowdin 创建翻译项目；采用 OSI 认可的许可证且源代码公开；没有相关商业产品；申请者是项目负责人；已开发至少 3 个月、有活跃社区、网站消息持续更新并定期发布版本；同意将译文贡献到 Crowdin Global TM",
+        "en": "A Crowdin translation project already exists; OSI-approved license and public source; no related commercial products; applicant is the project lead; 3+ months of work, an active community, an up-to-date news section and regular releases; translations are contributed to Crowdin Global TM"
+      },
+      "type": "application_required",
+      "category": [
+        "docs_localization"
+      ],
+      "link": "https://crowdin.com/product/for-open-source",
+      "lastVerified": "2026-11-18"
+    },
+    {
+      "id": "weblate",
+      "name": "Hosted Weblate Libre Plan",
+      "logo": "/logos/weblate.svg",
+      "whatYouGet": {
+        "zh-Hant": "免費 Libre 方案，額度與 160k 字串付費方案相同",
+        "zh-Hans": "免费 Libre 方案，额度与 160k 字符串付费方案相同",
+        "en": "Free Libre plan with the same limits as the paid 160k-string plan"
+      },
+      "whyItHelps": {
+        "zh-Hant": "與 Git 緊密整合的開源翻譯平台，譯文連同譯者署名 commit 回 repo，資料存放在歐盟。",
+        "zh-Hans": "与 Git 紧密集成的开源翻译平台，译文连同译者署名提交回仓库，数据存放在欧盟。",
+        "en": "An open source, Git-integrated translation platform that commits translations back with attribution; data stays in the EU."
+      },
+      "requirements": {
+        "zh-Hant": "公開的自由／開源專案：採 OSI 認可或 FSF 認定的自由授權，原始碼放在支援的 repo",
+        "zh-Hans": "公开的自由／开源项目：采用 OSI 认可或 FSF 认定的自由许可证，源代码放在支持的仓库",
+        "en": "Public libre project under an OSI-approved or FSF-recognized license, with source in a supported repository"
+      },
+      "type": "application_required",
+      "category": [
+        "docs_localization"
+      ],
+      "link": "https://weblate.org/hosting/",
+      "lastVerified": "2026-11-18"
+    },
+    {
+      "id": "gradle-develocity",
+      "name": "Gradle Develocity for OSS",
+      "logo": "/logos/gradle.svg",
+      "whatYouGet": {
+        "zh-Hant": "免費的 Develocity 實例：建置與測試加速、失敗排查、工具鏈可觀測性",
+        "zh-Hans": "免费的 Develocity 实例：构建与测试加速、失败排查、工具链可观测性",
+        "en": "A free Develocity instance: build and test acceleration, failure troubleshooting and toolchain observability"
+      },
+      "whyItHelps": {
+        "zh-Hant": "Gradle 或 Maven 專案可用建置快取加速 CI，並分析不穩定測試與建置失敗的原因。",
+        "zh-Hans": "Gradle 或 Maven 项目可用构建缓存加速 CI，并分析不稳定测试与构建失败的原因。",
+        "en": "Gradle and Maven projects speed up CI with build caching and dig into flaky tests and build failures."
+      },
+      "requirements": {
+        "zh-Hant": "只提供給重點開源專案與基金會（如 Apache 軟體基金會、Spring、Commonhaus Foundation），資源有限；需與 Gradle 聯繫",
+        "zh-Hans": "只提供给重点开源项目与基金会（如 Apache 软件基金会、Spring、Commonhaus Foundation），资源有限；需与 Gradle 联系",
+        "en": "Only for key open source projects and foundations (e.g. the Apache Software Foundation, Spring, Commonhaus Foundation); limited resources; contact Gradle"
+      },
+      "type": "high_bar",
+      "category": [
+        "observability"
+      ],
+      "link": "https://gradle.com/oss-sponsored-by-develocity/",
       "lastVerified": "2026-11-18"
     }
   ]

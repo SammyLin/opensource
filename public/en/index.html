@@ -38,7 +38,7 @@
             --color-border: #e5e7eb;
             --color-border-hover: #d1d5db;
             --color-accent: #10b981;
-            --color-accent-dark: #059669;
+            --color-accent-dark: #047857;
             --color-focus: #0d9668;
             --color-badge-green-bg: #d1fae5;
             --color-badge-green-text: #065f46;
@@ -91,7 +91,8 @@
         .chip { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; min-height: 36px; border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text-subtle); border-radius: var(--radius-full); font: inherit; font-size: 14px; cursor: pointer; }
         .chip:hover { border-color: var(--color-border-hover); color: var(--color-text); }
         .chip[aria-pressed="true"] { background: var(--color-text); border-color: var(--color-text); color: var(--color-surface); }
-        .chip .n { font-size: 12px; opacity: 0.7; font-variant-numeric: tabular-nums; }
+        .chip .n { font-size: 12px; color: var(--color-text-muted); font-variant-numeric: tabular-nums; }
+        .chip[aria-pressed="true"] .n { color: inherit; opacity: 0.85; }
         .chip:disabled { opacity: 0.4; cursor: default; }
         .status { display: flex; justify-content: space-between; align-items: center; font-size: 14px; color: var(--color-text-muted); margin-bottom: 16px; min-height: 32px; }
         .link-btn { background: none; border: 0; font: inherit; font-size: 14px; color: var(--color-accent-dark); cursor: pointer; display: inline-flex; gap: 4px; align-items: center; }
@@ -124,6 +125,7 @@
         .card { position: relative; }
         .card h2 a::after { content: ''; position: absolute; inset: 0; border-radius: var(--radius-lg); }
         .card .apply, .card dd a { position: relative; z-index: 1; }
+        .card dd a { color: #047857; }
         .card:hover h2 a { color: var(--color-accent-dark); }
         .empty { grid-column: 1 / -1; text-align: center; padding: 48px 0; color: var(--color-text-muted); }
 
@@ -234,7 +236,7 @@
       "dateModified": "2026-11-18",
       "mainEntity": {
         "@type": "ItemList",
-        "numberOfItems": 11,
+        "numberOfItems": 34,
         "itemListElement": [
           {
             "@type": "ListItem",
@@ -312,6 +314,167 @@
             "name": "OpenAI Codex for Open Source",
             "url": "https://opensource.3mi.ai/en/p/openai-codex/",
             "description": "Hand tasks like bug fixes, tests and PR reviews to an AI coding agent; Codex Security (where offered) helps find vulnerabilities."
+          },
+          {
+            "@type": "ListItem",
+            "position": 12,
+            "name": "CodeRabbit for Open Source",
+            "url": "https://opensource.3mi.ai/en/p/coderabbit/",
+            "description": "Every PR gets a line-by-line AI review and summary first, so maintainers can work through outside contributions faster."
+          },
+          {
+            "@type": "ListItem",
+            "position": 13,
+            "name": "GitGuardian for Open Source",
+            "url": "https://opensource.3mi.ai/en/p/gitguardian/",
+            "description": "Alerts you the moment someone commits a key or password, before a leaked credential can be abused."
+          },
+          {
+            "@type": "ListItem",
+            "position": 14,
+            "name": "Codacy Open Source",
+            "url": "https://opensource.3mi.ai/en/p/codacy/",
+            "description": "Flags quality and security issues right on the PR, keeping code from many contributors to one standard."
+          },
+          {
+            "@type": "ListItem",
+            "position": 15,
+            "name": "DeepSource Open Source Plan",
+            "url": "https://opensource.3mi.ai/en/p/deepsource/",
+            "description": "Runs static analysis on every commit and PR to catch bugs, anti-patterns and security issues early."
+          },
+          {
+            "@type": "ListItem",
+            "position": 16,
+            "name": "Mergify Open Source",
+            "url": "https://opensource.3mi.ai/en/p/mergify/",
+            "description": "Re-validates PRs against the latest main before merging, so individually green PRs don't break main together."
+          },
+          {
+            "@type": "ListItem",
+            "position": 17,
+            "name": "Tailscale Community on GitHub",
+            "url": "https://opensource.3mi.ai/en/p/tailscale/",
+            "description": "Maintainers reach the project's test, build and internal machines securely without running a VPN or opening ports."
+          },
+          {
+            "@type": "ListItem",
+            "position": 18,
+            "name": "GitLab for Open Source",
+            "url": "https://opensource.3mi.ai/en/p/gitlab/",
+            "description": "Run the project with Ultimate's security scanning, compliance and planning tools, with far more CI minutes."
+          },
+          {
+            "@type": "ListItem",
+            "position": 19,
+            "name": "Netlify Open Source Plan",
+            "url": "https://opensource.3mi.ai/en/p/netlify/",
+            "description": "Free hosting for docs and project sites, with every maintainer on the same team managing deploys."
+          },
+          {
+            "@type": "ListItem",
+            "position": 20,
+            "name": "Vercel Open Source Program",
+            "url": "https://opensource.3mi.ai/en/p/vercel/",
+            "description": "A year of hosting credits lets docs, demos and example apps go live without worrying about the bill."
+          },
+          {
+            "@type": "ListItem",
+            "position": 21,
+            "name": "Cloudflare Project Alexandria",
+            "url": "https://opensource.3mi.ai/en/p/cloudflare/",
+            "description": "Cloudflare's CDN and protection speed up downloads worldwide and absorb attacks; R2 suits build artifacts and packages."
+          },
+          {
+            "@type": "ListItem",
+            "position": 22,
+            "name": "AWS Cloud Credits for Open Source",
+            "url": "https://opensource.3mi.ai/en/p/aws/",
+            "description": "Cover CI runners, performance test environments and storage with credits, keeping funds for the project itself."
+          },
+          {
+            "@type": "ListItem",
+            "position": 23,
+            "name": "Fastly Fast Forward",
+            "url": "https://opensource.3mi.ai/en/p/fastly/",
+            "description": "Serve high-traffic content like package downloads and docs from Fastly's edge network, faster and without the bandwidth bill."
+          },
+          {
+            "@type": "ListItem",
+            "position": 24,
+            "name": "Datadog for Open Source Projects",
+            "url": "https://opensource.3mi.ai/en/p/datadog/",
+            "description": "See metrics, logs and traces for the project's own infrastructure (CI, package servers, website) in one place."
+          },
+          {
+            "@type": "ListItem",
+            "position": 25,
+            "name": "BrowserStack Open Source Program",
+            "url": "https://opensource.3mi.ai/en/p/browserstack/",
+            "description": "Test on every browser and real phones without owning the devices, so it works for all your users."
+          },
+          {
+            "@type": "ListItem",
+            "position": 26,
+            "name": "Sauce Labs Open Sauce",
+            "url": "https://opensource.3mi.ai/en/p/saucelabs/",
+            "description": "Run cross-browser tests in the cloud and catch browser-specific bugs early when the front end changes."
+          },
+          {
+            "@type": "ListItem",
+            "position": 27,
+            "name": "TestingBot for Open Source",
+            "url": "https://opensource.3mi.ai/en/p/testingbot/",
+            "description": "Run automated tests on real browsers and iOS/Android devices to catch compatibility issues early."
+          },
+          {
+            "@type": "ListItem",
+            "position": 28,
+            "name": "Termius for Open Source",
+            "url": "https://opensource.3mi.ai/en/p/termius/",
+            "description": "Maintainers share hosts and connection settings, making it easier to deploy and run project servers."
+          },
+          {
+            "@type": "ListItem",
+            "position": 29,
+            "name": "Atlassian Open Source License",
+            "url": "https://opensource.3mi.ai/en/p/atlassian/",
+            "description": "Track issues and roadmaps in Jira and write design docs in Confluence, useful for larger projects with formal planning."
+          },
+          {
+            "@type": "ListItem",
+            "position": 30,
+            "name": "Zulip Cloud Standard Sponsorship",
+            "url": "https://opensource.3mi.ai/en/p/zulip/",
+            "description": "Topic-threaded chat keeps community discussions from getting buried, ideal for asynchronous open source teams."
+          },
+          {
+            "@type": "ListItem",
+            "position": 31,
+            "name": "Algolia DocSearch",
+            "url": "https://opensource.3mi.ai/en/p/algolia-docsearch/",
+            "description": "Instant search in your docs helps users find APIs and guides faster, cutting repeat questions in issues."
+          },
+          {
+            "@type": "ListItem",
+            "position": 32,
+            "name": "Crowdin for Open Source",
+            "url": "https://opensource.3mi.ai/en/p/crowdin/",
+            "description": "Volunteers translate strings in the browser and translations sync back to the repo, making multilingual releases easy."
+          },
+          {
+            "@type": "ListItem",
+            "position": 33,
+            "name": "Hosted Weblate Libre Plan",
+            "url": "https://opensource.3mi.ai/en/p/weblate/",
+            "description": "An open source, Git-integrated translation platform that commits translations back with attribution; data stays in the EU."
+          },
+          {
+            "@type": "ListItem",
+            "position": 34,
+            "name": "Gradle Develocity for OSS",
+            "url": "https://opensource.3mi.ai/en/p/gradle-develocity/",
+            "description": "Gradle and Maven projects speed up CI with build caching and dig into flaky tests and build failures."
           }
         ]
       }
@@ -367,12 +530,12 @@
                 <svg class="icon"><use href="#i-search"></use></svg>
                 <input type="search" id="q" autocomplete="off" data-t-placeholder="search" placeholder="Search names, benefits or requirements…">
             </label>
-            <div class="row" id="type-row"><span class="row-label">Difficulty</span><button class="chip" data-group="type" data-value="" aria-pressed="true">All <span class="n">11</span></button><button class="chip" data-group="type" data-value="direct_activation" aria-pressed="false">Direct activation <span class="n">2</span></button><button class="chip" data-group="type" data-value="application_required" aria-pressed="false">Application required <span class="n">6</span></button><button class="chip" data-group="type" data-value="high_bar" aria-pressed="false">High bar <span class="n">3</span></button></div>
-            <div class="row" id="cat-row"><span class="row-label">CNCF category</span><button class="chip" data-group="cat" data-value="" aria-pressed="true">All <span class="n">11</span></button><button class="chip" data-group="cat" data-value="container_registry" aria-pressed="false">Container Registry <span class="n">1</span></button><button class="chip" data-group="cat" data-value="security_compliance" aria-pressed="false">Security &amp; Compliance <span class="n">3</span></button><button class="chip" data-group="cat" data-value="key_management" aria-pressed="false">Key Management <span class="n">1</span></button><button class="chip" data-group="cat" data-value="app_definition_image_build" aria-pressed="false">Application Definition &amp; Image Build <span class="n">1</span></button><button class="chip" data-group="cat" data-value="ci_cd" aria-pressed="false">Continuous Integration &amp; Delivery <span class="n">1</span></button><button class="chip" data-group="cat" data-value="observability" aria-pressed="false">Observability <span class="n">1</span></button><button class="chip" data-group="cat" data-value="ai_agent" aria-pressed="false">AI Agent <span class="n">3</span></button></div>
+            <div class="row" id="type-row"><span class="row-label">Difficulty</span><button class="chip" data-group="type" data-value="" aria-pressed="true">All <span class="n">34</span></button><button class="chip" data-group="type" data-value="direct_activation" aria-pressed="false">Direct activation <span class="n">8</span></button><button class="chip" data-group="type" data-value="application_required" aria-pressed="false">Application required <span class="n">22</span></button><button class="chip" data-group="type" data-value="high_bar" aria-pressed="false">High bar <span class="n">4</span></button></div>
+            <div class="row" id="cat-row"><span class="row-label">CNCF category</span><button class="chip" data-group="cat" data-value="" aria-pressed="true">All <span class="n">34</span></button><button class="chip" data-group="cat" data-value="container_registry" aria-pressed="false">Container Registry <span class="n">1</span></button><button class="chip" data-group="cat" data-value="security_compliance" aria-pressed="false">Security &amp; Compliance <span class="n">6</span></button><button class="chip" data-group="cat" data-value="key_management" aria-pressed="false">Key Management <span class="n">1</span></button><button class="chip" data-group="cat" data-value="cloud_native_network" aria-pressed="false">Cloud Native Network <span class="n">1</span></button><button class="chip" data-group="cat" data-value="app_definition_image_build" aria-pressed="false">Application Definition &amp; Image Build <span class="n">2</span></button><button class="chip" data-group="cat" data-value="ci_cd" aria-pressed="false">Continuous Integration &amp; Delivery <span class="n">6</span></button><button class="chip" data-group="cat" data-value="serverless_hosted" aria-pressed="false">Hosted Platform <span class="n">5</span></button><button class="chip" data-group="cat" data-value="observability" aria-pressed="false">Observability <span class="n">3</span></button><button class="chip" data-group="cat" data-value="ai_agent" aria-pressed="false">AI Agent <span class="n">4</span></button><button class="chip" data-group="cat" data-value="collaboration" aria-pressed="false">Collaboration <span class="n">2</span></button><button class="chip" data-group="cat" data-value="docs_localization" aria-pressed="false">Docs &amp; Localization <span class="n">3</span></button></div>
         </section>
 
         <div class="status">
-            <span id="count" aria-live="polite">11 programs</span>
+            <span id="count" aria-live="polite">34 programs</span>
             <button class="link-btn" id="clear" hidden=""><svg class="icon"><use href="#i-x"></use></svg><span data-t="clear">Clear filters</span></button>
         </div>
 
@@ -414,6 +577,126 @@
                     </dl>
                     <div class="card-foot">
                         <a class="apply" href="https://about.codecov.io/for/open-source/" target="_blank" rel="noopener">Activate<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>Verified 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/coderabbit.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/en/p/coderabbit/">CodeRabbit for Open Source</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-direct_activation">Direct activation</span>
+                        
+                        <span class="tag" title="CNCF › AI Agent">AI Agent</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>How it helps your project</dt><dd>Every PR gets a line-by-line AI review and summary first, so maintainers can work through outside contributions faster.</dd></div>
+                        <div><dt>What you get</dt><dd>Pro-level AI code reviews free on public repositories (rate-limited; other paid features such as Dashboard and Reports are not included)</dd></div>
+                        <div><dt>Requirements</dt><dd>Public repository on GitHub or GitLab; Pro features turn on automatically once CodeRabbit is installed, no application needed</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://kb.coderabbit.ai/articles/8856795235-how-do-i-activate-coderabbit-pro-for-my-open-source-project" target="_blank" rel="noopener">Activate<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>Verified 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand mono" aria-hidden="true">G</span>
+                        <h2><a href="/en/p/gitguardian/">GitGuardian for Open Source</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-direct_activation">Direct activation</span>
+                        
+                        <span class="tag" title="CNCF › Provisioning › Security &amp; Compliance">Security &amp; Compliance</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>How it helps your project</dt><dd>Alerts you the moment someone commits a key or password, before a leaked credential can be abused.</dd></div>
+                        <div><dt>What you get</dt><dd>Free use of the GitGuardian platform to monitor repositories for leaked API keys, tokens, passwords and other secrets</dd></div>
+                        <div><dt>Requirements</dt><dd>Repositories hosted under your GitHub Organization; install the GitGuardian app from GitHub Marketplace</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://www.gitguardian.com/pricing" target="_blank" rel="noopener">Activate<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>Verified 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/codacy.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/en/p/codacy/">Codacy Open Source</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-direct_activation">Direct activation</span>
+                        
+                        <span class="tag" title="CNCF › Provisioning › Security &amp; Compliance">Security &amp; Compliance</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>How it helps your project</dt><dd>Flags quality and security issues right on the PR, keeping code from many contributors to one standard.</dd></div>
+                        <div><dt>What you get</dt><dd>Free Open Source plan: basic access to all solutions (quality, security, coverage) with best-effort analysis time</dd></div>
+                        <div><dt>Requirements</dt><dd>Public repositories only; meant for individuals and teams working exclusively on public projects</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://codacy.com/pricing" target="_blank" rel="noopener">Activate<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>Verified 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand mono" aria-hidden="true">D</span>
+                        <h2><a href="/en/p/deepsource/">DeepSource Open Source Plan</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-direct_activation">Direct activation</span>
+                        
+                        <span class="tag" title="CNCF › Provisioning › Security &amp; Compliance">Security &amp; Compliance</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>How it helps your project</dt><dd>Runs static analysis on every commit and PR to catch bugs, anti-patterns and security issues early.</dd></div>
+                        <div><dt>What you get</dt><dd>Free Open Source plan: unlimited public repositories and team members, 1,000 PR reviews per month; AI Review and Autofix are pay-as-you-go; SCA (dependency scanning) is not included</dd></div>
+                        <div><dt>Requirements</dt><dd>Public repositories only; private repositories need a paid plan</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://deepsource.com/docs/platform/reference/billing" target="_blank" rel="noopener">Activate<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>Verified 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand mono" aria-hidden="true">M</span>
+                        <h2><a href="/en/p/mergify/">Mergify Open Source</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-direct_activation">Direct activation</span>
+                        
+                        <span class="tag" title="CNCF › App Definition and Development › Continuous Integration &amp; Delivery">Continuous Integration &amp; Delivery</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>How it helps your project</dt><dd>Re-validates PRs against the latest main before merging, so individually green PRs don't break main together.</dd></div>
+                        <div><dt>What you get</dt><dd>Free plan including Merge Queue, Merge Protections, CI Insights and Test Insights</dd></div>
+                        <div><dt>Requirements</dt><dd>Free for open source projects (public repositories); private repositories are limited to teams of up to 5</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://mergify.com/pricing" target="_blank" rel="noopener">Activate<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>Verified 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/tailscale.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/en/p/tailscale/">Tailscale Community on GitHub</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-direct_activation">Direct activation</span>
+                        
+                        <span class="tag" title="CNCF › Runtime › Cloud Native Network">Cloud Native Network</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>How it helps your project</dt><dd>Maintainers reach the project's test, build and internal machines securely without running a VPN or opening ports.</dd></div>
+                        <div><dt>What you get</dt><dd>Free Community on GitHub plan so members of a GitHub organization share one Tailscale private network (tailnet)</dd></div>
+                        <div><dt>Requirements</dt><dd>A GitHub organization used for an open source project with an OSI license; select the plan in the admin console's Billing settings</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://tailscale.com/kb/1154/free-plans-discounts" target="_blank" rel="noopener">Activate<svg class="icon"><use href="#i-ext"></use></svg></a>
                         <span>Verified 2026-11-18</span>
                     </div>
                 </article>
@@ -539,6 +822,326 @@
                 </article>
                 <article class="card">
                     <div class="card-head">
+                        <span class="brand"><img src="/logos/gitlab.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/en/p/gitlab/">GitLab for Open Source</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">Application required</span>
+                        
+                        <span class="tag" title="CNCF › App Definition and Development › Continuous Integration &amp; Delivery">Continuous Integration &amp; Delivery</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>How it helps your project</dt><dd>Run the project with Ultimate's security scanning, compliance and planning tools, with far more CI minutes.</dd></div>
+                        <div><dt>What you get</dt><dd>GitLab Ultimate features (SaaS or self-managed) plus 50,000 compute minutes; no vendor support included</dd></div>
+                        <div><dt>Requirements</dt><dd>Every project in the namespace must use an OSI-approved license; the GitLab.com group or self-managed instance and the source code must be public; renew annually</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://about.gitlab.com/solutions/open-source/join/" target="_blank" rel="noopener">Apply<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>Verified 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/netlify.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/en/p/netlify/">Netlify Open Source Plan</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">Application required</span>
+                        
+                        <span class="tag" title="CNCF › Serverless › Hosted Platform">Hosted Platform</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>How it helps your project</dt><dd>Free hosting for docs and project sites, with every maintainer on the same team managing deploys.</dd></div>
+                        <div><dt>What you get</dt><dd>10,000 credits per month, free production deploys and unlimited team members; sites stay up even if credits run out</dd></div>
+                        <div><dt>Requirements</dt><dd>The site must relate directly to the open source software and its community (docs, changelogs, team blog, etc.); open source license; apply via form for review</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://www.netlify.com/legal/open-source-policy/" target="_blank" rel="noopener">Apply<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>Verified 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/vercel.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/en/p/vercel/">Vercel Open Source Program</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">Application required</span>
+                        
+                        <span class="tag" title="CNCF › Serverless › Hosted Platform">Hosted Platform</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>How it helps your project</dt><dd>A year of hosting credits lets docs, demos and example apps go live without worrying about the bill.</dd></div>
+                        <div><dt>What you get</dt><dd>US$3,600 in Vercel platform credits over 12 months, plus an OSS Starter Pack of third-party credits and community support</dd></div>
+                        <div><dt>Requirements</dt><dd>Actively developed and maintained; hosted or intended to be hosted on Vercel; measurable impact or growth potential; a Code of Conduct; credits used only for the project. Four cohorts a year; applications are closed and reopen in January</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://vercel.com/open-source-program" target="_blank" rel="noopener">Apply<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>Verified 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/cloudflare.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/en/p/cloudflare/">Cloudflare Project Alexandria</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">Application required</span>
+                        
+                        <span class="tag" title="CNCF › Serverless › Hosted Platform">Hosted Platform</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>How it helps your project</dt><dd>Cloudflare's CDN and protection speed up downloads worldwide and absorb attacks; R2 suits build artifacts and packages.</dd></div>
+                        <div><dt>What you get</dt><dd>Recurring annual credits: upgrades to Pro, Business or Enterprise, more Workers and Pages requests, more R2 storage and enhanced Zero Trust</dd></div>
+                        <div><dt>Requirements</dt><dd>Open source project with a recognized OSS license, operating solely on a non-profit basis and aligned with the program's mission; submit a sponsorship request</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://www.cloudflare.com/lp/project-alexandria/" target="_blank" rel="noopener">Apply<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>Verified 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand mono" aria-hidden="true">A</span>
+                        <h2><a href="/en/p/aws/">AWS Cloud Credits for Open Source</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">Application required</span>
+                        
+                        <span class="tag" title="CNCF › Serverless › Hosted Platform">Hosted Platform</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>How it helps your project</dt><dd>Cover CI runners, performance test environments and storage with credits, keeping funds for the project itself.</dd></div>
+                        <div><dt>What you get</dt><dd>AWS promotional credits, typically used for upstream and performance testing, CI/CD and artifact storage</dd></div>
+                        <div><dt>Requirements</dt><dd>Generally an OSI-approved license (projects using common non-OSI licenses in their space may still apply); email the application form to awsopensourcecredits@amazon.com; reviewed and issued monthly</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://aws.amazon.com/blogs/opensource/aws-cloud-credits-for-open-source-projects-affirming-our-commitment/" target="_blank" rel="noopener">Apply<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>Verified 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/fastly.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/en/p/fastly/">Fastly Fast Forward</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">Application required</span>
+                        
+                        <span class="tag" title="CNCF › Serverless › Hosted Platform">Hosted Platform</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>How it helps your project</dt><dd>Serve high-traffic content like package downloads and docs from Fastly's edge network, faster and without the bandwidth bill.</dd></div>
+                        <div><dt>What you get</dt><dd>Free Fastly services for eligible open source projects and the nonprofits that support them</dd></div>
+                        <div><dt>Requirements</dt><dd>Eligible open source projects or nonprofits that support them; application and review required</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://www.fastly.com/forward" target="_blank" rel="noopener">Apply<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>Verified 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/datadog.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/en/p/datadog/">Datadog for Open Source Projects</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">Application required</span>
+                        
+                        <span class="tag" title="CNCF › Observability and Analysis › Observability">Observability</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>How it helps your project</dt><dd>See metrics, logs and traces for the project's own infrastructure (CI, package servers, website) in one place.</dd></div>
+                        <div><dt>What you get</dt><dd>Free access to Datadog's cloud observability and security platform</dd></div>
+                        <div><dt>Requirements</dt><dd>Non-commercial project under an approved open source license; monitored infrastructure must directly support the project (instances of an open source project are out of scope); reviewed case by case</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://www.datadoghq.com/partner/open-source/" target="_blank" rel="noopener">Apply<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>Verified 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand mono" aria-hidden="true">B</span>
+                        <h2><a href="/en/p/browserstack/">BrowserStack Open Source Program</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">Application required</span>
+                        <span class="badge pending">No longer shown on the pricing page; check the official open source page</span>
+                        <span class="tag" title="CNCF › App Definition and Development › Continuous Integration &amp; Delivery">Continuous Integration &amp; Delivery</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>How it helps your project</dt><dd>Test on every browser and real phones without owning the devices, so it works for all your users.</dd></div>
+                        <div><dt>What you get</dt><dd>Free unlimited testing with Live, Automate and Percy (5 users, 5 parallel tests) across 3,000+ browsers and real devices, for the life of the project</dd></div>
+                        <div><dt>Requirements</dt><dd>Public open source project; apply through the official open source page <a href="https://www.browserstack.com/open-source" target="_blank" rel="noopener">Source</a></dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://www.browserstack.com/open-source" target="_blank" rel="noopener">Apply<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>Verified 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/saucelabs.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/en/p/saucelabs/">Sauce Labs Open Sauce</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">Application required</span>
+                        
+                        <span class="tag" title="CNCF › App Definition and Development › Continuous Integration &amp; Delivery">Continuous Integration &amp; Delivery</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>How it helps your project</dt><dd>Run cross-browser tests in the cloud and catch browser-specific bugs early when the front end changes.</dd></div>
+                        <div><dt>What you get</dt><dd>Unlimited free testing minutes for open source, in parallel across many browser, OS and emulator combinations</dd></div>
+                        <div><dt>Requirements</dt><dd>The account may be used only for open source projects; all test results (videos, screenshots, logs) are public</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://opensource.saucelabs.com/" target="_blank" rel="noopener">Apply<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>Verified 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand mono" aria-hidden="true">T</span>
+                        <h2><a href="/en/p/testingbot/">TestingBot for Open Source</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">Application required</span>
+                        
+                        <span class="tag" title="CNCF › App Definition and Development › Continuous Integration &amp; Delivery">Continuous Integration &amp; Delivery</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>How it helps your project</dt><dd>Run automated tests on real browsers and iOS/Android devices to catch compatibility issues early.</dd></div>
+                        <div><dt>What you get</dt><dd>Free unlimited cross-browser and mobile testing: 2 concurrent tests on 6,100+ real browsers and iOS/Android devices, with Selenium, Cypress and more</dd></div>
+                        <div><dt>Requirements</dt><dd>Qualifying open source project; create a free account, then submit the project; usually upgraded within a couple of business days</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://testingbot.com/open-source" target="_blank" rel="noopener">Apply<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>Verified 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/termius.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/en/p/termius/">Termius for Open Source</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">Application required</span>
+                        
+                        <span class="tag" title="CNCF › App Definition and Development › Application Definition &amp; Image Build">Application Definition &amp; Image Build</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>How it helps your project</dt><dd>Maintainers share hosts and connection settings, making it easier to deploy and run project servers.</dd></div>
+                        <div><dt>What you get</dt><dd>Free Termius Business account for team collaboration on SSH connections</dd></div>
+                        <div><dt>Requirements</dt><dd>Add the Termius logo and link to your sponsors section; no commercial use (except open source funding platforms such as GitHub Sponsors or Open Collective); single-project applicants must be core contributors, and the project must be 30+ days old, actively maintained and under a permissive license</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://www.termius.com/opensource" target="_blank" rel="noopener">Apply<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>Verified 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/atlassian.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/en/p/atlassian/">Atlassian Open Source License</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">Application required</span>
+                        
+                        <span class="tag" title="">Collaboration</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>How it helps your project</dt><dd>Track issues and roadmaps in Jira and write design docs in Confluence, useful for larger projects with formal planning.</dd></div>
+                        <div><dt>What you get</dt><dd>Free Atlassian cloud products (Jira, Confluence and more); open source cloud is limited to the Standard plan</dd></div>
+                        <div><dt>Requirements</dt><dd>Open source projects apply for a license; responses usually arrive within 1 business day</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://www.atlassian.com/software/views/open-source-license-request" target="_blank" rel="noopener">Apply<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>Verified 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/zulip.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/en/p/zulip/">Zulip Cloud Standard Sponsorship</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">Application required</span>
+                        
+                        <span class="tag" title="">Collaboration</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>How it helps your project</dt><dd>Topic-threaded chat keeps community discussions from getting buried, ideal for asynchronous open source teams.</dd></div>
+                        <div><dt>What you get</dt><dd>Free Zulip Cloud Standard (unlimited search history, up to 10 GB file storage per user and more)</dd></div>
+                        <div><dt>Requirements</dt><dd>Open source projects request sponsorship (Zulip also sponsors nonprofits, education and academic research)</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://zulip.com/plans/" target="_blank" rel="noopener">Apply<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>Verified 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/algolia.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/en/p/algolia-docsearch/">Algolia DocSearch</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">Application required</span>
+                        
+                        <span class="tag" title="">Docs &amp; Localization</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>How it helps your project</dt><dd>Instant search in your docs helps users find APIs and guides faster, cutting repeat questions in issues.</dd></div>
+                        <div><dt>What you get</dt><dd>Free docs search: Algolia hosts the crawler and re-crawls your docs weekly, with a dedicated Algolia app and analytics</dd></div>
+                        <div><dt>Requirements</dt><dd>Open source docs or technical blogs that are public and in production; keep the "Search by Algolia" logo next to results; submit your domain in the DocSearch onboarding in the Algolia dashboard for an automated check</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://docsearch.algolia.com/docs/who-can-apply/" target="_blank" rel="noopener">Apply<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>Verified 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/crowdin.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/en/p/crowdin/">Crowdin for Open Source</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">Application required</span>
+                        
+                        <span class="tag" title="">Docs &amp; Localization</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>How it helps your project</dt><dd>Volunteers translate strings in the browser and translations sync back to the repo, making multilingual releases easy.</dd></div>
+                        <div><dt>What you get</dt><dd>Free use of the Crowdin localization platform</dd></div>
+                        <div><dt>Requirements</dt><dd>A Crowdin translation project already exists; OSI-approved license and public source; no related commercial products; applicant is the project lead; 3+ months of work, an active community, an up-to-date news section and regular releases; translations are contributed to Crowdin Global TM</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://crowdin.com/product/for-open-source" target="_blank" rel="noopener">Apply<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>Verified 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/weblate.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/en/p/weblate/">Hosted Weblate Libre Plan</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">Application required</span>
+                        
+                        <span class="tag" title="">Docs &amp; Localization</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>How it helps your project</dt><dd>An open source, Git-integrated translation platform that commits translations back with attribution; data stays in the EU.</dd></div>
+                        <div><dt>What you get</dt><dd>Free Libre plan with the same limits as the paid 160k-string plan</dd></div>
+                        <div><dt>Requirements</dt><dd>Public libre project under an OSI-approved or FSF-recognized license, with source in a supported repository</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://weblate.org/hosting/" target="_blank" rel="noopener">Apply<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>Verified 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
                         <span class="brand"><img src="/logos/githubcopilot.svg" alt="" width="24" height="24" loading="lazy"></span>
                         <h2><a href="/en/p/github-copilot/">GitHub Copilot Pro for Open Source</a></h2>
                     </div>
@@ -596,6 +1199,26 @@
                         <a class="apply" href="https://developers.openai.com/community/codex-for-oss" target="_blank" rel="noopener">Apply<svg class="icon"><use href="#i-ext"></use></svg></a>
                         <span>Verified 2026-11-18</span>
                     </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/gradle.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/en/p/gradle-develocity/">Gradle Develocity for OSS</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-high_bar">High bar</span>
+                        
+                        <span class="tag" title="CNCF › Observability and Analysis › Observability">Observability</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>How it helps your project</dt><dd>Gradle and Maven projects speed up CI with build caching and dig into flaky tests and build failures.</dd></div>
+                        <div><dt>What you get</dt><dd>A free Develocity instance: build and test acceleration, failure troubleshooting and toolchain observability</dd></div>
+                        <div><dt>Requirements</dt><dd>Only for key open source projects and foundations (e.g. the Apache Software Foundation, Spring, Commonhaus Foundation); limited resources; contact Gradle</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://gradle.com/oss-sponsored-by-develocity/" target="_blank" rel="noopener">Apply<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>Verified 2026-11-18</span>
+                    </div>
                 </article></section>
 
         <section class="contribute">
@@ -646,7 +1269,7 @@
                 'license': '程式碼 <a href="https://github.com/SammyLin/opensource/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a> · 資料 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>', 'updated': '資料更新於', 'pending': '待確認', 'pending-src': '確認來源',
                 'back': '所有方案', 'share-title': '分享這個方案', 'share-text': n => `${n}：開源專案可以免費申請`,
                 'copy-link': '複製連結', 'copied': '已複製！', 'share-native': '分享…', 'related': '同類別的其他方案',
-                'official-page': '官方頁面', 'label-verified': '最後驗證', 'edit-entry': '資料有誤？在 GitHub 上修改',
+                'official-page': '官方頁面', 'not-cncf': 'CNCF Landscape 未涵蓋此類別', 'label-verified': '最後驗證', 'edit-entry': '資料有誤？在 GitHub 上修改',
                 'not-found': '找不到這個方案', 'not-found-desc': '連結可能打錯了，或這個方案已經下架。',
                 'page-title': n => `${n}｜開源專案免費方案 — 開源福利社`
             },
@@ -673,7 +1296,7 @@
                 'license': '代码 <a href="https://github.com/SammyLin/opensource/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a> · 数据 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>', 'updated': '数据更新于', 'pending': '待确认', 'pending-src': '确认来源',
                 'back': '所有方案', 'share-title': '分享这个方案', 'share-text': n => `${n}：开源项目可以免费申请`,
                 'copy-link': '复制链接', 'copied': '已复制！', 'share-native': '分享…', 'related': '同类别的其他方案',
-                'official-page': '官方页面', 'label-verified': '最后验证', 'edit-entry': '数据有误？在 GitHub 上修改',
+                'official-page': '官方页面', 'not-cncf': 'CNCF Landscape 未涵盖此类别', 'label-verified': '最后验证', 'edit-entry': '数据有误？在 GitHub 上修改',
                 'not-found': '找不到这个方案', 'not-found-desc': '链接可能打错了，或这个方案已经下架。',
                 'page-title': n => `${n}｜开源项目免费方案 — 开源福利社`
             },
@@ -700,7 +1323,7 @@
                 'license': 'Code <a href="https://github.com/SammyLin/opensource/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a> · Data <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>', 'updated': 'Data updated', 'pending': 'To be confirmed', 'pending-src': 'Source',
                 'back': 'All programs', 'share-title': 'Share this program', 'share-text': n => `${n}: free for open source projects`,
                 'copy-link': 'Copy link', 'copied': 'Copied!', 'share-native': 'Share…', 'related': 'More in this category',
-                'official-page': 'Official page', 'label-verified': 'Last verified', 'edit-entry': 'Something wrong? Edit on GitHub',
+                'official-page': 'Official page', 'not-cncf': 'Not covered by the CNCF Landscape', 'label-verified': 'Last verified', 'edit-entry': 'Something wrong? Edit on GitHub',
                 'not-found': 'Program not found', 'not-found-desc': 'The link may be mistyped, or the program was removed.',
                 'page-title': n => `${n} — free for open source | OSS Perks`
             }
@@ -878,7 +1501,7 @@
             }).join('');
 
             const related = data.programs.filter(x => x.id !== p.id && x.category.some(c => p.category.includes(c)));
-            const cat = p.category.map(c => `${esc(data.categories[c]?.[lang] || c)}<br><small>${esc(cncfPath(c))}</small>`).join('<br>');
+            const cat = p.category.map(c => esc(data.categories[c]?.[lang] || c) + `<br><small>${esc(cncfPath(c) || t['not-cncf'])}</small>`).join('<br>');
             const cta = p.type === 'direct_activation' ? t['cta-direct'] : t['cta-apply'];
 
             $('#detail').innerHTML = `${back}

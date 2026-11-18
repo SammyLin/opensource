@@ -38,7 +38,7 @@
             --color-border: #e5e7eb;
             --color-border-hover: #d1d5db;
             --color-accent: #10b981;
-            --color-accent-dark: #059669;
+            --color-accent-dark: #047857;
             --color-focus: #0d9668;
             --color-badge-green-bg: #d1fae5;
             --color-badge-green-text: #065f46;
@@ -91,7 +91,8 @@
         .chip { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; min-height: 36px; border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text-subtle); border-radius: var(--radius-full); font: inherit; font-size: 14px; cursor: pointer; }
         .chip:hover { border-color: var(--color-border-hover); color: var(--color-text); }
         .chip[aria-pressed="true"] { background: var(--color-text); border-color: var(--color-text); color: var(--color-surface); }
-        .chip .n { font-size: 12px; opacity: 0.7; font-variant-numeric: tabular-nums; }
+        .chip .n { font-size: 12px; color: var(--color-text-muted); font-variant-numeric: tabular-nums; }
+        .chip[aria-pressed="true"] .n { color: inherit; opacity: 0.85; }
         .chip:disabled { opacity: 0.4; cursor: default; }
         .status { display: flex; justify-content: space-between; align-items: center; font-size: 14px; color: var(--color-text-muted); margin-bottom: 16px; min-height: 32px; }
         .link-btn { background: none; border: 0; font: inherit; font-size: 14px; color: var(--color-accent-dark); cursor: pointer; display: inline-flex; gap: 4px; align-items: center; }
@@ -124,6 +125,7 @@
         .card { position: relative; }
         .card h2 a::after { content: ''; position: absolute; inset: 0; border-radius: var(--radius-lg); }
         .card .apply, .card dd a { position: relative; z-index: 1; }
+        .card dd a { color: #047857; }
         .card:hover h2 a { color: var(--color-accent-dark); }
         .empty { grid-column: 1 / -1; text-align: center; padding: 48px 0; color: var(--color-text-muted); }
 
@@ -359,7 +361,8 @@
                 </section>
                 <section class="related"><h2>同類別的其他方案</h2><div class="related-list">
                     <a class="mini" href="/p/github-copilot/"><span class="brand"><img src="/logos/githubcopilot.svg" alt="" width="22" height="22"></span><span><strong>GitHub Copilot Pro for Open Source</strong><span class="badge type-high_bar">門檻高</span></span></a>
-                    <a class="mini" href="/p/claude/"><span class="brand"><img src="/logos/claude.svg" alt="" width="22" height="22"></span><span><strong>Claude for Open Source</strong><span class="badge type-high_bar">門檻高</span></span></a></div></section></div>
+                    <a class="mini" href="/p/claude/"><span class="brand"><img src="/logos/claude.svg" alt="" width="22" height="22"></span><span><strong>Claude for Open Source</strong><span class="badge type-high_bar">門檻高</span></span></a>
+                    <a class="mini" href="/p/coderabbit/"><span class="brand"><img src="/logos/coderabbit.svg" alt="" width="22" height="22"></span><span><strong>CodeRabbit for Open Source</strong><span class="badge type-direct_activation">直接開通</span></span></a></div></section></div>
     </main>
 
     <footer><p data-t="footer">資料以各方案官網為準，申請前請再確認條件。</p><p data-t-html="license">程式碼 <a href="https://github.com/SammyLin/opensource/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a> · 資料 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></p></footer>
@@ -395,7 +398,7 @@
                 'license': '程式碼 <a href="https://github.com/SammyLin/opensource/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a> · 資料 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>', 'updated': '資料更新於', 'pending': '待確認', 'pending-src': '確認來源',
                 'back': '所有方案', 'share-title': '分享這個方案', 'share-text': n => `${n}：開源專案可以免費申請`,
                 'copy-link': '複製連結', 'copied': '已複製！', 'share-native': '分享…', 'related': '同類別的其他方案',
-                'official-page': '官方頁面', 'label-verified': '最後驗證', 'edit-entry': '資料有誤？在 GitHub 上修改',
+                'official-page': '官方頁面', 'not-cncf': 'CNCF Landscape 未涵蓋此類別', 'label-verified': '最後驗證', 'edit-entry': '資料有誤？在 GitHub 上修改',
                 'not-found': '找不到這個方案', 'not-found-desc': '連結可能打錯了，或這個方案已經下架。',
                 'page-title': n => `${n}｜開源專案免費方案 — 開源福利社`
             },
@@ -422,7 +425,7 @@
                 'license': '代码 <a href="https://github.com/SammyLin/opensource/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a> · 数据 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>', 'updated': '数据更新于', 'pending': '待确认', 'pending-src': '确认来源',
                 'back': '所有方案', 'share-title': '分享这个方案', 'share-text': n => `${n}：开源项目可以免费申请`,
                 'copy-link': '复制链接', 'copied': '已复制！', 'share-native': '分享…', 'related': '同类别的其他方案',
-                'official-page': '官方页面', 'label-verified': '最后验证', 'edit-entry': '数据有误？在 GitHub 上修改',
+                'official-page': '官方页面', 'not-cncf': 'CNCF Landscape 未涵盖此类别', 'label-verified': '最后验证', 'edit-entry': '数据有误？在 GitHub 上修改',
                 'not-found': '找不到这个方案', 'not-found-desc': '链接可能打错了，或这个方案已经下架。',
                 'page-title': n => `${n}｜开源项目免费方案 — 开源福利社`
             },
@@ -449,7 +452,7 @@
                 'license': 'Code <a href="https://github.com/SammyLin/opensource/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a> · Data <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>', 'updated': 'Data updated', 'pending': 'To be confirmed', 'pending-src': 'Source',
                 'back': 'All programs', 'share-title': 'Share this program', 'share-text': n => `${n}: free for open source projects`,
                 'copy-link': 'Copy link', 'copied': 'Copied!', 'share-native': 'Share…', 'related': 'More in this category',
-                'official-page': 'Official page', 'label-verified': 'Last verified', 'edit-entry': 'Something wrong? Edit on GitHub',
+                'official-page': 'Official page', 'not-cncf': 'Not covered by the CNCF Landscape', 'label-verified': 'Last verified', 'edit-entry': 'Something wrong? Edit on GitHub',
                 'not-found': 'Program not found', 'not-found-desc': 'The link may be mistyped, or the program was removed.',
                 'page-title': n => `${n} — free for open source | OSS Perks`
             }
@@ -627,7 +630,7 @@
             }).join('');
 
             const related = data.programs.filter(x => x.id !== p.id && x.category.some(c => p.category.includes(c)));
-            const cat = p.category.map(c => `${esc(data.categories[c]?.[lang] || c)}<br><small>${esc(cncfPath(c))}</small>`).join('<br>');
+            const cat = p.category.map(c => esc(data.categories[c]?.[lang] || c) + `<br><small>${esc(cncfPath(c) || t['not-cncf'])}</small>`).join('<br>');
             const cta = p.type === 'direct_activation' ? t['cta-direct'] : t['cta-apply'];
 
             $('#detail').innerHTML = `${back}

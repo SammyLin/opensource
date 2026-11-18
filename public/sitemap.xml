@@ -288,4 +288,556 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/openai-codex/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/openai-codex/"/>
   </url>
+  <url>
+    <loc>https://opensource.3mi.ai/p/coderabbit/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/coderabbit/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/coderabbit/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/coderabbit/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/coderabbit/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/zh-hans/p/coderabbit/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/coderabbit/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/coderabbit/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/coderabbit/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/coderabbit/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/en/p/coderabbit/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/coderabbit/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/coderabbit/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/coderabbit/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/coderabbit/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/p/gitguardian/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/gitguardian/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/gitguardian/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/gitguardian/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/gitguardian/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/zh-hans/p/gitguardian/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/gitguardian/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/gitguardian/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/gitguardian/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/gitguardian/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/en/p/gitguardian/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/gitguardian/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/gitguardian/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/gitguardian/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/gitguardian/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/p/codacy/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/codacy/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/codacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/codacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/codacy/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/zh-hans/p/codacy/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/codacy/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/codacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/codacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/codacy/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/en/p/codacy/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/codacy/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/codacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/codacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/codacy/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/p/deepsource/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/deepsource/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/deepsource/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/deepsource/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/deepsource/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/zh-hans/p/deepsource/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/deepsource/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/deepsource/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/deepsource/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/deepsource/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/en/p/deepsource/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/deepsource/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/deepsource/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/deepsource/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/deepsource/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/p/mergify/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/mergify/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/mergify/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/mergify/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/mergify/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/zh-hans/p/mergify/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/mergify/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/mergify/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/mergify/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/mergify/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/en/p/mergify/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/mergify/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/mergify/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/mergify/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/mergify/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/p/tailscale/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/tailscale/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/tailscale/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/tailscale/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/tailscale/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/zh-hans/p/tailscale/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/tailscale/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/tailscale/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/tailscale/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/tailscale/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/en/p/tailscale/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/tailscale/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/tailscale/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/tailscale/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/tailscale/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/p/gitlab/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/gitlab/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/gitlab/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/gitlab/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/gitlab/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/zh-hans/p/gitlab/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/gitlab/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/gitlab/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/gitlab/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/gitlab/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/en/p/gitlab/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/gitlab/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/gitlab/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/gitlab/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/gitlab/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/p/netlify/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/netlify/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/netlify/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/netlify/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/netlify/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/zh-hans/p/netlify/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/netlify/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/netlify/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/netlify/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/netlify/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/en/p/netlify/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/netlify/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/netlify/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/netlify/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/netlify/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/p/vercel/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/vercel/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/vercel/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/vercel/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/vercel/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/zh-hans/p/vercel/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/vercel/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/vercel/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/vercel/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/vercel/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/en/p/vercel/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/vercel/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/vercel/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/vercel/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/vercel/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/p/cloudflare/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/cloudflare/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/cloudflare/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/cloudflare/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/cloudflare/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/zh-hans/p/cloudflare/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/cloudflare/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/cloudflare/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/cloudflare/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/cloudflare/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/en/p/cloudflare/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/cloudflare/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/cloudflare/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/cloudflare/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/cloudflare/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/p/aws/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/aws/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/aws/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/aws/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/aws/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/zh-hans/p/aws/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/aws/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/aws/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/aws/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/aws/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/en/p/aws/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/aws/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/aws/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/aws/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/aws/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/p/fastly/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/fastly/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/fastly/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/fastly/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/fastly/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/zh-hans/p/fastly/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/fastly/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/fastly/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/fastly/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/fastly/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/en/p/fastly/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/fastly/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/fastly/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/fastly/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/fastly/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/p/datadog/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/datadog/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/datadog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/datadog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/datadog/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/zh-hans/p/datadog/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/datadog/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/datadog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/datadog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/datadog/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/en/p/datadog/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/datadog/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/datadog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/datadog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/datadog/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/p/browserstack/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/browserstack/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/browserstack/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/browserstack/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/browserstack/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/zh-hans/p/browserstack/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/browserstack/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/browserstack/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/browserstack/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/browserstack/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/en/p/browserstack/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/browserstack/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/browserstack/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/browserstack/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/browserstack/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/p/saucelabs/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/saucelabs/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/saucelabs/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/saucelabs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/saucelabs/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/zh-hans/p/saucelabs/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/saucelabs/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/saucelabs/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/saucelabs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/saucelabs/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/en/p/saucelabs/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/saucelabs/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/saucelabs/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/saucelabs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/saucelabs/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/p/testingbot/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/testingbot/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/testingbot/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/testingbot/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/testingbot/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/zh-hans/p/testingbot/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/testingbot/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/testingbot/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/testingbot/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/testingbot/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/en/p/testingbot/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/testingbot/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/testingbot/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/testingbot/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/testingbot/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/p/termius/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/termius/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/termius/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/termius/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/termius/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/zh-hans/p/termius/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/termius/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/termius/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/termius/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/termius/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/en/p/termius/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/termius/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/termius/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/termius/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/termius/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/p/atlassian/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/atlassian/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/atlassian/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/atlassian/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/atlassian/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/zh-hans/p/atlassian/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/atlassian/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/atlassian/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/atlassian/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/atlassian/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/en/p/atlassian/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/atlassian/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/atlassian/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/atlassian/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/atlassian/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/p/zulip/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/zulip/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/zulip/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/zulip/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/zulip/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/zh-hans/p/zulip/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/zulip/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/zulip/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/zulip/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/zulip/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/en/p/zulip/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/zulip/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/zulip/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/zulip/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/zulip/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/p/algolia-docsearch/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/algolia-docsearch/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/algolia-docsearch/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/algolia-docsearch/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/algolia-docsearch/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/zh-hans/p/algolia-docsearch/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/algolia-docsearch/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/algolia-docsearch/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/algolia-docsearch/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/algolia-docsearch/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/en/p/algolia-docsearch/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/algolia-docsearch/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/algolia-docsearch/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/algolia-docsearch/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/algolia-docsearch/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/p/crowdin/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/crowdin/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/crowdin/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/crowdin/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/crowdin/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/zh-hans/p/crowdin/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/crowdin/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/crowdin/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/crowdin/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/crowdin/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/en/p/crowdin/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/crowdin/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/crowdin/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/crowdin/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/crowdin/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/p/weblate/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/weblate/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/weblate/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/weblate/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/weblate/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/zh-hans/p/weblate/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/weblate/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/weblate/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/weblate/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/weblate/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/en/p/weblate/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/weblate/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/weblate/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/weblate/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/weblate/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/p/gradle-develocity/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/gradle-develocity/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/gradle-develocity/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/gradle-develocity/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/gradle-develocity/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/zh-hans/p/gradle-develocity/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/gradle-develocity/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/gradle-develocity/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/gradle-develocity/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/gradle-develocity/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/en/p/gradle-develocity/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/gradle-develocity/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/gradle-develocity/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/gradle-develocity/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/gradle-develocity/"/>
+  </url>
 </urlset>
