@@ -1,0 +1,33 @@
+name: Validate Programs Data
+
+on:
+  pull_request:
+    paths:
+      - 'data/programs.json'
+      - 'validate.js'
+  push:
+    branches:
+      - main
+    paths:
+      - 'data/programs.json'
+      - 'validate.js'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Run validation script
+        run: node validate.js
+      
+      - name: Validation passed
+        if: success()
+        run: echo "✅ All validations passed!"
