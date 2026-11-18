@@ -57,17 +57,9 @@ npx http-server public
 
 ### 部署
 
-網站部署在 Cloudflare Pages：
+網站部署在 Cloudflare Pages，使用 Cloudflare 的 GitHub 集成（自動部署）。
 
-```bash
-# 手動部署（需要 CLOUDFLARE_API_TOKEN 環境變數）
-./scripts/deploy.sh
-
-# 或直接使用 wrangler
-npx wrangler pages deploy public --project-name opensource-3mi --branch main
-```
-
-自動部署：推送到 `main` 分支會自動觸發 GitHub Actions 部署。
+推送到 `main` 分支會自動觸發 Cloudflare Pages 重新建置和部署。
 
 ### 資料驗證
 
@@ -136,17 +128,9 @@ npx http-server public
 
 ### 部署
 
-网站部署在 Cloudflare Pages：
+网站部署在 Cloudflare Pages，使用 Cloudflare 的 GitHub 集成（自动部署）。
 
-```bash
-# 手动部署（需要 CLOUDFLARE_API_TOKEN 环境变量）
-./scripts/deploy.sh
-
-# 或直接使用 wrangler
-npx wrangler pages deploy public --project-name opensource-3mi --branch main
-```
-
-自动部署：推送到 `main` 分支会自动触发 GitHub Actions 部署。
+推送到 `main` 分支会自动触发 Cloudflare Pages 重新构建和部署。
 
 ### 数据验证
 
@@ -215,17 +199,9 @@ Then open the displayed URL in your browser (usually `http://localhost:8787` or 
 
 ### Deployment
 
-The site is deployed on Cloudflare Pages:
+The site is deployed on Cloudflare Pages using Cloudflare's GitHub integration (automatic deployment).
 
-```bash
-# Manual deployment (requires CLOUDFLARE_API_TOKEN environment variable)
-./scripts/deploy.sh
-
-# Or use wrangler directly
-npx wrangler pages deploy public --project-name opensource-3mi --branch main
-```
-
-Automatic deployment: Pushing to the `main` branch automatically triggers GitHub Actions deployment.
+Pushing to the `main` branch automatically triggers Cloudflare Pages to rebuild and deploy.
 
 ### Data Validation
 
