@@ -8,7 +8,7 @@
 Please ensure all items are checked before submitting:
 
 - [ ] I have verified the information on the **official source page**
-- [ ] The `name` field contains the official program name
+- [ ] The `id` is a new lowercase slug (e.g. `sentry`) and the `name` field contains the official program name
 - [ ] All three language fields (`zh-Hant`, `zh-Hans`, `en`) are filled in for `whatYouGet`, `whyItHelps` and `requirements`
 - [ ] (Optional) Logo added to `public/logos/` and referenced in `logo`
 - [ ] I have run `npm run readme` to update the README tables
@@ -25,7 +25,7 @@ Please ensure all items are checked before submitting:
 请确保在提交前勾选所有项目：
 
 - [ ] 我已在**官方來源頁面**驗證了資訊
-- [ ] `name` 欄位包含官方方案名稱
+- [ ] `id` 是新的小寫代號（例如 `sentry`），`name` 欄位包含官方方案名稱
 - [ ] `whatYouGet`、`whyItHelps` 和 `requirements` 的三種語言欄位（`zh-Hant`、`zh-Hans`、`en`）都已填寫
 - [ ] （選填）Logo 已放進 `public/logos/` 並填入 `logo` 欄位
 - [ ] 我已執行 `npm run readme` 更新 README 方案列表

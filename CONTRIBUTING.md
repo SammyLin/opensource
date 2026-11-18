@@ -23,6 +23,7 @@ cd opensource
 
 ```json
 {
+  "id": "方案代號，例如 sentry",
   "name": "方案的正式名稱",
   "logo": "/logos/方案代號.svg",
   "whatYouGet": {
@@ -57,6 +58,7 @@ cd opensource
 
 #### 欄位說明
 
+- **id**: 方案代號，用在網址 `/p/<id>/`（只能用小寫英文、數字和 `-`，例如 `sentry`、`github-copilot`）。建立後請不要修改，否則分享出去的連結會失效
 - **name**: 方案的正式英文名稱
 - **whatYouGet**: 三種語言的內容說明
   - **zh-Hant**: 繁體中文，使用台灣用詞（程式碼、軟體、儲存庫等）
@@ -139,6 +141,7 @@ cd opensource
 
 ```json
 {
+  "id": "方案代号，例如 sentry",
   "name": "方案的正式名称",
   "logo": "/logos/方案代号.svg",
   "whatYouGet": {
@@ -173,6 +176,7 @@ cd opensource
 
 #### 字段说明
 
+- **id**: 方案代号，用在网址 `/p/<id>/`（只能用小写英文、数字和 `-`，例如 `sentry`、`github-copilot`）。创建后请不要修改，否则分享出去的链接会失效
 - **name**: 方案的正式英文名称
 - **whatYouGet**: 三种语言的内容说明
   - **zh-Hant**: 繁體中文，使用台灣用詞（程式碼、軟體、儲存庫等）
@@ -255,6 +259,7 @@ Add a new entry to the `programs` array. The `$schema` at the top of the file gi
 
 ```json
 {
+  "id": "program-slug, e.g. sentry",
   "name": "Official Program Name",
   "logo": "/logos/program-slug.svg",
   "whatYouGet": {
@@ -289,6 +294,7 @@ Add a new entry to the `programs` array. The `$schema` at the top of the file gi
 
 #### Field Descriptions
 
+- **id**: Short slug used in the page URL `/p/<id>/` (lowercase letters, digits and `-`, e.g. `sentry`, `github-copilot`). Don't change it once published, or shared links break
 - **name**: Official name of the program (in English)
 - **whatYouGet**: Description in three languages
   - **zh-Hant**: Traditional Chinese, using Taiwan terminology (程式碼, 軟體, 儲存庫, etc.)
