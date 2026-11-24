@@ -168,6 +168,17 @@ function llmsIntro() {
         'Requirement levels:',
         ...Object.values(TYPE_EN).map(t => `- ${t}`),
         '',
+        '## Check which programs a repository qualifies for',
+        '',
+        `If a user asks which of these programs their project can apply for, read ${SITE}/llms-full.txt (it has every program's requirements), then look at the repository itself:`,
+        '',
+        '1. Gather the facts most requirements depend on: the license (and whether it is OSI-approved or permissive), whether the repository is public, its age, recent commit and release activity, stars, forks, downloads or dependents, the number of maintainers, whether the user is a core maintainer, and whether the project is backed by a company, has revenue or venture funding.',
+        "2. Look at what the project actually uses or needs: CI/CD, tests, docs, translations, hosting, package or container registries, error monitoring, security scanning, secrets, AI coding tools, and so on. A program is only useful if it fits the project's stack.",
+        "3. For each relevant program, compare the facts with its **Requirements** and sort it into: likely eligible, possibly eligible (name the missing or unknown facts), or not eligible (give the reason). Treat anything listed under **Not yet confirmed** as unknown.",
+        '4. Report the results with each program\'s official link and requirement level. Start with programs that are direct activation, then application required, then high bar. Say that terms change and the official page is the final word.',
+        '',
+        "Don't invent eligibility: if a requirement needs a fact you can't find in the repository, ask the user or mark it as unknown.",
+        '',
     ];
 }
 
