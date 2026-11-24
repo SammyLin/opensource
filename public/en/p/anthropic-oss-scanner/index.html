@@ -38,7 +38,7 @@
             --color-border: #e5e7eb;
             --color-border-hover: #d1d5db;
             --color-accent: #10b981;
-            --color-accent-dark: #059669;
+            --color-accent-dark: #047857;
             --color-focus: #0d9668;
             --color-badge-green-bg: #d1fae5;
             --color-badge-green-text: #065f46;
@@ -91,7 +91,8 @@
         .chip { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; min-height: 36px; border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text-subtle); border-radius: var(--radius-full); font: inherit; font-size: 14px; cursor: pointer; }
         .chip:hover { border-color: var(--color-border-hover); color: var(--color-text); }
         .chip[aria-pressed="true"] { background: var(--color-text); border-color: var(--color-text); color: var(--color-surface); }
-        .chip .n { font-size: 12px; opacity: 0.7; font-variant-numeric: tabular-nums; }
+        .chip .n { font-size: 12px; color: var(--color-text-muted); font-variant-numeric: tabular-nums; }
+        .chip[aria-pressed="true"] .n { color: inherit; opacity: 0.85; }
         .chip:disabled { opacity: 0.4; cursor: default; }
         .status { display: flex; justify-content: space-between; align-items: center; font-size: 14px; color: var(--color-text-muted); margin-bottom: 16px; min-height: 32px; }
         .link-btn { background: none; border: 0; font: inherit; font-size: 14px; color: var(--color-accent-dark); cursor: pointer; display: inline-flex; gap: 4px; align-items: center; }
@@ -124,6 +125,7 @@
         .card { position: relative; }
         .card h2 a::after { content: ''; position: absolute; inset: 0; border-radius: var(--radius-lg); }
         .card .apply, .card dd a { position: relative; z-index: 1; }
+        .card dd a { color: #047857; }
         .card:hover h2 a { color: var(--color-accent-dark); }
         .empty { grid-column: 1 / -1; text-align: center; padding: 48px 0; color: var(--color-text-muted); }
 
@@ -319,10 +321,10 @@
         <section class="contribute">
             <div>
                 <h2 data-t="contribute-title">Know another free program?</h2>
-                <p data-t-html="contribute-desc">All data lives in <code>public/data/programs.json</code>. Edit it on GitHub, add one entry following the existing format, and open a PR. CI checks the format for you.</p>
+                <p data-t-html="contribute-desc">Each program is one JSON file in <code>data/programs/</code>. On GitHub, add a new <code>&lt;id&gt;.json</code> following an existing file, and open a PR. CI checks the format for you.</p>
             </div>
             <div class="btns">
-                <a class="btn primary" href="https://github.com/SammyLin/opensource/edit/main/public/data/programs.json" target="_blank" rel="noopener"><svg class="icon"><use href="#i-github"></use></svg><span data-t="edit-btn">Edit data on GitHub</span></a>
+                <a class="btn primary" href="https://github.com/SammyLin/opensource/tree/main/data/programs" target="_blank" rel="noopener"><svg class="icon"><use href="#i-github"></use></svg><span data-t="edit-btn">Edit data on GitHub</span></a>
                 <a class="btn secondary" href="https://github.com/SammyLin/opensource/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener" data-t="guide-btn">Contributing guide</a>
             </div>
         </section>
@@ -354,7 +356,7 @@
                     </dl>
                     <div class="detail-cta">
                         <a class="apply" href="https://red.anthropic.com/oss-scanner/" target="_blank" rel="noopener">Apply<svg class="icon"><use href="#i-ext"></use></svg></a>
-                        <a class="edit" href="https://github.com/SammyLin/opensource/edit/main/public/data/programs.json" target="_blank" rel="noopener">Something wrong? Edit on GitHub</a>
+                        <a class="edit" href="https://github.com/SammyLin/opensource/edit/main/data/programs/anthropic-oss-scanner.json" target="_blank" rel="noopener">Something wrong? Edit on GitHub</a>
                     </div>
                 </article>
                 <section class="share" aria-labelledby="share-title">
@@ -366,8 +368,11 @@
                     </div>
                 </section>
                 <section class="related"><h2>More in this category</h2><div class="related-list">
-                    <a class="mini" href="/en/p/socket/"><span class="brand"><img src="/logos/socket.svg" alt="" width="22" height="22"></span><span><strong>Socket for Open Source</strong><span class="badge type-application_required">Application required</span></span></a>
+                    <a class="mini" href="/en/p/codacy/"><span class="brand"><img src="/logos/codacy.svg" alt="" width="22" height="22"></span><span><strong>Codacy Open Source</strong><span class="badge type-direct_activation">Direct activation</span></span></a>
+                    <a class="mini" href="/en/p/deepsource/"><span class="brand mono" aria-hidden="true">D</span><span><strong>DeepSource Open Source Plan</strong><span class="badge type-direct_activation">Direct activation</span></span></a>
+                    <a class="mini" href="/en/p/gitguardian/"><span class="brand mono" aria-hidden="true">G</span><span><strong>GitGuardian for Open Source</strong><span class="badge type-direct_activation">Direct activation</span></span></a>
                     <a class="mini" href="/en/p/snyk/"><span class="brand"><img src="/logos/snyk.svg" alt="" width="22" height="22"></span><span><strong>Snyk for Open Source</strong><span class="badge type-application_required">Application required</span></span></a>
+                    <a class="mini" href="/en/p/socket/"><span class="brand"><img src="/logos/socket.svg" alt="" width="22" height="22"></span><span><strong>Socket for Open Source</strong><span class="badge type-application_required">Application required</span></span></a>
                     <a class="mini" href="/en/p/sonarqube-cloud/"><span class="brand"><img src="/logos/sonarqubecloud.svg" alt="" width="22" height="22"></span><span><strong>SonarQube Cloud for Open Source</strong><span class="badge type-direct_activation">Direct activation</span></span></a></div></section></div>
     </main>
 
@@ -397,14 +402,14 @@
                 'empty': '沒有符合條件的方案，試試清除篩選。',
                 'why-it-helps': '對你的專案有什麼幫助', 'what-you-get': '拿到什麼', 'requirements': '申請條件', 'cta-apply': '前往申請', 'cta-direct': '前往開通', 'last-verified': '驗證於',
                 'contribute-title': '知道其他免費方案？',
-                'contribute-desc': '所有資料都在 <code>public/data/programs.json</code>。在 GitHub 上直接編輯、照著現有格式加一筆，送出 PR 就好；CI 會自動檢查格式。',
+                'contribute-desc': '每個方案是 <code>data/programs/</code> 底下的一個 JSON 檔。在 GitHub 上照著現有檔案的格式新增一個 <code>&lt;id&gt;.json</code>，送出 PR 就好；CI 會自動檢查格式。',
                 'edit-btn': '在 GitHub 編輯資料', 'guide-btn': '貢獻指南',
                 'footer': '資料以各方案官網為準，申請前請再確認條件。',
                 'load-fail': '資料載入失敗',
                 'license': '程式碼 <a href="https://github.com/SammyLin/opensource/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a> · 資料 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>', 'updated': '資料更新於', 'pending': '待確認', 'pending-src': '確認來源',
                 'back': '所有方案', 'share-title': '分享這個方案', 'share-text': n => `${n}：開源專案可以免費申請`,
                 'copy-link': '複製連結', 'copied': '已複製！', 'share-native': '分享…', 'related': '同類別的其他方案',
-                'official-page': '官方頁面', 'label-verified': '最後驗證', 'edit-entry': '資料有誤？在 GitHub 上修改',
+                'official-page': '官方頁面', 'not-cncf': 'CNCF Landscape 未涵蓋此類別', 'label-verified': '最後驗證', 'edit-entry': '資料有誤？在 GitHub 上修改',
                 'not-found': '找不到這個方案', 'not-found-desc': '連結可能打錯了，或這個方案已經下架。',
                 'page-title': n => `${n}｜開源專案免費方案 — 開源福利社`
             },
@@ -424,14 +429,14 @@
                 'empty': '没有符合条件的方案，试试清除筛选。',
                 'why-it-helps': '对你的项目有什么帮助', 'what-you-get': '拿到什么', 'requirements': '申请条件', 'cta-apply': '前往申请', 'cta-direct': '前往开通', 'last-verified': '验证于',
                 'contribute-title': '知道其他免费方案？',
-                'contribute-desc': '所有数据都在 <code>public/data/programs.json</code>。在 GitHub 上直接编辑、照着现有格式加一条，提交 PR 就好；CI 会自动检查格式。',
+                'contribute-desc': '每个方案是 <code>data/programs/</code> 下的一个 JSON 文件。在 GitHub 上照着现有文件的格式新建一个 <code>&lt;id&gt;.json</code>，提交 PR 就好；CI 会自动检查格式。',
                 'edit-btn': '在 GitHub 编辑数据', 'guide-btn': '贡献指南',
                 'footer': '数据以各方案官网为准，申请前请再确认条件。',
                 'load-fail': '数据加载失败',
                 'license': '代码 <a href="https://github.com/SammyLin/opensource/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a> · 数据 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>', 'updated': '数据更新于', 'pending': '待确认', 'pending-src': '确认来源',
                 'back': '所有方案', 'share-title': '分享这个方案', 'share-text': n => `${n}：开源项目可以免费申请`,
                 'copy-link': '复制链接', 'copied': '已复制！', 'share-native': '分享…', 'related': '同类别的其他方案',
-                'official-page': '官方页面', 'label-verified': '最后验证', 'edit-entry': '数据有误？在 GitHub 上修改',
+                'official-page': '官方页面', 'not-cncf': 'CNCF Landscape 未涵盖此类别', 'label-verified': '最后验证', 'edit-entry': '数据有误？在 GitHub 上修改',
                 'not-found': '找不到这个方案', 'not-found-desc': '链接可能打错了，或这个方案已经下架。',
                 'page-title': n => `${n}｜开源项目免费方案 — 开源福利社`
             },
@@ -451,14 +456,14 @@
                 'empty': 'No programs match. Try clearing the filters.',
                 'why-it-helps': 'How it helps your project', 'what-you-get': 'What you get', 'requirements': 'Requirements', 'cta-apply': 'Apply', 'cta-direct': 'Activate', 'last-verified': 'Verified',
                 'contribute-title': 'Know another free program?',
-                'contribute-desc': 'All data lives in <code>public/data/programs.json</code>. Edit it on GitHub, add one entry following the existing format, and open a PR. CI checks the format for you.',
+                'contribute-desc': 'Each program is one JSON file in <code>data/programs/</code>. On GitHub, add a new <code>&lt;id&gt;.json</code> following an existing file, and open a PR. CI checks the format for you.',
                 'edit-btn': 'Edit data on GitHub', 'guide-btn': 'Contributing guide',
                 'footer': 'Vendor sites are the source of truth. Double-check terms before applying.',
                 'load-fail': 'Failed to load data',
                 'license': 'Code <a href="https://github.com/SammyLin/opensource/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a> · Data <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>', 'updated': 'Data updated', 'pending': 'To be confirmed', 'pending-src': 'Source',
                 'back': 'All programs', 'share-title': 'Share this program', 'share-text': n => `${n}: free for open source projects`,
                 'copy-link': 'Copy link', 'copied': 'Copied!', 'share-native': 'Share…', 'related': 'More in this category',
-                'official-page': 'Official page', 'label-verified': 'Last verified', 'edit-entry': 'Something wrong? Edit on GitHub',
+                'official-page': 'Official page', 'not-cncf': 'Not covered by the CNCF Landscape', 'label-verified': 'Last verified', 'edit-entry': 'Something wrong? Edit on GitHub',
                 'not-found': 'Program not found', 'not-found-desc': 'The link may be mistyped, or the program was removed.',
                 'page-title': n => `${n} — free for open source | OSS Perks`
             }
@@ -636,7 +641,7 @@
             }).join('');
 
             const related = data.programs.filter(x => x.id !== p.id && x.category.some(c => p.category.includes(c)));
-            const cat = p.category.map(c => `${esc(data.categories[c]?.[lang] || c)}<br><small>${esc(cncfPath(c))}</small>`).join('<br>');
+            const cat = p.category.map(c => esc(data.categories[c]?.[lang] || c) + `<br><small>${esc(cncfPath(c) || t['not-cncf'])}</small>`).join('<br>');
             const cta = p.type === 'direct_activation' ? t['cta-direct'] : t['cta-apply'];
 
             $('#detail').innerHTML = `${back}
@@ -665,7 +670,7 @@
                     </dl>
                     <div class="detail-cta">
                         <a class="apply" href="${esc(safeUrl(p.link))}" target="_blank" rel="noopener">${esc(cta)}<svg class="icon"><use href="#i-ext"/></svg></a>
-                        <a class="edit" href="https://github.com/SammyLin/opensource/edit/main/public/data/programs.json" target="_blank" rel="noopener">${esc(t['edit-entry'])}</a>
+                        <a class="edit" href="https://github.com/SammyLin/opensource/edit/main/data/programs/${esc(p.id)}.json" target="_blank" rel="noopener">${esc(t['edit-entry'])}</a>
                     </div>
                 </article>
                 <section class="share" aria-labelledby="share-title">

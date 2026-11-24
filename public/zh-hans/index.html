@@ -38,7 +38,7 @@
             --color-border: #e5e7eb;
             --color-border-hover: #d1d5db;
             --color-accent: #10b981;
-            --color-accent-dark: #059669;
+            --color-accent-dark: #047857;
             --color-focus: #0d9668;
             --color-badge-green-bg: #d1fae5;
             --color-badge-green-text: #065f46;
@@ -91,7 +91,8 @@
         .chip { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; min-height: 36px; border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text-subtle); border-radius: var(--radius-full); font: inherit; font-size: 14px; cursor: pointer; }
         .chip:hover { border-color: var(--color-border-hover); color: var(--color-text); }
         .chip[aria-pressed="true"] { background: var(--color-text); border-color: var(--color-text); color: var(--color-surface); }
-        .chip .n { font-size: 12px; opacity: 0.7; font-variant-numeric: tabular-nums; }
+        .chip .n { font-size: 12px; color: var(--color-text-muted); font-variant-numeric: tabular-nums; }
+        .chip[aria-pressed="true"] .n { color: inherit; opacity: 0.85; }
         .chip:disabled { opacity: 0.4; cursor: default; }
         .status { display: flex; justify-content: space-between; align-items: center; font-size: 14px; color: var(--color-text-muted); margin-bottom: 16px; min-height: 32px; }
         .link-btn { background: none; border: 0; font: inherit; font-size: 14px; color: var(--color-accent-dark); cursor: pointer; display: inline-flex; gap: 4px; align-items: center; }
@@ -124,6 +125,7 @@
         .card { position: relative; }
         .card h2 a::after { content: ''; position: absolute; inset: 0; border-radius: var(--radius-lg); }
         .card .apply, .card dd a { position: relative; z-index: 1; }
+        .card dd a { color: #047857; }
         .card:hover h2 a { color: var(--color-accent-dark); }
         .empty { grid-column: 1 / -1; text-align: center; padding: 48px 0; color: var(--color-text-muted); }
 
@@ -242,112 +244,287 @@
       "dateModified": "2026-11-24",
       "mainEntity": {
         "@type": "ItemList",
-        "numberOfItems": 15,
+        "numberOfItems": 40,
         "itemListElement": [
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "JetBrains Open Source License",
-            "url": "https://opensource.3mi.ai/zh-hans/p/jetbrains/",
-            "description": "IntelliJ IDEA、PyCharm、WebStorm、GoLand 等专业 IDE 全部可用，重构、调试、代码分析更顺手，写代码和 review 都更高效。"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Docker-Sponsored Open Source Program",
-            "url": "https://opensource.3mi.ai/zh-hans/p/docker/",
-            "description": "用户从 Docker Hub 拉取你的镜像不会触发次数限制，加上认证徽章让大家知道这是官方可信的镜像，采用门槛更低。"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Sentry for Open Source",
-            "url": "https://opensource.3mi.ai/zh-hans/p/sentry/",
-            "description": "用户遇到的错误和崩溃会自动上报并附带 stack trace，不必等人提 issue 才知道哪里坏了，修 bug 更快。"
-          },
-          {
-            "@type": "ListItem",
-            "position": 4,
-            "name": "Socket for Open Source",
-            "url": "https://opensource.3mi.ai/zh-hans/p/socket/",
-            "description": "在 PR 阶段就拦下恶意或可疑的依赖包（例如被植入后门的包），避免供应链攻击经由你的项目传给下游用户。"
-          },
-          {
-            "@type": "ListItem",
-            "position": 5,
-            "name": "Snyk for Open Source",
-            "url": "https://opensource.3mi.ai/zh-hans/p/snyk/",
-            "description": "持续扫描依赖与代码中的已知漏洞，并自动提 PR 升级修复，让项目的安全状态始终保持最新。"
-          },
-          {
-            "@type": "ListItem",
-            "position": 6,
-            "name": "SonarQube Cloud for Open Source",
-            "url": "https://opensource.3mi.ai/zh-hans/p/sonarqube-cloud/",
-            "description": "每个 PR 自动检查 bug、代码异味与安全热点，让贡献者提交的代码质量一致，减轻维护者 review 负担。"
-          },
-          {
-            "@type": "ListItem",
-            "position": 7,
-            "name": "Codecov for Open Source",
-            "url": "https://opensource.3mi.ai/zh-hans/p/codecov/",
-            "description": "在 PR 上直接看到新代码有没有被测试覆盖，README 也能放覆盖率徽章，让用户对项目质量更有信心。"
-          },
-          {
-            "@type": "ListItem",
-            "position": 8,
             "name": "1Password for Open Source",
             "url": "https://opensource.3mi.ai/zh-hans/p/1password/",
             "description": "维护团队安全共享发布 token、云密钥等机密，不必再用聊天消息传密码，有人加入或离开时交接也简单。"
           },
           {
             "@type": "ListItem",
-            "position": 9,
-            "name": "GitHub Copilot Pro for Open Source",
-            "url": "https://opensource.3mi.ai/zh-hans/p/github-copilot/",
-            "description": "编辑器里的 AI 代码补全与对话，加快写功能、补测试，也更快看懂贡献者提交的陌生代码。"
+            "position": 2,
+            "name": "Algolia DocSearch",
+            "url": "https://opensource.3mi.ai/zh-hans/p/algolia-docsearch/",
+            "description": "用户在文档站里即打即搜，更快找到 API 与教程，减少重复的提问 issue。"
           },
           {
             "@type": "ListItem",
-            "position": 10,
-            "name": "Claude for Open Source",
-            "url": "https://opensource.3mi.ai/zh-hans/p/claude/",
-            "description": "用 AI 协助 review PR、整理 issue、撰写文档与测试、规划重构，把维护者有限的时间留给真正需要判断的地方。"
-          },
-          {
-            "@type": "ListItem",
-            "position": 11,
-            "name": "OpenAI Codex for Open Source",
-            "url": "https://opensource.3mi.ai/zh-hans/p/openai-codex/",
-            "description": "用 AI 编程代理直接接手修 bug、写测试、review PR 等任务；有条件提供的 Codex Security 还能协助找出安全漏洞。"
-          },
-          {
-            "@type": "ListItem",
-            "position": 12,
+            "position": 3,
             "name": "Anthropic OSS Scanner",
             "url": "https://opensource.3mi.ai/zh-hans/p/anthropic-oss-scanner/",
             "description": "在攻击者之前找出漏洞并拿到可复现用例和补丁草稿，让人手有限的维护团队也能处理深层的安全问题。"
           },
           {
             "@type": "ListItem",
-            "position": 13,
+            "position": 4,
+            "name": "Atlassian Open Source License",
+            "url": "https://opensource.3mi.ai/zh-hans/p/atlassian/",
+            "description": "用 Jira 跟踪 issue 与路线图、用 Confluence 写设计文档，适合需要较正式项目管理的大型项目。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "AWS Cloud Credits for Open Source",
+            "url": "https://opensource.3mi.ai/zh-hans/p/aws/",
+            "description": "用云点数支付 CI 运行器、性能测试环境与文件存储，把经费留给项目本身。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "Blacksmith OSS Program",
+            "url": "https://opensource.3mi.ai/zh-hans/p/blacksmith/",
+            "description": "把 GitHub Actions 换到性能更高的 runner，只需改一行 runs-on，CI 等待时间缩短，贡献者更快拿到测试结果。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "name": "BrowserStack Open Source Program",
+            "url": "https://opensource.3mi.ai/zh-hans/p/browserstack/",
+            "description": "不用自己准备一堆设备，就能在各种浏览器和真实手机上测试，确保用户那边都能正常运行。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
             "name": "CircleCI Open Source Plan",
             "url": "https://opensource.3mi.ai/zh-hans/p/circleci/",
             "description": "每个 PR 自动跑测试和构建，包括 macOS 环境，不用自建 CI 机器就能确认改动没有搞坏东西。"
           },
           {
             "@type": "ListItem",
-            "position": 14,
+            "position": 9,
+            "name": "Claude for Open Source",
+            "url": "https://opensource.3mi.ai/zh-hans/p/claude/",
+            "description": "用 AI 协助 review PR、整理 issue、撰写文档与测试、规划重构，把维护者有限的时间留给真正需要判断的地方。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 10,
+            "name": "Cloudflare Project Alexandria",
+            "url": "https://opensource.3mi.ai/zh-hans/p/cloudflare/",
+            "description": "用 Cloudflare 的 CDN 与防护加速全球下载、抵挡攻击，R2 也适合存放构建产物与软件包。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 11,
             "name": "Cloudsmith Open-Source Hosting",
             "url": "https://opensource.3mi.ai/zh-hans/p/cloudsmith/",
             "description": "在同一个地方发布 Docker 镜像、deb/rpm、npm、PyPI 等 30 多种格式的软件包，通过 CDN 让用户稳定下载。"
           },
           {
             "@type": "ListItem",
+            "position": 12,
+            "name": "Codacy Open Source",
+            "url": "https://opensource.3mi.ai/zh-hans/p/codacy/",
+            "description": "自动在 PR 上标出代码质量与安全问题，让不同贡献者写的代码保持一致标准。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 13,
+            "name": "Codecov for Open Source",
+            "url": "https://opensource.3mi.ai/zh-hans/p/codecov/",
+            "description": "在 PR 上直接看到新代码有没有被测试覆盖，README 也能放覆盖率徽章，让用户对项目质量更有信心。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 14,
+            "name": "CodeRabbit for Open Source",
+            "url": "https://opensource.3mi.ai/zh-hans/p/coderabbit/",
+            "description": "每个 PR 先由 AI 逐行审查并整理摘要，维护者能更快消化外部贡献者提交的 PR。"
+          },
+          {
+            "@type": "ListItem",
             "position": 15,
+            "name": "CodSpeed for Open Source",
+            "url": "https://opensource.3mi.ai/zh-hans/p/codspeed/",
+            "description": "在 CI 里持续跑基准测试，PR 上直接标出性能回退，避免变慢的代码被合并。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 16,
+            "name": "Crowdin for Open Source",
+            "url": "https://opensource.3mi.ai/zh-hans/p/crowdin/",
+            "description": "社区志愿者直接在网页上翻译界面字符串，译文同步回仓库，轻松做出多语言版本。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 17,
+            "name": "Datadog for Open Source Projects",
+            "url": "https://opensource.3mi.ai/zh-hans/p/datadog/",
+            "description": "在同一处看到项目基础设施（CI、软件包服务器、网站）的指标、日志与追踪，出问题能更快定位。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 18,
+            "name": "DeepSource Open Source Plan",
+            "url": "https://opensource.3mi.ai/zh-hans/p/deepsource/",
+            "description": "每次提交和 PR 自动做静态分析，及早发现 bug、反模式与安全问题。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 19,
+            "name": "Docker-Sponsored Open Source Program",
+            "url": "https://opensource.3mi.ai/zh-hans/p/docker/",
+            "description": "用户从 Docker Hub 拉取你的镜像不会触发次数限制，加上认证徽章让大家知道这是官方可信的镜像，采用门槛更低。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 20,
+            "name": "Fastly Fast Forward",
+            "url": "https://opensource.3mi.ai/zh-hans/p/fastly/",
+            "description": "软件包下载、文档站等高流量内容通过 Fastly 的边缘网络分发，更快也更省带宽费用。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 21,
+            "name": "GitGuardian for Open Source",
+            "url": "https://opensource.3mi.ai/zh-hans/p/gitguardian/",
+            "description": "有人不小心把密钥或密码提交进仓库时立即告警，降低凭证泄露被滥用的风险。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 22,
+            "name": "GitHub Copilot Pro for Open Source",
+            "url": "https://opensource.3mi.ai/zh-hans/p/github-copilot/",
+            "description": "编辑器里的 AI 代码补全与对话，加快写功能、补测试，也更快看懂贡献者提交的陌生代码。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 23,
+            "name": "GitLab for Open Source",
+            "url": "https://opensource.3mi.ai/zh-hans/p/gitlab/",
+            "description": "用顶级方案的安全扫描、合规与规划功能管理项目，CI 额度也更充裕。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 24,
+            "name": "Gradle Develocity for OSS",
+            "url": "https://opensource.3mi.ai/zh-hans/p/gradle-develocity/",
+            "description": "Gradle 或 Maven 项目可用构建缓存加速 CI，并分析不稳定测试与构建失败的原因。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 25,
+            "name": "JetBrains Open Source License",
+            "url": "https://opensource.3mi.ai/zh-hans/p/jetbrains/",
+            "description": "IntelliJ IDEA、PyCharm、WebStorm、GoLand 等专业 IDE 全部可用，重构、调试、代码分析更顺手，写代码和 review 都更高效。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 26,
+            "name": "Mergify Open Source",
+            "url": "https://opensource.3mi.ai/zh-hans/p/mergify/",
+            "description": "合并前用最新的 main 重新验证，避免多个各自通过 CI 的 PR 合在一起后把 main 弄坏。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 27,
+            "name": "Netlify Open Source Plan",
+            "url": "https://opensource.3mi.ai/zh-hans/p/netlify/",
+            "description": "文档站与项目官网免费托管，所有维护者都能加入同一个团队管理部署。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 28,
+            "name": "OpenAI Codex for Open Source",
+            "url": "https://opensource.3mi.ai/zh-hans/p/openai-codex/",
+            "description": "用 AI 编程代理直接接手修 bug、写测试、review PR 等任务；有条件提供的 Codex Security 还能协助找出安全漏洞。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 29,
+            "name": "Sauce Labs Open Sauce",
+            "url": "https://opensource.3mi.ai/zh-hans/p/saucelabs/",
+            "description": "在云端自动跑跨浏览器测试，改前端时能及早发现只在特定浏览器出现的 bug。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 30,
+            "name": "Sentry for Open Source",
+            "url": "https://opensource.3mi.ai/zh-hans/p/sentry/",
+            "description": "用户遇到的错误和崩溃会自动上报并附带 stack trace，不必等人提 issue 才知道哪里坏了，修 bug 更快。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 31,
+            "name": "Snyk for Open Source",
+            "url": "https://opensource.3mi.ai/zh-hans/p/snyk/",
+            "description": "持续扫描依赖与代码中的已知漏洞，并自动提 PR 升级修复，让项目的安全状态始终保持最新。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 32,
+            "name": "Socket for Open Source",
+            "url": "https://opensource.3mi.ai/zh-hans/p/socket/",
+            "description": "在 PR 阶段就拦下恶意或可疑的依赖包（例如被植入后门的包），避免供应链攻击经由你的项目传给下游用户。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 33,
+            "name": "SonarQube Cloud for Open Source",
+            "url": "https://opensource.3mi.ai/zh-hans/p/sonarqube-cloud/",
+            "description": "每个 PR 自动检查 bug、代码异味与安全热点，让贡献者提交的代码质量一致，减轻维护者 review 负担。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 34,
+            "name": "Tailscale Community on GitHub",
+            "url": "https://opensource.3mi.ai/zh-hans/p/tailscale/",
+            "description": "不用搭 VPN 或开放公网端口，维护者就能安全连接项目的测试机、构建机与内部服务。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 35,
+            "name": "Termius for Open Source",
+            "url": "https://opensource.3mi.ai/zh-hans/p/termius/",
+            "description": "维护团队共用主机列表与连接配置，部署和运维项目服务器更方便。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 36,
+            "name": "TestingBot for Open Source",
+            "url": "https://opensource.3mi.ai/zh-hans/p/testingbot/",
+            "description": "在真实浏览器和 iOS／Android 真机上跑自动化测试，及早发现兼容性问题。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 37,
             "name": "TestMu AI (formerly LambdaTest) for Open Source",
             "url": "https://opensource.3mi.ai/zh-hans/p/testmu-ai/",
             "description": "不用自己准备各种浏览器和手机，就能在云端跑跨浏览器和真机测试，提前发现兼容性问题。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 38,
+            "name": "Vercel Open Source Program",
+            "url": "https://opensource.3mi.ai/zh-hans/p/vercel/",
+            "description": "一整年的托管额度让文档站、Demo 与示例项目可以放心上线。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 39,
+            "name": "Hosted Weblate Libre Plan",
+            "url": "https://opensource.3mi.ai/zh-hans/p/weblate/",
+            "description": "与 Git 紧密集成的开源翻译平台，译文连同译者署名提交回仓库，数据存放在欧盟。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 40,
+            "name": "Zulip Cloud Standard Sponsorship",
+            "url": "https://opensource.3mi.ai/zh-hans/p/zulip/",
+            "description": "以话题（topic）分串的聊天室，社区讨论不会被刷屏，非同步协作的开源社区特别好用。"
           }
         ]
       }
@@ -403,56 +580,16 @@
                 <svg class="icon"><use href="#i-search"></use></svg>
                 <input type="search" id="q" autocomplete="off" data-t-placeholder="search" placeholder="搜索方案名称、内容或条件…">
             </label>
-            <div class="row" id="type-row"><span class="row-label">申请难度</span><button class="chip" data-group="type" data-value="" aria-pressed="true">全部 <span class="n">15</span></button><button class="chip" data-group="type" data-value="direct_activation" aria-pressed="false">直接开通 <span class="n">4</span></button><button class="chip" data-group="type" data-value="application_required" aria-pressed="false">要申请 <span class="n">7</span></button><button class="chip" data-group="type" data-value="high_bar" aria-pressed="false">门槛高 <span class="n">4</span></button></div>
-            <div class="row" id="cat-row"><span class="row-label">CNCF 分类</span><button class="chip" data-group="cat" data-value="" aria-pressed="true">全部 <span class="n">15</span></button><button class="chip" data-group="cat" data-value="container_registry" aria-pressed="false">容器镜像仓库 <span class="n">2</span></button><button class="chip" data-group="cat" data-value="security_compliance" aria-pressed="false">安全与合规 <span class="n">4</span></button><button class="chip" data-group="cat" data-value="key_management" aria-pressed="false">密钥与机密管理 <span class="n">1</span></button><button class="chip" data-group="cat" data-value="app_definition_image_build" aria-pressed="false">应用定义与开发环境 <span class="n">1</span></button><button class="chip" data-group="cat" data-value="ci_cd" aria-pressed="false">持续集成与交付 <span class="n">3</span></button><button class="chip" data-group="cat" data-value="observability" aria-pressed="false">可观测性 <span class="n">1</span></button><button class="chip" data-group="cat" data-value="ai_agent" aria-pressed="false">AI Agent <span class="n">3</span></button></div>
+            <div class="row" id="type-row"><span class="row-label">申请难度</span><button class="chip" data-group="type" data-value="" aria-pressed="true">全部 <span class="n">40</span></button><button class="chip" data-group="type" data-value="direct_activation" aria-pressed="false">直接开通 <span class="n">11</span></button><button class="chip" data-group="type" data-value="application_required" aria-pressed="false">要申请 <span class="n">24</span></button><button class="chip" data-group="type" data-value="high_bar" aria-pressed="false">门槛高 <span class="n">5</span></button></div>
+            <div class="row" id="cat-row"><span class="row-label">CNCF 分类</span><button class="chip" data-group="cat" data-value="" aria-pressed="true">全部 <span class="n">40</span></button><button class="chip" data-group="cat" data-value="container_registry" aria-pressed="false">容器镜像仓库 <span class="n">2</span></button><button class="chip" data-group="cat" data-value="security_compliance" aria-pressed="false">安全与合规 <span class="n">7</span></button><button class="chip" data-group="cat" data-value="key_management" aria-pressed="false">密钥与机密管理 <span class="n">1</span></button><button class="chip" data-group="cat" data-value="cloud_native_network" aria-pressed="false">云原生网络 <span class="n">1</span></button><button class="chip" data-group="cat" data-value="app_definition_image_build" aria-pressed="false">应用定义与开发环境 <span class="n">2</span></button><button class="chip" data-group="cat" data-value="ci_cd" aria-pressed="false">持续集成与交付 <span class="n">10</span></button><button class="chip" data-group="cat" data-value="serverless_hosted" aria-pressed="false">托管平台 <span class="n">5</span></button><button class="chip" data-group="cat" data-value="observability" aria-pressed="false">可观测性 <span class="n">3</span></button><button class="chip" data-group="cat" data-value="ai_agent" aria-pressed="false">AI Agent <span class="n">4</span></button><button class="chip" data-group="cat" data-value="collaboration" aria-pressed="false">协作与沟通 <span class="n">2</span></button><button class="chip" data-group="cat" data-value="docs_localization" aria-pressed="false">文档与本地化 <span class="n">3</span></button></div>
         </section>
 
         <div class="status">
-            <span id="count" aria-live="polite">共 15 个方案</span>
+            <span id="count" aria-live="polite">共 40 个方案</span>
             <button class="link-btn" id="clear" hidden=""><svg class="icon"><use href="#i-x"></use></svg><span data-t="clear">清除筛选</span></button>
         </div>
 
         <section class="programs" id="programs">
-                <article class="card">
-                    <div class="card-head">
-                        <span class="brand"><img src="/logos/sonarqubecloud.svg" alt="" width="24" height="24" loading="lazy"></span>
-                        <h2><a href="/zh-hans/p/sonarqube-cloud/">SonarQube Cloud for Open Source</a></h2>
-                    </div>
-                    <div class="meta">
-                        <span class="badge type-direct_activation">直接开通</span>
-                        
-                        <span class="tag" title="CNCF › Provisioning › Security &amp; Compliance">安全与合规</span>
-                    </div>
-                    <dl>
-                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>每个 PR 自动检查 bug、代码异味与安全热点，让贡献者提交的代码质量一致，减轻维护者 review 负担。</dd></div>
-                        <div><dt>拿到什么</dt><dd>Pro 方案功能（代码质量与安全扫描，支持 35+ 语言）、永久免费</dd></div>
-                        <div><dt>申请条件</dt><dd>公开且拥有 OSI 许可证的仓库</dd></div>
-                    </dl>
-                    <div class="card-foot">
-                        <a class="apply" href="https://www.sonarsource.com/plans-and-pricing/" target="_blank" rel="noopener">前往开通<svg class="icon"><use href="#i-ext"></use></svg></a>
-                        <span>验证于 2026-11-18</span>
-                    </div>
-                </article>
-                <article class="card">
-                    <div class="card-head">
-                        <span class="brand"><img src="/logos/codecov.svg" alt="" width="24" height="24" loading="lazy"></span>
-                        <h2><a href="/zh-hans/p/codecov/">Codecov for Open Source</a></h2>
-                    </div>
-                    <div class="meta">
-                        <span class="badge type-direct_activation">直接开通</span>
-                        
-                        <span class="tag" title="CNCF › App Definition and Development › Continuous Integration &amp; Delivery">持续集成与交付</span>
-                    </div>
-                    <dl>
-                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>在 PR 上直接看到新代码有没有被测试覆盖，README 也能放覆盖率徽章，让用户对项目质量更有信心。</dd></div>
-                        <div><dt>拿到什么</dt><dd>免费代码覆盖率分析、PR 评论、状态检查</dd></div>
-                        <div><dt>申请条件</dt><dd>公开的开源项目</dd></div>
-                    </dl>
-                    <div class="card-foot">
-                        <a class="apply" href="https://about.codecov.io/for/open-source/" target="_blank" rel="noopener">前往开通<svg class="icon"><use href="#i-ext"></use></svg></a>
-                        <span>验证于 2026-11-18</span>
-                    </div>
-                </article>
                 <article class="card">
                     <div class="card-head">
                         <span class="brand"><img src="/logos/circleci.svg" alt="" width="24" height="24" loading="lazy"></span>
@@ -495,101 +632,181 @@
                 </article>
                 <article class="card">
                     <div class="card-head">
-                        <span class="brand"><img src="/logos/jetbrains.svg" alt="" width="24" height="24" loading="lazy"></span>
-                        <h2><a href="/zh-hans/p/jetbrains/">JetBrains Open Source License</a></h2>
+                        <span class="brand"><img src="/logos/codacy.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/zh-hans/p/codacy/">Codacy Open Source</a></h2>
                     </div>
                     <div class="meta">
-                        <span class="badge type-application_required">要申请</span>
-                        
-                        <span class="tag" title="CNCF › App Definition and Development › Application Definition &amp; Image Build">应用定义与开发环境</span>
-                    </div>
-                    <dl>
-                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>IntelliJ IDEA、PyCharm、WebStorm、GoLand 等专业 IDE 全部可用，重构、调试、代码分析更顺手，写代码和 review 都更高效。</dd></div>
-                        <div><dt>拿到什么</dt><dd>免费 All Products Pack（所有产品套装）</dd></div>
-                        <div><dt>申请条件</dt><dd>一年期授权，项目必须持续开发中，提供开源许可证明，项目负责人或核心贡献者可申请</dd></div>
-                    </dl>
-                    <div class="card-foot">
-                        <a class="apply" href="https://www.jetbrains.com/shop/eform/opensource?product=ALL" target="_blank" rel="noopener">前往申请<svg class="icon"><use href="#i-ext"></use></svg></a>
-                        <span>验证于 2026-11-18</span>
-                    </div>
-                </article>
-                <article class="card">
-                    <div class="card-head">
-                        <span class="brand"><img src="/logos/docker.svg" alt="" width="24" height="24" loading="lazy"></span>
-                        <h2><a href="/zh-hans/p/docker/">Docker-Sponsored Open Source Program</a></h2>
-                    </div>
-                    <div class="meta">
-                        <span class="badge type-application_required">要申请</span>
-                        
-                        <span class="tag" title="CNCF › Provisioning › Container Registry">容器镜像仓库</span>
-                    </div>
-                    <dl>
-                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>用户从 Docker Hub 拉取你的镜像不会触发次数限制，加上认证徽章让大家知道这是官方可信的镜像，采用门槛更低。</dd></div>
-                        <div><dt>拿到什么</dt><dd>Docker Hub 无限制镜像拉取、验证徽章、核心贡献者获得一年免费 Docker Team 订阅</dd></div>
-                        <div><dt>申请条件</dt><dd>公开仓库、符合 OSI 定义、过去 6 个月内有更新、非营利性质</dd></div>
-                    </dl>
-                    <div class="card-foot">
-                        <a class="apply" href="https://www.docker.com/community/open-source/application/" target="_blank" rel="noopener">前往申请<svg class="icon"><use href="#i-ext"></use></svg></a>
-                        <span>验证于 2026-11-18</span>
-                    </div>
-                </article>
-                <article class="card">
-                    <div class="card-head">
-                        <span class="brand"><img src="/logos/sentry.svg" alt="" width="24" height="24" loading="lazy"></span>
-                        <h2><a href="/zh-hans/p/sentry/">Sentry for Open Source</a></h2>
-                    </div>
-                    <div class="meta">
-                        <span class="badge type-application_required">要申请</span>
-                        
-                        <span class="tag" title="CNCF › Observability and Analysis › Observability">可观测性</span>
-                    </div>
-                    <dl>
-                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>用户遇到的错误和崩溃会自动上报并附带 stack trace，不必等人提 issue 才知道哪里坏了，修 bug 更快。</dd></div>
-                        <div><dt>拿到什么</dt><dd>Business 级别配额（5M 错误、5,000GB 日志、1B spans、100K replays 等）、无期限、包含 Business 功能</dd></div>
-                        <div><dt>申请条件</dt><dd>需要 OSI 认可的许可证（如 Apache 或 MIT）</dd></div>
-                    </dl>
-                    <div class="card-foot">
-                        <a class="apply" href="https://sentry.io/for/open-source/" target="_blank" rel="noopener">前往申请<svg class="icon"><use href="#i-ext"></use></svg></a>
-                        <span>验证于 2026-11-18</span>
-                    </div>
-                </article>
-                <article class="card">
-                    <div class="card-head">
-                        <span class="brand"><img src="/logos/socket.svg" alt="" width="24" height="24" loading="lazy"></span>
-                        <h2><a href="/zh-hans/p/socket/">Socket for Open Source</a></h2>
-                    </div>
-                    <div class="meta">
-                        <span class="badge type-application_required">要申请</span>
+                        <span class="badge type-direct_activation">直接开通</span>
                         
                         <span class="tag" title="CNCF › Provisioning › Security &amp; Compliance">安全与合规</span>
                     </div>
                     <dl>
-                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>在 PR 阶段就拦下恶意或可疑的依赖包（例如被植入后门的包），避免供应链攻击经由你的项目传给下游用户。</dd></div>
-                        <div><dt>拿到什么</dt><dd>免费 Business 方案（自动阻止恶意依赖、可达性分析、GitHub Actions 扫描、SBOM 导出等）</dd></div>
-                        <div><dt>申请条件</dt><dd>公开的开源项目，拥有有效的 OSI 许可证</dd></div>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>自动在 PR 上标出代码质量与安全问题，让不同贡献者写的代码保持一致标准。</dd></div>
+                        <div><dt>拿到什么</dt><dd>免费 Open Source 方案：可基本使用所有功能（代码质量、安全、覆盖率），分析时间为尽力而为</dd></div>
+                        <div><dt>申请条件</dt><dd>仅限公开仓库，适合专门开发公开项目的个人或团队</dd></div>
                     </dl>
                     <div class="card-foot">
-                        <a class="apply" href="https://www.socket.dev/blog/free-business-plan-upgrades-for-open-source" target="_blank" rel="noopener">前往申请<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <a class="apply" href="https://codacy.com/pricing" target="_blank" rel="noopener">前往开通<svg class="icon"><use href="#i-ext"></use></svg></a>
                         <span>验证于 2026-11-18</span>
                     </div>
                 </article>
                 <article class="card">
                     <div class="card-head">
-                        <span class="brand"><img src="/logos/snyk.svg" alt="" width="24" height="24" loading="lazy"></span>
-                        <h2><a href="/zh-hans/p/snyk/">Snyk for Open Source</a></h2>
+                        <span class="brand"><img src="/logos/codecov.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/zh-hans/p/codecov/">Codecov for Open Source</a></h2>
                     </div>
                     <div class="meta">
-                        <span class="badge type-application_required">要申请</span>
+                        <span class="badge type-direct_activation">直接开通</span>
+                        
+                        <span class="tag" title="CNCF › App Definition and Development › Continuous Integration &amp; Delivery">持续集成与交付</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>在 PR 上直接看到新代码有没有被测试覆盖，README 也能放覆盖率徽章，让用户对项目质量更有信心。</dd></div>
+                        <div><dt>拿到什么</dt><dd>免费代码覆盖率分析、PR 评论、状态检查</dd></div>
+                        <div><dt>申请条件</dt><dd>公开的开源项目</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://about.codecov.io/for/open-source/" target="_blank" rel="noopener">前往开通<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>验证于 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/coderabbit.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/zh-hans/p/coderabbit/">CodeRabbit for Open Source</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-direct_activation">直接开通</span>
+                        
+                        <span class="tag" title="CNCF › AI Agent">AI Agent</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>每个 PR 先由 AI 逐行审查并整理摘要，维护者能更快消化外部贡献者提交的 PR。</dd></div>
+                        <div><dt>拿到什么</dt><dd>公开仓库免费使用 Pro 级别的 AI 代码审查（有速率限制；Dashboard、Reports 等其他付费功能不含）</dd></div>
+                        <div><dt>申请条件</dt><dd>GitHub 或 GitLab 上的公开仓库，安装 CodeRabbit 后自动启用，无需另外申请</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://kb.coderabbit.ai/articles/8856795235-how-do-i-activate-coderabbit-pro-for-my-open-source-project" target="_blank" rel="noopener">前往开通<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>验证于 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand mono" aria-hidden="true">C</span>
+                        <h2><a href="/zh-hans/p/codspeed/">CodSpeed for Open Source</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-direct_activation">直接开通</span>
+                        <span class="badge pending">官方如何认定“开源项目”（公开仓库或特定许可证）未能从官方页面确认</span>
+                        <span class="tag" title="CNCF › App Definition and Development › Continuous Integration &amp; Delivery">持续集成与交付</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>在 CI 里持续跑基准测试，PR 上直接标出性能回退，避免变慢的代码被合并。</dd></div>
+                        <div><dt>拿到什么</dt><dd>Free 套餐：不限运行次数和仓库、PR 性能报告与检查、CPU／内存／Wall-time 测量、3 个月历史、每月 600 分钟 macro runner；开源项目用户数不限（一般为 5 人），开源项目可再发邮件申请更多 macro runner 分钟数</dd></div>
+                        <div><dt>申请条件</dt><dd>注册 Free 套餐即可使用；额外的 macro runner 分钟数需发邮件至 support@codspeed.io 并附上仓库信息 <a href="https://codspeed.io/pricing" target="_blank" rel="noopener">确认来源</a></dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://codspeed.io/pricing" target="_blank" rel="noopener">前往开通<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>验证于 2026-11-24</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand mono" aria-hidden="true">D</span>
+                        <h2><a href="/zh-hans/p/deepsource/">DeepSource Open Source Plan</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-direct_activation">直接开通</span>
                         
                         <span class="tag" title="CNCF › Provisioning › Security &amp; Compliance">安全与合规</span>
                     </div>
                     <dl>
-                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>持续扫描依赖与代码中的已知漏洞，并自动提 PR 升级修复，让项目的安全状态始终保持最新。</dd></div>
-                        <div><dt>拿到什么</dt><dd>完整企业级授权（无使用限制的漏洞扫描）、Discord 社区支持</dd></div>
-                        <div><dt>申请条件</dt><dd>社区项目（非企业支持）。接受免费 Secure Developer Program 的条件：在该开源项目的 README 与项目网站放上回链 Snyk 的链接，并授权 Snyk 使用项目 logo（此为申请项目本身的义务，非列表网站要求）</dd></div>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>每次提交和 PR 自动做静态分析，及早发现 bug、反模式与安全问题。</dd></div>
+                        <div><dt>拿到什么</dt><dd>免费 Open Source 方案：公开仓库与团队成员数量不限，每月 1,000 次 PR 审查；AI Review 与 Autofix 按用量计费；不含依赖漏洞扫描（SCA）</dd></div>
+                        <div><dt>申请条件</dt><dd>仅限公开仓库；私有仓库需付费方案</dd></div>
                     </dl>
                     <div class="card-foot">
-                        <a class="apply" href="https://snyk.io/open-source/" target="_blank" rel="noopener">前往申请<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <a class="apply" href="https://deepsource.com/docs/platform/reference/billing" target="_blank" rel="noopener">前往开通<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>验证于 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand mono" aria-hidden="true">G</span>
+                        <h2><a href="/zh-hans/p/gitguardian/">GitGuardian for Open Source</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-direct_activation">直接开通</span>
+                        
+                        <span class="tag" title="CNCF › Provisioning › Security &amp; Compliance">安全与合规</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>有人不小心把密钥或密码提交进仓库时立即告警，降低凭证泄露被滥用的风险。</dd></div>
+                        <div><dt>拿到什么</dt><dd>免费使用 GitGuardian 平台，监控仓库中泄露的 API 密钥、token、密码等机密</dd></div>
+                        <div><dt>申请条件</dt><dd>仓库位于你的 GitHub Organization 下，从 GitHub Marketplace 安装 GitGuardian App</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://www.gitguardian.com/pricing" target="_blank" rel="noopener">前往开通<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>验证于 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand mono" aria-hidden="true">M</span>
+                        <h2><a href="/zh-hans/p/mergify/">Mergify Open Source</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-direct_activation">直接开通</span>
+                        
+                        <span class="tag" title="CNCF › App Definition and Development › Continuous Integration &amp; Delivery">持续集成与交付</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>合并前用最新的 main 重新验证，避免多个各自通过 CI 的 PR 合在一起后把 main 弄坏。</dd></div>
+                        <div><dt>拿到什么</dt><dd>免费方案，含 Merge Queue、Merge Protections、CI Insights、Test Insights</dd></div>
+                        <div><dt>申请条件</dt><dd>开源项目（公开仓库）免费；私有仓库则限 5 人以内</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://mergify.com/pricing" target="_blank" rel="noopener">前往开通<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>验证于 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/sonarqubecloud.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/zh-hans/p/sonarqube-cloud/">SonarQube Cloud for Open Source</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-direct_activation">直接开通</span>
+                        
+                        <span class="tag" title="CNCF › Provisioning › Security &amp; Compliance">安全与合规</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>每个 PR 自动检查 bug、代码异味与安全热点，让贡献者提交的代码质量一致，减轻维护者 review 负担。</dd></div>
+                        <div><dt>拿到什么</dt><dd>Pro 方案功能（代码质量与安全扫描，支持 35+ 语言）、永久免费</dd></div>
+                        <div><dt>申请条件</dt><dd>公开且拥有 OSI 许可证的仓库</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://www.sonarsource.com/plans-and-pricing/" target="_blank" rel="noopener">前往开通<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>验证于 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/tailscale.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/zh-hans/p/tailscale/">Tailscale Community on GitHub</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-direct_activation">直接开通</span>
+                        
+                        <span class="tag" title="CNCF › Runtime › Cloud Native Network">云原生网络</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>不用搭 VPN 或开放公网端口，维护者就能安全连接项目的测试机、构建机与内部服务。</dd></div>
+                        <div><dt>拿到什么</dt><dd>免费的 Community on GitHub 方案，让 GitHub 组织成员共用同一个 Tailscale 私有网络（tailnet）</dd></div>
+                        <div><dt>申请条件</dt><dd>用于采用 OSI 许可证开源项目的 GitHub 组织；在管理后台的 Billing 设置中选择此方案</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://tailscale.com/kb/1154/free-plans-discounts" target="_blank" rel="noopener">前往开通<svg class="icon"><use href="#i-ext"></use></svg></a>
                         <span>验证于 2026-11-18</span>
                     </div>
                 </article>
@@ -615,6 +832,386 @@
                 </article>
                 <article class="card">
                     <div class="card-head">
+                        <span class="brand"><img src="/logos/algolia.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/zh-hans/p/algolia-docsearch/">Algolia DocSearch</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">要申请</span>
+                        
+                        <span class="tag" title="">文档与本地化</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>用户在文档站里即打即搜，更快找到 API 与教程，减少重复的提问 issue。</dd></div>
+                        <div><dt>拿到什么</dt><dd>免费的文档搜索：Algolia 托管爬虫每周自动抓取文档，提供专属 Algolia 应用与后台分析</dd></div>
+                        <div><dt>申请条件</dt><dd>开源项目文档或技术博客，须公开且为正式上线网站；搜索结果旁要保留“Search by Algolia”Logo；在 Algolia 后台的 DocSearch 流程提交域名，会自动检查资格</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://docsearch.algolia.com/docs/who-can-apply/" target="_blank" rel="noopener">前往申请<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>验证于 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/atlassian.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/zh-hans/p/atlassian/">Atlassian Open Source License</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">要申请</span>
+                        
+                        <span class="tag" title="">协作与沟通</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>用 Jira 跟踪 issue 与路线图、用 Confluence 写设计文档，适合需要较正式项目管理的大型项目。</dd></div>
+                        <div><dt>拿到什么</dt><dd>免费使用 Atlassian 云端产品（Jira、Confluence 等），云端版限 Standard 方案</dd></div>
+                        <div><dt>申请条件</dt><dd>开源项目提出许可申请，通常 1 个工作日内回复</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://www.atlassian.com/software/views/open-source-license-request" target="_blank" rel="noopener">前往申请<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>验证于 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand mono" aria-hidden="true">A</span>
+                        <h2><a href="/zh-hans/p/aws/">AWS Cloud Credits for Open Source</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">要申请</span>
+                        
+                        <span class="tag" title="CNCF › Serverless › Hosted Platform">托管平台</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>用云点数支付 CI 运行器、性能测试环境与文件存储，把经费留给项目本身。</dd></div>
+                        <div><dt>拿到什么</dt><dd>AWS 促销点数，常用于上游与性能测试、CI/CD、存放构建产物</dd></div>
+                        <div><dt>申请条件</dt><dd>一般需采用 OSI 认可的许可证（领域内常用的非 OSI 许可证也可申请）；填写申请表发送到 awsopensourcecredits@amazon.com，每月审核发放</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://aws.amazon.com/blogs/opensource/aws-cloud-credits-for-open-source-projects-affirming-our-commitment/" target="_blank" rel="noopener">前往申请<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>验证于 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand mono" aria-hidden="true">B</span>
+                        <h2><a href="/zh-hans/p/blacksmith/">Blacksmith OSS Program</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">要申请</span>
+                        <span class="badge pending">开源项目实际获得的分钟数、折扣或期限未公开</span>
+                        <span class="tag" title="CNCF › App Definition and Development › Continuous Integration &amp; Delivery">持续集成与交付</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>把 GitHub Actions 换到性能更高的 runner，只需改一行 runs-on，CI 等待时间缩短，贡献者更快拿到测试结果。</dd></div>
+                        <div><dt>拿到什么</dt><dd>面向开源项目的 GitHub Actions runner 支持（官方目前列出 Celery、Ladybird、Zen、Limbo 等受支持项目）；普通账号另有每月 3,000 分钟免费额度</dd></div>
+                        <div><dt>申请条件</dt><dd>持续维护的公开仓库、宽松型（permissive）开源许可证、有明确的社区使用；在定价页的 OSS Program 表单申请 <a href="https://blacksmith.sh/pricing" target="_blank" rel="noopener">确认来源</a></dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://blacksmith.sh/pricing" target="_blank" rel="noopener">前往申请<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>验证于 2026-11-24</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand mono" aria-hidden="true">B</span>
+                        <h2><a href="/zh-hans/p/browserstack/">BrowserStack Open Source Program</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">要申请</span>
+                        <span class="badge pending">开源方案已从价格页移除，请以官方开源页面为准</span>
+                        <span class="tag" title="CNCF › App Definition and Development › Continuous Integration &amp; Delivery">持续集成与交付</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>不用自己准备一堆设备，就能在各种浏览器和真实手机上测试，确保用户那边都能正常运行。</dd></div>
+                        <div><dt>拿到什么</dt><dd>免费无限测试 Live、Automate、Percy（5 位用户、5 个并行测试），覆盖 3,000+ 浏览器与真机，项目存续期间有效</dd></div>
+                        <div><dt>申请条件</dt><dd>公开的开源项目，通过官方开源页面申请 <a href="https://www.browserstack.com/open-source" target="_blank" rel="noopener">确认来源</a></dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://www.browserstack.com/open-source" target="_blank" rel="noopener">前往申请<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>验证于 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/cloudflare.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/zh-hans/p/cloudflare/">Cloudflare Project Alexandria</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">要申请</span>
+                        
+                        <span class="tag" title="CNCF › Serverless › Hosted Platform">托管平台</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>用 Cloudflare 的 CDN 与防护加速全球下载、抵挡攻击，R2 也适合存放构建产物与软件包。</dd></div>
+                        <div><dt>拿到什么</dt><dd>每年可续的点数：升级 Pro／Business／Enterprise 方案、更多 Workers 与 Pages 请求、更多 R2 存储空间、增强版 Zero Trust</dd></div>
+                        <div><dt>申请条件</dt><dd>采用公认开源许可证的项目，以非营利方式运作并符合计划宗旨；提交赞助申请</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://www.cloudflare.com/lp/project-alexandria/" target="_blank" rel="noopener">前往申请<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>验证于 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/crowdin.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/zh-hans/p/crowdin/">Crowdin for Open Source</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">要申请</span>
+                        
+                        <span class="tag" title="">文档与本地化</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>社区志愿者直接在网页上翻译界面字符串，译文同步回仓库，轻松做出多语言版本。</dd></div>
+                        <div><dt>拿到什么</dt><dd>免费使用 Crowdin 翻译管理平台</dd></div>
+                        <div><dt>申请条件</dt><dd>已在 Crowdin 创建翻译项目；采用 OSI 认可的许可证且源代码公开；没有相关商业产品；申请者是项目负责人；已开发至少 3 个月、有活跃社区、网站消息持续更新并定期发布版本；同意将译文贡献到 Crowdin Global TM</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://crowdin.com/product/for-open-source" target="_blank" rel="noopener">前往申请<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>验证于 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/datadog.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/zh-hans/p/datadog/">Datadog for Open Source Projects</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">要申请</span>
+                        
+                        <span class="tag" title="CNCF › Observability and Analysis › Observability">可观测性</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>在同一处看到项目基础设施（CI、软件包服务器、网站）的指标、日志与追踪，出问题能更快定位。</dd></div>
+                        <div><dt>拿到什么</dt><dd>免费使用 Datadog 云端可观测性与安全平台</dd></div>
+                        <div><dt>申请条件</dt><dd>非商业项目、采用认可的开源许可证；监控的基础设施与应用必须直接用于支持项目本身（某个开源软件的部署实例不算）；逐案审核</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://www.datadoghq.com/partner/open-source/" target="_blank" rel="noopener">前往申请<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>验证于 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/docker.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/zh-hans/p/docker/">Docker-Sponsored Open Source Program</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">要申请</span>
+                        
+                        <span class="tag" title="CNCF › Provisioning › Container Registry">容器镜像仓库</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>用户从 Docker Hub 拉取你的镜像不会触发次数限制，加上认证徽章让大家知道这是官方可信的镜像，采用门槛更低。</dd></div>
+                        <div><dt>拿到什么</dt><dd>Docker Hub 无限制镜像拉取、验证徽章、核心贡献者获得一年免费 Docker Team 订阅</dd></div>
+                        <div><dt>申请条件</dt><dd>公开仓库、符合 OSI 定义、过去 6 个月内有更新、非营利性质</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://www.docker.com/community/open-source/application/" target="_blank" rel="noopener">前往申请<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>验证于 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/fastly.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/zh-hans/p/fastly/">Fastly Fast Forward</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">要申请</span>
+                        
+                        <span class="tag" title="CNCF › Serverless › Hosted Platform">托管平台</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>软件包下载、文档站等高流量内容通过 Fastly 的边缘网络分发，更快也更省带宽费用。</dd></div>
+                        <div><dt>拿到什么</dt><dd>免费向符合资格的开源项目及支持它们的非营利组织提供 Fastly 服务</dd></div>
+                        <div><dt>申请条件</dt><dd>符合资格的开源项目或支持开源的非营利组织；需申请审核</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://www.fastly.com/forward" target="_blank" rel="noopener">前往申请<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>验证于 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/gitlab.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/zh-hans/p/gitlab/">GitLab for Open Source</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">要申请</span>
+                        
+                        <span class="tag" title="CNCF › App Definition and Development › Continuous Integration &amp; Delivery">持续集成与交付</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>用顶级方案的安全扫描、合规与规划功能管理项目，CI 额度也更充裕。</dd></div>
+                        <div><dt>拿到什么</dt><dd>GitLab Ultimate 功能（SaaS 或自建）与 50,000 分钟计算时间；不含官方技术支持</dd></div>
+                        <div><dt>申请条件</dt><dd>namespace 内每个项目都要采用 OSI 认可的许可证；GitLab.com 群组或自建实例与源代码都必须公开；每年需续约</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://about.gitlab.com/solutions/open-source/join/" target="_blank" rel="noopener">前往申请<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>验证于 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/jetbrains.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/zh-hans/p/jetbrains/">JetBrains Open Source License</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">要申请</span>
+                        
+                        <span class="tag" title="CNCF › App Definition and Development › Application Definition &amp; Image Build">应用定义与开发环境</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>IntelliJ IDEA、PyCharm、WebStorm、GoLand 等专业 IDE 全部可用，重构、调试、代码分析更顺手，写代码和 review 都更高效。</dd></div>
+                        <div><dt>拿到什么</dt><dd>免费 All Products Pack（所有产品套装）</dd></div>
+                        <div><dt>申请条件</dt><dd>一年期授权，项目必须持续开发中，提供开源许可证明，项目负责人或核心贡献者可申请</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://www.jetbrains.com/shop/eform/opensource?product=ALL" target="_blank" rel="noopener">前往申请<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>验证于 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/netlify.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/zh-hans/p/netlify/">Netlify Open Source Plan</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">要申请</span>
+                        
+                        <span class="tag" title="CNCF › Serverless › Hosted Platform">托管平台</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>文档站与项目官网免费托管，所有维护者都能加入同一个团队管理部署。</dd></div>
+                        <div><dt>拿到什么</dt><dd>每月 10,000 点数、免费生产环境部署、团队成员不限；点数用完网站也不会停</dd></div>
+                        <div><dt>申请条件</dt><dd>网站内容须与开源软件及其社区直接相关（文档、变更记录、开发团队博客等）；项目采用开源许可证；填表申请审核</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://www.netlify.com/legal/open-source-policy/" target="_blank" rel="noopener">前往申请<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>验证于 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/saucelabs.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/zh-hans/p/saucelabs/">Sauce Labs Open Sauce</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">要申请</span>
+                        
+                        <span class="tag" title="CNCF › App Definition and Development › Continuous Integration &amp; Delivery">持续集成与交付</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>在云端自动跑跨浏览器测试，改前端时能及早发现只在特定浏览器出现的 bug。</dd></div>
+                        <div><dt>拿到什么</dt><dd>开源项目免费无限测试分钟数，可在多种浏览器、操作系统与模拟器上并行测试</dd></div>
+                        <div><dt>申请条件</dt><dd>账号只能用于开源项目；所有测试结果（视频、截图、日志）必须公开</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://opensource.saucelabs.com/" target="_blank" rel="noopener">前往申请<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>验证于 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/sentry.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/zh-hans/p/sentry/">Sentry for Open Source</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">要申请</span>
+                        
+                        <span class="tag" title="CNCF › Observability and Analysis › Observability">可观测性</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>用户遇到的错误和崩溃会自动上报并附带 stack trace，不必等人提 issue 才知道哪里坏了，修 bug 更快。</dd></div>
+                        <div><dt>拿到什么</dt><dd>Business 级别配额（5M 错误、5,000GB 日志、1B spans、100K replays 等）、无期限、包含 Business 功能</dd></div>
+                        <div><dt>申请条件</dt><dd>需要 OSI 认可的许可证（如 Apache 或 MIT）</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://sentry.io/for/open-source/" target="_blank" rel="noopener">前往申请<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>验证于 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/snyk.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/zh-hans/p/snyk/">Snyk for Open Source</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">要申请</span>
+                        
+                        <span class="tag" title="CNCF › Provisioning › Security &amp; Compliance">安全与合规</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>持续扫描依赖与代码中的已知漏洞，并自动提 PR 升级修复，让项目的安全状态始终保持最新。</dd></div>
+                        <div><dt>拿到什么</dt><dd>完整企业级授权（无使用限制的漏洞扫描）、Discord 社区支持</dd></div>
+                        <div><dt>申请条件</dt><dd>社区项目（非企业支持）。接受免费 Secure Developer Program 的条件：在该开源项目的 README 与项目网站放上回链 Snyk 的链接，并授权 Snyk 使用项目 logo（此为申请项目本身的义务，非列表网站要求）</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://snyk.io/open-source/" target="_blank" rel="noopener">前往申请<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>验证于 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/socket.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/zh-hans/p/socket/">Socket for Open Source</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">要申请</span>
+                        
+                        <span class="tag" title="CNCF › Provisioning › Security &amp; Compliance">安全与合规</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>在 PR 阶段就拦下恶意或可疑的依赖包（例如被植入后门的包），避免供应链攻击经由你的项目传给下游用户。</dd></div>
+                        <div><dt>拿到什么</dt><dd>免费 Business 方案（自动阻止恶意依赖、可达性分析、GitHub Actions 扫描、SBOM 导出等）</dd></div>
+                        <div><dt>申请条件</dt><dd>公开的开源项目，拥有有效的 OSI 许可证</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://www.socket.dev/blog/free-business-plan-upgrades-for-open-source" target="_blank" rel="noopener">前往申请<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>验证于 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/termius.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/zh-hans/p/termius/">Termius for Open Source</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">要申请</span>
+                        
+                        <span class="tag" title="CNCF › App Definition and Development › Application Definition &amp; Image Build">应用定义与开发环境</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>维护团队共用主机列表与连接配置，部署和运维项目服务器更方便。</dd></div>
+                        <div><dt>拿到什么</dt><dd>免费 Termius Business 账号，方便团队协作管理 SSH 连接</dd></div>
+                        <div><dt>申请条件</dt><dd>在项目的赞助者区块放上 Termius Logo 与介绍链接；不得商业使用（GitHub Sponsors、Open Collective 等开源筹资平台除外）；单一项目申请者须为核心贡献者，项目至少 30 天、持续维护并采用宽松型开源许可证</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://www.termius.com/opensource" target="_blank" rel="noopener">前往申请<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>验证于 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand mono" aria-hidden="true">T</span>
+                        <h2><a href="/zh-hans/p/testingbot/">TestingBot for Open Source</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">要申请</span>
+                        
+                        <span class="tag" title="CNCF › App Definition and Development › Continuous Integration &amp; Delivery">持续集成与交付</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>在真实浏览器和 iOS／Android 真机上跑自动化测试，及早发现兼容性问题。</dd></div>
+                        <div><dt>拿到什么</dt><dd>免费无限跨浏览器与移动设备测试：2 个并发测试、6,100+ 真实浏览器与 iOS／Android 真机，支持 Selenium、Cypress 等</dd></div>
+                        <div><dt>申请条件</dt><dd>符合资格的开源项目；先注册免费账号再提交项目，通常几个工作日内完成审核升级</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://testingbot.com/open-source" target="_blank" rel="noopener">前往申请<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>验证于 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
                         <span class="brand mono" aria-hidden="true">T</span>
                         <h2><a href="/zh-hans/p/testmu-ai/">TestMu AI (formerly LambdaTest) for Open Source</a></h2>
                     </div>
@@ -635,22 +1232,82 @@
                 </article>
                 <article class="card">
                     <div class="card-head">
-                        <span class="brand"><img src="/logos/githubcopilot.svg" alt="" width="24" height="24" loading="lazy"></span>
-                        <h2><a href="/zh-hans/p/github-copilot/">GitHub Copilot Pro for Open Source</a></h2>
+                        <span class="brand"><img src="/logos/vercel.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/zh-hans/p/vercel/">Vercel Open Source Program</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">要申请</span>
+                        
+                        <span class="tag" title="CNCF › Serverless › Hosted Platform">托管平台</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>一整年的托管额度让文档站、Demo 与示例项目可以放心上线。</dd></div>
+                        <div><dt>拿到什么</dt><dd>12 个月共 US$3,600 Vercel 平台点数，加上含第三方服务点数的 OSS Starter Pack 与社区支持</dd></div>
+                        <div><dt>申请条件</dt><dd>持续开发维护中；托管或打算托管在 Vercel；有可衡量的影响力或成长潜力；有行为准则；点数只用于该开源项目。一年四期收件，目前暂停申请，1 月重新开放</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://vercel.com/open-source-program" target="_blank" rel="noopener">前往申请<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>验证于 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/weblate.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/zh-hans/p/weblate/">Hosted Weblate Libre Plan</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">要申请</span>
+                        
+                        <span class="tag" title="">文档与本地化</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>与 Git 紧密集成的开源翻译平台，译文连同译者署名提交回仓库，数据存放在欧盟。</dd></div>
+                        <div><dt>拿到什么</dt><dd>免费 Libre 方案，额度与 160k 字符串付费方案相同</dd></div>
+                        <div><dt>申请条件</dt><dd>公开的自由／开源项目：采用 OSI 认可或 FSF 认定的自由许可证，源代码放在支持的仓库</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://weblate.org/hosting/" target="_blank" rel="noopener">前往申请<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>验证于 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/zulip.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/zh-hans/p/zulip/">Zulip Cloud Standard Sponsorship</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">要申请</span>
+                        
+                        <span class="tag" title="">协作与沟通</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>以话题（topic）分串的聊天室，社区讨论不会被刷屏，非同步协作的开源社区特别好用。</dd></div>
+                        <div><dt>拿到什么</dt><dd>免费 Zulip Cloud Standard 方案（无限搜索历史、每人最多 10 GB 文件空间等）</dd></div>
+                        <div><dt>申请条件</dt><dd>开源项目提出赞助申请（Zulip 也赞助非营利、教育与学术研究组织）</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://zulip.com/plans/" target="_blank" rel="noopener">前往申请<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>验证于 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/anthropic-oss-scanner.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/zh-hans/p/anthropic-oss-scanner/">Anthropic OSS Scanner</a></h2>
                     </div>
                     <div class="meta">
                         <span class="badge type-high_bar">门槛高</span>
-                        
-                        <span class="tag" title="CNCF › AI Agent">AI Agent</span>
+                        <span class="badge pending">后续扫描频率未公开，官方说明会根据队列中的项目数量和使用程度而定</span>
+                        <span class="tag" title="CNCF › Provisioning › Security &amp; Compliance">安全与合规</span>
                     </div>
                     <dl>
-                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>编辑器里的 AI 代码补全与对话，加快写功能、补测试，也更快看懂贡献者提交的陌生代码。</dd></div>
-                        <div><dt>拿到什么</dt><dd>免费 Copilot Pro 订阅</dd></div>
-                        <div><dt>申请条件</dt><dd>热门开源仓库的维护者（每月自动重新评估资格）</dd></div>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>在攻击者之前找出漏洞并拿到可复现用例和补丁草稿，让人手有限的维护团队也能处理深层的安全问题。</dd></div>
+                        <div><dt>拿到什么</dt><dd>免费、定期的 AI 安全扫描：由 Anthropic 最强的模型审计代码，报告通过邮件发给维护者，包含可复现步骤、漏洞说明（可能时附带 bisect 结果）和候选补丁；报告由模型生成、未经人工审核</dd></div>
+                        <div><dt>申请条件</dt><dd>核心维护者向 anthropics/oss-scanner 仓库提交 PR，新增 projects/&lt;名称&gt;/ 配置（仓库地址、主要联系邮箱、可离线构建的 Dockerfile）；每个申请由人工审核，参考 OSS-Fuzz 的标准，接受对基础设施和用户安全有关键影响的成熟项目，须为 OSI 许可证；新项目和普通 fork 通常不接受 <a href="https://red.anthropic.com/oss-scanner/" target="_blank" rel="noopener">确认来源</a></dd></div>
                     </dl>
                     <div class="card-foot">
-                        <a class="apply" href="https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-teachers-and-os-maintainers" target="_blank" rel="noopener">前往申请<svg class="icon"><use href="#i-ext"></use></svg></a>
-                        <span>验证于 2026-11-18</span>
+                        <a class="apply" href="https://red.anthropic.com/oss-scanner/" target="_blank" rel="noopener">前往申请<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>验证于 2026-11-24</span>
                     </div>
                 </article>
                 <article class="card">
@@ -675,6 +1332,46 @@
                 </article>
                 <article class="card">
                     <div class="card-head">
+                        <span class="brand"><img src="/logos/githubcopilot.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/zh-hans/p/github-copilot/">GitHub Copilot Pro for Open Source</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-high_bar">门槛高</span>
+                        
+                        <span class="tag" title="CNCF › AI Agent">AI Agent</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>编辑器里的 AI 代码补全与对话，加快写功能、补测试，也更快看懂贡献者提交的陌生代码。</dd></div>
+                        <div><dt>拿到什么</dt><dd>免费 Copilot Pro 订阅</dd></div>
+                        <div><dt>申请条件</dt><dd>热门开源仓库的维护者（每月自动重新评估资格）</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-teachers-and-os-maintainers" target="_blank" rel="noopener">前往申请<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>验证于 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/gradle.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/zh-hans/p/gradle-develocity/">Gradle Develocity for OSS</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-high_bar">门槛高</span>
+                        
+                        <span class="tag" title="CNCF › Observability and Analysis › Observability">可观测性</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>Gradle 或 Maven 项目可用构建缓存加速 CI，并分析不稳定测试与构建失败的原因。</dd></div>
+                        <div><dt>拿到什么</dt><dd>免费的 Develocity 实例：构建与测试加速、失败排查、工具链可观测性</dd></div>
+                        <div><dt>申请条件</dt><dd>只提供给重点开源项目与基金会（如 Apache 软件基金会、Spring、Commonhaus Foundation），资源有限；需与 Gradle 联系</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://gradle.com/oss-sponsored-by-develocity/" target="_blank" rel="noopener">前往申请<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>验证于 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
                         <span class="brand mono" aria-hidden="true">O</span>
                         <h2><a href="/zh-hans/p/openai-codex/">OpenAI Codex for Open Source</a></h2>
                     </div>
@@ -692,35 +1389,15 @@
                         <a class="apply" href="https://developers.openai.com/community/codex-for-oss" target="_blank" rel="noopener">前往申请<svg class="icon"><use href="#i-ext"></use></svg></a>
                         <span>验证于 2026-11-18</span>
                     </div>
-                </article>
-                <article class="card">
-                    <div class="card-head">
-                        <span class="brand"><img src="/logos/anthropic-oss-scanner.svg" alt="" width="24" height="24" loading="lazy"></span>
-                        <h2><a href="/zh-hans/p/anthropic-oss-scanner/">Anthropic OSS Scanner</a></h2>
-                    </div>
-                    <div class="meta">
-                        <span class="badge type-high_bar">门槛高</span>
-                        <span class="badge pending">后续扫描频率未公开，官方说明会根据队列中的项目数量和使用程度而定</span>
-                        <span class="tag" title="CNCF › Provisioning › Security &amp; Compliance">安全与合规</span>
-                    </div>
-                    <dl>
-                        <div class="why-it-helps"><dt>对你的项目有什么帮助</dt><dd>在攻击者之前找出漏洞并拿到可复现用例和补丁草稿，让人手有限的维护团队也能处理深层的安全问题。</dd></div>
-                        <div><dt>拿到什么</dt><dd>免费、定期的 AI 安全扫描：由 Anthropic 最强的模型审计代码，报告通过邮件发给维护者，包含可复现步骤、漏洞说明（可能时附带 bisect 结果）和候选补丁；报告由模型生成、未经人工审核</dd></div>
-                        <div><dt>申请条件</dt><dd>核心维护者向 anthropics/oss-scanner 仓库提交 PR，新增 projects/&lt;名称&gt;/ 配置（仓库地址、主要联系邮箱、可离线构建的 Dockerfile）；每个申请由人工审核，参考 OSS-Fuzz 的标准，接受对基础设施和用户安全有关键影响的成熟项目，须为 OSI 许可证；新项目和普通 fork 通常不接受 <a href="https://red.anthropic.com/oss-scanner/" target="_blank" rel="noopener">确认来源</a></dd></div>
-                    </dl>
-                    <div class="card-foot">
-                        <a class="apply" href="https://red.anthropic.com/oss-scanner/" target="_blank" rel="noopener">前往申请<svg class="icon"><use href="#i-ext"></use></svg></a>
-                        <span>验证于 2026-11-24</span>
-                    </div>
                 </article></section>
 
         <section class="contribute">
             <div>
                 <h2 data-t="contribute-title">知道其他免费方案？</h2>
-                <p data-t-html="contribute-desc">所有数据都在 <code>public/data/programs.json</code>。在 GitHub 上直接编辑、照着现有格式加一条，提交 PR 就好；CI 会自动检查格式。</p>
+                <p data-t-html="contribute-desc">每个方案是 <code>data/programs/</code> 下的一个 JSON 文件。在 GitHub 上照着现有文件的格式新建一个 <code>&lt;id&gt;.json</code>，提交 PR 就好；CI 会自动检查格式。</p>
             </div>
             <div class="btns">
-                <a class="btn primary" href="https://github.com/SammyLin/opensource/edit/main/public/data/programs.json" target="_blank" rel="noopener"><svg class="icon"><use href="#i-github"></use></svg><span data-t="edit-btn">在 GitHub 编辑数据</span></a>
+                <a class="btn primary" href="https://github.com/SammyLin/opensource/tree/main/data/programs" target="_blank" rel="noopener"><svg class="icon"><use href="#i-github"></use></svg><span data-t="edit-btn">在 GitHub 编辑数据</span></a>
                 <a class="btn secondary" href="https://github.com/SammyLin/opensource/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener" data-t="guide-btn">贡献指南</a>
             </div>
         </section>
@@ -755,14 +1432,14 @@
                 'empty': '沒有符合條件的方案，試試清除篩選。',
                 'why-it-helps': '對你的專案有什麼幫助', 'what-you-get': '拿到什麼', 'requirements': '申請條件', 'cta-apply': '前往申請', 'cta-direct': '前往開通', 'last-verified': '驗證於',
                 'contribute-title': '知道其他免費方案？',
-                'contribute-desc': '所有資料都在 <code>public/data/programs.json</code>。在 GitHub 上直接編輯、照著現有格式加一筆，送出 PR 就好；CI 會自動檢查格式。',
+                'contribute-desc': '每個方案是 <code>data/programs/</code> 底下的一個 JSON 檔。在 GitHub 上照著現有檔案的格式新增一個 <code>&lt;id&gt;.json</code>，送出 PR 就好；CI 會自動檢查格式。',
                 'edit-btn': '在 GitHub 編輯資料', 'guide-btn': '貢獻指南',
                 'footer': '資料以各方案官網為準，申請前請再確認條件。',
                 'load-fail': '資料載入失敗',
                 'license': '程式碼 <a href="https://github.com/SammyLin/opensource/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a> · 資料 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>', 'updated': '資料更新於', 'pending': '待確認', 'pending-src': '確認來源',
                 'back': '所有方案', 'share-title': '分享這個方案', 'share-text': n => `${n}：開源專案可以免費申請`,
                 'copy-link': '複製連結', 'copied': '已複製！', 'share-native': '分享…', 'related': '同類別的其他方案',
-                'official-page': '官方頁面', 'label-verified': '最後驗證', 'edit-entry': '資料有誤？在 GitHub 上修改',
+                'official-page': '官方頁面', 'not-cncf': 'CNCF Landscape 未涵蓋此類別', 'label-verified': '最後驗證', 'edit-entry': '資料有誤？在 GitHub 上修改',
                 'not-found': '找不到這個方案', 'not-found-desc': '連結可能打錯了，或這個方案已經下架。',
                 'page-title': n => `${n}｜開源專案免費方案 — 開源福利社`
             },
@@ -782,14 +1459,14 @@
                 'empty': '没有符合条件的方案，试试清除筛选。',
                 'why-it-helps': '对你的项目有什么帮助', 'what-you-get': '拿到什么', 'requirements': '申请条件', 'cta-apply': '前往申请', 'cta-direct': '前往开通', 'last-verified': '验证于',
                 'contribute-title': '知道其他免费方案？',
-                'contribute-desc': '所有数据都在 <code>public/data/programs.json</code>。在 GitHub 上直接编辑、照着现有格式加一条，提交 PR 就好；CI 会自动检查格式。',
+                'contribute-desc': '每个方案是 <code>data/programs/</code> 下的一个 JSON 文件。在 GitHub 上照着现有文件的格式新建一个 <code>&lt;id&gt;.json</code>，提交 PR 就好；CI 会自动检查格式。',
                 'edit-btn': '在 GitHub 编辑数据', 'guide-btn': '贡献指南',
                 'footer': '数据以各方案官网为准，申请前请再确认条件。',
                 'load-fail': '数据加载失败',
                 'license': '代码 <a href="https://github.com/SammyLin/opensource/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a> · 数据 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>', 'updated': '数据更新于', 'pending': '待确认', 'pending-src': '确认来源',
                 'back': '所有方案', 'share-title': '分享这个方案', 'share-text': n => `${n}：开源项目可以免费申请`,
                 'copy-link': '复制链接', 'copied': '已复制！', 'share-native': '分享…', 'related': '同类别的其他方案',
-                'official-page': '官方页面', 'label-verified': '最后验证', 'edit-entry': '数据有误？在 GitHub 上修改',
+                'official-page': '官方页面', 'not-cncf': 'CNCF Landscape 未涵盖此类别', 'label-verified': '最后验证', 'edit-entry': '数据有误？在 GitHub 上修改',
                 'not-found': '找不到这个方案', 'not-found-desc': '链接可能打错了，或这个方案已经下架。',
                 'page-title': n => `${n}｜开源项目免费方案 — 开源福利社`
             },
@@ -809,14 +1486,14 @@
                 'empty': 'No programs match. Try clearing the filters.',
                 'why-it-helps': 'How it helps your project', 'what-you-get': 'What you get', 'requirements': 'Requirements', 'cta-apply': 'Apply', 'cta-direct': 'Activate', 'last-verified': 'Verified',
                 'contribute-title': 'Know another free program?',
-                'contribute-desc': 'All data lives in <code>public/data/programs.json</code>. Edit it on GitHub, add one entry following the existing format, and open a PR. CI checks the format for you.',
+                'contribute-desc': 'Each program is one JSON file in <code>data/programs/</code>. On GitHub, add a new <code>&lt;id&gt;.json</code> following an existing file, and open a PR. CI checks the format for you.',
                 'edit-btn': 'Edit data on GitHub', 'guide-btn': 'Contributing guide',
                 'footer': 'Vendor sites are the source of truth. Double-check terms before applying.',
                 'load-fail': 'Failed to load data',
                 'license': 'Code <a href="https://github.com/SammyLin/opensource/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a> · Data <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>', 'updated': 'Data updated', 'pending': 'To be confirmed', 'pending-src': 'Source',
                 'back': 'All programs', 'share-title': 'Share this program', 'share-text': n => `${n}: free for open source projects`,
                 'copy-link': 'Copy link', 'copied': 'Copied!', 'share-native': 'Share…', 'related': 'More in this category',
-                'official-page': 'Official page', 'label-verified': 'Last verified', 'edit-entry': 'Something wrong? Edit on GitHub',
+                'official-page': 'Official page', 'not-cncf': 'Not covered by the CNCF Landscape', 'label-verified': 'Last verified', 'edit-entry': 'Something wrong? Edit on GitHub',
                 'not-found': 'Program not found', 'not-found-desc': 'The link may be mistyped, or the program was removed.',
                 'page-title': n => `${n} — free for open source | OSS Perks`
             }
@@ -994,7 +1671,7 @@
             }).join('');
 
             const related = data.programs.filter(x => x.id !== p.id && x.category.some(c => p.category.includes(c)));
-            const cat = p.category.map(c => `${esc(data.categories[c]?.[lang] || c)}<br><small>${esc(cncfPath(c))}</small>`).join('<br>');
+            const cat = p.category.map(c => esc(data.categories[c]?.[lang] || c) + `<br><small>${esc(cncfPath(c) || t['not-cncf'])}</small>`).join('<br>');
             const cta = p.type === 'direct_activation' ? t['cta-direct'] : t['cta-apply'];
 
             $('#detail').innerHTML = `${back}
@@ -1023,7 +1700,7 @@
                     </dl>
                     <div class="detail-cta">
                         <a class="apply" href="${esc(safeUrl(p.link))}" target="_blank" rel="noopener">${esc(cta)}<svg class="icon"><use href="#i-ext"/></svg></a>
-                        <a class="edit" href="https://github.com/SammyLin/opensource/edit/main/public/data/programs.json" target="_blank" rel="noopener">${esc(t['edit-entry'])}</a>
+                        <a class="edit" href="https://github.com/SammyLin/opensource/edit/main/data/programs/${esc(p.id)}.json" target="_blank" rel="noopener">${esc(t['edit-entry'])}</a>
                     </div>
                 </article>
                 <section class="share" aria-labelledby="share-title">
