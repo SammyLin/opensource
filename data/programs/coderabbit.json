@@ -1,0 +1,27 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "coderabbit",
+  "name": "CodeRabbit for Open Source",
+  "logo": "/logos/coderabbit.svg",
+  "whatYouGet": {
+    "zh-Hant": "公開 repo 免費使用 Pro 等級的 AI code review（有速率限制；Dashboard、Reports 等其他付費功能不含）",
+    "zh-Hans": "公开仓库免费使用 Pro 级别的 AI 代码审查（有速率限制；Dashboard、Reports 等其他付费功能不含）",
+    "en": "Pro-level AI code reviews free on public repositories (rate-limited; other paid features such as Dashboard and Reports are not included)"
+  },
+  "whyItHelps": {
+    "zh-Hant": "每個 PR 先由 AI 逐行 review 並整理摘要，維護者能更快消化外部貢獻者送來的 PR。",
+    "zh-Hans": "每个 PR 先由 AI 逐行审查并整理摘要，维护者能更快消化外部贡献者提交的 PR。",
+    "en": "Every PR gets a line-by-line AI review and summary first, so maintainers can work through outside contributions faster."
+  },
+  "requirements": {
+    "zh-Hant": "GitHub 或 GitLab 上的公開 repo，安裝 CodeRabbit 後自動啟用，不需另外申請",
+    "zh-Hans": "GitHub 或 GitLab 上的公开仓库，安装 CodeRabbit 后自动启用，无需另外申请",
+    "en": "Public repository on GitHub or GitLab; Pro features turn on automatically once CodeRabbit is installed, no application needed"
+  },
+  "type": "direct_activation",
+  "category": [
+    "ai_agent"
+  ],
+  "link": "https://kb.coderabbit.ai/articles/8856795235-how-do-i-activate-coderabbit-pro-for-my-open-source-project",
+  "lastVerified": "2026-11-18"
+}

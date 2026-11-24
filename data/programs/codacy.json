@@ -1,0 +1,27 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "codacy",
+  "name": "Codacy Open Source",
+  "logo": "/logos/codacy.svg",
+  "whatYouGet": {
+    "zh-Hant": "免費 Open Source 方案：可基本使用所有功能（程式碼品質、安全、覆蓋率），分析時間為盡力而為",
+    "zh-Hans": "免费 Open Source 方案：可基本使用所有功能（代码质量、安全、覆盖率），分析时间为尽力而为",
+    "en": "Free Open Source plan: basic access to all solutions (quality, security, coverage) with best-effort analysis time"
+  },
+  "whyItHelps": {
+    "zh-Hant": "自動在 PR 上標出程式碼品質與安全問題，讓不同貢獻者寫的程式碼維持一致標準。",
+    "zh-Hans": "自动在 PR 上标出代码质量与安全问题，让不同贡献者写的代码保持一致标准。",
+    "en": "Flags quality and security issues right on the PR, keeping code from many contributors to one standard."
+  },
+  "requirements": {
+    "zh-Hant": "只限公開 repo，適合專門開發公開專案的個人或團隊",
+    "zh-Hans": "仅限公开仓库，适合专门开发公开项目的个人或团队",
+    "en": "Public repositories only; meant for individuals and teams working exclusively on public projects"
+  },
+  "type": "direct_activation",
+  "category": [
+    "security_compliance"
+  ],
+  "link": "https://codacy.com/pricing",
+  "lastVerified": "2026-11-18"
+}

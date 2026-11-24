@@ -1,8 +1,8 @@
-// Validates public/data/programs.json. Run: node validate.js
+// Validates the program data in data/categories.json + data/programs/<id>.json. Run: node validate.js
 const fs = require('fs');
 const path = require('path');
+const { loadData } = require('./lib/data');
 
-const FILE = path.join(__dirname, 'public', 'data', 'programs.json');
 const TYPES = ['direct_activation', 'application_required', 'high_bar'];
 const LANGS = ['zh-Hant', 'zh-Hans', 'en'];
 const errors = [];
@@ -15,26 +15,28 @@ const checkI18n = (obj, where) => {
 
 let data;
 try {
-    data = JSON.parse(fs.readFileSync(FILE, 'utf-8'));
+    data = loadData();
 } catch (err) {
-    console.error(`ERROR: cannot read/parse ${FILE}: ${err.message}`);
+    console.error(`ERROR: cannot read/parse program data: ${err.message}`);
     process.exit(1);
 }
 
-if (!data.categories || typeof data.categories !== 'object') errors.push("root: missing 'categories' object");
+if (!data.categories || typeof data.categories !== 'object') errors.push("data/categories.json: must be an object");
 if (!Array.isArray(data.programs)) errors.push("root: 'programs' must be an array");
 const categories = data.categories || {};
 const programs = Array.isArray(data.programs) ? data.programs : [];
 
 Object.entries(categories).forEach(([id, label]) => {
     checkI18n(label, `categories.${id}`);
-    if (!label || !label.cncf || !isText(label.cncf.category)) errors.push(`categories.${id}.cncf.category: missing (see https://landscape.cncf.io)`);
+    // cncf is optional: categories outside the CNCF Landscape (e.g. collaboration) leave it out.
+    if (label && label.cncf !== undefined && !isText(label.cncf.category)) errors.push(`categories.${id}.cncf.category: missing (see https://landscape.cncf.io)`);
 });
 
 const seen = new Set();
 const seenIds = new Set();
 programs.forEach((p, i) => {
-    const id = `programs[${i}]${p.name ? ` (${p.name})` : ''}`;
+    const id = `data/programs/${p.__file}`;
+    if (p.id && p.__file !== `${p.id}.json`) errors.push(`${id}: file name must be '${p.id}.json' to match its id`);
     if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(p.id || '')) errors.push(`${id}: 'id' must be lowercase letters, digits and dashes (used in the page URL /p/<id>/)`);
     else if (seenIds.has(p.id)) errors.push(`${id}: duplicate id '${p.id}'`);
     else seenIds.add(p.id);

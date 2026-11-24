@@ -1,0 +1,26 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "openai-codex",
+  "name": "OpenAI Codex for Open Source",
+  "whatYouGet": {
+    "zh-Hant": "6 個月 ChatGPT Pro with Codex、API 額度、Codex Security（有條件提供）",
+    "zh-Hans": "6 个月 ChatGPT Pro with Codex、API 额度、Codex Security（有条件提供）",
+    "en": "6 months of ChatGPT Pro with Codex, API credits, conditional access to Codex Security"
+  },
+  "whyItHelps": {
+    "zh-Hant": "用 AI 程式代理直接接手修 bug、寫測試、review PR 等任務；有條件提供的 Codex Security 還能協助找出安全漏洞。",
+    "zh-Hans": "用 AI 编程代理直接接手修 bug、写测试、review PR 等任务；有条件提供的 Codex Security 还能协助找出安全漏洞。",
+    "en": "Hand tasks like bug fixes, tests and PR reviews to an AI coding agent; Codex Security (where offered) helps find vulnerabilities."
+  },
+  "requirements": {
+    "zh-Hant": "核心維護者或廣泛使用的公開專案（相較 Claude 門檻較寬鬆）",
+    "zh-Hans": "核心维护者或广泛使用的公开项目（相较 Claude 门槛较宽松）",
+    "en": "Core maintainer or widely used public project (looser requirements compared to Claude)"
+  },
+  "type": "high_bar",
+  "category": [
+    "ai_agent"
+  ],
+  "link": "https://developers.openai.com/community/codex-for-oss",
+  "lastVerified": "2026-11-18"
+}

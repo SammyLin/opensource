@@ -1,0 +1,27 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "termius",
+  "name": "Termius for Open Source",
+  "logo": "/logos/termius.svg",
+  "whatYouGet": {
+    "zh-Hant": "免費 Termius Business 帳號，方便團隊協作管理 SSH 連線",
+    "zh-Hans": "免费 Termius Business 账号，方便团队协作管理 SSH 连接",
+    "en": "Free Termius Business account for team collaboration on SSH connections"
+  },
+  "whyItHelps": {
+    "zh-Hant": "維護團隊共用主機清單與連線設定，部署和維運專案伺服器更方便。",
+    "zh-Hans": "维护团队共用主机列表与连接配置，部署和运维项目服务器更方便。",
+    "en": "Maintainers share hosts and connection settings, making it easier to deploy and run project servers."
+  },
+  "requirements": {
+    "zh-Hant": "在專案的贊助者區塊放上 Termius Logo 與介紹連結；不得商業使用（GitHub Sponsors、Open Collective 等開源募資平台除外）；單一專案申請者須為核心貢獻者，專案至少 30 天、持續維護並採寬鬆型開源授權",
+    "zh-Hans": "在项目的赞助者区块放上 Termius Logo 与介绍链接；不得商业使用（GitHub Sponsors、Open Collective 等开源筹资平台除外）；单一项目申请者须为核心贡献者，项目至少 30 天、持续维护并采用宽松型开源许可证",
+    "en": "Add the Termius logo and link to your sponsors section; no commercial use (except open source funding platforms such as GitHub Sponsors or Open Collective); single-project applicants must be core contributors, and the project must be 30+ days old, actively maintained and under a permissive license"
+  },
+  "type": "application_required",
+  "category": [
+    "app_definition_image_build"
+  ],
+  "link": "https://www.termius.com/opensource",
+  "lastVerified": "2026-11-18"
+}

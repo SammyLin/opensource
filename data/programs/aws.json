@@ -1,0 +1,26 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "aws",
+  "name": "AWS Cloud Credits for Open Source",
+  "whatYouGet": {
+    "zh-Hant": "AWS 促銷點數，常用於上游與效能測試、CI/CD、存放建置產物",
+    "zh-Hans": "AWS 促销点数，常用于上游与性能测试、CI/CD、存放构建产物",
+    "en": "AWS promotional credits, typically used for upstream and performance testing, CI/CD and artifact storage"
+  },
+  "whyItHelps": {
+    "zh-Hant": "用雲端點數支付 CI 跑者、效能測試環境與檔案儲存，把經費留給專案本身。",
+    "zh-Hans": "用云点数支付 CI 运行器、性能测试环境与文件存储，把经费留给项目本身。",
+    "en": "Cover CI runners, performance test environments and storage with credits, keeping funds for the project itself."
+  },
+  "requirements": {
+    "zh-Hant": "一般需採 OSI 認可授權（領域內常用的非 OSI 授權也可申請）；填寫申請表寄到 awsopensourcecredits@amazon.com，每月審核發放",
+    "zh-Hans": "一般需采用 OSI 认可的许可证（领域内常用的非 OSI 许可证也可申请）；填写申请表发送到 awsopensourcecredits@amazon.com，每月审核发放",
+    "en": "Generally an OSI-approved license (projects using common non-OSI licenses in their space may still apply); email the application form to awsopensourcecredits@amazon.com; reviewed and issued monthly"
+  },
+  "type": "application_required",
+  "category": [
+    "serverless_hosted"
+  ],
+  "link": "https://aws.amazon.com/blogs/opensource/aws-cloud-credits-for-open-source-projects-affirming-our-commitment/",
+  "lastVerified": "2026-11-18"
+}

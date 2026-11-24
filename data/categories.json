@@ -1,0 +1,93 @@
+{
+  "$schema": "./schemas/categories.schema.json",
+  "container_registry": {
+    "zh-Hant": "容器映像倉庫",
+    "zh-Hans": "容器镜像仓库",
+    "en": "Container Registry",
+    "cncf": {
+      "category": "Provisioning",
+      "subcategory": "Container Registry"
+    }
+  },
+  "security_compliance": {
+    "zh-Hant": "安全與合規",
+    "zh-Hans": "安全与合规",
+    "en": "Security & Compliance",
+    "cncf": {
+      "category": "Provisioning",
+      "subcategory": "Security & Compliance"
+    }
+  },
+  "key_management": {
+    "zh-Hant": "金鑰與機密管理",
+    "zh-Hans": "密钥与机密管理",
+    "en": "Key Management",
+    "cncf": {
+      "category": "Provisioning",
+      "subcategory": "Key Management"
+    }
+  },
+  "cloud_native_network": {
+    "zh-Hant": "雲原生網路",
+    "zh-Hans": "云原生网络",
+    "en": "Cloud Native Network",
+    "cncf": {
+      "category": "Runtime",
+      "subcategory": "Cloud Native Network"
+    }
+  },
+  "app_definition_image_build": {
+    "zh-Hant": "應用定義與開發環境",
+    "zh-Hans": "应用定义与开发环境",
+    "en": "Application Definition & Image Build",
+    "cncf": {
+      "category": "App Definition and Development",
+      "subcategory": "Application Definition & Image Build"
+    }
+  },
+  "ci_cd": {
+    "zh-Hant": "持續整合與交付",
+    "zh-Hans": "持续集成与交付",
+    "en": "Continuous Integration & Delivery",
+    "cncf": {
+      "category": "App Definition and Development",
+      "subcategory": "Continuous Integration & Delivery"
+    }
+  },
+  "serverless_hosted": {
+    "zh-Hant": "託管平台",
+    "zh-Hans": "托管平台",
+    "en": "Hosted Platform",
+    "cncf": {
+      "category": "Serverless",
+      "subcategory": "Hosted Platform"
+    }
+  },
+  "observability": {
+    "zh-Hant": "可觀測性",
+    "zh-Hans": "可观测性",
+    "en": "Observability",
+    "cncf": {
+      "category": "Observability and Analysis",
+      "subcategory": "Observability"
+    }
+  },
+  "ai_agent": {
+    "zh-Hant": "AI Agent",
+    "zh-Hans": "AI Agent",
+    "en": "AI Agent",
+    "cncf": {
+      "category": "AI Agent"
+    }
+  },
+  "collaboration": {
+    "zh-Hant": "協作與溝通",
+    "zh-Hans": "协作与沟通",
+    "en": "Collaboration"
+  },
+  "docs_localization": {
+    "zh-Hant": "文件與在地化",
+    "zh-Hans": "文档与本地化",
+    "en": "Docs & Localization"
+  }
+}

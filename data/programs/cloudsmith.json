@@ -1,0 +1,27 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "cloudsmith",
+  "name": "Cloudsmith Open-Source Hosting",
+  "logo": "/logos/cloudsmith.svg",
+  "whatYouGet": {
+    "zh-Hant": "所有開源儲存庫合計至少 50GB 套件儲存空間與 200GB 下載流量，用量與公開／私有儲存庫分開計算；另含 geo/IP 限制、存取記錄與統計等原本屬於 Pro 方案的功能",
+    "zh-Hans": "所有开源仓库合计至少 50GB 制品存储空间和 200GB 分发流量，用量与公开／私有仓库分开计算；另含 geo/IP 限制、访问日志和统计等原本属于 Pro 套餐的功能",
+    "en": "At least 50GB of artifact storage and 200GB of package delivery across all open source repositories, tracked separately from public/private repos; includes Pro-tier features such as geo/IP restrictions, access logs and statistics"
+  },
+  "whyItHelps": {
+    "zh-Hant": "用同一個地方發佈 Docker 映像、deb/rpm、npm、PyPI 等 30 多種格式的套件，透過 CDN 讓使用者穩定下載。",
+    "zh-Hans": "在同一个地方发布 Docker 镜像、deb/rpm、npm、PyPI 等 30 多种格式的软件包，通过 CDN 让用户稳定下载。",
+    "en": "Publish Docker images, deb/rpm, npm, PyPI and 30+ other package formats from one place, delivered to users via CDN."
+  },
+  "requirements": {
+    "zh-Hant": "主要專案須符合開源定義、申請者為維護者、不是小型 fork，且提供的主要是專案本身的套件；必須標示由 Cloudsmith 提供免費託管並連回官網；不需事先申請，建立儲存庫時選 Broadcast › Open source、填 SPDX 授權與專案網址即可，Cloudsmith 事後抽查；商業營利單位官方建議改用付費方案或贊助",
+    "zh-Hans": "主要项目须符合开源定义、申请者是维护者、不是小型 fork，且提供的主要是项目本身的软件包；必须注明由 Cloudsmith 提供免费托管并链接回官网；无需事先申请，创建仓库时选择 Broadcast › Open source、填写 SPDX 许可证和项目地址即可，Cloudsmith 事后抽查；商业营利机构官方建议改用付费套餐或赞助",
+    "en": "The primary project must meet the Open Source Definition, you must be a maintainer, it must not be a minor fork, and artifacts must be the project's own; attribution linking to Cloudsmith is required. No advance permission: create a repository with Broadcast › Open source, an SPDX license and the project URL, and Cloudsmith reviews later. Commercial for-profit entities are pointed to paid plans or sponsorship"
+  },
+  "type": "direct_activation",
+  "category": [
+    "container_registry"
+  ],
+  "link": "https://docs.cloudsmith.com/open-source-hosting-policy",
+  "lastVerified": "2026-11-24"
+}

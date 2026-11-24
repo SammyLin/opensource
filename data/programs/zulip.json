@@ -1,0 +1,27 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "zulip",
+  "name": "Zulip Cloud Standard Sponsorship",
+  "logo": "/logos/zulip.svg",
+  "whatYouGet": {
+    "zh-Hant": "免費 Zulip Cloud Standard 方案（無限搜尋歷史、每人最多 10 GB 檔案空間等）",
+    "zh-Hans": "免费 Zulip Cloud Standard 方案（无限搜索历史、每人最多 10 GB 文件空间等）",
+    "en": "Free Zulip Cloud Standard (unlimited search history, up to 10 GB file storage per user and more)"
+  },
+  "whyItHelps": {
+    "zh-Hant": "以話題（topic）分串的聊天室，社群討論不會被洗掉，非同步協作的開源社群特別好用。",
+    "zh-Hans": "以话题（topic）分串的聊天室，社区讨论不会被刷屏，非同步协作的开源社区特别好用。",
+    "en": "Topic-threaded chat keeps community discussions from getting buried, ideal for asynchronous open source teams."
+  },
+  "requirements": {
+    "zh-Hant": "開源專案提出贊助申請（Zulip 也贊助非營利、教育與學術研究組織）",
+    "zh-Hans": "开源项目提出赞助申请（Zulip 也赞助非营利、教育与学术研究组织）",
+    "en": "Open source projects request sponsorship (Zulip also sponsors nonprofits, education and academic research)"
+  },
+  "type": "application_required",
+  "category": [
+    "collaboration"
+  ],
+  "link": "https://zulip.com/plans/",
+  "lastVerified": "2026-11-18"
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "testmu-ai",
+  "name": "TestMu AI (formerly LambdaTest) for Open Source",
+  "whatYouGet": {
+    "zh-Hant": "免費授權，可在 5,000 多種瀏覽器與裝置上測試開源專案；另提供指導、社群推廣，並列出財務贊助",
+    "zh-Hans": "免费授权，可在 5,000 多种浏览器和设备上测试开源项目；另提供指导、社区推广，并列出资金赞助",
+    "en": "Free licenses to test open source projects across 5,000+ browsers and devices; also lists mentorship, community promotion and financial sponsorships"
+  },
+  "whyItHelps": {
+    "zh-Hant": "不必自備各種瀏覽器與手機，就能在雲端跑跨瀏覽器與真機測試，提早發現相容性問題。",
+    "zh-Hans": "不用自己准备各种浏览器和手机，就能在云端跑跨浏览器和真机测试，提前发现兼容性问题。",
+    "en": "Run cross-browser and real-device tests in the cloud without maintaining your own device lab, catching compatibility issues early."
+  },
+  "requirements": {
+    "zh-Hant": "須有有效的開源授權（如 MIT、Apache 2.0、GPL）、公開於 GitHub 或 GitLab 等平台、近期持續開發並有 README 等文件；在官方頁面填表申請",
+    "zh-Hans": "须有有效的开源许可证（如 MIT、Apache 2.0、GPL）、公开在 GitHub 或 GitLab 等平台、近期持续开发并有 README 等文档；在官方页面填表申请",
+    "en": "A valid open source license (e.g. MIT, Apache 2.0, GPL), publicly hosted on GitHub or GitLab, active recent development and documentation such as a README; apply via the form on the official page"
+  },
+  "type": "application_required",
+  "category": [
+    "ci_cd"
+  ],
+  "link": "https://www.testmuai.com/open-source/",
+  "lastVerified": "2026-11-24",
+  "pending": {
+    "zh-Hant": "授權的分鐘數／並行數未公開；頁面「支持的專案」標題寫「在印度建立或有大量印度貢獻的專案」，是否為資格限制待確認",
+    "zh-Hans": "授权的分钟数／并发数未公开；页面“支持的项目”标题写“在印度创建或有大量印度贡献的项目”，是否为资格限制待确认",
+    "en": "Minutes and parallel sessions are not published; the page's \"Projects we support\" heading mentions projects created in or with significant contributions from India — whether this limits eligibility is unconfirmed",
+    "link": "https://www.testmuai.com/open-source/"
+  }
+}

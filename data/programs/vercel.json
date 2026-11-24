@@ -1,0 +1,27 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "vercel",
+  "name": "Vercel Open Source Program",
+  "logo": "/logos/vercel.svg",
+  "whatYouGet": {
+    "zh-Hant": "12 個月共 US$3,600 Vercel 平台點數，加上含第三方服務點數的 OSS Starter Pack 與社群支援",
+    "zh-Hans": "12 个月共 US$3,600 Vercel 平台点数，加上含第三方服务点数的 OSS Starter Pack 与社区支持",
+    "en": "US$3,600 in Vercel platform credits over 12 months, plus an OSS Starter Pack of third-party credits and community support"
+  },
+  "whyItHelps": {
+    "zh-Hant": "一整年的託管額度讓文件站、Demo 與範例專案可以放心上線。",
+    "zh-Hans": "一整年的托管额度让文档站、Demo 与示例项目可以放心上线。",
+    "en": "A year of hosting credits lets docs, demos and example apps go live without worrying about the bill."
+  },
+  "requirements": {
+    "zh-Hant": "持續開發維護中；託管或打算託管在 Vercel；有可衡量的影響力或成長潛力；有行為準則；點數只用於該開源專案。一年四梯次收件，目前暫停申請，1 月重新開放",
+    "zh-Hans": "持续开发维护中；托管或打算托管在 Vercel；有可衡量的影响力或成长潜力；有行为准则；点数只用于该开源项目。一年四期收件，目前暂停申请，1 月重新开放",
+    "en": "Actively developed and maintained; hosted or intended to be hosted on Vercel; measurable impact or growth potential; a Code of Conduct; credits used only for the project. Four cohorts a year; applications are closed and reopen in January"
+  },
+  "type": "application_required",
+  "category": [
+    "serverless_hosted"
+  ],
+  "link": "https://vercel.com/open-source-program",
+  "lastVerified": "2026-11-18"
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "browserstack",
+  "name": "BrowserStack Open Source Program",
+  "whatYouGet": {
+    "zh-Hant": "免費無限測試 Live、Automate、Percy（5 位使用者、5 個平行測試），涵蓋 3,000+ 瀏覽器與實機，專案存續期間有效",
+    "zh-Hans": "免费无限测试 Live、Automate、Percy（5 位用户、5 个并行测试），覆盖 3,000+ 浏览器与真机，项目存续期间有效",
+    "en": "Free unlimited testing with Live, Automate and Percy (5 users, 5 parallel tests) across 3,000+ browsers and real devices, for the life of the project"
+  },
+  "whyItHelps": {
+    "zh-Hant": "不用自己準備一堆裝置，就能在各種瀏覽器和真實手機上測試，確保使用者那邊都能正常運作。",
+    "zh-Hans": "不用自己准备一堆设备，就能在各种浏览器和真实手机上测试，确保用户那边都能正常运行。",
+    "en": "Test on every browser and real phones without owning the devices, so it works for all your users."
+  },
+  "requirements": {
+    "zh-Hant": "公開的開源專案，透過官方開源頁面申請",
+    "zh-Hans": "公开的开源项目，通过官方开源页面申请",
+    "en": "Public open source project; apply through the official open source page"
+  },
+  "type": "application_required",
+  "category": [
+    "ci_cd"
+  ],
+  "link": "https://www.browserstack.com/open-source",
+  "lastVerified": "2026-11-18",
+  "pending": {
+    "zh-Hant": "開源方案已從價格頁移除，請以官方開源頁面為準",
+    "zh-Hans": "开源方案已从价格页移除，请以官方开源页面为准",
+    "en": "No longer shown on the pricing page; check the official open source page",
+    "link": "https://www.browserstack.com/open-source"
+  }
+}

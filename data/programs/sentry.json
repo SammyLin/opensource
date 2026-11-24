@@ -1,0 +1,27 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "sentry",
+  "name": "Sentry for Open Source",
+  "logo": "/logos/sentry.svg",
+  "whatYouGet": {
+    "zh-Hant": "Business 層級配額（5M 錯誤、5,000GB 日誌、1B spans、100K replays 等）、無期限、包含 Business 功能",
+    "zh-Hans": "Business 级别配额（5M 错误、5,000GB 日志、1B spans、100K replays 等）、无期限、包含 Business 功能",
+    "en": "Business-tier quota (5M errors, 5,000GB logs, 1B spans, 100K replays, etc.), no term limit, includes Business features"
+  },
+  "whyItHelps": {
+    "zh-Hant": "使用者遇到的錯誤和當機會自動回報並附上 stack trace，不必等人開 issue 才知道哪裡壞了，修 bug 更快。",
+    "zh-Hans": "用户遇到的错误和崩溃会自动上报并附带 stack trace，不必等人提 issue 才知道哪里坏了，修 bug 更快。",
+    "en": "Errors and crashes your users hit are reported automatically with stack traces, so you can fix bugs before anyone files an issue."
+  },
+  "requirements": {
+    "zh-Hant": "需要 OSI 認可的授權（如 Apache 或 MIT）",
+    "zh-Hans": "需要 OSI 认可的许可证（如 Apache 或 MIT）",
+    "en": "Requires OSI-approved license (e.g. Apache or MIT)"
+  },
+  "type": "application_required",
+  "category": [
+    "observability"
+  ],
+  "link": "https://sentry.io/for/open-source/",
+  "lastVerified": "2026-11-18"
+}

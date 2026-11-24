@@ -1,0 +1,27 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "saucelabs",
+  "name": "Sauce Labs Open Sauce",
+  "logo": "/logos/saucelabs.svg",
+  "whatYouGet": {
+    "zh-Hant": "開源專案免費無限測試分鐘數，可在多種瀏覽器、作業系統與模擬器上平行測試",
+    "zh-Hans": "开源项目免费无限测试分钟数，可在多种浏览器、操作系统与模拟器上并行测试",
+    "en": "Unlimited free testing minutes for open source, in parallel across many browser, OS and emulator combinations"
+  },
+  "whyItHelps": {
+    "zh-Hant": "在雲端自動跑跨瀏覽器測試，改前端時能及早發現只在特定瀏覽器出現的 bug。",
+    "zh-Hans": "在云端自动跑跨浏览器测试，改前端时能及早发现只在特定浏览器出现的 bug。",
+    "en": "Run cross-browser tests in the cloud and catch browser-specific bugs early when the front end changes."
+  },
+  "requirements": {
+    "zh-Hant": "帳號只能用於開源專案；所有測試結果（影片、截圖、日誌）必須公開",
+    "zh-Hans": "账号只能用于开源项目；所有测试结果（视频、截图、日志）必须公开",
+    "en": "The account may be used only for open source projects; all test results (videos, screenshots, logs) are public"
+  },
+  "type": "application_required",
+  "category": [
+    "ci_cd"
+  ],
+  "link": "https://opensource.saucelabs.com/",
+  "lastVerified": "2026-11-18"
+}

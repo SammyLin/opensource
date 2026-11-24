@@ -3,7 +3,11 @@ name: Validate Programs Data
 on:
   pull_request:
     paths:
+      - 'data/**'
+      - 'lib/**'
+      - 'scripts/**'
       - 'public/data/programs.json'
+      - 'README.md'
       - 'public/logos/**'
       - 'src/**'
       - 'build.js'
@@ -12,7 +16,8 @@ on:
     branches:
       - main
     paths:
-      - 'public/data/programs.json'
+      - 'data/**'
+      - 'lib/**'
       - 'validate.js'
 
 jobs:
@@ -24,6 +29,25 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # Generated files are rebuilt on main after merge. When every PR regenerated them,
+      # any two open PRs conflicted on them, so PRs must leave them alone.
+      - name: Check that generated files are untouched
+        if: github.event_name == 'pull_request'
+        run: |
+          changed=$(git diff --name-only "origin/${{ github.base_ref }}...HEAD")
+          if echo "$changed" | grep -qx 'public/data/programs.json'; then
+            echo "::error file=public/data/programs.json::public/data/programs.json is generated from data/. Put the program in data/programs/<id>.json instead (branches using the old single file: run 'node scripts/split-programs.js', then 'git checkout origin/${{ github.base_ref }} -- public/data/programs.json')."
+            exit 1
+          fi
+          base_tables=$(git show "origin/${{ github.base_ref }}:README.md" | sed -n '/<!-- programs:.*:start -->/,/<!-- programs:.*:end -->/p')
+          head_tables=$(sed -n '/<!-- programs:.*:start -->/,/<!-- programs:.*:end -->/p' README.md)
+          if [ "$base_tables" != "$head_tables" ]; then
+            echo "::error file=README.md::The program tables in README.md are generated after merge. Please don't run 'npm run readme' in PRs: run 'git checkout origin/${{ github.base_ref }} -- README.md' (or undo only the table changes)."
+            exit 1
+          fi
       
       - name: Setup Node.js
         uses: actions/setup-node@v4

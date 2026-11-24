@@ -1,0 +1,27 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "cloudflare",
+  "name": "Cloudflare Project Alexandria",
+  "logo": "/logos/cloudflare.svg",
+  "whatYouGet": {
+    "zh-Hant": "每年可續的點數：升級 Pro／Business／Enterprise 方案、更多 Workers 與 Pages 請求、更多 R2 儲存空間、加強版 Zero Trust",
+    "zh-Hans": "每年可续的点数：升级 Pro／Business／Enterprise 方案、更多 Workers 与 Pages 请求、更多 R2 存储空间、增强版 Zero Trust",
+    "en": "Recurring annual credits: upgrades to Pro, Business or Enterprise, more Workers and Pages requests, more R2 storage and enhanced Zero Trust"
+  },
+  "whyItHelps": {
+    "zh-Hant": "用 Cloudflare 的 CDN 與防護加速全球下載、擋下攻擊，R2 也適合存放建置產物與套件。",
+    "zh-Hans": "用 Cloudflare 的 CDN 与防护加速全球下载、抵挡攻击，R2 也适合存放构建产物与软件包。",
+    "en": "Cloudflare's CDN and protection speed up downloads worldwide and absorb attacks; R2 suits build artifacts and packages."
+  },
+  "requirements": {
+    "zh-Hant": "採公認開源授權的專案，以非營利方式運作並符合計畫宗旨；提交贊助申請",
+    "zh-Hans": "采用公认开源许可证的项目，以非营利方式运作并符合计划宗旨；提交赞助申请",
+    "en": "Open source project with a recognized OSS license, operating solely on a non-profit basis and aligned with the program's mission; submit a sponsorship request"
+  },
+  "type": "application_required",
+  "category": [
+    "serverless_hosted"
+  ],
+  "link": "https://www.cloudflare.com/lp/project-alexandria/",
+  "lastVerified": "2026-11-18"
+}

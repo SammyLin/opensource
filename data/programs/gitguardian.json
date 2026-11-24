@@ -1,0 +1,26 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "gitguardian",
+  "name": "GitGuardian for Open Source",
+  "whatYouGet": {
+    "zh-Hant": "免費使用 GitGuardian 平台，監控 repo 中外洩的 API 金鑰、token、密碼等機密",
+    "zh-Hans": "免费使用 GitGuardian 平台，监控仓库中泄露的 API 密钥、token、密码等机密",
+    "en": "Free use of the GitGuardian platform to monitor repositories for leaked API keys, tokens, passwords and other secrets"
+  },
+  "whyItHelps": {
+    "zh-Hant": "有人不小心把金鑰或密碼 commit 進 repo 時立即警示，降低憑證外洩被濫用的風險。",
+    "zh-Hans": "有人不小心把密钥或密码提交进仓库时立即告警，降低凭证泄露被滥用的风险。",
+    "en": "Alerts you the moment someone commits a key or password, before a leaked credential can be abused."
+  },
+  "requirements": {
+    "zh-Hant": "repo 放在你的 GitHub Organization 底下，從 GitHub Marketplace 安裝 GitGuardian App",
+    "zh-Hans": "仓库位于你的 GitHub Organization 下，从 GitHub Marketplace 安装 GitGuardian App",
+    "en": "Repositories hosted under your GitHub Organization; install the GitGuardian app from GitHub Marketplace"
+  },
+  "type": "direct_activation",
+  "category": [
+    "security_compliance"
+  ],
+  "link": "https://www.gitguardian.com/pricing",
+  "lastVerified": "2026-11-18"
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "docker",
+  "name": "Docker-Sponsored Open Source Program",
+  "logo": "/logos/docker.svg",
+  "whatYouGet": {
+    "zh-Hant": "Docker Hub 無限制映像拉取、驗證徽章、核心貢獻者獲得一年免費 Docker Team 訂閱",
+    "zh-Hans": "Docker Hub 无限制镜像拉取、验证徽章、核心贡献者获得一年免费 Docker Team 订阅",
+    "en": "Unlimited Docker Hub image pulls, verified badge, core contributors get one year free Docker Team subscription"
+  },
+  "whyItHelps": {
+    "zh-Hant": "使用者從 Docker Hub 拉你的映像不會撞到次數限制，加上認證徽章讓大家知道這是官方可信的映像，採用門檻更低。",
+    "zh-Hans": "用户从 Docker Hub 拉取你的镜像不会触发次数限制，加上认证徽章让大家知道这是官方可信的镜像，采用门槛更低。",
+    "en": "Users can pull your images from Docker Hub without hitting rate limits, and the verified badge tells them it's the trusted official image."
+  },
+  "requirements": {
+    "zh-Hant": "公開儲存庫、符合 OSI 定義、過去 6 個月內有更新、非營利性質",
+    "zh-Hans": "公开仓库、符合 OSI 定义、过去 6 个月内有更新、非营利性质",
+    "en": "Public repository, meets OSI definition, updated within past 6 months, non-commercial"
+  },
+  "type": "application_required",
+  "category": [
+    "container_registry"
+  ],
+  "link": "https://www.docker.com/community/open-source/application/",
+  "lastVerified": "2026-11-18"
+}

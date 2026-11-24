@@ -1,6 +1,6 @@
 name: Build static pages
 
-# Regenerates the prerendered pages (listing + /p/<id>/ program pages in every language),
+# Regenerates public/data/programs.json (the bundle of data/), the prerendered pages (listing + /p/<id>/ program pages in every language),
 # the program share images (public/og/), sitemap.xml, robots.txt and the README program tables after changes land on main,
 # so contributors who edit programs.json in the GitHub web editor don't need to run
 # the build themselves. Cloudflare Pages then deploys the resulting commit.
@@ -9,7 +9,9 @@ on:
     branches:
       - main
     paths:
-      - 'public/data/programs.json'
+      - 'data/**'
+      - 'lib/**'
+      - 'scripts/**'
       - 'public/logos/**'
       - 'src/**'
       - 'build.js'
@@ -43,8 +45,9 @@ jobs:
       - name: Validate data
         run: node validate.js
 
-      - name: Draw share images, prerender pages and update README
+      - name: Bundle data, draw share images, prerender pages and update README
         run: |
+          node scripts/bundle-data.js
           node og-images.js
           node build.js
           node update-readme.js

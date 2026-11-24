@@ -1,0 +1,27 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "snyk",
+  "name": "Snyk for Open Source",
+  "logo": "/logos/snyk.svg",
+  "whatYouGet": {
+    "zh-Hant": "完整企業級授權（無使用限制的漏洞掃描）、Discord 社群支援",
+    "zh-Hans": "完整企业级授权（无使用限制的漏洞扫描）、Discord 社区支持",
+    "en": "Full enterprise entitlements (vulnerability scanning with no usage limits), Discord community support"
+  },
+  "whyItHelps": {
+    "zh-Hant": "持續掃描相依套件與程式碼的已知漏洞，並自動開 PR 升級修補，讓專案的安全狀態一直保持在最新。",
+    "zh-Hans": "持续扫描依赖与代码中的已知漏洞，并自动提 PR 升级修复，让项目的安全状态始终保持最新。",
+    "en": "Continuously scans your dependencies and code for known vulnerabilities and opens fix PRs automatically."
+  },
+  "requirements": {
+    "zh-Hant": "社群專案（非企業支持）。接受免費 Secure Developer Program 的條件：在該開源專案的 README 與專案網站放上回連 Snyk 的連結，並授權 Snyk 使用專案 logo（此為申請專案本身的義務，非列表網站要求）",
+    "zh-Hans": "社区项目（非企业支持）。接受免费 Secure Developer Program 的条件：在该开源项目的 README 与项目网站放上回链 Snyk 的链接，并授权 Snyk 使用项目 logo（此为申请项目本身的义务，非列表网站要求）",
+    "en": "Community project (not corporate-backed). Accepting the free Secure Developer Program requires linking back to Snyk in that project's README and website, and granting Snyk license to use the project logo (obligations of the applying project, not of listing sites)"
+  },
+  "type": "application_required",
+  "category": [
+    "security_compliance"
+  ],
+  "link": "https://snyk.io/open-source/",
+  "lastVerified": "2026-11-18"
+}

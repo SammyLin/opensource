@@ -1,0 +1,27 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "weblate",
+  "name": "Hosted Weblate Libre Plan",
+  "logo": "/logos/weblate.svg",
+  "whatYouGet": {
+    "zh-Hant": "免費 Libre 方案，額度與 160k 字串付費方案相同",
+    "zh-Hans": "免费 Libre 方案，额度与 160k 字符串付费方案相同",
+    "en": "Free Libre plan with the same limits as the paid 160k-string plan"
+  },
+  "whyItHelps": {
+    "zh-Hant": "與 Git 緊密整合的開源翻譯平台，譯文連同譯者署名 commit 回 repo，資料存放在歐盟。",
+    "zh-Hans": "与 Git 紧密集成的开源翻译平台，译文连同译者署名提交回仓库，数据存放在欧盟。",
+    "en": "An open source, Git-integrated translation platform that commits translations back with attribution; data stays in the EU."
+  },
+  "requirements": {
+    "zh-Hant": "公開的自由／開源專案：採 OSI 認可或 FSF 認定的自由授權，原始碼放在支援的 repo",
+    "zh-Hans": "公开的自由／开源项目：采用 OSI 认可或 FSF 认定的自由许可证，源代码放在支持的仓库",
+    "en": "Public libre project under an OSI-approved or FSF-recognized license, with source in a supported repository"
+  },
+  "type": "application_required",
+  "category": [
+    "docs_localization"
+  ],
+  "link": "https://weblate.org/hosting/",
+  "lastVerified": "2026-11-18"
+}

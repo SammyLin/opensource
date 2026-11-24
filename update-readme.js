@@ -1,10 +1,11 @@
-// Regenerates the program tables in README.md from public/data/programs.json.
+// Regenerates the program tables in README.md from data/categories.json + data/programs/*.json.
+// Generated output — PRs don't need to run this; the "Build static pages" workflow does it on main.
 // Run: node update-readme.js  (or: npm run readme)
 const fs = require('fs');
 const path = require('path');
 
 const README = path.join(__dirname, 'README.md');
-const data = JSON.parse(fs.readFileSync(path.join(__dirname, 'public', 'data', 'programs.json'), 'utf-8'));
+const data = require('./lib/data').bundle();
 
 const TYPES = ['direct_activation', 'application_required', 'high_bar'];
 const L = {
@@ -22,7 +23,7 @@ const programs = [...data.programs].sort((a, b) =>
     (CATS.indexOf(a.category[0]) - CATS.indexOf(b.category[0])) || (TYPES.indexOf(a.type) - TYPES.indexOf(b.type)));
 const cncf = c => {
     const x = data.categories[c] && data.categories[c].cncf;
-    return x ? [x.category, x.subcategory].filter(Boolean).join(' › ') : c;
+    return x ? [x.category, x.subcategory].filter(Boolean).join(' › ') : '';
 };
 
 let readme = fs.readFileSync(README, 'utf-8');
@@ -30,9 +31,12 @@ for (const [lang, l] of Object.entries(L)) {
     const rows = programs.map(p => [
         p.logo ? `<img src="public${p.logo}" alt="" width="20" height="20">` : '',
         `[${cell(p.name)}](${SITE}${LANG_PATH[lang]}p/${p.id}/)`,
-        p.category.map(c => lang === 'en'
-            ? cell(cncf(c))
-            : `${cell(data.categories[c] ? data.categories[c][lang] : c)}<br><sub>${cell(cncf(c))}</sub>`).join('<br>'),
+        p.category.map(c => {
+            const label = cell(data.categories[c] ? data.categories[c][lang] : c);
+            const path = cell(cncf(c));
+            if (lang === 'en') return path || label;
+            return path ? `${label}<br><sub>${path}</sub>` : label;
+        }).join('<br>'),
         l.type[p.type],
         cell(p.whyItHelps ? p.whyItHelps[lang] : p.whatYouGet[lang]),
     ]);
