@@ -349,6 +349,68 @@
       ],
       "link": "https://developers.openai.com/community/codex-for-oss",
       "lastVerified": "2026-11-18"
+    },
+    {
+      "id": "blacksmith",
+      "name": "Blacksmith OSS Program",
+      "whatYouGet": {
+        "zh-Hant": "給開源專案的 GitHub Actions runner 支援（官方目前列出 Celery、Ladybird、Zen、Limbo 等受支持專案）；一般帳號另有每月 3,000 分鐘免費額度",
+        "zh-Hans": "面向开源项目的 GitHub Actions runner 支持（官方目前列出 Celery、Ladybird、Zen、Limbo 等受支持项目）；普通账号另有每月 3,000 分钟免费额度",
+        "en": "GitHub Actions runner support for open source projects (currently listed: Celery, Ladybird, Zen, Limbo); every account also gets 3,000 free minutes per month"
+      },
+      "whyItHelps": {
+        "zh-Hant": "把 GitHub Actions 換到效能更高的 runner，只要改一行 runs-on，CI 等待時間縮短，貢獻者更快拿到測試結果。",
+        "zh-Hans": "把 GitHub Actions 换到性能更高的 runner，只需改一行 runs-on，CI 等待时间缩短，贡献者更快拿到测试结果。",
+        "en": "Swap GitHub Actions onto faster runners by changing one runs-on line, so contributors get CI results sooner."
+      },
+      "requirements": {
+        "zh-Hant": "持續維護的公開儲存庫、寬鬆型（permissive）開源授權、有明確的社群使用；在定價頁的 OSS Program 表單申請",
+        "zh-Hans": "持续维护的公开仓库、宽松型（permissive）开源许可证、有明确的社区使用；在定价页的 OSS Program 表单申请",
+        "en": "Actively maintained public repo, permissive OSS license and clear community usage; apply via the OSS Program form on the pricing page"
+      },
+      "type": "application_required",
+      "category": [
+        "ci_cd"
+      ],
+      "link": "https://blacksmith.sh/pricing",
+      "lastVerified": "2026-11-24",
+      "pending": {
+        "zh-Hant": "開源專案實際取得的分鐘數、折扣或期限未公開",
+        "zh-Hans": "开源项目实际获得的分钟数、折扣或期限未公开",
+        "en": "The minutes, discount or term granted to OSS projects are not published",
+        "link": "https://blacksmith.sh/pricing"
+      }
+    },
+    {
+      "id": "codspeed",
+      "name": "CodSpeed for Open Source",
+      "whatYouGet": {
+        "zh-Hant": "Free 方案：不限執行次數與儲存庫、PR 效能報告與檢查、CPU／記憶體／Wall-time 量測、3 個月歷史、每月 600 分鐘 macro runner；開源專案使用者人數不限（一般為 5 人），開源專案可再來信申請更多 macro runner 分鐘數",
+        "zh-Hans": "Free 套餐：不限运行次数和仓库、PR 性能报告与检查、CPU／内存／Wall-time 测量、3 个月历史、每月 600 分钟 macro runner；开源项目用户数不限（一般为 5 人），开源项目可再发邮件申请更多 macro runner 分钟数",
+        "en": "Free plan: unlimited runs and repositories, PR performance reports and checks, CPU/memory/wall-time instruments, 3-month history, 600 macro runner minutes/month; unlimited users for open source (otherwise 5), and OSS projects can email for more macro runner minutes"
+      },
+      "whyItHelps": {
+        "zh-Hant": "在 CI 裡持續跑基準測試，PR 上直接標出效能退步，避免慢下來的程式碼被合併。",
+        "zh-Hans": "在 CI 里持续跑基准测试，PR 上直接标出性能回退，避免变慢的代码被合并。",
+        "en": "Runs benchmarks continuously in CI and flags performance regressions right on the PR before slower code is merged."
+      },
+      "requirements": {
+        "zh-Hant": "註冊 Free 方案即可使用；額外的 macro runner 分鐘數需寄信至 support@codspeed.io 並附上儲存庫資訊",
+        "zh-Hans": "注册 Free 套餐即可使用；额外的 macro runner 分钟数需发邮件至 support@codspeed.io 并附上仓库信息",
+        "en": "Sign up for the Free plan; extra macro runner minutes require emailing support@codspeed.io with details about your repo"
+      },
+      "type": "direct_activation",
+      "category": [
+        "ci_cd"
+      ],
+      "link": "https://codspeed.io/pricing",
+      "lastVerified": "2026-11-24",
+      "pending": {
+        "zh-Hant": "官方如何認定「開源專案」（公開儲存庫或特定授權）未能從官方頁面確認",
+        "zh-Hans": "官方如何认定“开源项目”（公开仓库或特定许可证）未能从官方页面确认",
+        "en": "How CodSpeed defines an open source project (public repo or specific license) could not be confirmed from the official pages",
+        "link": "https://codspeed.io/pricing"
+      }
     }
   ]
 }
