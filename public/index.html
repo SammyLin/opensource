@@ -239,10 +239,10 @@
       "isPartOf": {
         "@id": "https://opensource.3mi.ai/#website"
       },
-      "dateModified": "2026-11-18",
+      "dateModified": "2026-11-24",
       "mainEntity": {
         "@type": "ItemList",
-        "numberOfItems": 11,
+        "numberOfItems": 15,
         "itemListElement": [
           {
             "@type": "ListItem",
@@ -320,6 +320,34 @@
             "name": "OpenAI Codex for Open Source",
             "url": "https://opensource.3mi.ai/p/openai-codex/",
             "description": "用 AI 程式代理直接接手修 bug、寫測試、review PR 等任務；有條件提供的 Codex Security 還能協助找出安全漏洞。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 12,
+            "name": "Anthropic OSS Scanner",
+            "url": "https://opensource.3mi.ai/p/anthropic-oss-scanner/",
+            "description": "在攻擊者之前找出漏洞並拿到可重現案例與修補草稿，讓人力有限的維護團隊也能處理深層的安全問題。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 13,
+            "name": "CircleCI Open Source Plan",
+            "url": "https://opensource.3mi.ai/p/circleci/",
+            "description": "每個 PR 自動跑測試與建置，包含 macOS 環境，不必自架 CI 機器就能確認變更沒有弄壞東西。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 14,
+            "name": "Cloudsmith Open-Source Hosting",
+            "url": "https://opensource.3mi.ai/p/cloudsmith/",
+            "description": "用同一個地方發佈 Docker 映像、deb/rpm、npm、PyPI 等 30 多種格式的套件，透過 CDN 讓使用者穩定下載。"
+          },
+          {
+            "@type": "ListItem",
+            "position": 15,
+            "name": "TestMu AI (formerly LambdaTest) for Open Source",
+            "url": "https://opensource.3mi.ai/p/testmu-ai/",
+            "description": "不必自備各種瀏覽器與手機，就能在雲端跑跨瀏覽器與真機測試，提早發現相容性問題。"
           }
         ]
       }
@@ -361,7 +389,7 @@
             <h1 data-t="h1">做開源，這些工具可以免費用</h1>
             <p class="lead" data-t="lead">很多公司提供免費方案給開源專案維護者：IDE、CI、監控、安全掃描、AI 工具。這裡把它們整理成一頁，每個方案都寫清楚拿到什麼、要什麼條件、去哪申請。</p>
             <p class="why" data-t="why">資訊散落在各家官網、條件又常改，所以每筆都附官方連結與最後驗證日期。看到過期資訊，歡迎直接發 PR 修正。</p>
-            <p class="why" id="updated">資料更新於 2026-11-18</p>
+            <p class="why" id="updated">資料更新於 2026-11-24</p>
         </section>
 
         <section class="legend" aria-label="type legend">
@@ -375,12 +403,12 @@
                 <svg class="icon"><use href="#i-search"></use></svg>
                 <input type="search" id="q" autocomplete="off" data-t-placeholder="search" placeholder="搜尋方案名稱、內容或條件…">
             </label>
-            <div class="row" id="type-row"><span class="row-label">申請難度</span><button class="chip" data-group="type" data-value="" aria-pressed="true">全部 <span class="n">11</span></button><button class="chip" data-group="type" data-value="direct_activation" aria-pressed="false">直接開通 <span class="n">2</span></button><button class="chip" data-group="type" data-value="application_required" aria-pressed="false">要申請 <span class="n">6</span></button><button class="chip" data-group="type" data-value="high_bar" aria-pressed="false">門檻高 <span class="n">3</span></button></div>
-            <div class="row" id="cat-row"><span class="row-label">CNCF 分類</span><button class="chip" data-group="cat" data-value="" aria-pressed="true">全部 <span class="n">11</span></button><button class="chip" data-group="cat" data-value="container_registry" aria-pressed="false">容器映像倉庫 <span class="n">1</span></button><button class="chip" data-group="cat" data-value="security_compliance" aria-pressed="false">安全與合規 <span class="n">3</span></button><button class="chip" data-group="cat" data-value="key_management" aria-pressed="false">金鑰與機密管理 <span class="n">1</span></button><button class="chip" data-group="cat" data-value="app_definition_image_build" aria-pressed="false">應用定義與開發環境 <span class="n">1</span></button><button class="chip" data-group="cat" data-value="ci_cd" aria-pressed="false">持續整合與交付 <span class="n">1</span></button><button class="chip" data-group="cat" data-value="observability" aria-pressed="false">可觀測性 <span class="n">1</span></button><button class="chip" data-group="cat" data-value="ai_agent" aria-pressed="false">AI Agent <span class="n">3</span></button></div>
+            <div class="row" id="type-row"><span class="row-label">申請難度</span><button class="chip" data-group="type" data-value="" aria-pressed="true">全部 <span class="n">15</span></button><button class="chip" data-group="type" data-value="direct_activation" aria-pressed="false">直接開通 <span class="n">4</span></button><button class="chip" data-group="type" data-value="application_required" aria-pressed="false">要申請 <span class="n">7</span></button><button class="chip" data-group="type" data-value="high_bar" aria-pressed="false">門檻高 <span class="n">4</span></button></div>
+            <div class="row" id="cat-row"><span class="row-label">CNCF 分類</span><button class="chip" data-group="cat" data-value="" aria-pressed="true">全部 <span class="n">15</span></button><button class="chip" data-group="cat" data-value="container_registry" aria-pressed="false">容器映像倉庫 <span class="n">2</span></button><button class="chip" data-group="cat" data-value="security_compliance" aria-pressed="false">安全與合規 <span class="n">4</span></button><button class="chip" data-group="cat" data-value="key_management" aria-pressed="false">金鑰與機密管理 <span class="n">1</span></button><button class="chip" data-group="cat" data-value="app_definition_image_build" aria-pressed="false">應用定義與開發環境 <span class="n">1</span></button><button class="chip" data-group="cat" data-value="ci_cd" aria-pressed="false">持續整合與交付 <span class="n">3</span></button><button class="chip" data-group="cat" data-value="observability" aria-pressed="false">可觀測性 <span class="n">1</span></button><button class="chip" data-group="cat" data-value="ai_agent" aria-pressed="false">AI Agent <span class="n">3</span></button></div>
         </section>
 
         <div class="status">
-            <span id="count" aria-live="polite">共 11 個方案</span>
+            <span id="count" aria-live="polite">共 15 個方案</span>
             <button class="link-btn" id="clear" hidden=""><svg class="icon"><use href="#i-x"></use></svg><span data-t="clear">清除篩選</span></button>
         </div>
 
@@ -423,6 +451,46 @@
                     <div class="card-foot">
                         <a class="apply" href="https://about.codecov.io/for/open-source/" target="_blank" rel="noopener">前往開通<svg class="icon"><use href="#i-ext"></use></svg></a>
                         <span>驗證於 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/circleci.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/p/circleci/">CircleCI Open Source Plan</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-direct_activation">直接開通</span>
+                        <span class="badge pending">產品頁寫 Linux／Arm／Docker 400,000、macOS／Windows 30,000 credits，文件只列 Linux 與 macOS，Arm、Docker、Windows 是否適用待確認</span>
+                        <span class="tag" title="CNCF › App Definition and Development › Continuous Integration &amp; Delivery">持續整合與交付</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>對你的專案有什麼幫助</dt><dd>每個 PR 自動跑測試與建置，包含 macOS 環境，不必自架 CI 機器就能確認變更沒有弄壞東西。</dd></div>
+                        <div><dt>拿到什麼</dt><dd>Free 方案的公開專案每月最多 400,000 credits 用於 Linux 開源建置，另有每月 30,000 credits 用於 macOS 開源建置；credits 用完時開源建置不會被擋下</dd></div>
+                        <div><dt>申請條件</dt><dd>使用 Free 方案且儲存庫保持公開即自動適用；開源額度不會顯示在 CircleCI 網頁介面中；公開專案的建置記錄也會公開 <a href="https://circleci.com/docs/guides/plans-pricing/credits/#open-source-credit-usage" target="_blank" rel="noopener">確認來源</a></dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://circleci.com/open-source/" target="_blank" rel="noopener">前往開通<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>驗證於 2026-11-24</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/cloudsmith.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/p/cloudsmith/">Cloudsmith Open-Source Hosting</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-direct_activation">直接開通</span>
+                        
+                        <span class="tag" title="CNCF › Provisioning › Container Registry">容器映像倉庫</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>對你的專案有什麼幫助</dt><dd>用同一個地方發佈 Docker 映像、deb/rpm、npm、PyPI 等 30 多種格式的套件，透過 CDN 讓使用者穩定下載。</dd></div>
+                        <div><dt>拿到什麼</dt><dd>所有開源儲存庫合計至少 50GB 套件儲存空間與 200GB 下載流量，用量與公開／私有儲存庫分開計算；另含 geo/IP 限制、存取記錄與統計等原本屬於 Pro 方案的功能</dd></div>
+                        <div><dt>申請條件</dt><dd>主要專案須符合開源定義、申請者為維護者、不是小型 fork，且提供的主要是專案本身的套件；必須標示由 Cloudsmith 提供免費託管並連回官網；不需事先申請，建立儲存庫時選 Broadcast › Open source、填 SPDX 授權與專案網址即可，Cloudsmith 事後抽查；商業營利單位官方建議改用付費方案或贊助</dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://docs.cloudsmith.com/open-source-hosting-policy" target="_blank" rel="noopener">前往開通<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>驗證於 2026-11-24</span>
                     </div>
                 </article>
                 <article class="card">
@@ -547,6 +615,26 @@
                 </article>
                 <article class="card">
                     <div class="card-head">
+                        <span class="brand mono" aria-hidden="true">T</span>
+                        <h2><a href="/p/testmu-ai/">TestMu AI (formerly LambdaTest) for Open Source</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-application_required">要申請</span>
+                        <span class="badge pending">授權的分鐘數／並行數未公開；頁面「支持的專案」標題寫「在印度建立或有大量印度貢獻的專案」，是否為資格限制待確認</span>
+                        <span class="tag" title="CNCF › App Definition and Development › Continuous Integration &amp; Delivery">持續整合與交付</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>對你的專案有什麼幫助</dt><dd>不必自備各種瀏覽器與手機，就能在雲端跑跨瀏覽器與真機測試，提早發現相容性問題。</dd></div>
+                        <div><dt>拿到什麼</dt><dd>免費授權，可在 5,000 多種瀏覽器與裝置上測試開源專案；另提供指導、社群推廣，並列出財務贊助</dd></div>
+                        <div><dt>申請條件</dt><dd>須有有效的開源授權（如 MIT、Apache 2.0、GPL）、公開於 GitHub 或 GitLab 等平台、近期持續開發並有 README 等文件；在官方頁面填表申請 <a href="https://www.testmuai.com/open-source/" target="_blank" rel="noopener">確認來源</a></dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://www.testmuai.com/open-source/" target="_blank" rel="noopener">前往申請<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>驗證於 2026-11-24</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
                         <span class="brand"><img src="/logos/githubcopilot.svg" alt="" width="24" height="24" loading="lazy"></span>
                         <h2><a href="/p/github-copilot/">GitHub Copilot Pro for Open Source</a></h2>
                     </div>
@@ -603,6 +691,26 @@
                     <div class="card-foot">
                         <a class="apply" href="https://developers.openai.com/community/codex-for-oss" target="_blank" rel="noopener">前往申請<svg class="icon"><use href="#i-ext"></use></svg></a>
                         <span>驗證於 2026-11-18</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-head">
+                        <span class="brand"><img src="/logos/anthropic-oss-scanner.svg" alt="" width="24" height="24" loading="lazy"></span>
+                        <h2><a href="/p/anthropic-oss-scanner/">Anthropic OSS Scanner</a></h2>
+                    </div>
+                    <div class="meta">
+                        <span class="badge type-high_bar">門檻高</span>
+                        <span class="badge pending">後續掃描頻率未公開，官方說明會依排程中的專案數量與使用程度而定</span>
+                        <span class="tag" title="CNCF › Provisioning › Security &amp; Compliance">安全與合規</span>
+                    </div>
+                    <dl>
+                        <div class="why-it-helps"><dt>對你的專案有什麼幫助</dt><dd>在攻擊者之前找出漏洞並拿到可重現案例與修補草稿，讓人力有限的維護團隊也能處理深層的安全問題。</dd></div>
+                        <div><dt>拿到什麼</dt><dd>免費、定期的 AI 安全掃描：由 Anthropic 最強的模型稽核程式碼，報告以 email 寄給維護者，內含可重現步驟、漏洞說明（可能時附上 bisect 結果）與候選修補；報告由模型產生、未經人工審查</dd></div>
+                        <div><dt>申請條件</dt><dd>核心維護者向 anthropics/oss-scanner 儲存庫送 PR，新增 projects/&lt;名稱&gt;/ 設定（儲存庫網址、主要聯絡 email、可離線建置的 Dockerfile）；每筆申請由人工審核，參考 OSS-Fuzz 的標準，接受對基礎設施與使用者安全有關鍵影響的成熟專案，須為 OSI 授權；新專案與一般 fork 通常不收 <a href="https://red.anthropic.com/oss-scanner/" target="_blank" rel="noopener">確認來源</a></dd></div>
+                    </dl>
+                    <div class="card-foot">
+                        <a class="apply" href="https://red.anthropic.com/oss-scanner/" target="_blank" rel="noopener">前往申請<svg class="icon"><use href="#i-ext"></use></svg></a>
+                        <span>驗證於 2026-11-24</span>
                     </div>
                 </article></section>
 
