@@ -17,9 +17,9 @@ const data = require('./lib/data').bundle(); // read from data/ so the build nev
 const DATA_TEXT = JSON.stringify(data);
 
 const LANGS = [
-    { lang: 'zh-Hant', path: '/' },
+    { lang: 'en', path: '/' },
+    { lang: 'zh-Hant', path: '/zh-hant/' },
     { lang: 'zh-Hans', path: '/zh-hans/' },
-    { lang: 'en', path: '/en/' },
 ];
 const langPath = (lang, id) => LANGS.find(l => l.lang === lang).path + (id ? `p/${id}/` : '');
 // One listing page per language, plus one page per program per language.
@@ -76,7 +76,7 @@ function jsonLd(doc, lang) {
                 name: 'OSS Perks',
                 alternateName: ['開源福利社', '开源福利社'],
                 url: `${SITE}/`,
-                inLanguage: ['zh-Hant', 'zh-Hans', 'en'],
+                inLanguage: ['en', 'zh-Hant', 'zh-Hans'],
             },
             {
                 '@type': 'CollectionPage',
@@ -149,7 +149,7 @@ async function render({ lang, id, path: pagePath, out }) {
 
 function sitemap() {
     const alt = id => LANGS.map(l => `    <xhtml:link rel="alternate" hreflang="${l.lang}" href="${SITE}${langPath(l.lang, id)}"/>`)
-        .concat(`    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE}${langPath('zh-Hant', id)}"/>`).join('\n');
+        .concat(`    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE}${langPath('en', id)}"/>`).join('\n');
     const urls = PAGES.map(p => `  <url>\n    <loc>${SITE}${p.path}</loc>\n    <lastmod>${p.lastmod || lastmod}</lastmod>\n${alt(p.id)}\n  </url>`).join('\n');
     return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${urls}\n</urlset>\n`;
 }
@@ -169,6 +169,14 @@ function sitemap() {
                 fs.rmSync(path.join(dir, name), { recursive: true, force: true });
                 console.log(`removed stale public/${l.path.slice(1)}p/${name}/`);
             }
+        }
+    }
+    // English used to live under /en/ (now unprefixed); _redirects sends old /en/ links to the new URLs.
+    for (const legacy of ['en']) {
+        const dir = path.join(PUBLIC, legacy);
+        if (fs.existsSync(dir) && !LANGS.some(l => l.path === `/${legacy}/`)) {
+            fs.rmSync(dir, { recursive: true, force: true });
+            console.log(`removed legacy public/${legacy}/`);
         }
     }
     fs.writeFileSync(path.join(PUBLIC, 'sitemap.xml'), sitemap());

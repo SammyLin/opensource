@@ -1,30 +1,54 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OSS Perks｜開源福利社 — 開源維護者的免費工具</title>
-    <meta name="description" content="開源維護者可以免費拿到的工具與服務，一頁看完內容、條件、怎麼申請。" id="meta-description">
+    <title>OSS Perks — Free tools for open source maintainers</title>
+    <meta name="description" content="Free tools and services for open source maintainers: what you get, who qualifies, and where to apply, on one page." id="meta-description">
     <link rel="canonical" href="https://opensource.3mi.ai/" id="canonical">
-    <link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/" data-alt="zh-Hant">
+    <link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/" data-alt="en">
+    <link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/zh-hant/" data-alt="zh-Hant">
     <link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/" data-alt="zh-Hans">
-    <link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/" data-alt="en">
-    <link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/" data-alt="zh-Hant">
+    <link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/" data-alt="en">
+    <script>
+        // English lives at the unprefixed URLs; 繁中 at /zh-hant/, 简中 at /zh-hans/.
+        // On an English page, send people whose browser prefers Chinese (or who picked a
+        // language before) to the same page in that language. Prefixed URLs are never redirected,
+        // so a shared /zh-hant/ or /zh-hans/ link always opens as sent. Crawlers get English.
+        (function () {
+            var PREFIX = { 'zh-Hant': '/zh-hant', 'zh-Hans': '/zh-hans' };
+            var path = location.pathname;
+            if (/^\/zh-han[st](\/|$)/.test(path)) return;
+            if (navigator.webdriver || /bot|crawl|spider|slurp|jsdom|headless|lighthouse/i.test(navigator.userAgent)) return;
+            var pick = null;
+            try { pick = localStorage.getItem('oss-perks-lang'); } catch (e) {}
+            if (!pick) {
+                var langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
+                for (var i = 0; i < langs.length && !pick; i++) {
+                    var l = String(langs[i]).toLowerCase();
+                    if (/^en\b/.test(l)) pick = 'en';
+                    else if (/^zh-(hant|tw|hk|mo)\b/.test(l)) pick = 'zh-Hant';
+                    else if (/^zh\b/.test(l)) pick = 'zh-Hans';
+                }
+            }
+            if (PREFIX[pick]) location.replace(PREFIX[pick] + path + location.search + location.hash);
+        })();
+    </script>
     <meta name="robots" content="index, follow" id="meta-robots">
-    <meta property="og:title" content="OSS Perks｜開源福利社 — 開源維護者的免費工具" id="meta-og-title">
-    <meta property="og:description" content="開源維護者可以免費拿到的工具與服務，一頁看完內容、條件、怎麼申請。" id="meta-og-description">
+    <meta property="og:title" content="OSS Perks — Free tools for open source maintainers" id="meta-og-title">
+    <meta property="og:description" content="Free tools and services for open source maintainers: what you get, who qualifies, and where to apply, on one page." id="meta-og-description">
     <meta property="og:site_name" content="OSS Perks">
     <meta property="og:type" content="website" id="meta-og-type">
     <meta property="og:url" content="https://opensource.3mi.ai/" id="meta-og-url">
-    <meta property="og:locale" content="zh_TW" id="meta-og-locale">
-    <meta property="og:image" content="https://opensource.3mi.ai/brand/og-zh-hant.png" id="meta-og-image">
+    <meta property="og:locale" content="en_US" id="meta-og-locale">
+    <meta property="og:image" content="https://opensource.3mi.ai/brand/og-en.png" id="meta-og-image">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="OSS Perks｜開源福利社" id="meta-og-image-alt">
+    <meta property="og:image:alt" content="OSS Perks" id="meta-og-image-alt">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="OSS Perks｜開源福利社 — 開源維護者的免費工具" id="meta-tw-title">
-    <meta name="twitter:description" content="開源維護者可以免費拿到的工具與服務，一頁看完內容、條件、怎麼申請。" id="meta-tw-description">
-    <meta name="twitter:image" content="https://opensource.3mi.ai/brand/og-zh-hant.png" id="meta-tw-image">
+    <meta name="twitter:title" content="OSS Perks — Free tools for open source maintainers" id="meta-tw-title">
+    <meta name="twitter:description" content="Free tools and services for open source maintainers: what you get, who qualifies, and where to apply, on one page." id="meta-tw-description">
+    <meta name="twitter:image" content="https://opensource.3mi.ai/brand/og-en.png" id="meta-tw-image">
     <meta name="theme-color" content="#10b981">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -233,11 +257,11 @@
 
     <nav>
         <div class="wrap nav-inner">
-            <a href="/" class="logo"><img src="/brand/logo-mark.png" alt="" width="32" height="32"><span data-t="logo">OSS Perks｜開源福利社</span></a>
+            <a href="/" class="logo"><img src="/brand/logo-mark.png" alt="" width="32" height="32"><span data-t="logo">OSS Perks</span></a>
             <div class="lang-switch">
-                <a href="/" hreflang="zh-Hant" data-lang="zh-Hant">繁</a>
+                <a href="/" hreflang="en" data-lang="en">EN</a>
+                <a href="/zh-hant/" hreflang="zh-Hant" data-lang="zh-Hant">繁</a>
                 <a href="/zh-hans/" hreflang="zh-Hans" data-lang="zh-Hans">简</a>
-                <a href="/en/" hreflang="en" data-lang="en">EN</a>
             </div>
         </div>
     </nav>
@@ -291,7 +315,7 @@
     <footer><p data-t="footer"></p><p data-t-html="license"></p></footer>
 
     <script>
-        const LANG_PATHS = { 'zh-Hant': '/', 'zh-Hans': '/zh-hans/', 'en': '/en/' };
+        const LANG_PATHS = { 'en': '/', 'zh-Hant': '/zh-hant/', 'zh-Hans': '/zh-hans/' };
         const OG_LOCALE = { 'zh-Hant': 'zh_TW', 'zh-Hans': 'zh_CN', 'en': 'en_US' };
         const TYPES = ['direct_activation', 'application_required', 'high_bar'];
         // Old category ids (before the switch to CNCF Landscape categories) so shared links keep working.
@@ -381,10 +405,10 @@
             }
         };
 
-        const lang = Object.keys(LANG_PATHS).find(l => l !== 'zh-Hant' && location.pathname.startsWith(LANG_PATHS[l])) || 'zh-Hant';
+        const lang = Object.keys(LANG_PATHS).find(l => l !== 'en' && location.pathname.startsWith(LANG_PATHS[l])) || 'en';
         const t = T[lang];
         const SITE = 'https://opensource.3mi.ai';
-        // Program pages live at /p/<id>/, /zh-hans/p/<id>/ and /en/p/<id>/ (prerendered by build.js).
+        // Program pages live at /p/<id>/ (English), /zh-hant/p/<id>/ and /zh-hans/p/<id>/ (prerendered by build.js).
         const PID = (location.pathname.match(/\/p\/([a-z0-9-]+)\/?$/) || [])[1] || '';
         const pageUrl = (l, id) => SITE + LANG_PATHS[l] + (id ? `p/${id}/` : '');
         const programPath = id => `${LANG_PATHS[lang]}p/${id}/`;
@@ -422,6 +446,10 @@
                 if (a.dataset.lang === lang) a.setAttribute('aria-current', 'page');
             });
             $('.logo').href = LANG_PATHS[lang];
+            // Remember an explicit language choice so English pages stop redirecting by browser language.
+            document.querySelectorAll('.lang-switch a').forEach(a => a.addEventListener('click', () => {
+                try { localStorage.setItem('oss-perks-lang', a.dataset.lang); } catch (e) {}
+            }));
         }
 
         function readState() {
