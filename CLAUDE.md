@@ -12,6 +12,7 @@ OSS Perks｜開源福利社（https://opensource.3mi.ai/）：收錄給開源專
 - `data/categories.json`：類別 id → 三語名稱 + `cncf`（依 CNCF Landscape 官方英文名稱）。真的沒有合適類別才新增。
 - `data/schemas/`：JSON schema。
 - `public/logos/<id>.svg`：選填的 logo（Simple Icons 或官方 SVG）。
+- `public/skill.md`：給 AI agent 讀的說明（手寫、英文），教它讀 `/data/programs.json` 並判斷使用者的 repo 能申請哪些方案。改了資料格式（例如 `programs.json` 的欄位）要一起更新它。
 - `lib/data.js`：所有腳本都透過它讀 `data/`。
 
 ## 自動產生的檔案：PR 裡不要動
