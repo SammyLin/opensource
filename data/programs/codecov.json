@@ -1,0 +1,27 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "codecov",
+  "name": "Codecov for Open Source",
+  "logo": "/logos/codecov.svg",
+  "whatYouGet": {
+    "zh-Hant": "免費程式碼覆蓋率分析、PR 評論、狀態檢查",
+    "zh-Hans": "免费代码覆盖率分析、PR 评论、状态检查",
+    "en": "Free code coverage analysis, PR comments, status checks"
+  },
+  "whyItHelps": {
+    "zh-Hant": "在 PR 上直接看到新程式碼有沒有被測試覆蓋，README 也能放覆蓋率徽章，讓使用者對專案品質更有信心。",
+    "zh-Hans": "在 PR 上直接看到新代码有没有被测试覆盖，README 也能放覆盖率徽章，让用户对项目质量更有信心。",
+    "en": "See right on the PR whether new code is covered by tests, and show a coverage badge in your README to build user confidence."
+  },
+  "requirements": {
+    "zh-Hant": "公開的開源專案",
+    "zh-Hans": "公开的开源项目",
+    "en": "Public open source projects"
+  },
+  "type": "direct_activation",
+  "category": [
+    "ci_cd"
+  ],
+  "link": "https://about.codecov.io/for/open-source/",
+  "lastVerified": "2026-11-18"
+}

@@ -4,6 +4,8 @@
   "description": "[繁體中文](#繁體中文) | [简体中文](#简体中文) | [English](#english)",
   "main": "validate.js",
   "scripts": {
+    "data": "node scripts/bundle-data.js",
+    "split": "node scripts/split-programs.js",
     "build": "node build.js",
     "og": "node og-images.js",
     "validate": "node validate.js",

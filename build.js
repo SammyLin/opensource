@@ -3,7 +3,8 @@
 //
 // The page's own script runs inside jsdom, so the static HTML is exactly what a
 // browser would render (hero text, filters, every program card, per-language
-// meta tags). The live page still fetches programs.json and re-renders on load.
+// meta tags). The live page still fetches /data/programs.json (the bundle written by
+// scripts/bundle-data.js) and re-renders on load.
 const fs = require('fs');
 const path = require('path');
 const { JSDOM } = require('jsdom');
@@ -12,8 +13,8 @@ const SITE = 'https://opensource.3mi.ai';
 const ROOT = __dirname;
 const PUBLIC = path.join(ROOT, 'public');
 const TEMPLATE = fs.readFileSync(path.join(ROOT, 'src', 'index.html'), 'utf-8');
-const DATA_TEXT = fs.readFileSync(path.join(PUBLIC, 'data', 'programs.json'), 'utf-8');
-const data = JSON.parse(DATA_TEXT);
+const data = require('./lib/data').bundle(); // read from data/ so the build never depends on a stale bundle
+const DATA_TEXT = JSON.stringify(data);
 
 const LANGS = [
     { lang: 'zh-Hant', path: '/' },

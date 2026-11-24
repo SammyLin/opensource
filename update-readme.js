@@ -1,10 +1,11 @@
-// Regenerates the program tables in README.md from public/data/programs.json.
+// Regenerates the program tables in README.md from data/categories.json + data/programs/*.json.
+// Generated output — PRs don't need to run this; the "Build static pages" workflow does it on main.
 // Run: node update-readme.js  (or: npm run readme)
 const fs = require('fs');
 const path = require('path');
 
 const README = path.join(__dirname, 'README.md');
-const data = JSON.parse(fs.readFileSync(path.join(__dirname, 'public', 'data', 'programs.json'), 'utf-8'));
+const data = require('./lib/data').bundle();
 
 const TYPES = ['direct_activation', 'application_required', 'high_bar'];
 const L = {

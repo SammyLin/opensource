@@ -1,0 +1,27 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "sonarqube-cloud",
+  "name": "SonarQube Cloud for Open Source",
+  "logo": "/logos/sonarqubecloud.svg",
+  "whatYouGet": {
+    "zh-Hant": "Pro 方案功能（程式碼品質與安全掃描，支援 35+ 語言）、永久免費",
+    "zh-Hans": "Pro 方案功能（代码质量与安全扫描，支持 35+ 语言）、永久免费",
+    "en": "Pro plan features (code quality and security scanning, 35+ languages supported), free forever"
+  },
+  "whyItHelps": {
+    "zh-Hant": "每個 PR 自動檢查 bug、程式碼異味與安全熱點，讓貢獻者送進來的程式碼品質一致，減輕維護者 review 負擔。",
+    "zh-Hans": "每个 PR 自动检查 bug、代码异味与安全热点，让贡献者提交的代码质量一致，减轻维护者 review 负担。",
+    "en": "Every PR is checked for bugs, code smells and security hotspots, keeping contributions consistent and lightening the review load."
+  },
+  "requirements": {
+    "zh-Hant": "公開且擁有 OSI 授權的儲存庫",
+    "zh-Hans": "公开且拥有 OSI 许可证的仓库",
+    "en": "Public repositories with OSI license"
+  },
+  "type": "direct_activation",
+  "category": [
+    "security_compliance"
+  ],
+  "link": "https://www.sonarsource.com/plans-and-pricing/",
+  "lastVerified": "2026-11-18"
+}

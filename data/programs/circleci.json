@@ -1,0 +1,33 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "circleci",
+  "name": "CircleCI Open Source Plan",
+  "logo": "/logos/circleci.svg",
+  "whatYouGet": {
+    "zh-Hant": "Free 方案的公開專案每月最多 400,000 credits 用於 Linux 開源建置，另有每月 30,000 credits 用於 macOS 開源建置；credits 用完時開源建置不會被擋下",
+    "zh-Hans": "Free 套餐的公开项目每月最多 400,000 credits 用于 Linux 开源构建，另有每月 30,000 credits 用于 macOS 开源构建；credits 用完时开源构建不会被拦截",
+    "en": "Up to 400,000 credits per month for Linux open source builds on the Free plan, plus 30,000 credits per month for macOS open source builds; open source builds keep running even when the credit balance hits zero"
+  },
+  "whyItHelps": {
+    "zh-Hant": "每個 PR 自動跑測試與建置，包含 macOS 環境，不必自架 CI 機器就能確認變更沒有弄壞東西。",
+    "zh-Hans": "每个 PR 自动跑测试和构建，包括 macOS 环境，不用自建 CI 机器就能确认改动没有搞坏东西。",
+    "en": "Runs tests and builds on every PR, including macOS, without hosting your own CI machines."
+  },
+  "requirements": {
+    "zh-Hant": "使用 Free 方案且儲存庫保持公開即自動適用；開源額度不會顯示在 CircleCI 網頁介面中；公開專案的建置記錄也會公開",
+    "zh-Hans": "使用 Free 套餐且仓库保持公开即自动适用；开源额度不会显示在 CircleCI 网页界面中；公开项目的构建日志也会公开",
+    "en": "Applies automatically on the Free plan with a public repository; open source credit limits are not shown in the CircleCI web app; build logs of public projects are public"
+  },
+  "type": "direct_activation",
+  "category": [
+    "ci_cd"
+  ],
+  "link": "https://circleci.com/open-source/",
+  "lastVerified": "2026-11-24",
+  "pending": {
+    "zh-Hant": "產品頁寫 Linux／Arm／Docker 400,000、macOS／Windows 30,000 credits，文件只列 Linux 與 macOS，Arm、Docker、Windows 是否適用待確認",
+    "zh-Hans": "产品页写 Linux／Arm／Docker 400,000、macOS／Windows 30,000 credits，文档只列 Linux 和 macOS，Arm、Docker、Windows 是否适用待确认",
+    "en": "The product page lists 400,000 credits for Linux/Arm/Docker and 30,000 for macOS/Windows, while the docs mention only Linux and macOS; whether Arm, Docker and Windows are covered is unconfirmed",
+    "link": "https://circleci.com/docs/guides/plans-pricing/credits/#open-source-credit-usage"
+  }
+}

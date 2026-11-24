@@ -1,0 +1,33 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "anthropic-oss-scanner",
+  "name": "Anthropic OSS Scanner",
+  "logo": "/logos/anthropic-oss-scanner.svg",
+  "whatYouGet": {
+    "zh-Hant": "免費、定期的 AI 安全掃描：由 Anthropic 最強的模型稽核程式碼，報告以 email 寄給維護者，內含可重現步驟、漏洞說明（可能時附上 bisect 結果）與候選修補；報告由模型產生、未經人工審查",
+    "zh-Hans": "免费、定期的 AI 安全扫描：由 Anthropic 最强的模型审计代码，报告通过邮件发给维护者，包含可复现步骤、漏洞说明（可能时附带 bisect 结果）和候选补丁；报告由模型生成、未经人工审核",
+    "en": "Free, periodic AI security scans of your code by Anthropic's strongest models; reports are emailed to maintainers with a self-contained reproducer, an explanation (with bisection where possible) and a candidate patch. Reports are model-generated and not human-reviewed"
+  },
+  "whyItHelps": {
+    "zh-Hant": "在攻擊者之前找出漏洞並拿到可重現案例與修補草稿，讓人力有限的維護團隊也能處理深層的安全問題。",
+    "zh-Hans": "在攻击者之前找出漏洞并拿到可复现用例和补丁草稿，让人手有限的维护团队也能处理深层的安全问题。",
+    "en": "Surfaces vulnerabilities before attackers do, with reproducers and draft patches, so small maintainer teams can tackle deep security issues."
+  },
+  "requirements": {
+    "zh-Hant": "核心維護者向 anthropics/oss-scanner 儲存庫送 PR，新增 projects/<名稱>/ 設定（儲存庫網址、主要聯絡 email、可離線建置的 Dockerfile）；每筆申請由人工審核，參考 OSS-Fuzz 的標準，接受對基礎設施與使用者安全有關鍵影響的成熟專案，須為 OSI 授權；新專案與一般 fork 通常不收",
+    "zh-Hans": "核心维护者向 anthropics/oss-scanner 仓库提交 PR，新增 projects/<名称>/ 配置（仓库地址、主要联系邮箱、可离线构建的 Dockerfile）；每个申请由人工审核，参考 OSS-Fuzz 的标准，接受对基础设施和用户安全有关键影响的成熟项目，须为 OSI 许可证；新项目和普通 fork 通常不接受",
+    "en": "Core maintainers open a PR to the anthropics/oss-scanner repo adding projects/<name>/ (repo URL, primary contact email, a Dockerfile that builds offline). Every request is human-reviewed against OSS-Fuzz-like criteria: established, OSI-licensed projects with critical impact on infrastructure and user security; brand-new projects and most forks are excluded"
+  },
+  "type": "high_bar",
+  "category": [
+    "security_compliance"
+  ],
+  "link": "https://red.anthropic.com/oss-scanner/",
+  "lastVerified": "2026-11-24",
+  "pending": {
+    "zh-Hant": "後續掃描頻率未公開，官方說明會依排程中的專案數量與使用程度而定",
+    "zh-Hans": "后续扫描频率未公开，官方说明会根据队列中的项目数量和使用程度而定",
+    "en": "Follow-up scan frequency is not published; it depends on the number of projects in the pipeline and how widely a project is used",
+    "link": "https://red.anthropic.com/oss-scanner/"
+  }
+}

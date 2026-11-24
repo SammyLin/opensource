@@ -18,7 +18,7 @@ const MANIFEST = path.join(OUT, 'manifest.json');
 const VERSION = 1; // bump to redraw every image after changing the design below
 const FORCE = process.argv.includes('--force');
 
-const data = JSON.parse(fs.readFileSync(path.join(PUBLIC, 'data', 'programs.json'), 'utf-8'));
+const data = require('./lib/data').bundle();
 const wordmark = fs.readFileSync(path.join(PUBLIC, 'brand', 'logo-wordmark.png')).toString('base64');
 
 const LANGS = {

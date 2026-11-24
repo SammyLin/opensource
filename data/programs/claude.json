@@ -1,0 +1,27 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "claude",
+  "name": "Claude for Open Source",
+  "logo": "/logos/claude.svg",
+  "whatYouGet": {
+    "zh-Hant": "6 個月免費 Claude Ultra",
+    "zh-Hans": "6 个月免费 Claude Ultra",
+    "en": "6 months of free Claude Ultra"
+  },
+  "whyItHelps": {
+    "zh-Hant": "用 AI 協助 review PR、整理 issue、撰寫文件與測試、規劃重構，把維護者有限的時間留給真正需要判斷的地方。",
+    "zh-Hans": "用 AI 协助 review PR、整理 issue、撰写文档与测试、规划重构，把维护者有限的时间留给真正需要判断的地方。",
+    "en": "Use AI to help review PRs, triage issues, write docs and tests, and plan refactors, saving maintainer time for the calls that need you."
+  },
+  "requirements": {
+    "zh-Hant": "維護者與函式庫作者：500+ 依賴儲存庫、100+ 依賴套件或 200,000+ 每月下載；核心貢獻者：知名基金會或語言專案成員；活躍貢獻者：過去 12 個月有 100+ PR 合併；社群建設者：你的儲存庫在過去 12 個月有 20+ 外部貢獻者；關鍵基礎設施：OpenSSF 關鍵性評分 0.4 以上",
+    "zh-Hans": "维护者与库作者：500+ 依赖仓库、100+ 依赖包或 200,000+ 每月下载量；核心贡献者：知名基金会或语言项目成员；活跃贡献者：过去 12 个月有 100+ PR 合并；社区建设者：你的仓库在过去 12 个月有 20+ 外部贡献者；关键基础设施：OpenSSF 关键性评分 0.4 以上",
+    "en": "Maintainers & library authors: 500+ dependent repos, 100+ dependent packages, or 200,000+ monthly downloads; Core contributors: listed on recognized foundation or language project; Active contributors: 100+ PRs merged in last 12 months; Community builders: 20+ unique external contributors in last 12 months; Critical infrastructure: OpenSSF criticality score 0.4+"
+  },
+  "type": "high_bar",
+  "category": [
+    "ai_agent"
+  ],
+  "link": "https://claude.com/contact-sales/claude-for-oss",
+  "lastVerified": "2026-11-18"
+}

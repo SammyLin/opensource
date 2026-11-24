@@ -1,0 +1,27 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "jetbrains",
+  "name": "JetBrains Open Source License",
+  "logo": "/logos/jetbrains.svg",
+  "whatYouGet": {
+    "zh-Hant": "免費 All Products Pack（所有產品套裝）",
+    "zh-Hans": "免费 All Products Pack（所有产品套装）",
+    "en": "Free All Products Pack"
+  },
+  "whyItHelps": {
+    "zh-Hant": "IntelliJ IDEA、PyCharm、WebStorm、GoLand 等專業 IDE 全部可用，重構、除錯、程式碼分析更順手，寫碼和 review 都更有效率。",
+    "zh-Hans": "IntelliJ IDEA、PyCharm、WebStorm、GoLand 等专业 IDE 全部可用，重构、调试、代码分析更顺手，写代码和 review 都更高效。",
+    "en": "Use every JetBrains IDE (IntelliJ IDEA, PyCharm, WebStorm, GoLand…) for smoother refactoring, debugging and code analysis when writing and reviewing code."
+  },
+  "requirements": {
+    "zh-Hant": "一年期授權，專案必須持續開發中，提供開源授權證明，專案領導者或核心貢獻者可申請",
+    "zh-Hans": "一年期授权，项目必须持续开发中，提供开源许可证明，项目负责人或核心贡献者可申请",
+    "en": "One-year term, project must be actively developed, provide open source license proof, project lead or core contributor may apply"
+  },
+  "type": "application_required",
+  "category": [
+    "app_definition_image_build"
+  ],
+  "link": "https://www.jetbrains.com/shop/eform/opensource?product=ALL",
+  "lastVerified": "2026-11-18"
+}

@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OSS Perks categories (data/categories.json)",
+  "description": "類別 id → 三語顯示名稱 + 對應的 CNCF Landscape 類別。新增類別只要加在這裡。",
+  "type": "object",
+  "$defs": {
+    "category": {
+      "type": "object",
+      "required": [
+        "zh-Hant",
+        "zh-Hans",
+        "en",
+        "cncf"
+      ],
+      "properties": {
+        "zh-Hant": {
+          "type": "string",
+          "minLength": 1
+        },
+        "zh-Hans": {
+          "type": "string",
+          "minLength": 1
+        },
+        "en": {
+          "type": "string",
+          "minLength": 1
+        },
+        "cncf": {
+          "description": "對應 CNCF Landscape（https://landscape.cncf.io）的類別／子類別，照官方英文名稱",
+          "type": "object",
+          "required": [
+            "category"
+          ],
+          "properties": {
+            "category": {
+              "type": "string",
+              "minLength": 1
+            },
+            "subcategory": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "properties": {
+    "$schema": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": {
+    "$ref": "#/$defs/category"
+  }
+}

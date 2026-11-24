@@ -17,12 +17,13 @@ git clone https://github.com/YOUR_USERNAME/opensource.git
 cd opensource
 ```
 
-#### 2. 編輯 `public/data/programs.json`
+#### 2. 新增 `data/programs/<id>.json`
 
-在 `programs` 陣列中新增一個條目。檔案開頭的 `$schema` 會讓 VS Code 等編輯器自動補完欄位、即時標出錯誤。必要欄位：
+每個方案是一個獨立的 JSON 檔，檔名就是 `id`（例如 `data/programs/sentry.json`）。最簡單的做法是複製一個現有檔案再修改。檔案開頭的 `$schema` 會讓 VS Code 等編輯器自動補完欄位、即時標出錯誤。必要欄位：
 
 ```json
 {
+  "$schema": "../schemas/program.schema.json",
   "id": "方案代號，例如 sentry",
   "name": "方案的正式名稱",
   "logo": "/logos/方案代號.svg",
@@ -71,8 +72,8 @@ cd opensource
   - `direct_activation` - 直接開通（無需申請）
   - `application_required` - 要申請
   - `high_bar` - 門檻高
-- **category**: 陣列，填檔案上方 `categories` 裡的 id（一個或多個）。需要新類別時，先在 `categories` 加一筆三語名稱，網站篩選會自動出現
-  分類依照 [CNCF Cloud Native Landscape](https://landscape.cncf.io)：先在 CNCF Landscape 找這個產品（或同類工具）被放在哪一格，再選對應的 id。新類別要在 `categories` 加三語名稱和 `cncf` 欄位（照官方英文名稱）
+- **category**: 陣列，填 `data/categories.json` 裡的 id（一個或多個）。需要新類別時，先在 `data/categories.json` 加一筆三語名稱，網站篩選會自動出現
+  分類依照 [CNCF Cloud Native Landscape](https://landscape.cncf.io)：先在 CNCF Landscape 找這個產品（或同類工具）被放在哪一格，再選對應的 id。新類別要在 `data/categories.json` 加三語名稱和 `cncf` 欄位（照官方英文名稱）
   - `container_registry` - 容器映像倉庫 (Provisioning › Container Registry)
   - `security_compliance` - 安全與合規 (Provisioning › Security & Compliance)
   - `key_management` - 金鑰與機密管理 (Provisioning › Key Management)
@@ -88,18 +89,21 @@ cd opensource
 
 ```bash
 node validate.js
-npm run readme   # 更新 README 裡的方案列表
-npm run build    # （選填）重新產生網站靜態頁；沒跑的話合併後 GitHub Action 會自動處理
 ```
 
 確保所有欄位都正確，且通過驗證。
 
+> **PR 裡不要提交自動產生的檔案**：`public/data/programs.json`（網站讀取的合併檔）、README 的方案列表、`public/` 底下的靜態頁與分享圖，都會在合併到 `main` 後由 GitHub Action 自動重新產生。PR 只放 `data/programs/<id>.json`（和選填的 logo），多個 PR 同時開著也不會互相衝突。CI 會擋下改到 `public/data/programs.json` 或 README 方案列表的 PR。
+>
+> 想在本機預覽：`npm run data && npm run build`，看完用 `git checkout -- public README.md` 還原。
+
 #### 4. 提交 Pull Request
 
 ```bash
-git add public/data/programs.json
+git checkout -b add-<id>
+git add data/programs/<id>.json public/logos/<id>.svg
 git commit -m "Add [方案名稱]"
-git push origin main
+git push origin add-<id>
 ```
 
 然後在 GitHub 上開啟 Pull Request。
@@ -109,7 +113,7 @@ git push origin main
 提交貢獻即表示您同意：
 
 - **程式碼／網站／文件**貢獻以 [MIT](./LICENSE) 授權
-- **`public/data/programs.json` 資料**貢獻以 [CC BY 4.0](./public/data/LICENSE) 授權
+- **`data/` 方案資料**貢獻以 [CC BY 4.0](./data/LICENSE) 授權
 
 ### 重要原則
 
@@ -135,12 +139,13 @@ git clone https://github.com/YOUR_USERNAME/opensource.git
 cd opensource
 ```
 
-#### 2. 编辑 `public/data/programs.json`
+#### 2. 新建 `data/programs/<id>.json`
 
-在 `programs` 数组中新增一个条目。文件开头的 `$schema` 会让 VS Code 等编辑器自动补全字段、实时标出错误。必要字段：
+每个方案是一个独立的 JSON 文件，文件名就是 `id`（例如 `data/programs/sentry.json`）。最简单的做法是复制一个现有文件再修改。文件开头的 `$schema` 会让 VS Code 等编辑器自动补全字段、实时标出错误。必要字段：
 
 ```json
 {
+  "$schema": "../schemas/program.schema.json",
   "id": "方案代号，例如 sentry",
   "name": "方案的正式名称",
   "logo": "/logos/方案代号.svg",
@@ -189,8 +194,8 @@ cd opensource
   - `direct_activation` - 直接开通（无需申请）
   - `application_required` - 要申请
   - `high_bar` - 门槛高
-- **category**: 数组，填文件上方 `categories` 里的 id（一个或多个）。需要新类别时，先在 `categories` 加一条三语名称，网站筛选会自动出现
-  分类依照 [CNCF Cloud Native Landscape](https://landscape.cncf.io)：先在 CNCF Landscape 找这个产品（或同类工具）被放在哪一格，再选对应的 id。新类别要在 `categories` 加三语名称和 `cncf` 字段（照官方英文名称）
+- **category**: 数组，填 `data/categories.json` 里的 id（一个或多个）。需要新类别时，先在 `data/categories.json` 加一条三语名称，网站筛选会自动出现
+  分类依照 [CNCF Cloud Native Landscape](https://landscape.cncf.io)：先在 CNCF Landscape 找这个产品（或同类工具）被放在哪一格，再选对应的 id。新类别要在 `data/categories.json` 加三语名称和 `cncf` 字段（照官方英文名称）
   - `container_registry` - 容器镜像仓库 (Provisioning › Container Registry)
   - `security_compliance` - 安全与合规 (Provisioning › Security & Compliance)
   - `key_management` - 密钥与机密管理 (Provisioning › Key Management)
@@ -206,18 +211,21 @@ cd opensource
 
 ```bash
 node validate.js
-npm run readme   # 更新 README 里的方案列表
-npm run build    # （可选）重新生成网站静态页；没运行的话合并后 GitHub Action 会自动处理
 ```
 
 确保所有字段都正确，且通过验证。
 
+> **PR 里不要提交自动生成的文件**：`public/data/programs.json`（网站读取的合并文件）、README 的方案列表、`public/` 下的静态页和分享图，都会在合并到 `main` 后由 GitHub Action 自动重新生成。PR 只放 `data/programs/<id>.json`（和可选的 logo），多个 PR 同时开着也不会互相冲突。CI 会拦下改动 `public/data/programs.json` 或 README 方案列表的 PR。
+>
+> 想在本地预览：`npm run data && npm run build`，看完用 `git checkout -- public README.md` 还原。
+
 #### 4. 提交 Pull Request
 
 ```bash
-git add public/data/programs.json
+git checkout -b add-<id>
+git add data/programs/<id>.json public/logos/<id>.svg
 git commit -m "Add [方案名称]"
-git push origin main
+git push origin add-<id>
 ```
 
 然后在 GitHub 上开启 Pull Request。
@@ -227,7 +235,7 @@ git push origin main
 提交贡献即表示您同意：
 
 - **代码／网站／文档**贡献以 [MIT](./LICENSE) 授权
-- **`public/data/programs.json` 数据**贡献以 [CC BY 4.0](./public/data/LICENSE) 授权
+- **`data/` 方案数据**贡献以 [CC BY 4.0](./data/LICENSE) 授权
 
 ### 重要原则
 
@@ -253,12 +261,13 @@ git clone https://github.com/YOUR_USERNAME/opensource.git
 cd opensource
 ```
 
-#### 2. Edit `public/data/programs.json`
+#### 2. Add `data/programs/<id>.json`
 
-Add a new entry to the `programs` array. The `$schema` at the top of the file gives VS Code and other editors autocomplete and inline errors. Required fields:
+Each program is its own JSON file named after its `id` (e.g. `data/programs/sentry.json`). The easiest way is to copy an existing file and edit it. The `$schema` at the top of the file gives VS Code and other editors autocomplete and inline errors. Required fields:
 
 ```json
 {
+  "$schema": "../schemas/program.schema.json",
   "id": "program-slug, e.g. sentry",
   "name": "Official Program Name",
   "logo": "/logos/program-slug.svg",
@@ -307,7 +316,7 @@ Add a new entry to the `programs` array. The `$schema` at the top of the file gi
   - `direct_activation` - Direct Activation (no application needed)
   - `application_required` - Application Required
   - `high_bar` - High Bar
-- **category**: Array of ids from the `categories` map at the top of the file (one or more). For a new category, add it to `categories` with three-language labels first; the site filter picks it up automatically
+- **category**: Array of ids from `data/categories.json` (one or more). For a new category, add it to `data/categories.json` with three-language labels first; the site filter picks it up automatically
   Categories follow the [CNCF Cloud Native Landscape](https://landscape.cncf.io): find where the product (or a similar tool) sits in the landscape and pick the matching id. New categories need three-language labels plus a `cncf` field using the official English names
   - `container_registry` - Provisioning › Container Registry
   - `security_compliance` - Provisioning › Security & Compliance
@@ -324,18 +333,21 @@ Add a new entry to the `programs` array. The `$schema` at the top of the file gi
 
 ```bash
 node validate.js
-npm run readme   # refresh the program tables in README
-npm run build    # (optional) regenerate the static pages; the GitHub Action does it after merge if you skip it
 ```
 
 Ensure all fields are correct and pass validation.
 
+> **Don't commit generated files in a PR**: `public/data/programs.json` (the bundle the site reads), the README program tables, and the static pages and share images under `public/` are all regenerated by a GitHub Action after merging to `main`. A PR only needs `data/programs/<id>.json` (plus an optional logo), so open PRs never conflict with each other. CI rejects PRs that change `public/data/programs.json` or the README tables.
+>
+> To preview locally: `npm run data && npm run build`, then undo with `git checkout -- public README.md`.
+
 #### 4. Submit a Pull Request
 
 ```bash
-git add public/data/programs.json
+git checkout -b add-<id>
+git add data/programs/<id>.json public/logos/<id>.svg
 git commit -m "Add [Program Name]"
-git push origin main
+git push origin add-<id>
 ```
 
 Then open a Pull Request on GitHub.
@@ -345,7 +357,7 @@ Then open a Pull Request on GitHub.
 By contributing, you agree that:
 
 - **Code / site / documentation** contributions are licensed under [MIT](./LICENSE)
-- **`public/data/programs.json` data** contributions are licensed under [CC BY 4.0](./public/data/LICENSE)
+- **Program data in `data/`** contributions are licensed under [CC BY 4.0](./data/LICENSE)
 
 ### Important Guidelines
 

@@ -277,7 +277,7 @@
                 <p data-t-html="contribute-desc"></p>
             </div>
             <div class="btns">
-                <a class="btn primary" href="https://github.com/SammyLin/opensource/edit/main/public/data/programs.json" target="_blank" rel="noopener"><svg class="icon"><use href="#i-github"/></svg><span data-t="edit-btn"></span></a>
+                <a class="btn primary" href="https://github.com/SammyLin/opensource/tree/main/data/programs" target="_blank" rel="noopener"><svg class="icon"><use href="#i-github"/></svg><span data-t="edit-btn"></span></a>
                 <a class="btn secondary" href="https://github.com/SammyLin/opensource/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener" data-t="guide-btn"></a>
             </div>
         </section>
@@ -312,7 +312,7 @@
                 'empty': '沒有符合條件的方案，試試清除篩選。',
                 'why-it-helps': '對你的專案有什麼幫助', 'what-you-get': '拿到什麼', 'requirements': '申請條件', 'cta-apply': '前往申請', 'cta-direct': '前往開通', 'last-verified': '驗證於',
                 'contribute-title': '知道其他免費方案？',
-                'contribute-desc': '所有資料都在 <code>public/data/programs.json</code>。在 GitHub 上直接編輯、照著現有格式加一筆，送出 PR 就好；CI 會自動檢查格式。',
+                'contribute-desc': '每個方案是 <code>data/programs/</code> 底下的一個 JSON 檔。在 GitHub 上照著現有檔案的格式新增一個 <code>&lt;id&gt;.json</code>，送出 PR 就好；CI 會自動檢查格式。',
                 'edit-btn': '在 GitHub 編輯資料', 'guide-btn': '貢獻指南',
                 'footer': '資料以各方案官網為準，申請前請再確認條件。',
                 'load-fail': '資料載入失敗',
@@ -339,7 +339,7 @@
                 'empty': '没有符合条件的方案，试试清除筛选。',
                 'why-it-helps': '对你的项目有什么帮助', 'what-you-get': '拿到什么', 'requirements': '申请条件', 'cta-apply': '前往申请', 'cta-direct': '前往开通', 'last-verified': '验证于',
                 'contribute-title': '知道其他免费方案？',
-                'contribute-desc': '所有数据都在 <code>public/data/programs.json</code>。在 GitHub 上直接编辑、照着现有格式加一条，提交 PR 就好；CI 会自动检查格式。',
+                'contribute-desc': '每个方案是 <code>data/programs/</code> 下的一个 JSON 文件。在 GitHub 上照着现有文件的格式新建一个 <code>&lt;id&gt;.json</code>，提交 PR 就好；CI 会自动检查格式。',
                 'edit-btn': '在 GitHub 编辑数据', 'guide-btn': '贡献指南',
                 'footer': '数据以各方案官网为准，申请前请再确认条件。',
                 'load-fail': '数据加载失败',
@@ -366,7 +366,7 @@
                 'empty': 'No programs match. Try clearing the filters.',
                 'why-it-helps': 'How it helps your project', 'what-you-get': 'What you get', 'requirements': 'Requirements', 'cta-apply': 'Apply', 'cta-direct': 'Activate', 'last-verified': 'Verified',
                 'contribute-title': 'Know another free program?',
-                'contribute-desc': 'All data lives in <code>public/data/programs.json</code>. Edit it on GitHub, add one entry following the existing format, and open a PR. CI checks the format for you.',
+                'contribute-desc': 'Each program is one JSON file in <code>data/programs/</code>. On GitHub, add a new <code>&lt;id&gt;.json</code> following an existing file, and open a PR. CI checks the format for you.',
                 'edit-btn': 'Edit data on GitHub', 'guide-btn': 'Contributing guide',
                 'footer': 'Vendor sites are the source of truth. Double-check terms before applying.',
                 'load-fail': 'Failed to load data',
@@ -580,7 +580,7 @@
                     </dl>
                     <div class="detail-cta">
                         <a class="apply" href="${esc(safeUrl(p.link))}" target="_blank" rel="noopener">${esc(cta)}<svg class="icon"><use href="#i-ext"/></svg></a>
-                        <a class="edit" href="https://github.com/SammyLin/opensource/edit/main/public/data/programs.json" target="_blank" rel="noopener">${esc(t['edit-entry'])}</a>
+                        <a class="edit" href="https://github.com/SammyLin/opensource/edit/main/data/programs/${esc(p.id)}.json" target="_blank" rel="noopener">${esc(t['edit-entry'])}</a>
                     </div>
                 </article>
                 <section class="share" aria-labelledby="share-title">

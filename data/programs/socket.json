@@ -1,0 +1,27 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "socket",
+  "name": "Socket for Open Source",
+  "logo": "/logos/socket.svg",
+  "whatYouGet": {
+    "zh-Hant": "免費 Business 方案（自動封鎖惡意依賴、可達性分析、GitHub Actions 掃描、SBOM 匯出等）",
+    "zh-Hans": "免费 Business 方案（自动阻止恶意依赖、可达性分析、GitHub Actions 扫描、SBOM 导出等）",
+    "en": "Free Business plan (automatic blocking of malicious dependencies, reachability analysis, GitHub Actions scanning, SBOM export, etc.)"
+  },
+  "whyItHelps": {
+    "zh-Hant": "在 PR 階段就攔下惡意或可疑的相依套件（例如被植入後門的套件），避免供應鏈攻擊經由你的專案傳給下游使用者。",
+    "zh-Hans": "在 PR 阶段就拦下恶意或可疑的依赖包（例如被植入后门的包），避免供应链攻击经由你的项目传给下游用户。",
+    "en": "Catches malicious or suspicious dependencies (e.g. backdoored packages) at PR time, so supply-chain attacks don't reach your downstream users."
+  },
+  "requirements": {
+    "zh-Hant": "公開的開源專案，擁有有效的 OSI 授權",
+    "zh-Hans": "公开的开源项目，拥有有效的 OSI 许可证",
+    "en": "Public open source project with valid OSI license"
+  },
+  "type": "application_required",
+  "category": [
+    "security_compliance"
+  ],
+  "link": "https://www.socket.dev/blog/free-business-plan-upgrades-for-open-source",
+  "lastVerified": "2026-11-18"
+}

@@ -1,0 +1,65 @@
+{
+  "$schema": "./schemas/categories.schema.json",
+  "container_registry": {
+    "zh-Hant": "容器映像倉庫",
+    "zh-Hans": "容器镜像仓库",
+    "en": "Container Registry",
+    "cncf": {
+      "category": "Provisioning",
+      "subcategory": "Container Registry"
+    }
+  },
+  "security_compliance": {
+    "zh-Hant": "安全與合規",
+    "zh-Hans": "安全与合规",
+    "en": "Security & Compliance",
+    "cncf": {
+      "category": "Provisioning",
+      "subcategory": "Security & Compliance"
+    }
+  },
+  "key_management": {
+    "zh-Hant": "金鑰與機密管理",
+    "zh-Hans": "密钥与机密管理",
+    "en": "Key Management",
+    "cncf": {
+      "category": "Provisioning",
+      "subcategory": "Key Management"
+    }
+  },
+  "app_definition_image_build": {
+    "zh-Hant": "應用定義與開發環境",
+    "zh-Hans": "应用定义与开发环境",
+    "en": "Application Definition & Image Build",
+    "cncf": {
+      "category": "App Definition and Development",
+      "subcategory": "Application Definition & Image Build"
+    }
+  },
+  "ci_cd": {
+    "zh-Hant": "持續整合與交付",
+    "zh-Hans": "持续集成与交付",
+    "en": "Continuous Integration & Delivery",
+    "cncf": {
+      "category": "App Definition and Development",
+      "subcategory": "Continuous Integration & Delivery"
+    }
+  },
+  "observability": {
+    "zh-Hant": "可觀測性",
+    "zh-Hans": "可观测性",
+    "en": "Observability",
+    "cncf": {
+      "category": "Observability and Analysis",
+      "subcategory": "Observability"
+    }
+  },
+  "ai_agent": {
+    "zh-Hant": "AI Agent",
+    "zh-Hans": "AI Agent",
+    "en": "AI Agent",
+    "cncf": {
+      "category": "AI Agent"
+    }
+  }
+}

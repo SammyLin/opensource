@@ -1,0 +1,27 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "github-copilot",
+  "name": "GitHub Copilot Pro for Open Source",
+  "logo": "/logos/githubcopilot.svg",
+  "whatYouGet": {
+    "zh-Hant": "免費 Copilot Pro 訂閱",
+    "zh-Hans": "免费 Copilot Pro 订阅",
+    "en": "Free Copilot Pro subscription"
+  },
+  "whyItHelps": {
+    "zh-Hant": "編輯器裡的 AI 程式碼補全與對話，加快寫功能、補測試，也更快看懂貢獻者送來的陌生程式碼。",
+    "zh-Hans": "编辑器里的 AI 代码补全与对话，加快写功能、补测试，也更快看懂贡献者提交的陌生代码。",
+    "en": "AI code completion and chat in your editor to write features and tests faster and understand unfamiliar contributed code."
+  },
+  "requirements": {
+    "zh-Hant": "熱門開源儲存庫的維護者（每月自動重新評估資格）",
+    "zh-Hans": "热门开源仓库的维护者（每月自动重新评估资格）",
+    "en": "Maintainer of a popular open source repository (eligibility reevaluated monthly)"
+  },
+  "type": "high_bar",
+  "category": [
+    "ai_agent"
+  ],
+  "link": "https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-teachers-and-os-maintainers",
+  "lastVerified": "2026-11-18"
+}
