@@ -2,9 +2,18 @@
   "1password-en.png": "ce9d3159720331d2",
   "1password-zh-hans.png": "92a6e30887c0189c",
   "1password-zh-hant.png": "0fe163865ba180a1",
+  "anthropic-oss-scanner-en.png": "a77334181d355693",
+  "anthropic-oss-scanner-zh-hans.png": "434a111eebabfa66",
+  "anthropic-oss-scanner-zh-hant.png": "9b60306daa804ca0",
+  "circleci-en.png": "ba28f422f536894a",
+  "circleci-zh-hans.png": "62845527e2e8c870",
+  "circleci-zh-hant.png": "1e9e71da1fa6d19c",
   "claude-en.png": "17dd64380510b16c",
   "claude-zh-hans.png": "15742d5b23880b32",
   "claude-zh-hant.png": "8b7ce1e826a0a48f",
+  "cloudsmith-en.png": "f7c6dd43242d9df3",
+  "cloudsmith-zh-hans.png": "e4eb4647da163acd",
+  "cloudsmith-zh-hant.png": "ef8526440cbc3c0c",
   "codecov-en.png": "dab919db0eb5a1f5",
   "codecov-zh-hans.png": "8abca62343aa36fb",
   "codecov-zh-hant.png": "c1549a5dd6936ce2",
@@ -31,5 +40,8 @@
   "socket-zh-hant.png": "46c80f3f7d82ff29",
   "sonarqube-cloud-en.png": "4f8867a112eaa0c1",
   "sonarqube-cloud-zh-hans.png": "3e2f0615d2684219",
-  "sonarqube-cloud-zh-hant.png": "e5f37c0a7f0aff40"
+  "sonarqube-cloud-zh-hant.png": "e5f37c0a7f0aff40",
+  "testmu-ai-en.png": "e485b9ebeb9585a4",
+  "testmu-ai-zh-hans.png": "c8aa4e04e571548f",
+  "testmu-ai-zh-hant.png": "f115262fe8408043"
 }
