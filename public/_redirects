@@ -1,2 +1,5 @@
+/zh-hant  /zh-hant/  301
 /zh-hans  /zh-hans/  301
-/en       /en/       301
+# English moved from /en/ to the unprefixed URLs.
+/en       /         301
+/en/*     /:splat   301

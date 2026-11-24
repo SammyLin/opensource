@@ -2,6 +2,8 @@
 
 OSS Perks｜開源福利社（https://opensource.3mi.ai/）：收錄給開源專案／維護者的免費或優惠方案。純靜態網站，部署在 Cloudflare Pages（直接發佈 `public/`）。
 
+網址：英文是預設、不加前綴（`/`、`/p/<id>/`），繁中在 `/zh-hant/`，簡中在 `/zh-hans/`。英文頁會依瀏覽器語系（或使用者點過的語言）自動轉到中文版；舊的 `/en/...` 由 `public/_redirects` 301 到新網址。
+
 欄位規格、分類規則、寫作原則以 `CONTRIBUTING.md` 為準。這份檔案只補充 agent 容易做錯的地方。
 
 ## 資料放在哪
@@ -60,6 +62,8 @@ PR 裡不要執行 `npm run data`、`npm run build`，也不要 commit 上述檔
 - 看完照上面的方式還原 `public/`。
 
 ## Git / PR
+
+- **PR 標題、內文和 commit 訊息一律用英文。** README 也只用英文。
 
 - 不推 `main`、不 merge。一律開分支，再 PR 到 `main`。
 - 分支有衝突時，把 main merge 進分支，不要 rebase 別人的分支。
