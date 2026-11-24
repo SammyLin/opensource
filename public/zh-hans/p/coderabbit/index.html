@@ -5,10 +5,34 @@
     <title>CodeRabbit for Open Source｜开源项目免费方案 — 开源福利社</title>
     <meta name="description" content="每个 PR 先由 AI 逐行审查并整理摘要，维护者能更快消化外部贡献者提交的 PR。 拿到什么：公开仓库免费使用 Pro 级别的 AI 代码审查（有速率限制；Dashboard、Reports 等其他付费功能不含）" id="meta-description">
     <link rel="canonical" href="https://opensource.3mi.ai/zh-hans/p/coderabbit/" id="canonical">
-    <link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/p/coderabbit/" data-alt="zh-Hant">
+    <link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/p/coderabbit/" data-alt="en">
+    <link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/zh-hant/p/coderabbit/" data-alt="zh-Hant">
     <link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/coderabbit/" data-alt="zh-Hans">
-    <link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/en/p/coderabbit/" data-alt="en">
-    <link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/coderabbit/" data-alt="zh-Hant">
+    <link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/coderabbit/" data-alt="en">
+    <script>
+        // English lives at the unprefixed URLs; 繁中 at /zh-hant/, 简中 at /zh-hans/.
+        // On an English page, send people whose browser prefers Chinese (or who picked a
+        // language before) to the same page in that language. Prefixed URLs are never redirected,
+        // so a shared /zh-hant/ or /zh-hans/ link always opens as sent. Crawlers get English.
+        (function () {
+            var PREFIX = { 'zh-Hant': '/zh-hant', 'zh-Hans': '/zh-hans' };
+            var path = location.pathname;
+            if (/^\/zh-han[st](\/|$)/.test(path)) return;
+            if (navigator.webdriver || /bot|crawl|spider|slurp|jsdom|headless|lighthouse/i.test(navigator.userAgent)) return;
+            var pick = null;
+            try { pick = localStorage.getItem('oss-perks-lang'); } catch (e) {}
+            if (!pick) {
+                var langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
+                for (var i = 0; i < langs.length && !pick; i++) {
+                    var l = String(langs[i]).toLowerCase();
+                    if (/^en\b/.test(l)) pick = 'en';
+                    else if (/^zh-(hant|tw|hk|mo)\b/.test(l)) pick = 'zh-Hant';
+                    else if (/^zh\b/.test(l)) pick = 'zh-Hans';
+                }
+            }
+            if (PREFIX[pick]) location.replace(PREFIX[pick] + path + location.search + location.hash);
+        })();
+    </script>
     <meta name="robots" content="index, follow" id="meta-robots">
     <meta property="og:title" content="CodeRabbit for Open Source｜开源项目免费方案 — 开源福利社" id="meta-og-title">
     <meta property="og:description" content="每个 PR 先由 AI 逐行审查并整理摘要，维护者能更快消化外部贡献者提交的 PR。 拿到什么：公开仓库免费使用 Pro 级别的 AI 代码审查（有速率限制；Dashboard、Reports 等其他付费功能不含）" id="meta-og-description">
@@ -280,9 +304,9 @@
         <div class="wrap nav-inner">
             <a href="/zh-hans/" class="logo"><img src="/brand/logo-mark.png" alt="" width="32" height="32"><span data-t="logo">OSS Perks｜开源福利社</span></a>
             <div class="lang-switch">
-                <a href="/p/coderabbit/" hreflang="zh-Hant" data-lang="zh-Hant">繁</a>
+                <a href="/p/coderabbit/" hreflang="en" data-lang="en">EN</a>
+                <a href="/zh-hant/p/coderabbit/" hreflang="zh-Hant" data-lang="zh-Hant">繁</a>
                 <a href="/zh-hans/p/coderabbit/" hreflang="zh-Hans" data-lang="zh-Hans" aria-current="page">简</a>
-                <a href="/en/p/coderabbit/" hreflang="en" data-lang="en">EN</a>
             </div>
         </div>
     </nav>
@@ -376,7 +400,7 @@
     <footer><p data-t="footer">数据以各方案官网为准，申请前请再确认条件。</p><p data-t-html="license">代码 <a href="https://github.com/SammyLin/opensource/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a> · 数据 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></p></footer>
 
     <script>
-        const LANG_PATHS = { 'zh-Hant': '/', 'zh-Hans': '/zh-hans/', 'en': '/en/' };
+        const LANG_PATHS = { 'en': '/', 'zh-Hant': '/zh-hant/', 'zh-Hans': '/zh-hans/' };
         const OG_LOCALE = { 'zh-Hant': 'zh_TW', 'zh-Hans': 'zh_CN', 'en': 'en_US' };
         const TYPES = ['direct_activation', 'application_required', 'high_bar'];
         // Old category ids (before the switch to CNCF Landscape categories) so shared links keep working.
@@ -466,10 +490,10 @@
             }
         };
 
-        const lang = Object.keys(LANG_PATHS).find(l => l !== 'zh-Hant' && location.pathname.startsWith(LANG_PATHS[l])) || 'zh-Hant';
+        const lang = Object.keys(LANG_PATHS).find(l => l !== 'en' && location.pathname.startsWith(LANG_PATHS[l])) || 'en';
         const t = T[lang];
         const SITE = 'https://opensource.3mi.ai';
-        // Program pages live at /p/<id>/, /zh-hans/p/<id>/ and /en/p/<id>/ (prerendered by build.js).
+        // Program pages live at /p/<id>/ (English), /zh-hant/p/<id>/ and /zh-hans/p/<id>/ (prerendered by build.js).
         const PID = (location.pathname.match(/\/p\/([a-z0-9-]+)\/?$/) || [])[1] || '';
         const pageUrl = (l, id) => SITE + LANG_PATHS[l] + (id ? `p/${id}/` : '');
         const programPath = id => `${LANG_PATHS[lang]}p/${id}/`;
@@ -507,6 +531,10 @@
                 if (a.dataset.lang === lang) a.setAttribute('aria-current', 'page');
             });
             $('.logo').href = LANG_PATHS[lang];
+            // Remember an explicit language choice so English pages stop redirecting by browser language.
+            document.querySelectorAll('.lang-switch a').forEach(a => a.addEventListener('click', () => {
+                try { localStorage.setItem('oss-perks-lang', a.dataset.lang); } catch (e) {}
+            }));
         }
 
         function readState() {
