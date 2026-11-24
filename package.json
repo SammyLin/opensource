@@ -1,7 +1,7 @@
 {
   "name": "workspace",
   "version": "1.0.0",
-  "description": "[繁體中文](#繁體中文) | [简体中文](#简体中文) | [English](#english)",
+  "description": "[\u7e41\u9ad4\u4e2d\u6587](#\u7e41\u9ad4\u4e2d\u6587) | [\u7b80\u4f53\u4e2d\u6587](#\u7b80\u4f53\u4e2d\u6587) | [English](#english)",
   "main": "validate.js",
   "scripts": {
     "data": "node scripts/bundle-data.js",
@@ -9,7 +9,6 @@
     "build": "node build.js",
     "og": "node og-images.js",
     "validate": "node validate.js",
-    "readme": "node update-readme.js",
     "screenshots": "node take-screenshots.js",
     "test": "node validate.js"
   },

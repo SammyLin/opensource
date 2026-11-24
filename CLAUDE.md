@@ -17,12 +17,11 @@ OSS Perks｜開源福利社（https://opensource.3mi.ai/）：收錄給開源專
 下面這些檔案會在合併到 `main` 後，由 `.github/workflows/build.yml` 重新產生並 commit：
 
 - `public/data/programs.json`：網站讀取的合併檔，由 `scripts/bundle-data.js` 產生
-- README.md 裡 `<!-- programs:*:start/end -->` 之間的方案表格（`update-readme.js`）
 - `public/**/index.html`、`public/og/`、`sitemap.xml`、`robots.txt`
 
-PR 裡不要執行 `npm run data`、`npm run readme`、`npm run build`，也不要 commit 上述檔案。以前每個 PR 都重新產生這些檔案，同時開著的 PR 一定互相衝突。`validate.yml` 會擋下改到合併檔或 README 表格的 PR。
+PR 裡不要執行 `npm run data`、`npm run build`，也不要 commit 上述檔案。以前每個 PR 都重新產生這些檔案，同時開著的 PR 一定互相衝突。`validate.yml` 會擋下改到合併檔的 PR。README 刻意保持精簡，不放方案列表，新增方案不需要改 README。
 
-只想在本機看結果的話，跑完用 `git checkout -- public README.md && git clean -fd public` 還原。
+只想在本機看結果的話，跑完用 `git checkout -- public && git clean -fd public` 還原。
 
 新增方案的 PR 通常只該包含 `data/programs/*.json` 和 `public/logos/*.svg`，必要時加 `data/categories.json`。commit 前用 `git status` 確認。
 
@@ -52,7 +51,13 @@ PR 裡不要執行 `npm run data`、`npm run readme`、`npm run build`，也不�
 還在改單一 `public/data/programs.json` 的分支，要先轉成新格式：
 
 1. 執行 `node scripts/split-programs.js`，把方案拆成 `data/programs/*.json`。
-2. 用 `git checkout origin/main -- public/data/programs.json README.md` 還原自動產生的檔案。
+2. 用 `git checkout origin/main -- public/data/programs.json README.md` 還原自動產生的檔案和 README。
+
+## 本機預覽與 PR 截圖
+
+- `npm install && npm run data && npm run build`，再用 `npx wrangler pages dev public --port 8788` 啟動本機站。
+- PR 截圖：`npx playwright install chromium`（首次），然後 `npm run screenshots -- before pr-media/pr<N>`、`npm run screenshots -- after pr-media/pr<N>`（`take-screenshots.js`）。
+- 看完照上面的方式還原 `public/`。
 
 ## Git / PR
 
