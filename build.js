@@ -147,6 +147,74 @@ async function render({ lang, id, path: pagePath, out }) {
     return { out, summary };
 }
 
+// llms.txt (https://llmstxt.org): a plain-Markdown guide to the site for AI assistants and agents.
+// llms.txt is the short index; llms-full.txt has every program's details. Both are English.
+const TYPE_EN = {
+    direct_activation: 'Direct activation (no application needed)',
+    application_required: 'Application required',
+    high_bar: 'High bar (selective)',
+};
+const one = s => String(s).replace(/\s+/g, ' ').trim();
+const catName = c => (data.categories[c] && data.categories[c].en) || c;
+
+function llmsIntro() {
+    return [
+        '# OSS Perks',
+        '',
+        '> A curated list of free plans, credits and licenses that companies offer to open source projects and maintainers: what each program gives, who qualifies, how hard it is to get, and the official link to apply. Every entry links to an official source and records the date it was last verified.',
+        '',
+        `There are ${data.programs.length} programs, last updated ${lastmod}. Terms change, so check the official link before relying on an entry. Each program has a page in English (${SITE}/p/<id>/), Traditional Chinese (${SITE}/zh-hant/p/<id>/) and Simplified Chinese (${SITE}/zh-hans/p/<id>/).`,
+        '',
+        'Requirement levels:',
+        ...Object.values(TYPE_EN).map(t => `- ${t}`),
+        '',
+    ];
+}
+
+function llmsTxt() {
+    const lines = [...llmsIntro()];
+    for (const c of Object.keys(data.categories)) {
+        const list = data.programs.filter(p => p.category[0] === c);
+        if (!list.length) continue;
+        lines.push(`## ${catName(c)}`, '');
+        for (const p of list) lines.push(`- [${p.name}](${SITE}/p/${p.id}/): ${one(p.whatYouGet.en)} — ${TYPE_EN[p.type]}.`);
+        lines.push('');
+    }
+    lines.push(
+        '## Data',
+        '',
+        `- [Full details for every program](${SITE}/llms-full.txt): requirements, links and verification dates in Markdown`,
+        `- [Machine-readable data](${SITE}/data/programs.json): all programs and categories as JSON, in English, Traditional Chinese and Simplified Chinese`,
+        '- [Source and contributing guide](https://github.com/SammyLin/opensource): each program is one file, `data/programs/<id>.json`; PRs are welcome',
+        '',
+    );
+    return lines.join('\n');
+}
+
+function llmsFullTxt() {
+    const lines = [...llmsIntro()];
+    for (const p of data.programs) {
+        lines.push(
+            `## ${p.name}`,
+            '',
+            `- Page: ${SITE}/p/${p.id}/`,
+            `- Official link: ${p.link}`,
+            `- Category: ${p.category.map(catName).join(', ')}`,
+            `- Requirement level: ${TYPE_EN[p.type]}`,
+            `- Last verified: ${p.lastVerified}`,
+            '',
+            `**What you get:** ${one(p.whatYouGet.en)}`,
+            '',
+            `**Why it helps:** ${one(p.whyItHelps.en)}`,
+            '',
+            `**Requirements:** ${one(p.requirements.en)}`,
+            '',
+        );
+        if (p.pending) lines.push(`**Not yet confirmed:** ${one(p.pending.en)}${p.pending.link ? ` (${p.pending.link})` : ''}`, '');
+    }
+    return lines.join('\n');
+}
+
 function sitemap() {
     const alt = id => LANGS.map(l => `    <xhtml:link rel="alternate" hreflang="${l.lang}" href="${SITE}${langPath(l.lang, id)}"/>`)
         .concat(`    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE}${langPath('en', id)}"/>`).join('\n');
@@ -181,7 +249,9 @@ function sitemap() {
     }
     fs.writeFileSync(path.join(PUBLIC, 'sitemap.xml'), sitemap());
     fs.writeFileSync(path.join(PUBLIC, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
-    console.log('public/sitemap.xml, public/robots.txt');
+    fs.writeFileSync(path.join(PUBLIC, 'llms.txt'), llmsTxt());
+    fs.writeFileSync(path.join(PUBLIC, 'llms-full.txt'), llmsFullTxt());
+    console.log('public/sitemap.xml, public/robots.txt, public/llms.txt, public/llms-full.txt');
 })().catch(err => {
     console.error(err.message || err);
     process.exit(1);

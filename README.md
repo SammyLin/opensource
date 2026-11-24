@@ -20,6 +20,8 @@
 
 Many companies offer free plans for open source projects, but the details are scattered across their websites. **[OSS Perks](https://opensource.3mi.ai)** puts them on one page: what you get, who qualifies, and how hard it is to get (direct activation / application required / high bar), each with an official link and a last-verified date. Filter by [CNCF Landscape](https://landscape.cncf.io) category. The site is in English, Traditional Chinese and Simplified Chinese, and follows your browser's language.
 
+For AI assistants and agents: [`/llms.txt`](https://opensource.3mi.ai/llms.txt) (index) and [`/llms-full.txt`](https://opensource.3mi.ai/llms-full.txt) (every program's details), generated from the data on each build.
+
 ## Contributing
 
 **To add or fix a program, edit one file:** `data/programs/<id>.json`. Copy an existing file, change it, and open a PR — the site updates automatically after merge. See [CONTRIBUTING.md](CONTRIBUTING.md#english) for the fields.

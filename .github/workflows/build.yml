@@ -1,7 +1,7 @@
 name: Build static pages
 
 # Regenerates public/data/programs.json (the bundle of data/), the prerendered pages (listing + /p/<id>/ program pages in every language),
-# the program share images (public/og/), sitemap.xml and robots.txt after changes land on main,
+# the program share images (public/og/), sitemap.xml, robots.txt and llms.txt / llms-full.txt after changes land on main,
 # so contributors who edit programs.json in the GitHub web editor don't need to run
 # the build themselves. Cloudflare Pages then deploys the resulting commit.
 on:

@@ -20,6 +20,7 @@ OSS Perks｜開源福利社（https://opensource.3mi.ai/）：收錄給開源專
 
 - `public/data/programs.json`：網站讀取的合併檔，由 `scripts/bundle-data.js` 產生
 - `public/**/index.html`、`public/og/`、`sitemap.xml`、`robots.txt`
+- `public/llms.txt`、`public/llms-full.txt`：給 AI 看的網站說明（[llms.txt](https://llmstxt.org) 格式，英文），由 `build.js` 從方案資料產生
 
 PR 裡不要執行 `npm run data`、`npm run build`，也不要 commit 上述檔案。以前每個 PR 都重新產生這些檔案，同時開著的 PR 一定互相衝突。`validate.yml` 會擋下改到合併檔的 PR。README 刻意保持精簡，不放方案列表，新增方案不需要改 README。
 
