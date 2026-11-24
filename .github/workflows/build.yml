@@ -1,7 +1,7 @@
 name: Build static pages
 
 # Regenerates public/data/programs.json (the bundle of data/), the prerendered pages (listing + /p/<id>/ program pages in every language),
-# the program share images (public/og/), sitemap.xml, robots.txt and the README program tables after changes land on main,
+# the program share images (public/og/), sitemap.xml and robots.txt after changes land on main,
 # so contributors who edit programs.json in the GitHub web editor don't need to run
 # the build themselves. Cloudflare Pages then deploys the resulting commit.
 on:
@@ -16,7 +16,6 @@ on:
       - 'src/**'
       - 'build.js'
       - 'og-images.js'
-      - 'update-readme.js'
   workflow_dispatch:
 
 permissions:
@@ -45,12 +44,11 @@ jobs:
       - name: Validate data
         run: node validate.js
 
-      - name: Bundle data, draw share images, prerender pages and update README
+      - name: Bundle data, draw share images and prerender pages
         run: |
           node scripts/bundle-data.js
           node og-images.js
           node build.js
-          node update-readme.js
 
       - name: Commit generated files
         run: |
@@ -60,8 +58,8 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git add public README.md
+          git add public
           # No [skip ci] here: Cloudflare Pages honours it and would skip the deploy.
           # Pushes made with GITHUB_TOKEN don't trigger other workflows, so there is no loop.
-          git commit -m "chore: regenerate static pages and README tables"
+          git commit -m "chore: regenerate data bundle and static pages"
           git push
