@@ -96,6 +96,12 @@
         .lang-switch { display: flex; gap: 4px; background: var(--color-bg); padding: 4px; border-radius: var(--radius-full); }
         .lang-switch a { padding: 6px 14px; color: var(--color-text-subtle); text-decoration: none; border-radius: var(--radius-full); font-size: 14px; font-weight: 500; }
         .lang-switch a[aria-current="page"] { background: var(--color-text); color: var(--color-surface); }
+        .nav-right { display: flex; align-items: center; gap: 10px; }
+        .gh-star { display: inline-flex; align-items: stretch; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); color: var(--color-text); text-decoration: none; font-size: 14px; font-weight: 500; line-height: 1; overflow: hidden; }
+        .gh-star:hover { border-color: var(--color-text); }
+        .gh-star > span { display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; }
+        .gh-star .star { width: 16px; height: 16px; fill: #e3b341; stroke: none; }
+        .gh-star .gh-count { border-left: 1px solid var(--color-border); background: var(--color-bg); font-variant-numeric: tabular-nums; }
 
         .hero { padding: 56px 0 32px; max-width: 760px; }
         .hero h1 { font-size: 44px; line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 16px; text-wrap: balance; }
@@ -232,9 +238,19 @@
             .row-label { width: 100%; }
             .contribute { padding: 24px; }
         }
+        @media (max-width: 600px) {
+            .gh-star .gh-label { display: none; }
+            .gh-star > span { padding: 8px 10px; }
+        }
+        @media (max-width: 480px) {
+            .logo .logo-sub { display: none; }
+        }
         @media (max-width: 420px) {
             .logo { font-size: 15px; gap: 6px; }
-            .lang-switch a { padding: 6px 10px; }
+            .lang-switch a { padding: 6px 8px; }
+            .nav-right { gap: 6px; }
+            .gh-star > span { padding: 6px 8px; gap: 4px; }
+            .nav-inner { gap: 8px; }
         }
     </style>
   <!-- GA4 -->
@@ -308,16 +324,22 @@
         <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></symbol>
         <symbol id="i-ext" viewBox="0 0 24 24"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></symbol>
         <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></symbol>
+        <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></symbol>
         <symbol id="i-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></symbol>
     </svg>
 
     <nav>
         <div class="wrap nav-inner">
-            <a href="/zh-hans/" class="logo"><img src="/brand/logo-mark.png" alt="" width="32" height="32"><span data-t="logo">OSS Perks｜开源福利社</span></a>
-            <div class="lang-switch">
-                <a href="/p/testingbot/" hreflang="en" data-lang="en">EN</a>
-                <a href="/zh-hant/p/testingbot/" hreflang="zh-Hant" data-lang="zh-Hant">繁</a>
-                <a href="/zh-hans/p/testingbot/" hreflang="zh-Hans" data-lang="zh-Hans" aria-current="page">简</a>
+            <a href="/zh-hans/" class="logo"><img src="/brand/logo-mark.png" alt="" width="32" height="32"><span><span data-t="logo">OSS Perks</span><span class="logo-sub" data-t="logo-sub">｜开源福利社</span></span></a>
+            <div class="nav-right">
+                <a class="gh-star" href="https://github.com/SammyLin/opensource" target="_blank" rel="noopener" data-t-aria="star-aria" aria-label="在 GitHub 上给这个项目点星">
+                    <span><svg class="icon star"><use href="#i-star"></use></svg><span class="gh-label">Star</span></span><span class="gh-count" hidden=""></span>
+                </a>
+                <div class="lang-switch">
+                    <a href="/p/testingbot/" hreflang="en" data-lang="en">EN</a>
+                    <a href="/zh-hant/p/testingbot/" hreflang="zh-Hant" data-lang="zh-Hant">繁</a>
+                    <a href="/zh-hans/p/testingbot/" hreflang="zh-Hans" data-lang="zh-Hans" aria-current="page">简</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -432,7 +454,7 @@
 
         const T = {
             'zh-Hant': {
-                'logo': 'OSS Perks｜開源福利社',
+                'logo': 'OSS Perks', 'logo-sub': '｜開源福利社',
                 'title': 'OSS Perks｜開源福利社 — 開源維護者的免費工具',
                 'desc': '開源維護者可以免費拿到的工具與服務，一頁看完內容、條件、怎麼申請。',
                 'h1': '做開源，這些工具可以免費用',
@@ -450,7 +472,7 @@
                 'why-it-helps': '對你的專案有什麼幫助', 'what-you-get': '拿到什麼', 'requirements': '申請條件', 'cta-apply': '前往申請', 'cta-direct': '前往開通', 'last-verified': '驗證於',
                 'contribute-title': '知道其他免費方案？',
                 'contribute-desc': '每個方案是 <code>data/programs/</code> 底下的一個 JSON 檔。在 GitHub 上照著現有檔案的格式新增一個 <code>&lt;id&gt;.json</code>，送出 PR 就好；CI 會自動檢查格式。',
-                'edit-btn': '在 GitHub 編輯資料', 'guide-btn': '貢獻指南',
+                'star-aria': '在 GitHub 上給這個專案星星', 'edit-btn': '在 GitHub 編輯資料', 'guide-btn': '貢獻指南',
                 'footer': '資料以各方案官網為準，申請前請再確認條件。',
                 'load-fail': '資料載入失敗',
                 'license': '程式碼 <a href="https://github.com/SammyLin/opensource/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a> · 資料 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>', 'updated': '資料更新於', 'pending': '待確認', 'pending-src': '確認來源',
@@ -461,7 +483,7 @@
                 'page-title': n => `${n}｜開源專案免費方案 — 開源福利社`
             },
             'zh-Hans': {
-                'logo': 'OSS Perks｜开源福利社',
+                'logo': 'OSS Perks', 'logo-sub': '｜开源福利社',
                 'title': 'OSS Perks｜开源福利社 — 开源维护者的免费工具',
                 'desc': '开源维护者可以免费拿到的工具与服务，一页看完内容、条件、怎么申请。',
                 'h1': '做开源，这些工具可以免费用',
@@ -479,7 +501,7 @@
                 'why-it-helps': '对你的项目有什么帮助', 'what-you-get': '拿到什么', 'requirements': '申请条件', 'cta-apply': '前往申请', 'cta-direct': '前往开通', 'last-verified': '验证于',
                 'contribute-title': '知道其他免费方案？',
                 'contribute-desc': '每个方案是 <code>data/programs/</code> 下的一个 JSON 文件。在 GitHub 上照着现有文件的格式新建一个 <code>&lt;id&gt;.json</code>，提交 PR 就好；CI 会自动检查格式。',
-                'edit-btn': '在 GitHub 编辑数据', 'guide-btn': '贡献指南',
+                'star-aria': '在 GitHub 上给这个项目点星', 'edit-btn': '在 GitHub 编辑数据', 'guide-btn': '贡献指南',
                 'footer': '数据以各方案官网为准，申请前请再确认条件。',
                 'load-fail': '数据加载失败',
                 'license': '代码 <a href="https://github.com/SammyLin/opensource/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a> · 数据 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>', 'updated': '数据更新于', 'pending': '待确认', 'pending-src': '确认来源',
@@ -490,7 +512,7 @@
                 'page-title': n => `${n}｜开源项目免费方案 — 开源福利社`
             },
             'en': {
-                'logo': 'OSS Perks',
+                'logo': 'OSS Perks', 'logo-sub': '',
                 'title': 'OSS Perks — Free tools for open source maintainers',
                 'desc': 'Free tools and services for open source maintainers: what you get, who qualifies, and where to apply, on one page.',
                 'h1': 'Free tools for open source maintainers',
@@ -508,7 +530,7 @@
                 'why-it-helps': 'How it helps your project', 'what-you-get': 'What you get', 'requirements': 'Requirements', 'cta-apply': 'Apply', 'cta-direct': 'Activate', 'last-verified': 'Verified',
                 'contribute-title': 'Know another free program?',
                 'contribute-desc': 'Each program is one JSON file in <code>data/programs/</code>. On GitHub, add a new <code>&lt;id&gt;.json</code> following an existing file, and open a PR. CI checks the format for you.',
-                'edit-btn': 'Edit data on GitHub', 'guide-btn': 'Contributing guide',
+                'star-aria': 'Star this project on GitHub', 'edit-btn': 'Edit data on GitHub', 'guide-btn': 'Contributing guide',
                 'footer': 'Vendor sites are the source of truth. Double-check terms before applying.',
                 'load-fail': 'Failed to load data',
                 'license': 'Code <a href="https://github.com/SammyLin/opensource/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a> · Data <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>', 'updated': 'Data updated', 'pending': 'To be confirmed', 'pending-src': 'Source',
@@ -556,6 +578,7 @@
             setMeta({ title: t.title, desc: t.desc, url: pageUrl(lang), image: `${SITE}/brand/og-${lang.toLowerCase()}.png` });
             document.querySelectorAll('[data-t]').forEach(el => el.textContent = t[el.dataset.t]);
             document.querySelectorAll('[data-t-html]').forEach(el => el.innerHTML = t[el.dataset.tHtml]);
+            document.querySelectorAll('[data-t-aria]').forEach(el => el.setAttribute('aria-label', t[el.dataset.tAria]));
             document.querySelectorAll('[data-t-placeholder]').forEach(el => el.placeholder = t[el.dataset.tPlaceholder]);
             document.querySelectorAll('.lang-switch a').forEach(a => {
                 if (a.dataset.lang === lang) a.setAttribute('aria-current', 'page');
@@ -773,6 +796,16 @@
         $('#clear').addEventListener('click', () => { state.q = state.type = state.cat = ''; $('#q').value = ''; render(); });
 
         applyStaticText();
+        // Live star count from the GitHub API (not prerendered, so it never goes stale). Hidden if the request fails.
+        fetch('https://api.github.com/repos/SammyLin/opensource')
+            .then(r => r.ok ? r.json() : Promise.reject())
+            .then(r => {
+                if (typeof r.stargazers_count !== 'number') return;
+                const el = $('.gh-count');
+                el.textContent = r.stargazers_count.toLocaleString('en-US');
+                el.hidden = false;
+            })
+            .catch(() => {});
         if (PID) { $('#list-view').hidden = true; $('#detail').hidden = false; }
         fetch('/data/programs.json')
             .then(r => r.json())
