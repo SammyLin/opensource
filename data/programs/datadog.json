@@ -1,0 +1,27 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "datadog",
+  "name": "Datadog for Open Source Projects",
+  "logo": "/logos/datadog.svg",
+  "whatYouGet": {
+    "zh-Hant": "免費使用 Datadog 雲端可觀測性與安全平台",
+    "zh-Hans": "免费使用 Datadog 云端可观测性与安全平台",
+    "en": "Free access to Datadog's cloud observability and security platform"
+  },
+  "whyItHelps": {
+    "zh-Hant": "在同一處看到專案基礎設施（CI、套件伺服器、網站）的指標、日誌與追蹤，出問題能更快定位。",
+    "zh-Hans": "在同一处看到项目基础设施（CI、软件包服务器、网站）的指标、日志与追踪，出问题能更快定位。",
+    "en": "See metrics, logs and traces for the project's own infrastructure (CI, package servers, website) in one place."
+  },
+  "requirements": {
+    "zh-Hant": "非商業專案、採認可的開源授權；監控的基礎設施與應用必須直接用於支援專案本身（某個開源軟體的部署實例不算）；個案審核",
+    "zh-Hans": "非商业项目、采用认可的开源许可证；监控的基础设施与应用必须直接用于支持项目本身（某个开源软件的部署实例不算）；逐案审核",
+    "en": "Non-commercial project under an approved open source license; monitored infrastructure must directly support the project (instances of an open source project are out of scope); reviewed case by case"
+  },
+  "type": "application_required",
+  "category": [
+    "observability"
+  ],
+  "link": "https://www.datadoghq.com/partner/open-source/",
+  "lastVerified": "2026-11-18"
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "crowdin",
+  "name": "Crowdin for Open Source",
+  "logo": "/logos/crowdin.svg",
+  "whatYouGet": {
+    "zh-Hant": "免費使用 Crowdin 翻譯管理平台",
+    "zh-Hans": "免费使用 Crowdin 翻译管理平台",
+    "en": "Free use of the Crowdin localization platform"
+  },
+  "whyItHelps": {
+    "zh-Hant": "社群志工直接在網頁上翻譯介面字串，譯文同步回 repo，輕鬆做出多語系版本。",
+    "zh-Hans": "社区志愿者直接在网页上翻译界面字符串，译文同步回仓库，轻松做出多语言版本。",
+    "en": "Volunteers translate strings in the browser and translations sync back to the repo, making multilingual releases easy."
+  },
+  "requirements": {
+    "zh-Hant": "已在 Crowdin 建立翻譯專案；採 OSI 認可授權且原始碼公開；沒有相關商業產品；申請者是專案負責人；已開發至少 3 個月、有活躍社群、網站消息持續更新並定期發布版本；同意將譯文貢獻到 Crowdin Global TM",
+    "zh-Hans": "已在 Crowdin 创建翻译项目；采用 OSI 认可的许可证且源代码公开；没有相关商业产品；申请者是项目负责人；已开发至少 3 个月、有活跃社区、网站消息持续更新并定期发布版本；同意将译文贡献到 Crowdin Global TM",
+    "en": "A Crowdin translation project already exists; OSI-approved license and public source; no related commercial products; applicant is the project lead; 3+ months of work, an active community, an up-to-date news section and regular releases; translations are contributed to Crowdin Global TM"
+  },
+  "type": "application_required",
+  "category": [
+    "docs_localization"
+  ],
+  "link": "https://crowdin.com/product/for-open-source",
+  "lastVerified": "2026-11-18"
+}

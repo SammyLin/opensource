@@ -1,0 +1,27 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "fastly",
+  "name": "Fastly Fast Forward",
+  "logo": "/logos/fastly.svg",
+  "whatYouGet": {
+    "zh-Hant": "免費提供 Fastly 服務給符合資格的開源專案，以及支持它們的非營利組織",
+    "zh-Hans": "免费向符合资格的开源项目及支持它们的非营利组织提供 Fastly 服务",
+    "en": "Free Fastly services for eligible open source projects and the nonprofits that support them"
+  },
+  "whyItHelps": {
+    "zh-Hant": "套件下載、文件站等高流量內容透過 Fastly 的邊緣網路傳送，更快也更省頻寬費用。",
+    "zh-Hans": "软件包下载、文档站等高流量内容通过 Fastly 的边缘网络分发，更快也更省带宽费用。",
+    "en": "Serve high-traffic content like package downloads and docs from Fastly's edge network, faster and without the bandwidth bill."
+  },
+  "requirements": {
+    "zh-Hant": "符合資格的開源專案或支持開源的非營利組織；需申請審核",
+    "zh-Hans": "符合资格的开源项目或支持开源的非营利组织；需申请审核",
+    "en": "Eligible open source projects or nonprofits that support them; application and review required"
+  },
+  "type": "application_required",
+  "category": [
+    "serverless_hosted"
+  ],
+  "link": "https://www.fastly.com/forward",
+  "lastVerified": "2026-11-18"
+}

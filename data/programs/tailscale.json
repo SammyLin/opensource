@@ -1,0 +1,27 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "tailscale",
+  "name": "Tailscale Community on GitHub",
+  "logo": "/logos/tailscale.svg",
+  "whatYouGet": {
+    "zh-Hant": "免費的 Community on GitHub 方案，讓 GitHub 組織成員共用同一個 Tailscale 私有網路（tailnet）",
+    "zh-Hans": "免费的 Community on GitHub 方案，让 GitHub 组织成员共用同一个 Tailscale 私有网络（tailnet）",
+    "en": "Free Community on GitHub plan so members of a GitHub organization share one Tailscale private network (tailnet)"
+  },
+  "whyItHelps": {
+    "zh-Hant": "不用架 VPN 或開放公網連接埠，維護者就能安全連到專案的測試機、建置機與內部服務。",
+    "zh-Hans": "不用搭 VPN 或开放公网端口，维护者就能安全连接项目的测试机、构建机与内部服务。",
+    "en": "Maintainers reach the project's test, build and internal machines securely without running a VPN or opening ports."
+  },
+  "requirements": {
+    "zh-Hant": "用於採 OSI 授權開源專案的 GitHub 組織；在管理後台的 Billing 設定選擇此方案",
+    "zh-Hans": "用于采用 OSI 许可证开源项目的 GitHub 组织；在管理后台的 Billing 设置中选择此方案",
+    "en": "A GitHub organization used for an open source project with an OSI license; select the plan in the admin console's Billing settings"
+  },
+  "type": "direct_activation",
+  "category": [
+    "cloud_native_network"
+  ],
+  "link": "https://tailscale.com/kb/1154/free-plans-discounts",
+  "lastVerified": "2026-11-18"
+}

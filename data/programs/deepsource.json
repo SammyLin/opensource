@@ -1,0 +1,26 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "deepsource",
+  "name": "DeepSource Open Source Plan",
+  "whatYouGet": {
+    "zh-Hant": "免費 Open Source 方案：公開 repo 與團隊成員數量不限，每月 1,000 次 PR review；AI Review 與 Autofix 按用量計費；不含相依套件漏洞掃描（SCA）",
+    "zh-Hans": "免费 Open Source 方案：公开仓库与团队成员数量不限，每月 1,000 次 PR 审查；AI Review 与 Autofix 按用量计费；不含依赖漏洞扫描（SCA）",
+    "en": "Free Open Source plan: unlimited public repositories and team members, 1,000 PR reviews per month; AI Review and Autofix are pay-as-you-go; SCA (dependency scanning) is not included"
+  },
+  "whyItHelps": {
+    "zh-Hant": "每次 commit 和 PR 自動做靜態分析，及早抓出 bug、反模式與安全問題。",
+    "zh-Hans": "每次提交和 PR 自动做静态分析，及早发现 bug、反模式与安全问题。",
+    "en": "Runs static analysis on every commit and PR to catch bugs, anti-patterns and security issues early."
+  },
+  "requirements": {
+    "zh-Hant": "僅限公開 repo；私有 repo 需付費方案",
+    "zh-Hans": "仅限公开仓库；私有仓库需付费方案",
+    "en": "Public repositories only; private repositories need a paid plan"
+  },
+  "type": "direct_activation",
+  "category": [
+    "security_compliance"
+  ],
+  "link": "https://deepsource.com/docs/platform/reference/billing",
+  "lastVerified": "2026-11-18"
+}

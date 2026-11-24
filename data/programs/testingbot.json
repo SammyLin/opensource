@@ -1,0 +1,26 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "testingbot",
+  "name": "TestingBot for Open Source",
+  "whatYouGet": {
+    "zh-Hant": "免費無限跨瀏覽器與行動裝置測試：2 個同時測試、6,100+ 真實瀏覽器與 iOS／Android 實機，支援 Selenium、Cypress 等",
+    "zh-Hans": "免费无限跨浏览器与移动设备测试：2 个并发测试、6,100+ 真实浏览器与 iOS／Android 真机，支持 Selenium、Cypress 等",
+    "en": "Free unlimited cross-browser and mobile testing: 2 concurrent tests on 6,100+ real browsers and iOS/Android devices, with Selenium, Cypress and more"
+  },
+  "whyItHelps": {
+    "zh-Hant": "在真實瀏覽器和 iOS／Android 實機上跑自動化測試，及早抓到相容性問題。",
+    "zh-Hans": "在真实浏览器和 iOS／Android 真机上跑自动化测试，及早发现兼容性问题。",
+    "en": "Run automated tests on real browsers and iOS/Android devices to catch compatibility issues early."
+  },
+  "requirements": {
+    "zh-Hant": "符合資格的開源專案；先註冊免費帳號再提交專案，通常幾個工作天內完成審核升級",
+    "zh-Hans": "符合资格的开源项目；先注册免费账号再提交项目，通常几个工作日内完成审核升级",
+    "en": "Qualifying open source project; create a free account, then submit the project; usually upgraded within a couple of business days"
+  },
+  "type": "application_required",
+  "category": [
+    "ci_cd"
+  ],
+  "link": "https://testingbot.com/open-source",
+  "lastVerified": "2026-11-18"
+}

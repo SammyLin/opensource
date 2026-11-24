@@ -1,0 +1,27 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "atlassian",
+  "name": "Atlassian Open Source License",
+  "logo": "/logos/atlassian.svg",
+  "whatYouGet": {
+    "zh-Hant": "免費使用 Atlassian 雲端產品（Jira、Confluence 等），雲端版限 Standard 方案",
+    "zh-Hans": "免费使用 Atlassian 云端产品（Jira、Confluence 等），云端版限 Standard 方案",
+    "en": "Free Atlassian cloud products (Jira, Confluence and more); open source cloud is limited to the Standard plan"
+  },
+  "whyItHelps": {
+    "zh-Hant": "用 Jira 追蹤 issue 與路線圖、用 Confluence 寫設計文件，適合需要較正式專案管理的大型專案。",
+    "zh-Hans": "用 Jira 跟踪 issue 与路线图、用 Confluence 写设计文档，适合需要较正式项目管理的大型项目。",
+    "en": "Track issues and roadmaps in Jira and write design docs in Confluence, useful for larger projects with formal planning."
+  },
+  "requirements": {
+    "zh-Hant": "開源專案提出授權申請，通常 1 個工作天內回覆",
+    "zh-Hans": "开源项目提出许可申请，通常 1 个工作日内回复",
+    "en": "Open source projects apply for a license; responses usually arrive within 1 business day"
+  },
+  "type": "application_required",
+  "category": [
+    "collaboration"
+  ],
+  "link": "https://www.atlassian.com/software/views/open-source-license-request",
+  "lastVerified": "2026-11-18"
+}

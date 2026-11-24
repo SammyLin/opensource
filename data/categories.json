@@ -27,6 +27,15 @@
       "subcategory": "Key Management"
     }
   },
+  "cloud_native_network": {
+    "zh-Hant": "雲原生網路",
+    "zh-Hans": "云原生网络",
+    "en": "Cloud Native Network",
+    "cncf": {
+      "category": "Runtime",
+      "subcategory": "Cloud Native Network"
+    }
+  },
   "app_definition_image_build": {
     "zh-Hant": "應用定義與開發環境",
     "zh-Hans": "应用定义与开发环境",
@@ -45,6 +54,15 @@
       "subcategory": "Continuous Integration & Delivery"
     }
   },
+  "serverless_hosted": {
+    "zh-Hant": "託管平台",
+    "zh-Hans": "托管平台",
+    "en": "Hosted Platform",
+    "cncf": {
+      "category": "Serverless",
+      "subcategory": "Hosted Platform"
+    }
+  },
   "observability": {
     "zh-Hant": "可觀測性",
     "zh-Hans": "可观测性",
@@ -61,5 +79,15 @@
     "cncf": {
       "category": "AI Agent"
     }
+  },
+  "collaboration": {
+    "zh-Hant": "協作與溝通",
+    "zh-Hans": "协作与沟通",
+    "en": "Collaboration"
+  },
+  "docs_localization": {
+    "zh-Hant": "文件與在地化",
+    "zh-Hans": "文档与本地化",
+    "en": "Docs & Localization"
   }
 }

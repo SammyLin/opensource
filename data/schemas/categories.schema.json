@@ -9,8 +9,7 @@
       "required": [
         "zh-Hant",
         "zh-Hans",
-        "en",
-        "cncf"
+        "en"
       ],
       "properties": {
         "zh-Hant": {
@@ -26,7 +25,7 @@
           "minLength": 1
         },
         "cncf": {
-          "description": "對應 CNCF Landscape（https://landscape.cncf.io）的類別／子類別，照官方英文名稱",
+          "description": "對應 CNCF Landscape（https://landscape.cncf.io）的類別／子類別，照官方英文名稱。CNCF 沒有涵蓋的類別（例如協作、文件與在地化）就省略",
           "type": "object",
           "required": [
             "category"

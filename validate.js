@@ -28,7 +28,8 @@ const programs = Array.isArray(data.programs) ? data.programs : [];
 
 Object.entries(categories).forEach(([id, label]) => {
     checkI18n(label, `categories.${id}`);
-    if (!label || !label.cncf || !isText(label.cncf.category)) errors.push(`categories.${id}.cncf.category: missing (see https://landscape.cncf.io)`);
+    // cncf is optional: categories outside the CNCF Landscape (e.g. collaboration) leave it out.
+    if (label && label.cncf !== undefined && !isText(label.cncf.category)) errors.push(`categories.${id}.cncf.category: missing (see https://landscape.cncf.io)`);
 });
 
 const seen = new Set();

@@ -1,0 +1,26 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "mergify",
+  "name": "Mergify Open Source",
+  "whatYouGet": {
+    "zh-Hant": "免費方案，含 Merge Queue、Merge Protections、CI Insights、Test Insights",
+    "zh-Hans": "免费方案，含 Merge Queue、Merge Protections、CI Insights、Test Insights",
+    "en": "Free plan including Merge Queue, Merge Protections, CI Insights and Test Insights"
+  },
+  "whyItHelps": {
+    "zh-Hant": "合併前用最新的 main 重新驗證，避免多個各自通過 CI 的 PR 合在一起後把 main 弄壞。",
+    "zh-Hans": "合并前用最新的 main 重新验证，避免多个各自通过 CI 的 PR 合在一起后把 main 弄坏。",
+    "en": "Re-validates PRs against the latest main before merging, so individually green PRs don't break main together."
+  },
+  "requirements": {
+    "zh-Hant": "開源專案（公開 repo）免費；私有 repo 則限 5 人以內",
+    "zh-Hans": "开源项目（公开仓库）免费；私有仓库则限 5 人以内",
+    "en": "Free for open source projects (public repositories); private repositories are limited to teams of up to 5"
+  },
+  "type": "direct_activation",
+  "category": [
+    "ci_cd"
+  ],
+  "link": "https://mergify.com/pricing",
+  "lastVerified": "2026-11-18"
+}

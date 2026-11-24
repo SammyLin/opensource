@@ -1,0 +1,27 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "gitlab",
+  "name": "GitLab for Open Source",
+  "logo": "/logos/gitlab.svg",
+  "whatYouGet": {
+    "zh-Hant": "GitLab Ultimate 功能（SaaS 或自架）與 50,000 分鐘運算時間；不含官方技術支援",
+    "zh-Hans": "GitLab Ultimate 功能（SaaS 或自建）与 50,000 分钟计算时间；不含官方技术支持",
+    "en": "GitLab Ultimate features (SaaS or self-managed) plus 50,000 compute minutes; no vendor support included"
+  },
+  "whyItHelps": {
+    "zh-Hant": "用頂級方案的安全掃描、合規與規劃功能管理專案，CI 額度也更充裕。",
+    "zh-Hans": "用顶级方案的安全扫描、合规与规划功能管理项目，CI 额度也更充裕。",
+    "en": "Run the project with Ultimate's security scanning, compliance and planning tools, with far more CI minutes."
+  },
+  "requirements": {
+    "zh-Hant": "namespace 內每個專案都要採 OSI 認可授權；GitLab.com 群組或自架實例與原始碼都必須公開；每年需續約",
+    "zh-Hans": "namespace 内每个项目都要采用 OSI 认可的许可证；GitLab.com 群组或自建实例与源代码都必须公开；每年需续约",
+    "en": "Every project in the namespace must use an OSI-approved license; the GitLab.com group or self-managed instance and the source code must be public; renew annually"
+  },
+  "type": "application_required",
+  "category": [
+    "ci_cd"
+  ],
+  "link": "https://about.gitlab.com/solutions/open-source/join/",
+  "lastVerified": "2026-11-18"
+}

@@ -77,10 +77,14 @@ cd opensource
   - `container_registry` - 容器映像倉庫 (Provisioning › Container Registry)
   - `security_compliance` - 安全與合規 (Provisioning › Security & Compliance)
   - `key_management` - 金鑰與機密管理 (Provisioning › Key Management)
+  - `cloud_native_network` - 雲原生網路 (Runtime › Cloud Native Network)
   - `app_definition_image_build` - 應用定義與開發環境 (App Definition and Development › Application Definition & Image Build)
   - `ci_cd` - 持續整合與交付 (App Definition and Development › Continuous Integration & Delivery)
+  - `serverless_hosted` - 託管平台 (Serverless › Hosted Platform)
   - `observability` - 可觀測性 (Observability and Analysis › Observability)
   - `ai_agent` - AI Agent (AI Agent)
+  - `collaboration` - 協作與溝通（CNCF 未涵蓋，不填 `cncf`）
+  - `docs_localization` - 文件與在地化（CNCF 未涵蓋，不填 `cncf`）
 - **link**: 申請／開通頁面（必填），網站的「前往申請」按鈕會連到這裡
 - **lastVerified**: 最後驗證日期，格式 YYYY-MM-DD（如 2026-11-18）
 - **pending**（選填）：尚未確認的說明，需含 `zh-Hant` / `zh-Hans` / `en`；可選 `link` 指向官方來源
@@ -199,10 +203,14 @@ cd opensource
   - `container_registry` - 容器镜像仓库 (Provisioning › Container Registry)
   - `security_compliance` - 安全与合规 (Provisioning › Security & Compliance)
   - `key_management` - 密钥与机密管理 (Provisioning › Key Management)
+  - `cloud_native_network` - 云原生网络 (Runtime › Cloud Native Network)
   - `app_definition_image_build` - 应用定义与开发环境 (App Definition and Development › Application Definition & Image Build)
   - `ci_cd` - 持续集成与交付 (App Definition and Development › Continuous Integration & Delivery)
+  - `serverless_hosted` - 托管平台 (Serverless › Hosted Platform)
   - `observability` - 可观测性 (Observability and Analysis › Observability)
   - `ai_agent` - AI Agent (AI Agent)
+  - `collaboration` - 协作与沟通（CNCF 未涵盖，不填 `cncf`）
+  - `docs_localization` - 文档与本地化（CNCF 未涵盖，不填 `cncf`）
 - **link**: 申请／开通页面（必填），网站的「前往申请」按钮会链接到这里
 - **lastVerified**: 最后验证日期，格式 YYYY-MM-DD（如 2026-11-18）
 - **pending**（选填）：尚未确认的说明，需含 `zh-Hant` / `zh-Hans` / `en`；可选 `link` 指向官方来源
@@ -321,10 +329,14 @@ Each program is its own JSON file named after its `id` (e.g. `data/programs/sent
   - `container_registry` - Provisioning › Container Registry
   - `security_compliance` - Provisioning › Security & Compliance
   - `key_management` - Provisioning › Key Management
+  - `cloud_native_network` - Runtime › Cloud Native Network
   - `app_definition_image_build` - App Definition and Development › Application Definition & Image Build
   - `ci_cd` - App Definition and Development › Continuous Integration & Delivery
+  - `serverless_hosted` - Serverless › Hosted Platform
   - `observability` - Observability and Analysis › Observability
   - `ai_agent` - AI Agent
+  - `collaboration` - Collaboration (not covered by CNCF; omit `cncf`)
+  - `docs_localization` - Docs & Localization (not covered by CNCF; omit `cncf`)
 - **link**: Official source link (required)
 - **lastVerified**: Last verified date in YYYY-MM-DD format (e.g., 2026-11-18)
 - **pending** (optional): Unconfirmed note with `zh-Hant` / `zh-Hans` / `en`; optional `link` to the official source

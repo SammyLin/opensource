@@ -1,0 +1,27 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "gradle-develocity",
+  "name": "Gradle Develocity for OSS",
+  "logo": "/logos/gradle.svg",
+  "whatYouGet": {
+    "zh-Hant": "免費的 Develocity 實例：建置與測試加速、失敗排查、工具鏈可觀測性",
+    "zh-Hans": "免费的 Develocity 实例：构建与测试加速、失败排查、工具链可观测性",
+    "en": "A free Develocity instance: build and test acceleration, failure troubleshooting and toolchain observability"
+  },
+  "whyItHelps": {
+    "zh-Hant": "Gradle 或 Maven 專案可用建置快取加速 CI，並分析不穩定測試與建置失敗的原因。",
+    "zh-Hans": "Gradle 或 Maven 项目可用构建缓存加速 CI，并分析不稳定测试与构建失败的原因。",
+    "en": "Gradle and Maven projects speed up CI with build caching and dig into flaky tests and build failures."
+  },
+  "requirements": {
+    "zh-Hant": "只提供給重點開源專案與基金會（如 Apache 軟體基金會、Spring、Commonhaus Foundation），資源有限；需與 Gradle 聯繫",
+    "zh-Hans": "只提供给重点开源项目与基金会（如 Apache 软件基金会、Spring、Commonhaus Foundation），资源有限；需与 Gradle 联系",
+    "en": "Only for key open source projects and foundations (e.g. the Apache Software Foundation, Spring, Commonhaus Foundation); limited resources; contact Gradle"
+  },
+  "type": "high_bar",
+  "category": [
+    "observability"
+  ],
+  "link": "https://gradle.com/oss-sponsored-by-develocity/",
+  "lastVerified": "2026-11-18"
+}

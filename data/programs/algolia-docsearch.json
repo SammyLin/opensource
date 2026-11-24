@@ -1,0 +1,27 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "algolia-docsearch",
+  "name": "Algolia DocSearch",
+  "logo": "/logos/algolia.svg",
+  "whatYouGet": {
+    "zh-Hant": "免費的文件搜尋：Algolia 代管爬蟲每週自動爬取文件，提供專屬 Algolia 應用與後台分析",
+    "zh-Hans": "免费的文档搜索：Algolia 托管爬虫每周自动抓取文档，提供专属 Algolia 应用与后台分析",
+    "en": "Free docs search: Algolia hosts the crawler and re-crawls your docs weekly, with a dedicated Algolia app and analytics"
+  },
+  "whyItHelps": {
+    "zh-Hant": "使用者在文件站裡即打即搜，更快找到 API 與教學，減少重複的提問 issue。",
+    "zh-Hans": "用户在文档站里即打即搜，更快找到 API 与教程，减少重复的提问 issue。",
+    "en": "Instant search in your docs helps users find APIs and guides faster, cutting repeat questions in issues."
+  },
+  "requirements": {
+    "zh-Hant": "開源專案文件或技術部落格，須公開且為正式上線網站；搜尋結果旁要保留「Search by Algolia」Logo；在 Algolia 後台的 DocSearch 流程提交網域，會自動檢查資格",
+    "zh-Hans": "开源项目文档或技术博客，须公开且为正式上线网站；搜索结果旁要保留“Search by Algolia”Logo；在 Algolia 后台的 DocSearch 流程提交域名，会自动检查资格",
+    "en": "Open source docs or technical blogs that are public and in production; keep the \"Search by Algolia\" logo next to results; submit your domain in the DocSearch onboarding in the Algolia dashboard for an automated check"
+  },
+  "type": "application_required",
+  "category": [
+    "docs_localization"
+  ],
+  "link": "https://docsearch.algolia.com/docs/who-can-apply/",
+  "lastVerified": "2026-11-18"
+}
