@@ -351,6 +351,127 @@
       "lastVerified": "2026-11-18"
     },
     {
+      "id": "anthropic-oss-scanner",
+      "name": "Anthropic OSS Scanner",
+      "logo": "/logos/anthropic-oss-scanner.svg",
+      "whatYouGet": {
+        "zh-Hant": "免費、定期的 AI 安全掃描：由 Anthropic 最強的模型稽核程式碼，報告以 email 寄給維護者，內含可重現步驟、漏洞說明（可能時附上 bisect 結果）與候選修補；報告由模型產生、未經人工審查",
+        "zh-Hans": "免费、定期的 AI 安全扫描：由 Anthropic 最强的模型审计代码，报告通过邮件发给维护者，包含可复现步骤、漏洞说明（可能时附带 bisect 结果）和候选补丁；报告由模型生成、未经人工审核",
+        "en": "Free, periodic AI security scans of your code by Anthropic's strongest models; reports are emailed to maintainers with a self-contained reproducer, an explanation (with bisection where possible) and a candidate patch. Reports are model-generated and not human-reviewed"
+      },
+      "whyItHelps": {
+        "zh-Hant": "在攻擊者之前找出漏洞並拿到可重現案例與修補草稿，讓人力有限的維護團隊也能處理深層的安全問題。",
+        "zh-Hans": "在攻击者之前找出漏洞并拿到可复现用例和补丁草稿，让人手有限的维护团队也能处理深层的安全问题。",
+        "en": "Surfaces vulnerabilities before attackers do, with reproducers and draft patches, so small maintainer teams can tackle deep security issues."
+      },
+      "requirements": {
+        "zh-Hant": "核心維護者向 anthropics/oss-scanner 儲存庫送 PR，新增 projects/<名稱>/ 設定（儲存庫網址、主要聯絡 email、可離線建置的 Dockerfile）；每筆申請由人工審核，參考 OSS-Fuzz 的標準，接受對基礎設施與使用者安全有關鍵影響的成熟專案，須為 OSI 授權；新專案與一般 fork 通常不收",
+        "zh-Hans": "核心维护者向 anthropics/oss-scanner 仓库提交 PR，新增 projects/<名称>/ 配置（仓库地址、主要联系邮箱、可离线构建的 Dockerfile）；每个申请由人工审核，参考 OSS-Fuzz 的标准，接受对基础设施和用户安全有关键影响的成熟项目，须为 OSI 许可证；新项目和普通 fork 通常不接受",
+        "en": "Core maintainers open a PR to the anthropics/oss-scanner repo adding projects/<name>/ (repo URL, primary contact email, a Dockerfile that builds offline). Every request is human-reviewed against OSS-Fuzz-like criteria: established, OSI-licensed projects with critical impact on infrastructure and user security; brand-new projects and most forks are excluded"
+      },
+      "type": "high_bar",
+      "category": [
+        "security_compliance"
+      ],
+      "link": "https://red.anthropic.com/oss-scanner/",
+      "lastVerified": "2026-11-24",
+      "pending": {
+        "zh-Hant": "後續掃描頻率未公開，官方說明會依排程中的專案數量與使用程度而定",
+        "zh-Hans": "后续扫描频率未公开，官方说明会根据队列中的项目数量和使用程度而定",
+        "en": "Follow-up scan frequency is not published; it depends on the number of projects in the pipeline and how widely a project is used",
+        "link": "https://red.anthropic.com/oss-scanner/"
+      }
+    },
+    {
+      "id": "circleci",
+      "name": "CircleCI Open Source Plan",
+      "logo": "/logos/circleci.svg",
+      "whatYouGet": {
+        "zh-Hant": "Free 方案的公開專案每月最多 400,000 credits 用於 Linux 開源建置，另有每月 30,000 credits 用於 macOS 開源建置；credits 用完時開源建置不會被擋下",
+        "zh-Hans": "Free 套餐的公开项目每月最多 400,000 credits 用于 Linux 开源构建，另有每月 30,000 credits 用于 macOS 开源构建；credits 用完时开源构建不会被拦截",
+        "en": "Up to 400,000 credits per month for Linux open source builds on the Free plan, plus 30,000 credits per month for macOS open source builds; open source builds keep running even when the credit balance hits zero"
+      },
+      "whyItHelps": {
+        "zh-Hant": "每個 PR 自動跑測試與建置，包含 macOS 環境，不必自架 CI 機器就能確認變更沒有弄壞東西。",
+        "zh-Hans": "每个 PR 自动跑测试和构建，包括 macOS 环境，不用自建 CI 机器就能确认改动没有搞坏东西。",
+        "en": "Runs tests and builds on every PR, including macOS, without hosting your own CI machines."
+      },
+      "requirements": {
+        "zh-Hant": "使用 Free 方案且儲存庫保持公開即自動適用；開源額度不會顯示在 CircleCI 網頁介面中；公開專案的建置記錄也會公開",
+        "zh-Hans": "使用 Free 套餐且仓库保持公开即自动适用；开源额度不会显示在 CircleCI 网页界面中；公开项目的构建日志也会公开",
+        "en": "Applies automatically on the Free plan with a public repository; open source credit limits are not shown in the CircleCI web app; build logs of public projects are public"
+      },
+      "type": "direct_activation",
+      "category": [
+        "ci_cd"
+      ],
+      "link": "https://circleci.com/open-source/",
+      "lastVerified": "2026-11-24",
+      "pending": {
+        "zh-Hant": "產品頁寫 Linux／Arm／Docker 400,000、macOS／Windows 30,000 credits，文件只列 Linux 與 macOS，Arm、Docker、Windows 是否適用待確認",
+        "zh-Hans": "产品页写 Linux／Arm／Docker 400,000、macOS／Windows 30,000 credits，文档只列 Linux 和 macOS，Arm、Docker、Windows 是否适用待确认",
+        "en": "The product page lists 400,000 credits for Linux/Arm/Docker and 30,000 for macOS/Windows, while the docs mention only Linux and macOS; whether Arm, Docker and Windows are covered is unconfirmed",
+        "link": "https://circleci.com/docs/guides/plans-pricing/credits/#open-source-credit-usage"
+      }
+    },
+    {
+      "id": "cloudsmith",
+      "name": "Cloudsmith Open-Source Hosting",
+      "logo": "/logos/cloudsmith.svg",
+      "whatYouGet": {
+        "zh-Hant": "所有開源儲存庫合計至少 50GB 套件儲存空間與 200GB 下載流量，用量與公開／私有儲存庫分開計算；另含 geo/IP 限制、存取記錄與統計等原本屬於 Pro 方案的功能",
+        "zh-Hans": "所有开源仓库合计至少 50GB 制品存储空间和 200GB 分发流量，用量与公开／私有仓库分开计算；另含 geo/IP 限制、访问日志和统计等原本属于 Pro 套餐的功能",
+        "en": "At least 50GB of artifact storage and 200GB of package delivery across all open source repositories, tracked separately from public/private repos; includes Pro-tier features such as geo/IP restrictions, access logs and statistics"
+      },
+      "whyItHelps": {
+        "zh-Hant": "用同一個地方發佈 Docker 映像、deb/rpm、npm、PyPI 等 30 多種格式的套件，透過 CDN 讓使用者穩定下載。",
+        "zh-Hans": "在同一个地方发布 Docker 镜像、deb/rpm、npm、PyPI 等 30 多种格式的软件包，通过 CDN 让用户稳定下载。",
+        "en": "Publish Docker images, deb/rpm, npm, PyPI and 30+ other package formats from one place, delivered to users via CDN."
+      },
+      "requirements": {
+        "zh-Hant": "主要專案須符合開源定義、申請者為維護者、不是小型 fork，且提供的主要是專案本身的套件；必須標示由 Cloudsmith 提供免費託管並連回官網；不需事先申請，建立儲存庫時選 Broadcast › Open source、填 SPDX 授權與專案網址即可，Cloudsmith 事後抽查；商業營利單位官方建議改用付費方案或贊助",
+        "zh-Hans": "主要项目须符合开源定义、申请者是维护者、不是小型 fork，且提供的主要是项目本身的软件包；必须注明由 Cloudsmith 提供免费托管并链接回官网；无需事先申请，创建仓库时选择 Broadcast › Open source、填写 SPDX 许可证和项目地址即可，Cloudsmith 事后抽查；商业营利机构官方建议改用付费套餐或赞助",
+        "en": "The primary project must meet the Open Source Definition, you must be a maintainer, it must not be a minor fork, and artifacts must be the project's own; attribution linking to Cloudsmith is required. No advance permission: create a repository with Broadcast › Open source, an SPDX license and the project URL, and Cloudsmith reviews later. Commercial for-profit entities are pointed to paid plans or sponsorship"
+      },
+      "type": "direct_activation",
+      "category": [
+        "container_registry"
+      ],
+      "link": "https://docs.cloudsmith.com/open-source-hosting-policy",
+      "lastVerified": "2026-11-24"
+    },
+    {
+      "id": "testmu-ai",
+      "name": "TestMu AI (formerly LambdaTest) for Open Source",
+      "whatYouGet": {
+        "zh-Hant": "免費授權，可在 5,000 多種瀏覽器與裝置上測試開源專案；另提供指導、社群推廣，並列出財務贊助",
+        "zh-Hans": "免费授权，可在 5,000 多种浏览器和设备上测试开源项目；另提供指导、社区推广，并列出资金赞助",
+        "en": "Free licenses to test open source projects across 5,000+ browsers and devices; also lists mentorship, community promotion and financial sponsorships"
+      },
+      "whyItHelps": {
+        "zh-Hant": "不必自備各種瀏覽器與手機，就能在雲端跑跨瀏覽器與真機測試，提早發現相容性問題。",
+        "zh-Hans": "不用自己准备各种浏览器和手机，就能在云端跑跨浏览器和真机测试，提前发现兼容性问题。",
+        "en": "Run cross-browser and real-device tests in the cloud without maintaining your own device lab, catching compatibility issues early."
+      },
+      "requirements": {
+        "zh-Hant": "須有有效的開源授權（如 MIT、Apache 2.0、GPL）、公開於 GitHub 或 GitLab 等平台、近期持續開發並有 README 等文件；在官方頁面填表申請",
+        "zh-Hans": "须有有效的开源许可证（如 MIT、Apache 2.0、GPL）、公开在 GitHub 或 GitLab 等平台、近期持续开发并有 README 等文档；在官方页面填表申请",
+        "en": "A valid open source license (e.g. MIT, Apache 2.0, GPL), publicly hosted on GitHub or GitLab, active recent development and documentation such as a README; apply via the form on the official page"
+      },
+      "type": "application_required",
+      "category": [
+        "ci_cd"
+      ],
+      "link": "https://www.testmuai.com/open-source/",
+      "lastVerified": "2026-11-24",
+      "pending": {
+        "zh-Hant": "授權的分鐘數／並行數未公開；頁面「支持的專案」標題寫「在印度建立或有大量印度貢獻的專案」，是否為資格限制待確認",
+        "zh-Hans": "授权的分钟数／并发数未公开；页面“支持的项目”标题写“在印度创建或有大量印度贡献的项目”，是否为资格限制待确认",
+        "en": "Minutes and parallel sessions are not published; the page's \"Projects we support\" heading mentions projects created in or with significant contributions from India — whether this limits eligibility is unconfirmed",
+        "link": "https://www.testmuai.com/open-source/"
+      }
+    },
+    {
       "id": "blacksmith",
       "name": "Blacksmith OSS Program",
       "whatYouGet": {
