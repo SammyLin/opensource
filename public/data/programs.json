@@ -177,6 +177,38 @@
       }
     },
     {
+      "id": "appwrite",
+      "name": "Appwrite OSS Program",
+      "logo": "/logos/appwrite.svg",
+      "whatYouGet": {
+        "zh-Hant": "免費的 Appwrite Cloud Pro 訂閱，含 Pro 方案的資源與支援",
+        "zh-Hans": "免费的 Appwrite Cloud Pro 订阅，含 Pro 方案的资源与支持",
+        "en": "Free Appwrite Cloud Pro subscription with its resources and support"
+      },
+      "whyItHelps": {
+        "zh-Hant": "專案的示範站或線上服務需要後端（資料庫、驗證、儲存、函式）時，超過免費方案額度後仍可繼續使用。",
+        "zh-Hans": "项目的演示站点或在线服务需要后端（数据库、身份验证、存储、函数）时，超出免费方案额度后仍可继续使用。",
+        "en": "Keeps a project's demo or hosted service running on a managed backend (database, auth, storage, functions) after it outgrows the Free plan."
+      },
+      "requirements": {
+        "zh-Hant": "符合 OSI 開源定義並採用 OSI 認可授權；有開源的 GitHub 儲存庫；活躍專案，至少 15 次貢獻、100 顆星；非營利或尚未有營收；填寫 OSS 表單，由 Appwrite 審核決定",
+        "zh-Hans": "符合 OSI 开源定义并采用 OSI 认可的许可证；有开源的 GitHub 仓库；活跃项目，至少 15 次贡献、100 个 star；非营利或尚未有营收；填写 OSS 表单，由 Appwrite 审核决定",
+        "en": "Meets the OSI definition with an OSI-approved license; open source GitHub repository; active project with at least 15 contributions and 100 stars; nonprofit or pre-revenue; submit the OSS form, acceptance at Appwrite's discretion"
+      },
+      "type": "application_required",
+      "category": [
+        "serverless_hosted"
+      ],
+      "link": "https://appwrite.io/docs/advanced/billing/oss",
+      "lastVerified": "2026-11-25",
+      "pending": {
+        "zh-Hant": "官方頁面提到另有「Appwrite 的標準」但未列出細節；計畫沒有固定結束日，每年檢視一次",
+        "zh-Hans": "官方页面提到另有「Appwrite 的标准」但未列出细节；计划没有固定结束日期，每年审查一次",
+        "en": "The page mentions additional Appwrite criteria without listing them; the program has no fixed end date and is reviewed annually",
+        "link": "https://appwrite.io/docs/advanced/billing/oss"
+      }
+    },
+    {
       "id": "atlassian",
       "name": "Atlassian Open Source License",
       "logo": "/logos/atlassian.svg",
@@ -638,6 +670,32 @@
       "lastVerified": "2026-11-18"
     },
     {
+      "id": "gitbook",
+      "name": "GitBook Community Plan",
+      "logo": "/logos/gitbook.svg",
+      "whatYouGet": {
+        "zh-Hant": "免費的 Community 方案，包含 Ultimate 方案除 SAML SSO 以外的所有功能；可再申請 Sponsored 網站方案（每頁角落顯示一則小廣告）",
+        "zh-Hans": "免费的 Community 方案，包含 Ultimate 方案除 SAML SSO 以外的所有功能；可再申请 Sponsored 站点方案（每页角落显示一则小广告）",
+        "en": "Free Community plan with all Ultimate plan features except SAML SSO; optional Sponsored site plan that shows one small ad per page"
+      },
+      "whyItHelps": {
+        "zh-Hant": "團隊可以一起編寫文件，並透過 Git Sync 讓社群直接對 GitHub／GitLab 發 PR 修改文件，不需要付費席位。",
+        "zh-Hans": "团队可以一起编写文档，并通过 Git Sync 让社区直接向 GitHub／GitLab 提 PR 修改文档，不需要付费席位。",
+        "en": "Lets a team write docs together, and Git Sync lets the community edit docs through GitHub/GitLab pull requests without paid seats."
+      },
+      "requirements": {
+        "zh-Hant": "公開在 GitHub 或 GitLab 上的儲存庫，不是空的或停止活動的 fork；與營利或創投支持的公司無關；含 README.md、CONTRIBUTING.md、CODE_OF_CONDUCT.md 與有效開源授權的 LICENSE；不接受加密貨幣、遊戲專案；透過客服或 support@gitbook.com 申請並附上專案說明、儲存庫與組織連結，經審核",
+        "zh-Hans": "公开在 GitHub 或 GitLab 上的仓库，不是空的或停止活跃的 fork；与营利或风投支持的公司无关；包含 README.md、CONTRIBUTING.md、CODE_OF_CONDUCT.md 以及有效开源许可证的 LICENSE；不接受加密货币、游戏项目；通过客服或 support@gitbook.com 申请，并附上项目说明、仓库和组织链接，需经审核",
+        "en": "Public repository on GitHub or GitLab that is not empty or an inactive fork; not associated with a for-profit or venture-backed company; includes README.md, CONTRIBUTING.md, CODE_OF_CONDUCT.md and a LICENSE with a valid OSS license; no cryptocurrency or gaming projects; apply via support chat or support@gitbook.com with a project description, repo link and organization link, subject to review"
+      },
+      "type": "application_required",
+      "category": [
+        "docs_localization"
+      ],
+      "link": "https://gitbook.com/docs/account-and-billing/plans/community",
+      "lastVerified": "2026-11-25"
+    },
+    {
       "id": "gitguardian",
       "name": "GitGuardian for Open Source",
       "whatYouGet": {
@@ -790,6 +848,38 @@
       ],
       "link": "https://mergify.com/pricing",
       "lastVerified": "2026-11-18"
+    },
+    {
+      "id": "mintlify",
+      "name": "Mintlify OSS Program",
+      "logo": "/logos/mintlify.svg",
+      "whatYouGet": {
+        "zh-Hant": "永久免費的 Mintlify Pro 方案（自訂網域與品牌、進階分析、API Playground）",
+        "zh-Hans": "永久免费的 Mintlify Pro 方案（自定义域名与品牌、高级分析、API Playground）",
+        "en": "Mintlify Pro free permanently (custom domain and branding, advanced analytics, API playground)"
+      },
+      "whyItHelps": {
+        "zh-Hant": "用自己的網域架設文件網站，搭配互動式 API 參考，並透過分析了解讀者在看哪些頁面。",
+        "zh-Hans": "用自己的域名搭建文档站点，配合交互式 API 参考，并通过分析了解读者在看哪些页面。",
+        "en": "Host docs on your own domain with an interactive API reference, and use analytics to see which pages readers use."
+      },
+      "requirements": {
+        "zh-Hant": "非商業開源專案；採用公認的開源授權（如 MIT、Apache 2.0、GPL）；沒有創投資金、不靠營收支撐；不由營利公司擁有或主要維護；填寫申請表",
+        "zh-Hans": "非商业开源项目；采用公认的开源许可证（如 MIT、Apache 2.0、GPL）；没有风险投资、不靠营收支撑；不由营利公司拥有或主要维护；填写申请表",
+        "en": "Non-commercial open source project; recognized open source license (e.g. MIT, Apache 2.0, GPL); not venture-backed or funded by revenue; not owned or mostly maintained by a for-profit company; submit the application form"
+      },
+      "type": "application_required",
+      "category": [
+        "docs_localization"
+      ],
+      "link": "https://www.mintlify.com/oss-program",
+      "lastVerified": "2026-11-25",
+      "pending": {
+        "zh-Hant": "官方頁面沒有說明審核流程與所需時間",
+        "zh-Hans": "官方页面没有说明审核流程与所需时间",
+        "en": "The official page does not describe the review process or timeline",
+        "link": "https://www.mintlify.com/oss-program"
+      }
     },
     {
       "id": "netlify",

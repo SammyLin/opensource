@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://opensource.3mi.ai/</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/zh-hant/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/"/>
@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://opensource.3mi.ai/zh-hant/</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/zh-hant/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/"/>
@@ -18,7 +18,7 @@
   </url>
   <url>
     <loc>https://opensource.3mi.ai/zh-hans/</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/zh-hant/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/"/>
@@ -95,6 +95,30 @@
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/zh-hant/p/anthropic-oss-scanner/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/anthropic-oss-scanner/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/anthropic-oss-scanner/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/p/appwrite/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/p/appwrite/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/zh-hant/p/appwrite/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/appwrite/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/appwrite/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/zh-hant/p/appwrite/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/p/appwrite/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/zh-hant/p/appwrite/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/appwrite/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/appwrite/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/zh-hans/p/appwrite/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/p/appwrite/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/zh-hant/p/appwrite/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/appwrite/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/appwrite/"/>
   </url>
   <url>
     <loc>https://opensource.3mi.ai/p/atlassian/</loc>
@@ -505,6 +529,30 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/fastly/"/>
   </url>
   <url>
+    <loc>https://opensource.3mi.ai/p/gitbook/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/p/gitbook/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/zh-hant/p/gitbook/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/gitbook/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/gitbook/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/zh-hant/p/gitbook/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/p/gitbook/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/zh-hant/p/gitbook/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/gitbook/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/gitbook/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/zh-hans/p/gitbook/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/p/gitbook/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/zh-hant/p/gitbook/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/gitbook/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/gitbook/"/>
+  </url>
+  <url>
     <loc>https://opensource.3mi.ai/p/gitguardian/</loc>
     <lastmod>2026-11-18</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/p/gitguardian/"/>
@@ -647,6 +695,30 @@
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/zh-hant/p/mergify/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/mergify/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/mergify/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/p/mintlify/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/p/mintlify/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/zh-hant/p/mintlify/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/mintlify/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/mintlify/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/zh-hant/p/mintlify/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/p/mintlify/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/zh-hant/p/mintlify/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/mintlify/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/mintlify/"/>
+  </url>
+  <url>
+    <loc>https://opensource.3mi.ai/zh-hans/p/mintlify/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opensource.3mi.ai/p/mintlify/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://opensource.3mi.ai/zh-hant/p/mintlify/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://opensource.3mi.ai/zh-hans/p/mintlify/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://opensource.3mi.ai/p/mintlify/"/>
   </url>
   <url>
     <loc>https://opensource.3mi.ai/p/netlify/</loc>
