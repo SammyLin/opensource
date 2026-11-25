@@ -1,0 +1,33 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "mintlify",
+  "name": "Mintlify OSS Program",
+  "logo": "/logos/mintlify.svg",
+  "whatYouGet": {
+    "zh-Hant": "永久免費的 Mintlify Pro 方案（自訂網域與品牌、進階分析、API Playground）",
+    "zh-Hans": "永久免费的 Mintlify Pro 方案（自定义域名与品牌、高级分析、API Playground）",
+    "en": "Mintlify Pro free permanently (custom domain and branding, advanced analytics, API playground)"
+  },
+  "whyItHelps": {
+    "zh-Hant": "用自己的網域架設文件網站，搭配互動式 API 參考，並透過分析了解讀者在看哪些頁面。",
+    "zh-Hans": "用自己的域名搭建文档站点，配合交互式 API 参考，并通过分析了解读者在看哪些页面。",
+    "en": "Host docs on your own domain with an interactive API reference, and use analytics to see which pages readers use."
+  },
+  "requirements": {
+    "zh-Hant": "非商業開源專案；採用公認的開源授權（如 MIT、Apache 2.0、GPL）；沒有創投資金、不靠營收支撐；不由營利公司擁有或主要維護；填寫申請表",
+    "zh-Hans": "非商业开源项目；采用公认的开源许可证（如 MIT、Apache 2.0、GPL）；没有风险投资、不靠营收支撑；不由营利公司拥有或主要维护；填写申请表",
+    "en": "Non-commercial open source project; recognized open source license (e.g. MIT, Apache 2.0, GPL); not venture-backed or funded by revenue; not owned or mostly maintained by a for-profit company; submit the application form"
+  },
+  "type": "application_required",
+  "category": [
+    "docs_localization"
+  ],
+  "link": "https://www.mintlify.com/oss-program",
+  "lastVerified": "2026-11-25",
+  "pending": {
+    "zh-Hant": "官方頁面沒有說明審核流程與所需時間",
+    "zh-Hans": "官方页面没有说明审核流程与所需时间",
+    "en": "The official page does not describe the review process or timeline",
+    "link": "https://www.mintlify.com/oss-program"
+  }
+}
