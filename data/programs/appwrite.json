@@ -1,0 +1,33 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "appwrite",
+  "name": "Appwrite OSS Program",
+  "logo": "/logos/appwrite.svg",
+  "whatYouGet": {
+    "zh-Hant": "免費的 Appwrite Cloud Pro 訂閱，含 Pro 方案的資源與支援",
+    "zh-Hans": "免费的 Appwrite Cloud Pro 订阅，含 Pro 方案的资源与支持",
+    "en": "Free Appwrite Cloud Pro subscription with its resources and support"
+  },
+  "whyItHelps": {
+    "zh-Hant": "專案的示範站或線上服務需要後端（資料庫、驗證、儲存、函式）時，超過免費方案額度後仍可繼續使用。",
+    "zh-Hans": "项目的演示站点或在线服务需要后端（数据库、身份验证、存储、函数）时，超出免费方案额度后仍可继续使用。",
+    "en": "Keeps a project's demo or hosted service running on a managed backend (database, auth, storage, functions) after it outgrows the Free plan."
+  },
+  "requirements": {
+    "zh-Hant": "符合 OSI 開源定義並採用 OSI 認可授權；有開源的 GitHub 儲存庫；活躍專案，至少 15 次貢獻、100 顆星；非營利或尚未有營收；填寫 OSS 表單，由 Appwrite 審核決定",
+    "zh-Hans": "符合 OSI 开源定义并采用 OSI 认可的许可证；有开源的 GitHub 仓库；活跃项目，至少 15 次贡献、100 个 star；非营利或尚未有营收；填写 OSS 表单，由 Appwrite 审核决定",
+    "en": "Meets the OSI definition with an OSI-approved license; open source GitHub repository; active project with at least 15 contributions and 100 stars; nonprofit or pre-revenue; submit the OSS form, acceptance at Appwrite's discretion"
+  },
+  "type": "application_required",
+  "category": [
+    "serverless_hosted"
+  ],
+  "link": "https://appwrite.io/docs/advanced/billing/oss",
+  "lastVerified": "2026-11-25",
+  "pending": {
+    "zh-Hant": "官方頁面提到另有「Appwrite 的標準」但未列出細節；計畫沒有固定結束日，每年檢視一次",
+    "zh-Hans": "官方页面提到另有「Appwrite 的标准」但未列出细节；计划没有固定结束日期，每年审查一次",
+    "en": "The page mentions additional Appwrite criteria without listing them; the program has no fixed end date and is reviewed annually",
+    "link": "https://appwrite.io/docs/advanced/billing/oss"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "../schemas/program.schema.json",
+  "id": "gitbook",
+  "name": "GitBook Community Plan",
+  "logo": "/logos/gitbook.svg",
+  "whatYouGet": {
+    "zh-Hant": "免費的 Community 方案，包含 Ultimate 方案除 SAML SSO 以外的所有功能；可再申請 Sponsored 網站方案（每頁角落顯示一則小廣告）",
+    "zh-Hans": "免费的 Community 方案，包含 Ultimate 方案除 SAML SSO 以外的所有功能；可再申请 Sponsored 站点方案（每页角落显示一则小广告）",
+    "en": "Free Community plan with all Ultimate plan features except SAML SSO; optional Sponsored site plan that shows one small ad per page"
+  },
+  "whyItHelps": {
+    "zh-Hant": "團隊可以一起編寫文件，並透過 Git Sync 讓社群直接對 GitHub／GitLab 發 PR 修改文件，不需要付費席位。",
+    "zh-Hans": "团队可以一起编写文档，并通过 Git Sync 让社区直接向 GitHub／GitLab 提 PR 修改文档，不需要付费席位。",
+    "en": "Lets a team write docs together, and Git Sync lets the community edit docs through GitHub/GitLab pull requests without paid seats."
+  },
+  "requirements": {
+    "zh-Hant": "公開在 GitHub 或 GitLab 上的儲存庫，不是空的或停止活動的 fork；與營利或創投支持的公司無關；含 README.md、CONTRIBUTING.md、CODE_OF_CONDUCT.md 與有效開源授權的 LICENSE；不接受加密貨幣、遊戲專案；透過客服或 support@gitbook.com 申請並附上專案說明、儲存庫與組織連結，經審核",
+    "zh-Hans": "公开在 GitHub 或 GitLab 上的仓库，不是空的或停止活跃的 fork；与营利或风投支持的公司无关；包含 README.md、CONTRIBUTING.md、CODE_OF_CONDUCT.md 以及有效开源许可证的 LICENSE；不接受加密货币、游戏项目；通过客服或 support@gitbook.com 申请，并附上项目说明、仓库和组织链接，需经审核",
+    "en": "Public repository on GitHub or GitLab that is not empty or an inactive fork; not associated with a for-profit or venture-backed company; includes README.md, CONTRIBUTING.md, CODE_OF_CONDUCT.md and a LICENSE with a valid OSS license; no cryptocurrency or gaming projects; apply via support chat or support@gitbook.com with a project description, repo link and organization link, subject to review"
+  },
+  "type": "application_required",
+  "category": [
+    "docs_localization"
+  ],
+  "link": "https://gitbook.com/docs/account-and-billing/plans/community",
+  "lastVerified": "2026-11-25"
+}
